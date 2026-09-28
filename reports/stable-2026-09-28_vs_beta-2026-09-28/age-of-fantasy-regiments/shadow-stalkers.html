@@ -1,0 +1,536 @@
+<title>Shadow Stalkers 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Shadow Stalkers — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>age-of-fantasy-regiments. <code>stable 2026-09-28: Shadow Stalkers</code> (versionString 3.5.3, edited 2026-05-18, modified 2026-07-14) → <code>beta 2026-09-28: Shadow Stalkers</code> (versionString 3.5.1, edited 2026-09-10, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 23 (20 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 0, Size 0</li>
+<li>Special rules: +9 / -10 / ~11</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Butcher Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>140</td><td class='num'>170</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td>Reaper Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>70</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Phantom Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>60</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Spectre Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>45</td><td class='num'>55</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Scourge Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>40</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Scourges</td><td class='num'>10</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>85</td><td class='num'>100</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Tormentors</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>100</td><td class='num'>80</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td>Phantoms</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>95</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Reapers</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>95</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td>Butchers</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>200</td><td class='num'>210</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Spectres</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>85</td><td class='num'>90</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Flayer Cavalry</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>140</td><td class='num'>135</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Shadow Hounds</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>60</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Fang Swarms</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>100</td><td class='num'>100</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Fiends</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>185</td><td class='num'>175</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Great Winged Horror</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>140</td><td class='num'>170</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td>Great Fiend</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>150</td><td class='num'>160</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Great Screecher</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>170</td><td class='num'>170</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Terror Beast</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>300</td><td class='num'>305</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Blind Behemoth</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>295</td><td class='num'>335</td><td class='num'><b class='del'>+40</b></td></tr>
+<tr><td>Ascended Fiend</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>375</td><td class='num'>430</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td>Stalker Titan</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>560</td><td class='num'>565</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Omoshu &amp; Kothiz</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>100</td><td class='num'>80</td><td class='num'><b class='add'>-20</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Butcher Champion</h3><p class='stats'>140 → 170 pts (+30) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>170</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Ravage(1)</del></td><td><ins class='add'>Ravage(6)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A8)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Butcher Blade (A6, AP(1), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Butcher Great-Hammer (A2, AP(2), Blast(3), Imprecise, Thrust) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Butcher Great-Blade (A6, AP(1), Rending) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Spears (12&quot;, A3, Assault), Butcher Great-Hammer (A2, Blast(3), Thrust) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Butcher Great-Axe (A2, AP(4), Deadly(3), Ignores Regeneration) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A6, AP(4)) · +50 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Butcher <del class='del'>Blade</del></td><td>Replace Butcher <ins class='add'>Great-Hammer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Butcher Great-Blade (A6, Rending) · +15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Great Weapon (A6, <del class='del'>AP(3))</del> · <del class='del'>+15</del> pts</td><td>Great Weapon (A6, <ins class='add'>AP(2))</ins> · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Butcher Great-Axe (A2, AP(4), Deadly(3)) · +45 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throwing Spears (12&quot;, A6, AP(1)), Bash (A4) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Throwing Spears</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Censer (9&quot;, A3, Assault, Bane) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Stalker Sling (12&quot;, A3, Assault, Destructive) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Harpoons (9&quot;, A1, AP(2), Deadly(3), Assault) · +20 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Maze Walker (Strider Aura) · <del class='del'>+20</del> pts</td><td>Maze Walker (Strider Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shadow Master <del class='del'>(Shadowborn Boost</del> Aura) · <del class='del'>+25</del> pts</td><td>Shadow Master <ins class='add'>(Enhanced Shadowborn</ins> Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dream Stalker (Thrust in Melee Aura) · <del class='del'>+30</del> pts</td><td>Dream Stalker (Thrust in Melee Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Shade <del class='del'>(Counter-Attack</del> Aura) · <del class='del'>+35</del> pts</td><td>Night Shade <ins class='add'>(Counter in Melee</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Censer Bearer (Repel Ambushers) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Reaper Champion</h3><p class='stats'>65 → 70 pts (+5) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Reaper Great-Glaive (A1, AP(2), Blast(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Great Weapon (A3, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Master Reaper Great-Glaive</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Spears (12&quot;, A1, Assault), Reaper Great-Glaive (A1, AP(1), Blast(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Halberd (A3, AP(1), Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Reaper Great-Sword (A1, AP(3), Deadly(3), Shred) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A3, AP(4)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Censer (9&quot;, A3, Assault, Bane), Strike (A1) · +25 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Reaper Great-Glaive</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A3, Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Reaper Great-Sword (A1, AP(2), Deadly(3), Shred) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A3, AP(2)) · +15 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Throwing Spears</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Stalker Sling (12&quot;, A1, Assault, Destructive) · +5 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Combat Censer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Harpoons (9&quot;, A1, AP(2), Deadly(3), Assault) · +10 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Flayer <del class='del'>(Heavy Claws (A2, AP(1)),</del> Fast, <del class='del'>Impact(4), Melee Evasion,</del> Tough(6)) · <del class='del'>+160</del> pts</td><td>Great Flayer <ins class='add'>(Dodge,</ins> Fast, <ins class='add'>Impact(6),</ins> Tough(6)) · <ins class='add'>+140</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Flying Beast <del class='del'>(Heavy Claws (A6, AP(1)),</del> Stomp (A4, AP(1)), Armor(3), <del class='del'>Breath Attack,</del> Fear(2), Flying, Tough(12)) · <del class='del'>+350</del> pts</td><td>Flying Beast <ins class='add'>(Toxic Breath (6&quot;, A1, Blast(3), Reliable, Assault, Bane),</ins> Stomp (A4, AP(1)), <ins class='add'>Toxin Claws (A8, Bane),</ins> Armor(3), Fear(2), Flying, Tough(12)) · <ins class='add'>+420</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Maze Walker (Strider Aura) · <del class='del'>+20</del> pts</td><td>Maze Walker (Strider Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shadow Master <del class='del'>(Shadowborn Boost</del> Aura) · <del class='del'>+25</del> pts</td><td>Shadow Master <ins class='add'>(Enhanced Shadowborn</ins> Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(2)) · <del class='del'>+20</del> pts</td><td>Army Standard Bearer (Fear(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dream Stalker (Thrust in Melee Aura) · <del class='del'>+30</del> pts</td><td>Dream Stalker (Thrust in Melee Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Shade <del class='del'>(Counter-Attack</del> Aura) · <del class='del'>+35</del> pts</td><td>Night Shade <ins class='add'>(Counter in Melee</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Censer Bearer (Repel Ambushers) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Phantom Champion</h3><p class='stats'>55 → 60 pts (+5) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Spell Resistance</ins><br><span class='muted'>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Resistance</del><br><span class='muted'>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Throwing Spears (12&quot;, A2, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Halberd (A3, AP(1), Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Spears (12&quot;, A1, Assault), Halberd (A3, Rending) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A3, AP(4)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Censer (9&quot;, A3, Assault, Bane), Strike (A1) · +20 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Halberd</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A3, AP(2)) · +5 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Throwing <del class='del'>Spear and Hand Weapon</del></td><td>Replace Throwing <ins class='add'>Spears</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Stalker Sling (12&quot;, A1, Assault, Destructive) · +5 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Assault Blades (A4, AP(1), Rending) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Combat Censer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Harpoons (9&quot;, A1, AP(2), Deadly(3), Assault) · +10 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Umbral Horror (Increased Shooting Range Aura) · <del class='del'>+35</del> pts</td><td>Umbral Horror (Increased Shooting Range Aura) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Maze Walker (Strider Aura) · <del class='del'>+20</del> pts</td><td>Maze Walker (Strider Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hex Banshee (Caster(2)) · <del class='del'>+45</del> pts</td><td>Hex Banshee (Caster(2)) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dream Stalker (Thrust in Melee Aura) · <del class='del'>+30</del> pts</td><td>Dream Stalker (Thrust in Melee Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Shade <del class='del'>(Counter-Attack</del> Aura) · <del class='del'>+35</del> pts</td><td>Night Shade <ins class='add'>(Counter in Melee</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Censer Bearer (Repel Ambushers) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Spectre Champion</h3><p class='stats'>45 → 55 pts (+10) · Size 1 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Spell Resistance</ins><br><span class='muted'>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Resistance</del><br><span class='muted'>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Stalker Wand (12&quot;, A4, Destructive)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Claws</del> (A1)</td><td><ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Champion Stalker Staff (18&quot;, A2, AP(1), Disintegrate)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Master Stalker Wand and Strike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Banshee Staff (A2, Spell Amplifier) · +10 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Champion</del> Stalker <del class='del'>Staff</del></td><td>Replace <ins class='add'>Master</ins> Stalker <ins class='add'>Wand</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Nightmare Wand (12&quot;, A1, AP(4), Deadly(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Stalker Staff (24&quot;, A3, Destructive) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Champion</del> Shadow Staff (18&quot;, <del class='del'>A2, AP(1),</del> Rending) · +5 pts</td><td><ins class='add'>Master</ins> Shadow Staff (18&quot;, <ins class='add'>A3,</ins> Rending) · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Champion</del> Shadow Wand <del class='del'>(12&quot;,</del> A4, Rending) · +5 pts</td><td><ins class='add'>Master</ins> Shadow Wand <ins class='add'>(9&quot;,</ins> A4, Rending) · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Umbral Wand (12&quot;, A1, AP(1), Blast(3), Reliable) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Umbral Staff (18&quot;, A1, AP(1), Blast(3), Reliable) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Champion Stalker Wand (12&quot;, A4, Disintegrate) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Umbral Horror (Increased Shooting Range Aura) · <del class='del'>+35</del> pts</td><td>Umbral Horror (Increased Shooting Range Aura) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Maze Walker (Strider Aura) · <del class='del'>+20</del> pts</td><td>Maze Walker (Strider Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hex Banshee (Caster(2)) · <del class='del'>+45</del> pts</td><td>Hex Banshee (Caster(2)) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dream Stalker (Thrust in Melee Aura) · <del class='del'>+30</del> pts</td><td>Dream Stalker (Thrust in Melee Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Shade <del class='del'>(Counter-Attack</del> Aura) · <del class='del'>+35</del> pts</td><td>Night Shade <ins class='add'>(Counter in Melee</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Censer Bearer (Repel Ambushers) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Scourge Champion</h3><p class='stats'>30 → 40 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Hand Weapon (A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A3, AP(1), Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Spears (12&quot;, A1, Assault), Hand Weapon (A3, Parry(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A3, AP(4)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Halberd (A3, AP(1), Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Spear (A3, AP(1), Counter, Brace(1)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Censer (9&quot;, A3, Assault, Bane), Strike (A1) · +10 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy</del> Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear (A3, Counter, Brace(1)) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Halberd (A3, <del class='del'>AP(1),</del> Rending) · +5 pts</td><td>Halberd (A3, Rending) · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Great Weapon (A3, <del class='del'>AP(3))</del> · +5 pts</td><td>Great Weapon (A3, <ins class='add'>AP(2))</ins> · +5 pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Spear (A3, AP(1), Counter) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Heavy Hand Weapons (A4, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Throwing Spears</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Stalker Sling (12&quot;, A1, Assault, Destructive) · +5 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Combat Censer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Harpoons (9&quot;, A1, AP(2), Deadly(3), Assault) · +5 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Hound <del class='del'>(Heavy</del> Claws (A3, <del class='del'>AP(2)), Melee Evasion,</del> Strider, Tough(3)) · <del class='del'>+60</del> pts</td><td>Great Hound <ins class='add'>(Jagged</ins> Claws (A3, <ins class='add'>Shred),</ins> Strider, Tough(3)) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Maze Walker (Strider Aura) · <del class='del'>+20</del> pts</td><td>Maze Walker (Strider Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shadow Master <del class='del'>(Shadowborn Boost</del> Aura) · <del class='del'>+25</del> pts</td><td>Shadow Master <ins class='add'>(Enhanced Shadowborn</ins> Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(2)) · <del class='del'>+20</del> pts</td><td>Army Standard Bearer (Fear(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dream Stalker (Thrust in Melee Aura) · <del class='del'>+30</del> pts</td><td>Dream Stalker (Thrust in Melee Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Shade <del class='del'>(Counter-Attack</del> Aura) · <del class='del'>+35</del> pts</td><td>Night Shade <ins class='add'>(Counter in Melee</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with (2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Censer Bearer (Repel Ambushers) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Scourges</h3><p class='stats'>85 → 100 pts (+15) · Size 10 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>10x Hand Weapon <del class='del'>(A1)</del></td><td>10x Hand Weapon <ins class='add'>(A1, Parry(1))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A1, Rending) · <del class='del'>+25</del> pts</td><td>Halberd (A1, Rending) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A1, <del class='del'>Counter)</del> · <del class='del'>+25</del> pts</td><td>Spear (A1, <ins class='add'>Counter, Brace(1))</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Scourging Censer <del class='del'>(Shadowborn Boost</del> Aura) · <del class='del'>+35</del> pts</td><td>Scourging Censer <ins class='add'>(Enhanced Shadowborn</ins> Aura) · <ins class='add'>+25</ins> pts</td></tr>
+</table></div>
+<h3>Tormentors</h3><p class='stats'>100 → 80 pts (-20) · Size 5 · Quality 4+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Dodge</ins><br><span class='muted'>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Melee Evasion</del><br><span class='muted'>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Toxin Dagger <del class='del'>(A2,</del> Bane)</td><td>5x Toxin Dagger <ins class='add'>(A1,</ins> Bane)</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade all models with</td><td>Upgrade all models with <ins class='add'>one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxic Stinger (9&quot;, A1, Assault, Bane) · +50 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Deadly Stinger <del class='del'>(A1, AP(2), Limited)</del> · <del class='del'>+10</del> pts</td><td>Deadly Stinger <ins class='add'>(9&quot;, A1, Rending, Assault)</ins> · <ins class='add'>+70</ins> pts</td></tr>
+</table></div>
+<h3>Phantoms</h3><p class='stats'>95 pts · Size 5 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Spell Resistance</ins><br><span class='muted'>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Resistance</del><br><span class='muted'>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Assault Daggers (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Throwing Spears (12&quot;, A1, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Hand Weapon (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Assault Daggers</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Spears (12&quot;, A1, Assault), Dagger (A1) · +20 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Scourging Censer <del class='del'>(Shadowborn Boost</del> Aura) · <del class='del'>+20</del> pts</td><td>Scourging Censer <ins class='add'>(Enhanced Shadowborn</ins> Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace all Throwing Spears and Hand Weapons</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Assault Blades (A2, Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Reapers</h3><p class='stats'>135 → 95 pts (-40) · Size 5 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>135</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Halberd <del class='del'>(A2,</del> Rending)</td><td>5x Halberd <ins class='add'>(A1,</ins> Rending)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Halberds</td><td>Replace all Halberds</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A2,</del> AP(2)) · <del class='del'>+15</del> pts</td><td>Great Weapon <ins class='add'>(A1,</ins> AP(2)) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Halberd</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Reaper Great-Glaive (A1, AP(1), Blast(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Reaper Great-Sword (A1, AP(2), Deadly(3), Shred) · +30 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Soul-Hunter Censer (Precision Target(1)) · <del class='del'>+25</del> pts</td><td>Soul-Hunter Censer (Precision Target(1)) · <ins class='add'>+30</ins> pts</td></tr>
+</table></div>
+<h3>Butchers</h3><p class='stats'>200 → 210 pts (+10) · Size 3 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>200</del> pts</td><td><ins class='add'>210</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Ravage(1)</del></td><td><ins class='add'>Ravage(2)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Butcher <del class='del'>Blade</del> (A3, <del class='del'>AP(1),</del> Rending)</td><td>3x Butcher <ins class='add'>Great-Blade</ins> (A3, Rending)</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all Butcher <del class='del'>Blades</del></td><td>Replace all Butcher <ins class='add'>Great-Blades</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Great Weapon (A3, <del class='del'>AP(3))</del> · <del class='del'>+20</del> pts</td><td>Great Weapon (A3, <ins class='add'>AP(2))</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Throwing Spears (12&quot;, A3, <del class='del'>AP(1)), Bash (A2)</del> · <del class='del'>+10</del> pts</td><td>Throwing Spears (12&quot;, A3, <ins class='add'>Assault), Strike (A1)</ins> · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Butcher Great-Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Butcher Great-Hammer (A2, Blast(3), Thrust) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Butcher Great-Axe (A2, AP(4), Deadly(3)) · +55 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Soul-Hunter Censer (Precision Target(1)) · <del class='del'>+25</del> pts</td><td>Soul-Hunter Censer (Precision Target(1)) · <ins class='add'>+30</ins> pts</td></tr>
+</table></div>
+<h3>Spectres</h3><p class='stats'>85 → 90 pts (+5) · Size 5 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Spell Resistance</ins><br><span class='muted'>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Resistance</del><br><span class='muted'>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Stalker Staff (24&quot;, A1, Destructive)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Claws</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Stalker Wand (12&quot;, A2, Disintegrate)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all Stalker <del class='del'>Wands</del></td><td>Replace all Stalker <ins class='add'>Staffs</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shadow Staff (18&quot;, A1, <del class='del'>AP(1),</del> Rending) · +10 pts</td><td>Shadow Staff (18&quot;, A1, Rending) · +10 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Stalker Wand (12&quot;, A2, Destructive) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shadow Wand <del class='del'>(12&quot;,</del> A2, Rending) · <del class='del'>+15</del> pts</td><td>Shadow Wand <ins class='add'>(9&quot;,</ins> A2, Rending) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Stalker Staff (18&quot;, A1, AP(1), Disintegrate) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Stalker Staff</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Nightmare Wand (12&quot;, A1, AP(4), Deadly(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Umbral Wand (12&quot;, A1, AP(1), Blast(3), Reliable) · +20 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Soul-Hunter Censer (Precision Target(1)) · <del class='del'>+25</del> pts</td><td>Soul-Hunter Censer (Precision Target(1)) · <ins class='add'>+30</ins> pts</td></tr>
+</table></div>
+<h3>Flayer Cavalry</h3><p class='stats'>140 → 135 pts (-5) · Size 5 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Lance (A1, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Great Weapon (A1, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Great Weapons</del></td><td>Replace all <ins class='add'>Lances</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A1, AP(2)) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Lance (A1, Thrust) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Lance</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Reaper Great-Glaive (A1, AP(1), Blast(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Reaper Great-Sword (A1, AP(2), Deadly(3), Shred) · +30 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Soul-Hunter Censer (Precision Target(1)) · <del class='del'>+25</del> pts</td><td>Soul-Hunter Censer (Precision Target(1)) · <ins class='add'>+30</ins> pts</td></tr>
+</table></div>
+<h3>Shadow Hounds</h3><p class='stats'>70 → 60 pts (-10) · Size 5 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Claws <del class='del'>(A2)</del></td><td>5x <ins class='add'>Toxin</ins> Claws <ins class='add'>(A1, Bane)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Toxin Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jagged Teeth (A1, Shred) · +5 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade all models with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Vicious Maw (Bane in Melee) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Fang Swarms</h3><p class='stats'>100 pts · Size 3 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Toxin Fangs (A3, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Swarm Attacks (A3, Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Toxin Fangs</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sharp Fangs (A3, Rending) · +20 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with one</td><td>Upgrade all models with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Venom Sprayers (9&quot;, A1, Assault, Bane) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle Sprayers (9&quot;, A1, AP(1), Assault, Destructive) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Vicious Maw (Bane in Melee) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needle Spitters (12&quot;, A3, Disintegrate) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Venom Spitters (12&quot;, A3, Bane) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Fiends</h3><p class='stats'>185 → 175 pts (-10) · Size 3 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>175</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Dodge</ins><br><span class='muted'>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Melee Evasion</del><br><span class='muted'>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x <del class='del'>Rending</del> Claws (A3, <del class='del'>Rending)</del></td><td>3x <ins class='add'>Toxin</ins> Claws (A3, <ins class='add'>Bane)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Toxin Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jagged Claws (A3, Shred) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Venom Spitters (18&quot;, A3, Bane), Strike (A1) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle Spitters (18&quot;, A3, AP(1), Destructive), Strike (A1) · +65 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with one</td><td>Upgrade all models with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Venom Sprayers (9&quot;, A1, Assault, Bane) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle Sprayers (9&quot;, A1, AP(1), Assault, Destructive) · +45 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Venom Spitters (12&quot;, A3, Bane) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needle Spitters (12&quot;, A3, Disintegrate) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Great Winged Horror</h3><p class='stats'>140 → 170 pts (+30) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>170</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Breath Attack</del><br><span class='muted'>Once per activation, before attacking, roll one die. On a 2+ one enemy unit within 6&quot; in line of sight takes 1 hit with Blast(3) and AP(1).</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxic Breath (6&quot;, A1, Blast(3), Reliable, Assault, Bane)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Jagged Claws (A4, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Claws (A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Jagged Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mutated Claws (A4, Surge) · +5 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Aerial Horror (Ambush) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scourging Censer (Shadowborn Boost) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with (2)</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scourging Censer (Enhanced Shadowborn) · +10 pts</ins></td></tr>
+</table></div>
+<h3>Great Fiend</h3><p class='stats'>150 → 160 pts (+10) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Dodge</ins><br><span class='muted'>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Melee Evasion</del><br><span class='muted'>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxin Claws (A6, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Rending Claws (A4, Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Stomp (A2, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Toxin Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jagged Claws (A6, Shred) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Venom Spitters (18&quot;, A6, Bane), Strike (A2) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle Spitters (18&quot;, A6, AP(1), Destructive), Strike (A2) · +60 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Venom Sprayers (9&quot;, A3, Assault, Bane) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle Sprayers (9&quot;, A3, AP(1), Assault, Destructive) · +60 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needle Spitters (12&quot;, A6, Disintegrate) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Venom Spitters (12&quot;, A6, Rending) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Labyrinthian Censer (Unpredictable Fighter Mark) · <del class='del'>+30</del> pts</td><td>Labyrinthian Censer (Unpredictable Fighter Mark) · <ins class='add'>+35</ins> pts</td></tr>
+</table></div>
+<h3>Great Screecher</h3><p class='stats'>170 pts · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Spell Resistance</ins><br><span class='muted'>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Resistance</del><br><span class='muted'>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Daggers (A6)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Dual Hand Weapons (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Assault Daggers</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mind-Blaster Shriek (24&quot;, A2, Blast(3)), Strike (A2) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mind-Piercer Screech (18&quot;, A2, AP(2), Deadly(3)), Strike (A2) · +40 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Scourging Censer <del class='del'>(Shadowborn Boost)</del> · <del class='del'>+15</del> pts</td><td>Scourging Censer <ins class='add'>(Enhanced Shadowborn)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mind-Blaster Shriek (12&quot;, A2, Blast(3)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mind-Piercer Screech (12&quot;, A2, AP(1), Deadly(3)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Terror Beast</h3><p class='stats'>300 → 305 pts (+5) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>300</del> pts</td><td><ins class='add'>305</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Smashing Claws (A3, AP(1), Blast(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Claws (A8, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Great Smashing Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Smashing Claws (A2, AP(1), Blast(3)), Spear Rider (A3, Thrust) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Blade Rider (A3, Rending), Smashing Claws (A2, AP(1), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Claws (A8, AP(2)) · +25 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Stomp</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mace Tail (A1, AP(4), Deadly(3)) · +5 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Censer <del class='del'>Bearer</del> (Repel Ambushers) · +15 pts</td><td><ins class='add'>Shadow</ins> Censer (Repel Ambushers) · +15 pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spear Rider (A1, AP(2), Deadly(3)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Sword Rider (A3, Reliable) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Blind Behemoth</h3><p class='stats'>295 → 335 pts (+40) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>295</del> pts</td><td><ins class='add'>335</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Spell Resistance</ins><br><span class='muted'>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Resistance</del><br><span class='muted'>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Butcher Great-Glaive (A3, Blast(3), Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Great Flail (A3, AP(1), Blast(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Great Flail</del></td><td>Replace <ins class='add'>Butcher Great-Glaive</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Behemoth Great-Flail (A8, Surge) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Behemoth Great-Mace (A8, Shred) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Behemoth Great-Axe (A3, AP(4), Deadly(3)) · +65 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Mace (A8, AP(3)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Labyrinthian Censer (Unpredictable Fighter Mark) · <del class='del'>+30</del> pts</td><td>Labyrinthian Censer (Unpredictable Fighter Mark) · <ins class='add'>+35</ins> pts</td></tr>
+</table></div>
+<h3>Ascended Fiend</h3><p class='stats'>375 → 430 pts (+55) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>375</del> pts</td><td><ins class='add'>430</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Dodge</ins><br><span class='muted'>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Melee Evasion</del><br><span class='muted'>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Rending</del> Claws (A8, <del class='del'>Rending)</del></td><td><ins class='add'>Toxin</ins> Claws (A8, <ins class='add'>Bane)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Toxin Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jagged Claws (A8, Shred) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Venom Spitters (18&quot;, A12, Bane) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle Spitters (18&quot;, A12, AP(1), Destructive) · +120 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Venom Sprayers (9&quot;, A3, Assault, Bane) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle Sprayers (9&quot;, A3, AP(1), Assault, Destructive) · +60 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Venom Spitters (12&quot;, A12, Bane) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needle Spitters (12&quot;, A12, Disintegrate) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Labyrinthian Censer (Unpredictable Fighter Mark) · <del class='del'>+30</del> pts</td><td>Labyrinthian Censer (Unpredictable Fighter Mark) · <ins class='add'>+35</ins> pts</td></tr>
+</table></div>
+<h3>Stalker Titan</h3><p class='stats'>560 → 565 pts (+5) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>560</del> pts</td><td><ins class='add'>565</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Crew (A3, Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Great Claws (A8, AP(4))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Stalker Crew (A6, Reliable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Great Terror Fiend (Ambush, <del class='del'>Melee Evasion,</del> Stomp (A6, <del class='del'>AP(2)))</del></td><td>Great Terror Fiend (Ambush, <ins class='add'>Dodge,</ins> Stomp (A6, <ins class='add'>AP(2)), Toxin Claws (A12, Bane))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Great Terror Fiend</td><td>Replace Great Terror Fiend</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Terror Beast <del class='del'>(Mace</del> Tail (A2, AP(4), Deadly(3)), Fortified, Strider) · <del class='del'>+5</del> pts</td><td>Great Terror Beast <ins class='add'>(Heavy Claws (A12, AP(2)), Mace</ins> Tail (A2, AP(4), Deadly(3)), Fortified, Strider) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Censer <del class='del'>Bearer</del> (Repel Ambushers) · +15 pts</td><td><ins class='add'>Shadow</ins> Censer (Repel Ambushers) · +15 pts</td></tr>
+</table></div>
+<h3>Omoshu &amp; Kothiz</h3><p class='stats'>100 → 80 pts (-20) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Heroes with up to Tough(6) may deploy as part of one multi-model unit without another Hero. The hero may take morale tests on behalf of the unit, but must use the unit’s Defense until all other models have been killed.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Shadow Axe (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Claws (A3, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Hand Weapon (A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Kothiz <del class='del'>(Tough(3))</del></td><td>Kothiz <ins class='add'>(Tough(3), Jagged Claws (A3, Shred))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Ensnaring Carnivore (Good Fighter, Melee Evasion)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ensnaring Stalker (Unpredictable Fighter) · +10 pts</ins></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Counter in Melee Aura</td><td>This model and its unit get Counter in melee.</td></tr>
+<tr class='add'><td>➕</td><td>Destructive</td><td>When attacking units with more than half of their total size or Tough value (for single-model units), those hits get AP(+1).</td></tr>
+<tr class='add'><td>➕</td><td>Dodge</td><td>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Shadowborn</td><td>If most models in this unit have Shadowborn, attackers always get -4&quot;/-2&quot; range when targeting it from Shadowborn (instead of only as long as they haven&#x27;t started an activation yet).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Shadowborn Aura</td><td>This model and its unit get Enhanced Shadowborn.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Shrouded</td><td>If most models in this unit have Shrouded, attackers always get -4&quot;/-2&quot; range when targeting it from Shrouded (instead of only as long as they haven&#x27;t started an activation yet).</td></tr>
+<tr class='add'><td>➕</td><td>Imprecise</td><td>Gets -1 to hit when attacking.</td></tr>
+<tr class='add'><td>➕</td><td>Spell Resistance</td><td>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='add'><td>➕</td><td>Unique Hero</td><td>Counts as having Hero, and this model may only be taken once per army.</td></tr>
+<tr class='del'><td>➖</td><td>Breath Attack</td><td>Once per activation, before attacking, roll one die. On a 2+ one enemy unit within 6&quot; in line of sight takes 1 hit with Blast(3) and AP(1).</td></tr>
+<tr class='del'><td>➖</td><td>Counter-Attack</td><td>Strikes first when charged.</td></tr>
+<tr class='del'><td>➖</td><td>Counter-Attack Aura</td><td>This model and its unit get Counter-Attack.</td></tr>
+<tr class='del'><td>➖</td><td>Disintegrate</td><td>Ignores Regeneration, and against units where most models have Defense 2+ to Defense 3+, this weapon gets AP(+2).</td></tr>
+<tr class='del'><td>➖</td><td>Evasive</td><td>Enemies get -1 to hit rolls when attacking units where all models have this rule.</td></tr>
+<tr class='del'><td>➖</td><td>Good Fighter</td><td>This model gets +1 to hit rolls in melee.</td></tr>
+<tr class='del'><td>➖</td><td>Melee Evasion</td><td>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</td></tr>
+<tr class='del'><td>➖</td><td>Resistance</td><td>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='del'><td>➖</td><td>Shadowborn Boost</td><td>If all models in this unit have Shadowborn, enemies get -8&quot; range to a min. of 6&quot; when shooting  them, and -4&quot; movement to a min. of 6&quot; when charging them from Shadowborn (instead of only -4&quot; and -2&quot;).</td></tr>
+<tr class='del'><td>➖</td><td>Shadowborn Boost Aura</td><td>This model and its unit get Shadowborn Boost.</td></tr>
+<tr class='mod'><td>✏️</td><td>Counter<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>Strikes</del> first with this weapon when charged, <del class='del'>and the charging</del> unit <del class='del'>gets -1 total Impact rolls per model with Counter in the two front rows if charging in the front.</del><br><span class='add'>3.6.0:</span> <ins class='add'>May strike</ins> first with this weapon when charged, <ins class='add'>unless this</ins> unit <ins class='add'>is Fatigued.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Ethereal</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, place this model anywhere fully within 6&quot; of its position. <del class='del'>This</del> model moves -6&quot; when using Advance, and <del class='del'>-6”</del> when using <del class='del'>Rush/Charge.</del><br><span class='add'>3.6.0:</span> Once per activation, before attacking, <ins class='add'>you may</ins> place this model anywhere fully within 6&quot; of its position. <ins class='add'>If you do, this</ins> model moves -6&quot; when using Advance, and <ins class='add'>-6&quot;</ins> when using <ins class='add'>Rush/Charge until the end of that activation.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Fortified</td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='mod'><td>✏️</td><td>Melee Slayer</td><td><span class='del'>3.5.1:</span> When this <del class='del'>model charges, its</del> weapons get AP(+2) if most models in the target have Tough(3) or higher.<br><span class='add'>3.6.0:</span> When <ins class='add'>charging,</ins> this <ins class='add'>model&#x27;s</ins> weapons get AP(+2) if most models in the target have Tough(3) or higher.</td></tr>
+<tr class='mod'><td>✏️</td><td>Precision Target</td><td><span class='del'>3.5.1:</span> Once per game, during this model&#x27;s activation, pick <del class='del'>one</del> enemy <del class='del'>unit</del> within 18&quot; and in line of sight of it, and place <del class='del'>X markers</del> on <del class='del'>it.</del> Friendly units get <del class='del'>+X</del> to hit rolls when attacking <del class='del'>it.</del><br><span class='add'>3.6.0:</span> Once per game, during this model&#x27;s activation, pick <ins class='add'>X</ins> enemy <ins class='add'>units</ins> within 18&quot; and in line of sight of it, and place <ins class='add'>one token</ins> on <ins class='add'>them.</ins> Friendly units get <ins class='add'>+1</ins> to hit rolls when attacking <ins class='add'>them.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Ravage</td><td><span class='del'>3.5.1:</span> <del class='del'>When it&#x27;s</del> this <del class='del'>model&#x27;s</del> turn to <del class='del'>attack</del> in melee, roll X <del class='del'>dice.</del> For each 6+ the target takes one wound.<br><span class='add'>3.6.0:</span> <ins class='add'>Once per round, when it’s</ins> this <ins class='add'>model’s</ins> turn to <ins class='add'>strike</ins> in melee, roll X <ins class='add'>dice before attacking, unless this unit is Fatigued.</ins> For each 6+ the target takes one wound.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Sergeant<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>When this</del> model <del class='del'>attacks, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</del><br><span class='add'>3.6.0:</span> <ins class='add'>This</ins> model <ins class='add'>gets AP(+1) when attacking.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Shadowborn</td><td><span class='del'>3.5.1:</span> <del class='del'>Enemies</del> get <del class='del'>-4&quot;</del> range to a min. of 6&quot; when <del class='del'>trying to shoot at units where all models have this rule, and -2&quot; movement to a min. of 6&quot; when trying to charge units where all models have this rule.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When a unit where most models have this rule is targeted by an enemy, as long as this unit hasn&#x27;t started an activation yet this round, attackers</ins> get <ins class='add'>-4&quot;/-2&quot;</ins> range to a min. of 6&quot; when <ins class='add'>shooting/charging it.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Shrouded</td><td><span class='del'>3.5.1:</span> <del class='del'>Enemies</del> get <del class='del'>-4&quot;</del> range to a min. of 6&quot; when <del class='del'>trying to shoot at units where all models have this rule, and -2&quot; movement to a min. of 6&quot; when trying to charge units where all models have this rule.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When a unit where most models have this rule is targeted by an enemy, as long as this unit hasn&#x27;t started an activation yet this round, attackers</ins> get <ins class='add'>-4&quot;/-2&quot;</ins> range to a min. of 6&quot; when <ins class='add'>shooting/charging it.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Strider<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> May ignore the effects of <del class='del'>difficult terrain when moving.</del><br><span class='add'>3.6.0:</span> May ignore the effects of <ins class='add'>Difficult terrain.</ins></td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Chill of Death</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>6</del> hits.<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick one enemy unit within <ins class='add'>18&quot; in line of sight in any direction,</ins> which takes <ins class='add'>9</ins> hits.</td></tr>
+<tr class='mod'><td>✏️</td><td>Combat Possession</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick up to <del class='del'>three</del> friendly units within 12&quot;, which <del class='del'>moves +2&quot; when using Advance actions and +4&quot; when using Rush/Charge actions once (next time the effect would apply).</del><br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which</td></tr>
+<tr class='mod'><td>✏️</td><td>Dream Haunter</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which friendly units gets Unpredictable Fighter against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight in any direction,</ins> which friendly units gets Unpredictable Fighter against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Labyrinthian Sparkle</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick <del class='del'>one</del> friendly <del class='del'>unit</del> within <del class='del'>12&quot;,</del> which <del class='del'>gets Evasive</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick <ins class='add'>up to three</ins> friendly <ins class='add'>units</ins> within <ins class='add'>18&quot;,</ins> which <ins class='add'>get Enhanced Shadowborn</ins> once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Maze Vines</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>2</del> hits with <del class='del'>AP(1) and Disintegrate.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick one enemy unit within <ins class='add'>18&quot; in line of sight in any direction,</ins> which takes <ins class='add'>4</ins> hits with <ins class='add'>Destructive.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Spectral Light</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick one enemy unit within 6&quot;, which takes <del class='del'>3 hits</del> with AP(2) and Deadly(3).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick one enemy unit within 6&quot;, which takes <ins class='add'>1 hit</ins> with AP(2) and Deadly(3).</td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

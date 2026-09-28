@@ -1,0 +1,694 @@
+<title>Dark Elf Raiders 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Dark Elf Raiders — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>grimdark-future-star-quest-ai. <code>stable 2026-09-28: Dark Elf Raiders</code> (versionString 3.5.3, edited 2026-04-27, modified 2026-07-14) → <code>beta 2026-09-28: Dark Elf Raiders</code> (versionString 3.5.1, edited 2026-09-03, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 1</li>
+<li>Removed units: 0</li>
+<li>Changed units: 26 (25 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 6, Size 0</li>
+<li>Special rules: +9 / -7 / ~15</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Blood Hound</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>45</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Gene-Warrior</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>55</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Warrior</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Nightmare</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>100</td><td class='num'>60</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td>Witch</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>70</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Winged Warrior</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>95</td><td class='num'>85</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Hoverboard Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>115</td><td class='num'>95</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td>True Warrior</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>100</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Crow Swarm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>105</td><td class='num'>115</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>True Witch</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>125</td><td class='num'><b class='del'>+45</b></td></tr>
+<tr><td>Shadow Warrior</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>160</td><td class='num'>125</td><td class='num'><b class='add'>-35</b></td></tr>
+<tr><td>Elite Raider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>120</td><td class='num'>130</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Gene-Tech Master</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>150</td><td class='num'>145</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Court Henchman</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>140</td><td class='num'>160</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Elite True Raider</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>150</td><td class='num'>165</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Dark Lord</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>165</td><td class='num'>175</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Jetbike Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>215</td><td class='num'>185</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td>Gene-Brute</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>265</td><td class='num'>210</td><td class='num'><b class='add'>-55</b></td></tr>
+<tr><td>Clawed Beast</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>365</td><td class='num'>380</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Light Skimmer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>555</td><td class='num'>445</td><td class='num'><b class='add'>-110</b></td></tr>
+<tr><td>Heavy Jetbike</td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>570</td><td class='num'>455</td><td class='num'><b class='add'>-115</b></td></tr>
+<tr><td>Leech Engine</td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>550</td><td class='num'>455</td><td class='num'><b class='add'>-95</b></td></tr>
+<tr><td>Engine of Suffering</td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>545</td><td class='num'>490</td><td class='num'><b class='add'>-55</b></td></tr>
+<tr><td>Razor Fighter</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>880</td><td class='num'>735</td><td class='num'><b class='add'>-145</b></td></tr>
+<tr><td>Raven Bomber</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1005</td><td class='num'>950</td><td class='num'><b class='add'>-55</b></td></tr>
+<tr><td>Heavy Skimmer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1105</td><td class='num'>1035</td><td class='num'><b class='add'>-70</b></td></tr>
+</table></div>
+<h2>New units</h2><div class='scroll'><table>
+<tr class='add'><td><b>Dark Sniper</b></td><td>1x Q4+ D5+ — 95 pts. Rules: Harassing, Stealth, Scout, Tough(3). Weapons: Barb-Sniper Carbine (24&quot;, A3, Reliable, Lacerate, Takedown), Strike (A3)</td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Blood Hound</h3><p class='stats'>60 → 45 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Toxin Claws <del class='del'>(A6,</del> Bane)</td><td>Toxin Claws <ins class='add'>(A3,</ins> Bane)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Combat Beast Handler (Unpredictable Fighter) · <del class='del'>+10</del> pts</td><td>Combat Beast Handler (Unpredictable Fighter) · <ins class='add'>+5</ins> pts</td></tr>
+</table></div>
+<h3>Gene-Warrior</h3><p class='stats'>55 pts · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Dual <del class='del'>CCWs</del> (A6)</td><td>Dual <ins class='add'>Hand Weapons</ins> (A6)</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Dual <del class='del'>CCW</del></td><td>Replace Dual <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Barb Pistol (12&quot;, A3, Lacerate), <del class='del'>CCW (A6)</del> · <del class='del'>+15</del> pts</td><td>Barb Pistol (12&quot;, A3, <ins class='add'>Assault,</ins> Lacerate), <ins class='add'>Hand Weapon (A3)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Charged Flail (A3, AP(1), Blast(3)) · +50 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Acid Sword (A9, Bane) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Jagged Scourge (A9, Shred) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Slashing Arm-Claws (A9, Rending) · +75 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Executioner Gun (15&quot;, A3, AP(1), Reliable, Assault, Takedown), Hand Weapon (A3) · +75 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Heavy Arm-Spike (A9, AP(2)) · +85 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Poisoned Arm-Blade (A3, AP(4), Deadly(3)) · +95 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Acid Spewer (6&quot;, A3, Blast(3), Reliable, Assault, Bane), Hand Weapon (A3) · +100 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Skull-Shredder Gun (9&quot;, A9, Rending, Assault), Hand Weapon (A3) · +120 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Syringe Pistol (6&quot;, A3, AP(4), Deadly(3), Assault), Hand Weapon (A3) · +145 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Barb Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Syringe Pistol (12&quot;, A3, Deadly(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bone Gun (18&quot;, A6, Rending) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Acid Gun (12&quot;, A3, Blast(3), Reliable, Bane) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Arcane Rifle (30&quot;, A3, AP(1), Reliable) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Agony Whip (A3, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Venom Sword (A6, Bane) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Electro-Corroder (A6, AP(1), Bane) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Leech Claw (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Syringe Claw (A3, AP(2), Deadly(3)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scissor Claw (A6, AP(4)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Warrior</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Barb Rifle</td><td>Replace Barb Rifle</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Scrapper</del> (12&quot;, A3, Blast(3), Reliable) · <del class='del'>+30</del> pts</td><td><ins class='add'>Torrent Gun</ins> (12&quot;, A3, Blast(3), Reliable) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Rifle (24&quot;, A6, AP(2)) · +55 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Barb Cannon <del class='del'>(30&quot;,</del> A9, Lacerate) · <del class='del'>+60</del> pts</td><td>Barb Cannon <ins class='add'>(36&quot;,</ins> A9, Lacerate) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>EMP Rifle (18&quot;, <del class='del'>A6,</del> Rending) · <del class='del'>+30</del> pts</td><td>EMP Rifle (18&quot;, <ins class='add'>A9,</ins> Rending) · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Scythe</del> Launcher (30&quot;, A3, <del class='del'>AP(3),</del> Unstoppable) · <del class='del'>+40</del> pts</td><td><ins class='add'>Hook-Missile</ins> Launcher (30&quot;, A3, <ins class='add'>AP(2), Deadly(3),</ins> Unstoppable) · <ins class='add'>+100</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Laser</del> Cannon (36&quot;, A3, AP(3), Deadly(3)) · +135 pts</td><td><ins class='add'>Dark-Energy</ins> Cannon (36&quot;, A3, AP(3), Deadly(3)) · +135 pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plas-Blaster (18&quot;, A6, AP(4)) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Barb Rifle and <del class='del'>CCW</del></td><td>Replace Barb Rifle and <ins class='add'>Strike</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sgt. Barb Pistol (12&quot;, A3, Lacerate), <del class='del'>Energy Sword (A6, AP(1), Rending)</del> · <del class='del'>+20</del> pts</td><td>Sgt. Barb Pistol (12&quot;, A3, <ins class='add'>Assault,</ins> Lacerate), <ins class='add'>Sgt. Hand Weapon (A3)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Sgt. Barb Pistol</td><td>Replace Sgt. Barb Pistol</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>EMP Pistol (9&quot;, <del class='del'>A6, Rending)</del> · +15 pts</td><td>EMP Pistol (9&quot;, <ins class='add'>A3, Rending, Assault)</ins> · +15 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Pistol (12&quot;, A3, AP(2), Assault) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plas-Blaster Pistol (6&quot;, A6, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sgt. Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Sword (A3, Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Trident (A3, AP(2)) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Nightmare</h3><p class='stats'>100 → 60 pts (-40) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Jagged Cleaver (A3, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Energy Sword (A6, AP(1), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Heavy Jagged Cleaver</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Jagged Cleavers (A9, Shred) · +65 pts</ins></td></tr>
+</table></div>
+<h3>Witch</h3><p class='stats'>65 → 70 pts (+5) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Dodge</ins><br><span class='muted'>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Melee Evasion</del><br><span class='muted'>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Barb Pistol (12&quot;, A3, Lacerate)</td><td>Barb Pistol (12&quot;, A3, <ins class='add'>Assault,</ins> Lacerate)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Barb Pistol and <del class='del'>CCW</del></td><td>Replace Barb Pistol and <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sgt. Barb Pistol (12&quot;, A3, Lacerate), <del class='del'>Energy Sword (A6, AP(1), Rending)</del> · <del class='del'>+25 pts</del></td><td>Sgt. Barb Pistol (12&quot;, A3, <ins class='add'>Assault,</ins> Lacerate), <ins class='add'>Sgt. Hand Weapon (A3)</ins> · <ins class='add'>free</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Blade-Whips (A12, Shred) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spiked Catchpole (A12, Thrust) · +35 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual <del class='del'>Crystal</del> Claws (A12, <del class='del'>Rending)</del> · +35 pts</td><td>Dual <ins class='add'>Witch</ins> Claws (A12, <ins class='add'>Surge)</ins> · +35 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Trident (A12, AP(2)) · +60 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Net &amp; Spear (A9, Thrust) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Sword-Flails (A3, AP(2), Blast(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Glaive (A12, AP(1)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Sgt. Barb Pistol</td><td>Replace Sgt. Barb Pistol</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>EMP Pistol (9&quot;, <del class='del'>A6, Rending)</del> · +15 pts</td><td>EMP Pistol (9&quot;, <ins class='add'>A3, Rending, Assault)</ins> · +15 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Pistol (12&quot;, A3, AP(2), Assault) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plas-Blaster Pistol (6&quot;, A6, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sgt. Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Sword (A3, Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Trident (A3, AP(2)) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Winged Warrior</h3><p class='stats'>95 → 85 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Ambush</del><br><span class='muted'>Only deploys D3 rounds afters its wave is deployed, and at the start of the round it&#x27;s placed at the centre of a random table quarter.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Barb Carbine</td><td>Replace Barb Carbine</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Scrapper</del> (12&quot;, A3, Blast(3), Reliable) · +15 pts</td><td><ins class='add'>Torrent Gun</ins> (12&quot;, A3, Blast(3), Reliable) · +15 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Rifle (24&quot;, A6, AP(2)) · +35 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Barb Cannon <del class='del'>(30&quot;,</del> A9, Lacerate) · +50 pts</td><td>Barb Cannon <ins class='add'>(36&quot;,</ins> A9, Lacerate) · +50 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>EMP Rifle (18&quot;, <del class='del'>A6,</del> Rending) · <del class='del'>+15</del> pts</td><td>EMP Rifle (18&quot;, <ins class='add'>A9,</ins> Rending) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Fusion <del class='del'>Gun</del> (18&quot;, A3, AP(4), Deadly(3)) · <del class='del'>+75</del> pts</td><td>Heavy Fusion <ins class='add'>Rifle</ins> (18&quot;, A3, AP(4), Deadly(3)) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Laser</del> Cannon (36&quot;, A3, AP(3), Deadly(3)) · <del class='del'>+125</del> pts</td><td><ins class='add'>Dark-Energy</ins> Cannon (36&quot;, A3, AP(3), Deadly(3)) · <ins class='add'>+115</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plas-Blaster (18&quot;, A6, AP(4)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sky Raider (Ambush) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Expert Raider (Piercing Frenzy) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Barb Carbine and <del class='del'>CCW</del></td><td>Replace Barb Carbine and <ins class='add'>Strike</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sgt. Barb Pistol (12&quot;, A3, Lacerate), Energy Sword <del class='del'>(A6, AP(1),</del> Rending) · <del class='del'>+10 pts</del></td><td>Sgt. Barb Pistol (12&quot;, A3, <ins class='add'>Assault,</ins> Lacerate), <ins class='add'>Sgt.</ins> Energy Sword <ins class='add'>(A3,</ins> Rending) · <ins class='add'>free</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Sgt. Barb Pistol</td><td>Replace Sgt. Barb Pistol</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>EMP Pistol (9&quot;, <del class='del'>A6, Rending)</del> · +15 pts</td><td>EMP Pistol (9&quot;, <ins class='add'>A3, Rending, Assault)</ins> · +15 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Pistol (12&quot;, A3, AP(2), Assault) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plas-Blaster Pistol (6&quot;, A6, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sgt. Energy Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Trident (A3, AP(2)) · +5 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with (2)</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Expert Raider (Piercing Frenzy) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Hoverboard Rider</h3><p class='stats'>115 → 95 pts (-20) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>115</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb-Pods (12&quot;, A3, Assault, Lacerate)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Trident (A3, AP(2))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Barb-Pods (18&quot;, A6, Lacerate)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Glaive (A6, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Glaive</del></td><td>Replace <ins class='add'>Dark Trident</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Charged Flail (A3, AP(1), Blast(3)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Haze-Launcher (12&quot;, A3, Blast(3), Assault) · +40 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword <del class='del'>(A6, AP(1),</del> Rending) · <del class='del'>+15</del> pts</td><td>Energy Sword <ins class='add'>(A9,</ins> Rending) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Grapple <del class='del'>Claw</del> (A3, <del class='del'>AP(2),</del> Deadly(3)) · <del class='del'>+20</del> pts</td><td>Grapple <ins class='add'>Hook</ins> (A3, <ins class='add'>AP(4),</ins> Deadly(3)) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Agony Whip (A3, Blast(3)) · +-10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Expert Raider (Piercing Frenzy) · <del class='del'>+15</del> pts</td><td>Expert Raider (Piercing Frenzy) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Twin Barb-Pod</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Barb-Pod (18&quot;, A3, Lacerate), Phantom-GL (18&quot;, A3, Blast(3)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>True Warrior</h3><p class='stats'>75 → 100 pts (+25) · Size 1 · Quality 3+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Torrent Gun (12&quot;, A3, Blast(3), Reliable)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Barb Rifle (24&quot;, A3, Lacerate)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Barb Rifle</del></td><td>Replace any <ins class='add'>Torrent Gun</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Barb <del class='del'>Cannon (30&quot;,</del> A9, Lacerate) · <del class='del'>+80</del> pts</td><td><ins class='add'>Burst</ins> Barb <ins class='add'>Rifle (24&quot;,</ins> A9, Lacerate) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Rifle (24&quot;, A6, AP(2)) · +50 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>EMP Rifle (18&quot;, <del class='del'>A6,</del> Rending) · <del class='del'>+30</del> pts</td><td>EMP Rifle (18&quot;, <ins class='add'>A9,</ins> Rending) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scrapper (12&quot;, A3, Blast(3), Reliable) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scythe Launcher (30&quot;, A3, AP(3), Unstoppable) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plas-Blaster (18&quot;, A6, AP(4)) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Laser Cannon (36&quot;, A3, AP(3), Deadly(3)) · +185 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Expert Raider (Piercing Frenzy) · <del class='del'>+10</del> pts</td><td>Expert Raider (Piercing Frenzy) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Barb Rifle and CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sgt. Barb Pistol (12&quot;, A3, Lacerate), Energy Sword (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Sgt. Barb Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>EMP Pistol (9&quot;, A6, Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plas-Blaster Pistol (6&quot;, A6, AP(4)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Crow Swarm</h3><p class='stats'>105 → 115 pts (+10) · Size 1 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Swarm Attacks</del> (A9, Rending)</td><td><ins class='add'>Sharp Beaks</ins> (A9, Rending)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Pathfinder Beast Handler (Vanguard) · <del class='del'>+10</del> pts</td><td>Pathfinder Beast Handler (Vanguard) · <ins class='add'>+15</ins> pts</td></tr>
+</table></div>
+<h3>True Witch</h3><p class='stats'>80 → 125 pts (+45) · Size 1 · Quality 3+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Dodge</ins><br><span class='muted'>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Melee Evasion</del><br><span class='muted'>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Witch Claws (A12, Surge)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Barb Pistol (12&quot;, A3, Lacerate)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Dual Witch Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Hand Weapon (A9) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spiked Catchpole (A12, Thrust) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Blade-Whips (A12, Shred) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Trident (A12, AP(2)) · +45 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Expert Raider (Piercing Frenzy) · <del class='del'>+10</del> pts</td><td>Expert Raider (Piercing Frenzy) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Barb Pistol and CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Sword-Flails (A3, AP(2), Blast(3)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Net &amp; Spear (A9, Thrust) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Crystal Claws (A12, Rending) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Glaive (A12, AP(1)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Barb Pistol and CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sgt. Barb Pistol (12&quot;, A3, Lacerate), Energy Sword (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Sgt. Barb Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>EMP Pistol (9&quot;, A6, Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plas-Blaster Pistol (6&quot;, A6, AP(4)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Shadow Warrior</h3><p class='stats'>160 → 125 pts (-35) · Size 1 · Quality 3+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Dark Blast <del class='del'>(18&quot;, A6, AP(1))</del></td><td>Dark Blast <ins class='add'>(9&quot;, A3, Assault, Unstoppable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Sword (A3, Unstoppable)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dark Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barbed Sword (A3, AP(1), Lacerate) · +5 pts</ins></td></tr>
+</table></div>
+<h3>Elite Raider</h3><p class='stats'>120 → 130 pts (+10) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Haze-Launcher (24&quot;, A3, Blast(3))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Elite Barb Pistol (12&quot;, A6, Lacerate)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Haze-Launcher and Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Hand Weapon (A9) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Blade-Whips (A12, Shred) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spiked Catchpole (A12, Thrust) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Witch Claws (A12, Surge) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Barb Rifle (24&quot;, A9, Lacerate), Hand Weapon (A3) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Trident (A12, AP(2)) · +40 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Elite</del> Barb Pistol</td><td>Replace Barb Pistol</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Torrent Pistol (6&quot;, A3, Ignores Cover, Reliable, Assault) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Elite</del> EMP Pistol (9&quot;, <del class='del'>A9, Rending)</del> · +15 pts</td><td>EMP Pistol (9&quot;, <ins class='add'>A3, Rending, Assault)</ins> · +15 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Pistol (12&quot;, A3, AP(2), Assault) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark-Energy Pistol (9&quot;, A3, AP(3), Assault) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Phantom-GL (18&quot;, A3, Blast(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Plas-Blaster Pistol (6&quot;, A9, AP(4)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Barb Rifle (24&quot;, A6, Lacerate) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Charged Flail (A3, AP(1), Blast(3)) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Jagged Cleavers (A9, Shred) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Saw-Glaive (A3, AP(4), Deadly(3)) · +75 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Witch Master <del class='del'>(Melee Evasion)</del> · <del class='del'>+20</del> pts</td><td>Witch Master <ins class='add'>(Dodge)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Expert Raider (Piercing Frenzy) · <del class='del'>+10</del> pts</td><td>Expert Raider (Piercing Frenzy) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wings <del class='del'>(Ambush, Flying)</del> · <del class='del'>+50</del> pts</td><td>Wings <ins class='add'>(Flying)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Raider Wings (Ambush, Flying) · +50 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hoverboard (Agile, Scout, Strider) · <del class='del'>+55</del> pts</td><td>Hoverboard (Agile, Scout, Strider) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetbike <del class='del'>(Twin Barb Rifle</del> (24&quot;, <del class='del'>A6,</del> Lacerate), Defense(1), Fast, Strider, Tough(9)) · <del class='del'>+255</del> pts</td><td><ins class='add'>Combat</ins> Jetbike <ins class='add'>(Barb Bike-Rifle</ins> (24&quot;, <ins class='add'>A9,</ins> Lacerate), Defense(1), Fast, Strider, Tough(9)) · <ins class='add'>+220</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Jetbike (Assault Barb Bike-Rifle (12&quot;, A9, Assault, Lacerate), Defense(1), Fast, Strider, Tough(9)) · +245 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dread Ruler <del class='del'>(Courage</del> Aura) · +5 pts</td><td>Dread Ruler <ins class='add'>(Bravery</ins> Aura) · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Agoniser (Furious Aura) · <del class='del'>+5</del> pts</td><td>Agoniser (Furious Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Tormentor (Piercing <del class='del'>Hunter</del> Aura) · <del class='del'>+20</del> pts</td><td>Tormentor (Piercing <ins class='add'>Marksman</ins> Aura) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Agony Whip (A3, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Sword (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shell Sword (A3, AP(2), Deadly(3)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Elite Barb Pistol and CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Sword-Flails (A3, AP(2), Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Net &amp; Spear (A9, Thrust) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Crystal Claws (A12, Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Glaive (A12, AP(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Gene-Tech Master</h3><p class='stats'>150 → 145 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>145</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Dual <del class='del'>CCWs</del> (A12)</td><td>Dual <ins class='add'>Hand Weapons</ins> (A12)</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Dual <del class='del'>CCW</del></td><td>Replace Dual <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Staff (A6, Spell Amplifier) · +-15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Hand Weapon (A9) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Executioner Gun (15&quot;, A3, AP(1), Reliable, Assault, Takedown), Strike (A3) · +50 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Acid Spewer (6&quot;, A3, Blast(3), Reliable, Assault, Bane), Strike (A3) · +75 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Syringe Pistol (6&quot;, A3, AP(4), Deadly(3), Assault), Strike (A3) · +120 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Syringe Pistol (12&quot;, A3, Deadly(3)), CCW (A6) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Charged Flail (A3, AP(1), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Acid Sword (A9, Bane) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jagged Scourge (A9, Shred) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slashing Arm-Claws (A9, Rending) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Arm-Spike (A9, AP(2)) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Poisoned Arm-Blade (A3, AP(4), Deadly(3)) · +50 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dread Ruler <del class='del'>(Courage</del> Aura) · +5 pts</td><td>Dread Ruler <ins class='add'>(Bravery</ins> Aura) · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Soul Carrier (Caster(2)) · <del class='del'>+30</del> pts</td><td>Soul Carrier (Caster(2)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Raid Leader <del class='del'>(Harassing Boost</del> Aura) · <del class='del'>+15</del> pts</td><td>Raid Leader <ins class='add'>(Enhanced Harassing</ins> Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Soul Carrier (Caster(3)) · <del class='del'>+45</del> pts</td><td>Master Soul Carrier (Caster(3)) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Agoniser (Furious Aura) · <del class='del'>+5</del> pts</td><td>Agoniser (Furious Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Syringe Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Barb Pistol (12&quot;, A6, Lacerate) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Acid Gun (12&quot;, A3, Blast(3), Reliable, Bane) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Arcane Rifle (30&quot;, A3, AP(1), Reliable) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Agony Whip (A3, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Venom Sword (A6, Bane) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Electro-Corroder (A6, AP(1), Bane) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Leech Claw (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Syringe Claw (A3, AP(2), Deadly(3)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scissor Claw (A6, AP(4)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Court Henchman</h3><p class='stats'>140 → 160 pts (+20) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace any Courtesan&#x27;s Sword</td><td>Replace any Courtesan&#x27;s Sword</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Naga Guns (9&quot;, A9, Assault, Surge), Hand Weapon (A3) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Medusa&#x27;s Gaze (6&quot;, A3, AP(4), Deadly(3), Assault), Strike (A3) · +170 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Naga Guns (18&quot;, A12, Lacerate), Barb Dagger (A3, Lacerate) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Medusa&#x27;s Gaze (12&quot;, A12, AP(3)), Barb Dagger (A3, Lacerate) · +110 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Elite True Raider</h3><p class='stats'>150 → 165 pts (+15) · Size 1 · Quality 3+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Haze-Launcher (24&quot;, A3, Blast(3))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Elite Barb Pistol (12&quot;, A6, Lacerate)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Witch Master <del class='del'>(Melee Evasion)</del> · <del class='del'>+20</del> pts</td><td>Witch Master <ins class='add'>(Dodge)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Expert Raider (Piercing Frenzy) · <del class='del'>+15</del> pts</td><td>Expert Raider (Piercing Frenzy) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wings <del class='del'>(Ambush, Flying)</del> · <del class='del'>+65</del> pts</td><td>Wings <ins class='add'>(Flying)</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Raider Wings (Ambush, Flying) · +65 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetbike <del class='del'>(Twin Barb Rifle</del> (24&quot;, <del class='del'>A6,</del> Lacerate), Defense(1), Fast, Strider, Tough(9)) · <del class='del'>+315</del> pts</td><td><ins class='add'>Combat</ins> Jetbike <ins class='add'>(Barb Bike-Rifle</ins> (24&quot;, <ins class='add'>A9,</ins> Lacerate), Defense(1), Fast, Strider, Tough(9)) · <ins class='add'>+280</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Jetbike (Assault Barb Bike-Rifle (12&quot;, A9, Assault, Lacerate), Defense(1), Fast, Strider, Tough(9)) · +310 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dread Ruler <del class='del'>(Courage</del> Aura) · +5 pts</td><td>Dread Ruler <ins class='add'>(Bravery</ins> Aura) · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Agoniser (Furious Aura) · <del class='del'>+5</del> pts</td><td>Agoniser (Furious Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Tormentor (Piercing <del class='del'>Hunter</del> Aura) · <del class='del'>+20</del> pts</td><td>Tormentor (Piercing <ins class='add'>Marksman</ins> Aura) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Haze-Launcher and Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Torrent Pistol (6&quot;, A3, Ignores Cover, Reliable, Assault), Hand Weapon (A9) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Witch Claws (A12, Surge) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spiked Catchpole (A12, Thrust) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Blade-Whips (A12, Shred) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Barb Rifle (24&quot;, A9, Lacerate), Hand Weapon (A3) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Trident (A12, AP(2)) · +55 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Elite Barb</del> Pistol</td><td>Replace <ins class='add'>Torrent</ins> Pistol</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Elite</del> EMP Pistol (9&quot;, <del class='del'>A9, Rending)</del> · <del class='del'>+15</del> pts</td><td>EMP Pistol (9&quot;, <ins class='add'>A3, Rending, Assault)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Pistol (12&quot;, A3, AP(2), Assault) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark-Energy Pistol (9&quot;, A3, AP(3), Assault) · +40 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Phantom-GL (18&quot;, A3, Blast(3)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Plas-Blaster Pistol (6&quot;, A9, AP(4)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Barb Rifle (24&quot;, A6, Lacerate) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Charged Flail (A3, AP(1), Blast(3)) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Jagged Cleavers (A9, Shred) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Saw-Glaive (A3, AP(4), Deadly(3)) · +105 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Agony Whip (A3, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Sword (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shell Sword (A3, AP(2), Deadly(3)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Elite Barb Pistol and CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Sword-Flails (A3, AP(2), Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Net &amp; Spear (A9, Thrust) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Crystal Claws (A12, Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Glaive (A12, AP(1)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Dark Lord</h3><p class='stats'>165 → 175 pts (+10) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>165</del> pts</td><td><ins class='add'>175</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Haze-Launcher (24&quot;, A3, Blast(3))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Elite Barb Pistol (12&quot;, A6, Lacerate)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Raid Leader <del class='del'>(Harassing Boost</del> Aura) · <del class='del'>+15</del> pts</td><td>Raid Leader <ins class='add'>(Enhanced Harassing</ins> Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Agoniser (Furious Aura) · <del class='del'>+5</del> pts</td><td>Agoniser (Furious Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Tormentor (Piercing <del class='del'>Hunter</del> Aura) · <del class='del'>+20</del> pts</td><td>Tormentor (Piercing <ins class='add'>Marksman</ins> Aura) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Haze-Launcher and Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Torrent Pistol (6&quot;, A3, Ignores Cover, Reliable, Assault), Hand Weapon (A9) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Barb Rifle (24&quot;, A9, Lacerate), Hand Weapon (A3) · +25 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Elite Barb</del> Pistol</td><td>Replace <ins class='add'>Torrent</ins> Pistol</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Elite</del> EMP Pistol (9&quot;, <del class='del'>A9, Rending)</del> · <del class='del'>+15</del> pts</td><td>EMP Pistol (9&quot;, <ins class='add'>A3, Rending, Assault)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Pistol (12&quot;, A3, AP(2), Assault) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark-Energy Pistol (9&quot;, A3, AP(3), Assault) · +40 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Phantom-GL (18&quot;, A3, Blast(3)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Plas-Blaster Pistol (6&quot;, A9, AP(4)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Barb Rifle (24&quot;, A6, Lacerate) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Charged Flail (A3, AP(1), Blast(3)) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Jagged Cleavers (A9, Shred) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Saw-Glaive (A3, AP(4), Deadly(3)) · +105 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Nightmare Master (Melee Slayer) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Witch Master <del class='del'>(Melee Evasion)</del> · <del class='del'>+20</del> pts</td><td>Witch Master <ins class='add'>(Dodge)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wings <del class='del'>(Ambush, Flying)</del> · <del class='del'>+65</del> pts</td><td>Wings <ins class='add'>(Flying)</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Raider Wings (Ambush, Flying) · +65 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetbike <del class='del'>(Twin Barb Rifle</del> (24&quot;, <del class='del'>A6,</del> Lacerate), Fast, Strider, Tough(9)) · <del class='del'>+300</del> pts</td><td><ins class='add'>Combat</ins> Jetbike <ins class='add'>(Barb Bike-Rifle</ins> (24&quot;, <ins class='add'>A9,</ins> Lacerate), Fast, Strider, Tough(9)) · <ins class='add'>+270</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Jetbike (Assault Barb Bike-Rifle (12&quot;, A9, Assault, Lacerate), Fast, Strider, Tough(9)) · +300 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Expert Raider (Piercing Frenzy) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Agony Whip (A3, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Sword (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shell Sword (A3, AP(2), Deadly(3)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Jetbike Rider</h3><p class='stats'>215 → 185 pts (-30) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>215</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Bike-Rifle (24&quot;, A6, Lacerate)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Twin</del> Barb Rifle (24&quot;, <del class='del'>A6,</del> Lacerate)</td><td>Barb Rifle (24&quot;, <ins class='add'>A3,</ins> Lacerate)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Barb Pistol (12&quot;, A3, Lacerate)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Barb Bike-Rifle</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Barb Bike-Rifle (12&quot;, A6, Assault, Lacerate) · +15 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Barb Rifles and Strike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Pistol (12&quot;, A3, Assault, Lacerate), Hand Weapon (A3) · +10 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Twin</del> Barb Rifle</td><td>Replace Barb Rifle</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Rifle (24&quot;, A6, AP(2)) · +55 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Fusion <del class='del'>Gun</del> (18&quot;, A3, AP(4), Deadly(3)) · <del class='del'>+60</del> pts</td><td>Heavy Fusion <ins class='add'>Rifle</ins> (18&quot;, A3, AP(4), Deadly(3)) · <ins class='add'>+100</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plas-Blaster (18&quot;, A6, AP(4)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Razor-Net (A3, AP(1), Blast(3)) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scythe-Hook (A3, AP(4), Deadly(3)) · +75 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Barb Rifle and Strike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sgt. Barb Pistol (12&quot;, A3, Assault, Lacerate), Sgt. Hand Weapon (A3) · +10 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sgt. Barb Pistol</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>EMP Pistol (9&quot;, A3, Rending, Assault) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Pistol (12&quot;, A3, AP(2), Assault) · +20 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sgt. Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Sword (A3, Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Trident (A3, AP(2)) · +15 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spiked Talon (A3, AP(2), Deadly(3)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Razor Caltrops (Impact(9)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Gene-Brute</h3><p class='stats'>265 → 210 pts (-55) · Size 1 · Quality 3+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>265</del> pts</td><td><ins class='add'>210</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Heavy Arm-Spikes (A9, AP(2))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Acid Gun (12&quot;, A3, Blast(3), Reliable, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Scissor Claw (A6, AP(4))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Heavy Arm-Spike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Acid Spewer (6&quot;, A3, Blast(3), Reliable, Assault, Bane), Heavy Arm-Spike (A3, AP(2)) · +45 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Acid Gun and Scissor Claw</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Scissor Claws (A12, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Clawed Beast</h3><p class='stats'>365 → 380 pts (+15) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>365</del> pts</td><td><ins class='add'>380</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Combat Beast Handler (Unpredictable Fighter) · <del class='del'>+55</del> pts</td><td>Combat Beast Handler (Unpredictable Fighter) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Pathfinder Beast Handler (Vanguard) · <del class='del'>+45</del> pts</td><td>Pathfinder Beast Handler (Vanguard) · <ins class='add'>+55</ins> pts</td></tr>
+</table></div>
+<h3>Light Skimmer</h3><p class='stats'>555 → 445 pts (-110) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>555</del> pts</td><td><ins class='add'>445</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(9)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Twin Barb Rifle (24&quot;, <del class='del'>A6,</del> Lacerate)</td><td>Twin Barb Rifle (24&quot;, <ins class='add'>A9,</ins> Lacerate)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A6, Thrust)</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td><del class='del'>Replace Twin Barb Rifle</del></td><td><ins class='add'>Upgrade with one</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Barb Cannon <del class='del'>(30&quot;,</del> A9, Lacerate) · <del class='del'>+50</del> pts</td><td>Barb Cannon <ins class='add'>(36&quot;,</ins> A9, Lacerate) · <ins class='add'>+125</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Destroyer</del> Cannon (36&quot;, A9, AP(2)) · <del class='del'>+150</del> pts</td><td><ins class='add'>Plas-Burster</ins> Cannon (36&quot;, A9, AP(2)) · <ins class='add'>+210</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Laser</del> Cannon (36&quot;, A3, AP(3), Deadly(3)) · <del class='del'>+150</del> pts</td><td><ins class='add'>Dark-Energy</ins> Cannon (36&quot;, A3, AP(3), Deadly(3)) · <ins class='add'>+210</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Disposable Haze-Launcher (24&quot;, A3, Blast(3), Limited) · +20 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dark-Sails (Agile) · <del class='del'>+30</del> pts</td><td>Dark-Sails (Agile) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shield of Darkness (Stealth) · <del class='del'>+45</del> pts</td><td>Shield of Darkness (Stealth) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Ram <del class='del'>(Impact(15))</del> · <del class='del'>+85</del> pts</td><td>Energy Ram <ins class='add'>(Heavy Impact(9))</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +85 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Phantom-GL (18&quot;, A3, Blast(3)) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Heavy Jetbike</h3><p class='stats'>570 → 455 pts (-115) · Size 1 · Quality 4+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>570</del> pts</td><td><ins class='add'>455</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(9)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Barb Cannon <del class='del'>(30&quot;,</del> A9, Lacerate)</td><td>Barb Cannon <ins class='add'>(36&quot;,</ins> A9, Lacerate)</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Twin Barb Rifle (24&quot;, <del class='del'>A6,</del> Lacerate)</td><td>Twin Barb Rifle (24&quot;, <ins class='add'>A9,</ins> Lacerate)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A6, Thrust)</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Twin Barb Rifle</td><td>Replace Twin Barb Rifle</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Barb Cannon <del class='del'>(30&quot;,</del> A9, Lacerate) · <del class='del'>+35</del> pts</td><td>Barb Cannon <ins class='add'>(36&quot;,</ins> A9, Lacerate) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Scythe</del> Launcher (30&quot;, A3, <del class='del'>AP(3),</del> Unstoppable) · <del class='del'>+10</del> pts</td><td><ins class='add'>Hook-Missile</ins> Launcher (30&quot;, A3, <ins class='add'>AP(2), Deadly(3),</ins> Unstoppable) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dark-Sails (Agile) · <del class='del'>+25</del> pts</td><td>Dark-Sails (Agile) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shield of Darkness (Stealth) · <del class='del'>+45</del> pts</td><td>Shield of Darkness (Stealth) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Ram <del class='del'>(Impact(15))</del> · <del class='del'>+85</del> pts</td><td>Energy Ram <ins class='add'>(Heavy Impact(9))</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +85 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Open Deck (Transport(18)) · <del class='del'>+60</del> pts</td><td>Open Deck (Transport(18)) · <ins class='add'>+155</ins> pts</td></tr>
+</table></div>
+<h3>Leech Engine</h3><p class='stats'>550 → 455 pts (-95) · Size 1 · Quality 4+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>550</del> pts</td><td><ins class='add'>455</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Leech-Shot Blaster (24&quot;, A6, Blast(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Soul Syphon (12&quot;, A18, AP(1), Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Leech-Shot Blaster</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barbed Stinger (12&quot;, A9, Assault, Lacerate), Toxin Claws (A9, Bane) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Leech-Slug Blaster (18&quot;, A6, AP(2), Deadly(3)) · +105 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with <del class='del'>any</del></td><td>Upgrade with <ins class='add'>one</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Widow Maker (Precision Fighting Mark) · <del class='del'>+15</del> pts</td><td>Widow Maker (Precision Fighting Mark) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Soul Conductor (Regeneration Buff) · <del class='del'>+15</del> pts</td><td>Soul Conductor (Regeneration Buff) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Soul Syphon</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Soul Vortex (18&quot;, A6, AP(1), Deadly(3), Bane) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Soul Blaster (24&quot;, A6, AP(1), Blast(3), Bane) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Engine of Suffering</h3><p class='stats'>545 → 490 pts (-55) · Size 1 · Quality 4+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>545</del> pts</td><td><ins class='add'>490</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>2x Acid <del class='del'>Spewers (A3, Blast(3),</del> Bane)</td><td>2x Acid <ins class='add'>Stingers (A9,</ins> Bane)</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Acid <del class='del'>Spewer</del></td><td>Replace <ins class='add'>2x</ins> Acid <ins class='add'>Stinger</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Stinger Cannon</del> (24&quot;, A6, Blast(3)) · <del class='del'>+80</del> pts</td><td><ins class='add'>Flechette Launcher</ins> (24&quot;, A6, Blast(3)) · <ins class='add'>+-10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid</del> Barb Cannon <del class='del'>(30&quot;,</del> A18, Lacerate) · <del class='del'>+145</del> pts</td><td><ins class='add'>Twin</ins> Barb Cannon <ins class='add'>(36&quot;,</ins> A18, Lacerate) · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Twin EMP Rifle (18&quot;, <del class='del'>A12,</del> Rending) · +80 pts</td><td>Twin EMP Rifle (18&quot;, <ins class='add'>A18,</ins> Rending) · +80 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Twin Heavy Fusion <del class='del'>Gun</del> (18&quot;, A6, AP(4), Deadly(3)) · <del class='del'>+195</del> pts</td><td>Twin Heavy Fusion <ins class='add'>Rifle</ins> (18&quot;, A6, AP(4), Deadly(3)) · <ins class='add'>+130</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Venom Injector (A9, Bane) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Claws (A9, AP(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shred Flail (A9, Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Acid Stinger</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shredder Scourge (A9, Rending) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Acid Spewer (6&quot;, A3, Blast(3), Reliable, Assault, Bane) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flechette Launcher (24&quot;, A6, Blast(3)), Heavy Claws (A9, AP(2)) · +125 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with <del class='del'>any</del></td><td>Upgrade with <ins class='add'>one</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Widow Maker (Precision Fighting Mark) · <del class='del'>+15</del> pts</td><td>Widow Maker (Precision Fighting Mark) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Pain Fueled (Regenerative Strength) · <del class='del'>+30</del> pts</td><td>Pain Fueled (Regenerative Strength) · <ins class='add'>+70</ins> pts</td></tr>
+</table></div>
+<h3>Razor Fighter</h3><p class='stats'>880 → 735 pts (-145) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>880</del> pts</td><td><ins class='add'>735</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Harassing</ins><br><span class='muted'>Once per round, this model may move by up to 3&quot; after shooting or being in melee.</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Dark-Energy Cannons (18&quot;, A3, AP(3), Deadly(3))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Toxin Missiles (36&quot;,</del> A3, Blast(3), Bane)</td><td><ins class='add'>Strafing Acid-Missiles (15&quot;,</ins> A3, Blast(3), Bane)</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Twin Barb Rifle <del class='del'>(24&quot;, A6,</del> Lacerate)</td><td><ins class='add'>Strafing</ins> Twin Barb Rifle <ins class='add'>(12&quot;, A9,</ins> Lacerate)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Laser Cannon (36&quot;, A3, AP(3), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Twin Barb Rifle</td><td>Replace <ins class='add'>Strafing</ins> Twin Barb Rifle</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Barb Cannon <del class='del'>(30&quot;,</del> A9, Lacerate) · +50 pts</td><td><ins class='add'>Aircraft</ins> Barb Cannon <ins class='add'>(15&quot;,</ins> A9, <ins class='add'>AP(1),</ins> Lacerate) · +50 pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Laser</del> Cannon</td><td>Replace <ins class='add'>Strafing Dark-Energy</ins> Cannon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Plas-Burster Cannons (18&quot;, A9, AP(2)) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Destroyer Cannon (36&quot;, A9, AP(2)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Toxin Missile</del></td><td>Replace <ins class='add'>Strafing Acid-Missile</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Haze-Missiles (15&quot;, A3, AP(1), Blast(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Hook-Missiles (15&quot;, A3, AP(2), Deadly(3), Unstoppable) · +50 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shatter Missiles (36&quot;, A3, Blast(6)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scythe Missiles (36&quot;, A6, AP(3), Unstoppable) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Raven Bomber</h3><p class='stats'>1005 → 950 pts (-55) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1005</del> pts</td><td><ins class='add'>950</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Harassing</ins><br><span class='muted'>Once per round, this model may move by up to 3&quot; after shooting or being in melee.</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Haze-Missiles (15&quot;, A3, AP(1), Blast(3))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Plas-Blaster (12&quot;, A6, AP(2))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Reaper Bombs (A3, AP(4), Deadly(3), Crossing Strike)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Shatter Missiles (36&quot;, A3, Blast(6))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Void Cannon (30&quot;, A3, AP(3), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Void Bombs (A3, AP(3), Deadly(3), Strafing)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Strafing Plas-Blaster</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Reaper Cannon (18&quot;, A3, AP(3), Deadly(3)) · +65 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Shatter Missile</del></td><td>Replace <ins class='add'>Strafing Haze-Missile</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Reaper-Missiles (15&quot;, A3, AP(2), Deadly(3)) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Void Missiles (36&quot;, A3, AP(3), Deadly(3)) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Heavy Skimmer</h3><p class='stats'>1105 → 1035 pts (-70) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1105</del> pts</td><td><ins class='add'>1035</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(9)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>3x</del> Barb Cannons <del class='del'>(30&quot;,</del> A9, Lacerate)</td><td><ins class='add'>2x</ins> Barb Cannons <ins class='add'>(36&quot;,</ins> A9, Lacerate)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Barb Rifle (24&quot;, A9, Lacerate)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A9, Thrust)</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace any Barb Cannon</td><td>Replace any Barb Cannon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Laser</del> Cannon (36&quot;, A3, AP(3), Deadly(3)) · <del class='del'>+100</del> pts</td><td><ins class='add'>Dark-Energy</ins> Cannon (36&quot;, A3, AP(3), Deadly(3)) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Destroyer</del> Cannon (36&quot;, A9, AP(2)) · <del class='del'>+100</del> pts</td><td><ins class='add'>Plas-Burster</ins> Cannon (36&quot;, A9, AP(2)) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Twin Barb Rifle</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barb Cannon (36&quot;, A9, Lacerate) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark-Energy Cannon (36&quot;, A3, AP(3), Deadly(3)) · +115 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plas-Burster Cannon (36&quot;, A9, AP(2)) · +115 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Disposable Haze-Launcher (24&quot;, A3, Blast(3), Limited) · +20 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dark-Sails (Agile) · <del class='del'>+45</del> pts</td><td>Dark-Sails (Agile) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shield of Darkness (Stealth) · <del class='del'>+70</del> pts</td><td>Shield of Darkness (Stealth) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Ram <del class='del'>(Impact(15))</del> · <del class='del'>+85</del> pts</td><td>Energy Ram <ins class='add'>(Heavy Impact(9))</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Phantom-GL (18&quot;, A3, Blast(3)) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Bravery Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get +1 to Morale Test rolls. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Crossing Strike</td><td>Once per activation, when this model moves through enemy units, pick one of them and attack it with this weapon as if it was shooting. This weapon may only be used in this way.</td></tr>
+<tr class='add'><td>➕</td><td>Dodge</td><td>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Harassing</td><td>If most models in this unit have Harassing, they may move by up to 6&quot; from Harassing (instead of only 3&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Harassing Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Enhanced Harassing. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Hit &amp; Run</td><td>If most models in this unit have Hit &amp; Run, they may move by up to 6&quot; from Hit &amp; Run (instead of only 3&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Heavy Impact</td><td>Counts as having Impact(X) with hits that have AP(1).</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Marksman</td><td>When shooting at enemies over 9&quot; away, this model&#x27;s weapons get AP(+1).</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Marksman Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Piercing Marksman. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Courage Aura</td><td>This model and up to 3 nearest friendly units picked before the start of the game get +1 to morale test rolls. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Harassing Boost</td><td>If most models in this unit have Harassing, they may move by up to 6&quot; from Harassing (instead of only 3&quot;).</td></tr>
+<tr class='del'><td>➖</td><td>Harassing Boost Aura</td><td>This model and up to 3 nearest friendly units picked before the start of the game get Harassing Boost. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Melee Evasion</td><td>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Hunter</td><td>When this model shoots at enemies over 9&quot; away, its weapons get AP(+1).</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Hunter Aura</td><td>This model and up to 3 nearest friendly units picked before the start of the game get Piercing Hunter. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Strafing</td><td>Once per activation, when this model moves through enemy units, pick one of them and attack it with this weapon as if it was shooting. This weapon may only be used in this way.</td></tr>
+<tr class='mod'><td>✏️</td><td>Ambush<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Only deploys D3 rounds afters its <del class='del'>wave is deployed,</del> and at the start of the round it&#x27;s placed <del class='del'>at the centre</del> of a random <del class='del'>table quarter.</del><br><span class='add'>3.6.0:</span> Only deploys D3 rounds afters its <ins class='add'>wave,</ins> and at the start of the round it&#x27;s placed <ins class='add'>within 6”</ins> of a random <ins class='add'>AI Goal.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Furious<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When charging, unmodified <del class='del'>results</del> of 6 to hit <del class='del'>in melee</del> deal 1 extra hit (only the original hit counts as a 6 for special rules).<br><span class='add'>3.6.0:</span> When charging, unmodified <ins class='add'>result</ins> of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Furious Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Furious. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Furious. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Harassing</td><td><span class='del'>3.5.1:</span> Once per round, <del class='del'>units where all models have</del> this <del class='del'>rule</del> may move by up to 3&quot; after shooting or being in melee.<br><span class='add'>3.6.0:</span> Once per round, this <ins class='add'>model</ins> may move by up to 3&quot; after shooting or being in melee.</td></tr>
+<tr class='mod'><td>✏️</td><td>Hit &amp; Run</td><td><span class='del'>3.5.1:</span> Once per round, <del class='del'>units where all models have</del> this <del class='del'>rule</del> may move by up to 3&quot; after shooting or being in melee.<br><span class='add'>3.6.0:</span> Once per round, this <ins class='add'>model</ins> may move by up to 3&quot; after shooting or being in melee.</td></tr>
+<tr class='mod'><td>✏️</td><td>Martial Prowess</td><td><span class='del'>3.5.1:</span> Once per game, if all models in this unit have this rule, it may be activated even if it had already activated this round (stops being <del class='del'>fatigued</del> when activated <del class='del'>for the second time).</del> Only up to one third of the units in the army with this rule at the beginning of the game (rounding up) may use it in a single round.<br><span class='add'>3.6.0:</span> Once per game, if all models in this unit have this rule, it may be activated even if it had already activated this round (stops being <ins class='add'>Fatigued</ins> when activated <ins class='add'>again).</ins> Only up to one third of the units in the army with this rule at the beginning of the game (rounding up) may use it in a single round.</td></tr>
+<tr class='mod'><td>✏️</td><td>Melee Shrouding</td><td><span class='del'>3.5.1:</span> <del class='del'>Enemies</del> get <del class='del'>-3&quot; movement</del> to a min. of 6&quot; when <del class='del'>trying to charge units where all models have this rule.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When a unit where most models have this rule is targeted by an enemy, as long as this unit hasn&#x27;t started an activation yet this round, attackers</ins> get <ins class='add'>-2&quot; range</ins> to a min. of 6&quot; when <ins class='add'>charging it.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Melee Shrouding Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Melee Shrouding. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Melee Shrouding. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Piercing Frenzy</td><td><span class='del'>3.5.1:</span> Place one <del class='del'>marker</del> on this unit when it fully destroys an enemy unit, up to a max. of two <del class='del'>markers.</del> For each <del class='del'>marker</del> all models with this rule in this unit get AP(+1) on their weapons when attacking until the end of the game.<br><span class='add'>3.6.0:</span> Place one <ins class='add'>token</ins> on this unit when it fully destroys an enemy unit, up to a max. of two <ins class='add'>tokens.</ins> For each <ins class='add'>token</ins> all models with this rule in this unit get AP(+1) on their weapons when attacking until the end of the game.</td></tr>
+<tr class='mod'><td>✏️</td><td>Precision Fighting Mark</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick up to <del class='del'>4</del> enemy units within 18&quot; in line of sight, which friendly units get +1 to hit rolls in melee against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> enemy units within 18&quot; in line of sight, which friendly units get +1 to hit rolls in melee against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration Buff</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick up to <del class='del'>4</del> nearest friendly units within 12&quot;, which gets Regeneration once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> nearest friendly units within 12&quot;, which gets Regeneration once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Regenerative Strength</td><td><span class='del'>3.5.1:</span> Place one <del class='del'>marker</del> on this model when it ignores a wound. <del class='del'>When</del> in melee, <del class='del'>pick</del> one <del class='del'>of its weapons to get +X attacks, where X is the number of markers on it.</del><br><span class='add'>3.6.0:</span> Place one <ins class='add'>token</ins> on this model when it ignores a wound. <ins class='add'>Once per round, when it’s this model’s turn to strike</ins> in melee, <ins class='add'>roll as many dice as tokens on it before attacking, unless this unit is Fatigued. For each 4+ the target takes</ins> one <ins class='add'>wound.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Vanguard</td><td><span class='del'>3.5.1:</span> After this model is deployed, it may be placed anywhere fully within <del class='del'>9”</del> of its <del class='del'>position.</del><br><span class='add'>3.6.0:</span> After this model is deployed, it may be placed anywhere fully within <ins class='add'>9&quot;</ins> of its <ins class='add'>position, over 9&quot; away from non-Vanguard enemy units.</ins></td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Art of Pain</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within 6&quot;, which <del class='del'>take</del> 1 hit with AP(2) and <del class='del'>Deadly(3) each.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within 6&quot;, which <ins class='add'>takes</ins> 1 hit with AP(2) and <ins class='add'>Deadly(3).</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Fade in the Dark</td><td><span class='del'>3.5.1:</span> (3) Pick up to <del class='del'>six</del> friendly units within <del class='del'>12&quot;,</del> which get Stealth once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (3) Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get Stealth once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Holistic Suffering</td><td><span class='del'>3.5.1:</span> (3) Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within <del class='del'>12&quot;,</del> which <del class='del'>take 3 hits each.</del><br><span class='add'>3.6.0:</span> (3) Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>takes 9 hits.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Psy-Adrenaline</td><td><span class='del'>3.5.1:</span> (1) Pick <del class='del'>up to two</del> friendly <del class='del'>units</del> within 12&quot;, which <del class='del'>get</del> Harassing <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick <ins class='add'>one</ins> friendly <ins class='add'>unit</ins> within 12&quot;, which <ins class='add'>gets Enhanced</ins> Harassing once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Raiding Drugs</td><td><span class='del'>3.5.1:</span> (2) Pick up to <del class='del'>four</del> enemy units within <del class='del'>18&quot;,</del> which friendly units get +1 to hit rolls in melee against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (2) Pick up to <ins class='add'>two</ins> enemy units within <ins class='add'>18&quot; in line of sight,</ins> which friendly units get +1 to hit rolls in melee against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Snake Bite</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>2</del> hits with <del class='del'>AP(1) and</del> Lacerate.<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which takes <ins class='add'>4</ins> hits with Lacerate.</td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

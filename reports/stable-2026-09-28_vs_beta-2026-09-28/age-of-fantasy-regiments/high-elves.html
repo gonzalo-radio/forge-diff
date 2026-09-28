@@ -1,0 +1,499 @@
+<title>High Elves 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>High Elves — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>age-of-fantasy-regiments. <code>stable 2026-09-28: High Elves</code> (versionString 3.5.3, edited 2026-05-20, modified 2026-07-14) → <code>beta 2026-09-28: High Elves</code> (versionString 3.5.1, edited 2026-09-11, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 1</li>
+<li>Removed units: 0</li>
+<li>Changed units: 21 (19 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 2, Size 0</li>
+<li>Special rules: +11 / -7 / ~11</li>
+<li>Spells: +0 / -0 / ~5</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>High Noble</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>60</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>45</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Warriors</td><td class='num'>10</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>100</td><td class='num'>110</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Weapon Masters</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>90</td><td class='num'>100</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Phoenix Warriors</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>105</td><td class='num'>90</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Lion Warriors</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>140</td><td class='num'>95</td><td class='num'><b class='add'>-45</b></td></tr>
+<tr><td>Coast Guard</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>105</td><td class='num'>90</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Archers</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>95</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Shadow Sisters</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>135</td><td class='num'>115</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td>Shadow Brothers</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>130</td><td class='num'>125</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Reaver Cavalry</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>115</td><td class='num'>95</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td>Silver Cavalry</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>105</td><td class='num'>95</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Dragon Cavalry</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>160</td><td class='num'>135</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td>Giant Eagles</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>185</td><td class='num'>160</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td>Ice Phoenix</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>215</td><td class='num'>205</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Fire Phoenix</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'>190</td><td class='num'>215</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Bull Giant → Bull-Avatar Giant</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>315</td><td class='num'>310</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Eagle Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'>140</td><td class='num'>130</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>War Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>120</td><td class='num'>130</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Lion Chariot</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>195</td><td class='num'>195</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>High Elf Artillery</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>125</td><td class='num'>125</td><td class='num'><b class=''>=</b></td></tr>
+</table></div>
+<h2>New units</h2><div class='scroll'><table>
+<tr class='add'><td><b>Deer-Avatar Hunter</b></td><td>1x Q3+ D4+ — 145 pts. Rules: Fear(1), Strider, Tough(6), Highborn. Weapons: Lunar Great Glaive (A6, Surge), Stomp (A2, AP(1))</td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>High Noble</h3><p class='stats'>55 → 60 pts (+5) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Hand Weapon (A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy</del> Hand <del class='del'>Weapon</del></td><td>Replace <ins class='add'>Dual</ins> Hand <ins class='add'>Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A3, AP(1), Parry(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Lion Axe (A3, AP(1), Bane) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Bow (24&quot;, A3), Strike (A1) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Magic Bolt (9&quot;, A1, Assault, Unstoppable), Lion Axe (A3, Bane) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Halberd (A3, AP(1), Rending) · <del class='del'>+5</del> pts</td><td><ins class='add'>Master</ins> Halberd (A3, AP(1), Rending) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Lance (A3, AP(1), Thrust) · +10 pts</td><td><ins class='add'>Master</ins> Lance (A3, AP(1), Thrust) · +10 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mage Staff (A2, Spell Amplifier) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Spear (A3, AP(1), <del class='del'>Counter)</del> · <del class='del'>+15</del> pts</td><td><ins class='add'>Master</ins> Spear (A3, AP(1), <ins class='add'>Counter, Brace(1))</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Great Weapon (A3, <del class='del'>AP(3))</del> · <del class='del'>+15</del> pts</td><td><ins class='add'>Master</ins> Great Weapon (A3, <ins class='add'>AP(4))</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Heavy Hand Weapons (A4, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Lion Axe</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lance (A3, Thrust) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3, Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A3, Rending) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear (A3, Counter, Brace(1)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A3, AP(2)) · +15 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Magic Bolt</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Bolt (9&quot;, A1, Assault, Bane) · +5 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Rapid Bow</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fire Blast (6&quot;, A1, Blast(3), Reliable, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Longbow (30&quot;, A3, Indirect) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ice Blast (9&quot;, A1, AP(2), Deadly(3), Assault) · +30 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Weapon Master (Furious) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Steed (Fast, Impact(1)) · +15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lion Warrior (Fearless, Resistance) · <del class='del'>+15</del> pts</td><td>Lion Warrior (Fearless, <ins class='add'>Spell</ins> Resistance) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dragon Steed (Armor(3), Fast, Fearless, Impact(1)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Griffon (Razor Claws (A8), Armor(3), Fast, Fear(1), Flying, Tough(6)) · +190 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ice Phoenix (Ice Claws (A6, AP(1)), Armor(3), Fear(1), Flying, Regeneration, Tough(6)) · +210 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fire Phoenix (Flame Claws (A6, Rending), Fear(1), Flying, Furious, Regeneration, Tough(6)) · +220 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Royal Dragon (Flame Breath (6&quot;, A1, Blast(3), Reliable, Assault), Rapid Claws (A8, Surge), Stomp (A4, AP(1)), Armor(3), Fear(2), Flying, Tough(12)) · +375 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master-Crafted Shortbow (18&quot;, A3, Crack) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Longbow (30&quot;, A2, AP(1)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master-Crafted Bow (24&quot;, A3, Crack) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shortbow (18&quot;, A3), Shadow Brother (Scout, Stealth) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Magic Shortbow (18&quot;, A3, Rending), Shadow Sister (Quick Shot) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Longbow (30&quot;, A3, Indirect) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Commander (Enhanced Highborn Aura) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Coast Warden (Shielded Aura) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Army Standard Bearer (Fear(2)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>War Prince (Shred in Melee Aura) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mage (Caster(2)) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>High Merchant (Relentless Aura) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Mage (Caster(3)) · +55 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dragon Steed (Armor(3), Fast, Fearless, Impact(1)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Griffon (Rending Claws (A6, Rending), Armor(3), Fast, Fear(1), Flying, Tough(6)) · +200 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fire Phoenix (Ember Storm (A1, AP(1), Blast(3), Strafing), Flame Claws (A4, Reliable, Rending), Armor(3), Fear(1), Flying, Regeneration, Tough(6)) · +220 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ice Phoenix (Ice Claws (A6, AP(1)), Armor(3), Fear(1), Flying, Precision Debuff, Regeneration, Tough(6)) · +245 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dragon (Heavy Claws (A6, AP(1)), Stomp (A4, AP(1)), Armor(3), Breath Attack, Fear(2), Flying, Tough(12)) · +340 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one (3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>High Merchant (Relentless Aura) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Coast Warden (Shielded Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Army Standard Bearer (Fear(2)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Commander (Highborn Boost Aura) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>War Prince (Shred in Melee Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mage (Caster(2)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Mage (Caster(3)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Champion</h3><p class='stats'>35 → 45 pts (+10) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A3, AP(1), Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Bow (24&quot;, A3), Strike (A1) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Halberd (A3, AP(1), Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Lance (A3, AP(1), Thrust) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Magic Bolt (9&quot;, A1, Assault, Unstoppable), Hand Weapon (A3, Parry(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Spear (A3, AP(1), Counter, Brace(1)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mage Staff (A2, Spell Amplifier) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A3, AP(4)) · +20 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A3, <del class='del'>Counter)</del> · +5 pts</td><td>Spear (A3, <ins class='add'>Counter, Brace(1))</ins> · +5 pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Hand Weapons (A4) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Magic Bolt</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Bolt (9&quot;, A1, Assault, Bane) · +5 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Rapid Bow</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Realm-Bow (24&quot;, A3, Fracture) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fire Blast (6&quot;, A1, Blast(3), Reliable, Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Realm-Shortbow (18&quot;, A4, Fracture) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Longbow (30&quot;, A3, Indirect) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ice Blast (9&quot;, A1, AP(2), Deadly(3), Assault) · +20 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Steed (Fast, Impact(1)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Magic Cloud (Fast, Flying) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Beast Mount (Bounding, Vanguard) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Silver Steed (Armor(4), Fast, Impact(1)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Beast (Armor(4), Fast, Fear(1), Impact(3), Tough(3)) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Giant Eagle (Eagle Claws (A3, Rending), Armor(4), Fast, Flying, Tough(3)) · +75 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master-Crafted Shortbow (18&quot;, A3, Crack) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Longbow (30&quot;, A2, AP(1)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master-Crafted Bow (24&quot;, A3, Crack) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Longbow (30&quot;, A3, Indirect) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Commander (Enhanced Highborn Aura) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mage Acolyte (Spell Conduit) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Coast Warden (Shielded Aura) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ambassador (Fearless Aura) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mage (Caster(2)) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>High Merchant (Relentless Aura) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Mage (Caster(3)) · +55 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Magic Cloud (Fast, Flying) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Silver Steed (Armor(4), Fast, Impact(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Beast (Armor(4), Fast, Fear(1), Impact(3), Tough(3)) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Giant Eagle (Claws (A1), Armor(4), Fast, Flying, Impact(2), Tough(3)) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one (3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mage Acolyte (Spell Conduit) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>High Merchant (Relentless Aura) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Coast Warden (Shielded Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ambassador (Fearless Aura) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Commander (Highborn Boost Aura) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mage (Caster(2)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Mage (Caster(3)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Warriors</h3><p class='stats'>100 → 110 pts (+10) · Size 10 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>10x Hand Weapon <del class='del'>(A1)</del></td><td>10x Hand Weapon <ins class='add'>(A1, Parry(1))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+15</del> pts</td><td>Musician · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A1, Rending) · <del class='del'>+25</del> pts</td><td>Halberd (A1, Rending) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A1, <del class='del'>Counter)</del> · <del class='del'>+30</del> pts</td><td>Spear (A1, <ins class='add'>Counter, Brace(1))</ins> · <ins class='add'>+20</ins> pts</td></tr>
+</table></div>
+<h3>Weapon Masters</h3><p class='stats'>90 → 100 pts (+10) · Size 5 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Furious</ins><br><span class='muted'>When charging, unmodified result of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Halberd (A1, Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Great Weapon (A1, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Halberds</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A1, AP(2)) · +10 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace one <del class='del'>Great Weapon</del></td><td>Replace one <ins class='add'>Halberd</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Hand Weapons <del class='del'>(A2)</del> · <del class='del'>+5</del> pts</td><td>Dual Hand Weapons <ins class='add'>(A4)</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Solar Great Sword (A1, AP(4), Deadly(3)) · +35 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spell Master (Caster(1)) · <del class='del'>+20</del> pts</td><td>Spell Master (Caster(1)) · <ins class='add'>+15</ins> pts</td></tr>
+</table></div>
+<h3>Phoenix Warriors</h3><p class='stats'>105 → 90 pts (-15) · Size 5 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Heavy</del> Halberd (A1, <del class='del'>AP(1),</del> Rending)</td><td>5x Halberd (A1, Rending)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Light-Beacon Conjurer (Piercing <del class='del'>Tag(1))</del> · <del class='del'>+25</del> pts</td><td>Light-Beacon Conjurer (Piercing <ins class='add'>Tag(2))</ins> · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Halberds</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear (A1, Counter, Brace(1)) · +10 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade one model with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fire Blast (6&quot;, A1, Blast(3), Reliable, Assault) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ice Blast (9&quot;, A1, AP(2), Deadly(3), Assault) · +55 pts</ins></td></tr>
+</table></div>
+<h3>Lion Warriors</h3><p class='stats'>140 → 95 pts (-45) · Size 5 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Spell Resistance</ins><br><span class='muted'>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Resistance</del><br><span class='muted'>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Lion Axe (A1, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Great Axe (A2, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Lion Axes</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A1, AP(2)) · +20 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Lion Axe</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lunar Great Glaive (A3, Surge) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lion Great Axe (A1, AP(2), Deadly(3), Bane) · +25 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Light-Beacon Conjurer (Piercing <del class='del'>Tag(1))</del> · <del class='del'>+25</del> pts</td><td>Light-Beacon Conjurer (Piercing <ins class='add'>Tag(2))</ins> · <ins class='add'>+55</ins> pts</td></tr>
+</table></div>
+<h3>Coast Guard</h3><p class='stats'>105 → 90 pts (-15) · Size 5 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Bow (24&quot;, A1)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Hand Weapon (A1, Parry(1))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Master-Crafted Shortbow (18&quot;, A1, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Spear (A1, Counter)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Bows</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Realm-Shortbow (18&quot;, A2, Fracture) · +45 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear (A1, Counter, Brace(1)) · +10 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Light-Beacon Conjurer (Piercing <del class='del'>Tag(1))</del> · <del class='del'>+25</del> pts</td><td>Light-Beacon Conjurer (Piercing <ins class='add'>Tag(2))</ins> · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace all Master-Crafted Shortbows</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bow (24&quot;, A1) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade all models with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Volley Fire (Indirect when Shooting) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Archers</h3><p class='stats'>90 → 95 pts (+5) · Size 5 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Realm-Bow (24&quot;, A1, Fracture)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Hand Weapon</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Longbow (30&quot;, A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Longbows</del></td><td>Replace all <ins class='add'>Realm-Bows</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Longbow (30&quot;, A1, Indirect) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master-Crafted Bow (24&quot;, A1, Crack) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with</td><td>Upgrade all models with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Volley</del> Fire <del class='del'>(Indirect</del> when Shooting) · <del class='del'>+15</del> pts</td><td>Fire <ins class='add'>Braziers (Bane</ins> when Shooting) · <ins class='add'>+10</ins> pts</td></tr>
+</table></div>
+<h3>Shadow Sisters</h3><p class='stats'>135 → 115 pts (-20) · Size 5 · Quality 3+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>135</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Magic Shortbow (18&quot;, A1, <del class='del'>Rending)</del></td><td>5x Magic Shortbow (18&quot;, A1, <ins class='add'>Unstoppable)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Hand Weapon</del> (A1)</td><td>5x <ins class='add'>Dagger</ins> (A1)</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Magic Shortbows</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hexed Shortbow (18&quot;, A1, Bane) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Enchanted Shortbow (18&quot;, A1, Rending) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Knives (12&quot;, A1, Assault) · +20 pts</ins></td></tr>
+</table></div>
+<h3>Shadow Brothers</h3><p class='stats'>130 → 125 pts (-5) · Size 5 · Quality 3+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>130</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Dual Daggers (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Shortbow (18&quot;, A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Hand Weapon (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Light-Beacon Conjurer (Piercing <del class='del'>Tag(1))</del> · <del class='del'>+25</del> pts</td><td>Light-Beacon Conjurer (Piercing <ins class='add'>Tag(2))</ins> · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Dual Daggers</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Knives (12&quot;, A1, Assault), Dagger (A1) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shortbow (18&quot;, A2), Dagger (A1) · +55 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Daggers</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A1, Parry(1)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear (A1, Counter, Brace(1)) · +20 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Shortbow</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Triple-Shortbow (18&quot;, A4) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Kill-Bow (18&quot;, A1, AP(2), Deadly(3)) · +25 pts</ins></td></tr>
+</table></div>
+<h3>Reaver Cavalry</h3><p class='stats'>115 → 95 pts (-20) · Size 5 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>115</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Bow (24&quot;, A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Master-Crafted Shortbow (18&quot;, A1, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Reaver Steed (Fast)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>5x Beast Mount (Bounding, Vanguard)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Beast Mounts</del></td><td>Replace all <ins class='add'>Bows</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Realm-Shortbow (18&quot;, A2, Fracture) · +45 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Reaver Steed (Fast, Impact(1)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Reaver Steeds</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Beast Mount (Bounding, Vanguard) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Steed (Fast, Impact(1)) · +30 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace all Master-Crafted Shortbows</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bow (24&quot;, A1) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Silver Cavalry</h3><p class='stats'>105 → 95 pts (-10) · Size 5 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Hand Weapon (A1, Parry(1))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Lance (A1, Thrust)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lance (A1, Thrust) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A1, Rending) · +5 pts</ins></td></tr>
+</table></div>
+<h3>Dragon Cavalry</h3><p class='stats'>160 → 135 pts (-25) · Size 5 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Heavy</del> Lance (A1, <del class='del'>AP(1),</del> Thrust)</td><td>5x Lance (A1, Thrust)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Lances</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A1, AP(2)) · +15 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Lance</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lunar Great Glaive (A3, Surge) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Solar Great Sword (A1, AP(4), Deadly(3)) · +30 pts</ins></td></tr>
+</table></div>
+<h3>Giant Eagles</h3><p class='stats'>185 → 160 pts (-25) · Size 3 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(2)</del><br><span class='muted'>Models in the two front rows roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Claws <del class='del'>(A2)</del></td><td>3x <ins class='add'>Razor</ins> Claws <ins class='add'>(A4)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Razor Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sharp Claws (A3, Rending) · +10 pts</ins></td></tr>
+</table></div>
+<h3>Ice Phoenix</h3><p class='stats'>215 → 205 pts (-10) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>215</del> pts</td><td><ins class='add'>205</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Frost Blizzard</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ice Blast (9&quot;, A1, AP(2), Deadly(3), Assault) · +30 pts</ins></td></tr>
+</table></div>
+<h3>Fire Phoenix</h3><p class='stats'>190 → 215 pts (+25) · Size 1 · Quality 3+ · Defense 3+ → 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>190</del> pts</td><td><ins class='add'>215</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>3+</del></td><td><ins class='add'>4+</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Furious</ins><br><span class='muted'>When charging, unmodified result of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Ember Storm (A1, AP(1), Blast(3), <del class='del'>Strafing)</del></td><td>Ember Storm (A1, AP(1), Blast(3), <ins class='add'>Crossing Strike)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Flame Claws <del class='del'>(A4, Reliable,</del> Rending)</td><td>Flame Claws <ins class='add'>(A6,</ins> Rending)</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Ember Storm</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fire Blast (6&quot;, A1, Blast(3), Reliable, Assault) · +5 pts</ins></td></tr>
+</table></div>
+<h3>Bull-Avatar Giant</h3><p class='stats'>315 → 310 pts (-5) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Bull</del> Giant</td><td><ins class='add'>Bull-Avatar</ins> Giant</td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>315</del> pts</td><td><ins class='add'>310</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Breath Attack</del><br><span class='muted'>Once per activation, before attacking, roll one die. On a 2+ one enemy unit within 6&quot; in line of sight takes 1 hit with Blast(3) and AP(1).</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Bull-Hammers (A3, AP(1), Blast(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Greathammer (A6, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Greathammer</del></td><td>Replace <ins class='add'>Dual Bull-Hammers</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Giant Bull-Hammer (A3, AP(4), Deadly(3)) · +60 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Hammers (A8, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shockwave (12&quot;, A1, Blast(3), Assault) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rock Storm (12&quot;, A2, AP(2), Assault) · +50 pts</ins></td></tr>
+</table></div>
+<h3>Eagle Chariot</h3><p class='stats'>140 → 130 pts (-10) · Size 1 · Quality 4+ · Defense 3+ → 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>3+</del></td><td><ins class='add'>4+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(4)</del><br><span class='muted'>Models in the two front rows roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Eagle Claws (A2, Rending)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Spear Crew <del class='del'>(A2,</del> Thrust)</td><td>Spear Crew <ins class='add'>(A3,</ins> Thrust)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Claws (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>Chariot Shock (Impact(4))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Spear Crew</td><td>Replace Spear Crew <ins class='add'>and Chariot Shock</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bow Crew (24&quot;, A6) · <del class='del'>+35</del> pts</td><td>Bow Crew (24&quot;, A6) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Light Bolt Thrower (18&quot;, A1, AP(4), Deadly(6)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Realm-Shortbow Crew (18&quot;, A8, Fracture) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master-Crafted Shortbow Crew (18&quot;, A6, Crack) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mini Bolt Thrower (24&quot;, A2, AP(2), Deadly(3)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with (2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Coastal Warding (Precision Shooting Mark) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>War Chariot</h3><p class='stats'>120 → 130 pts (+10) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(4)</del><br><span class='muted'>Models in the two front rows roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Hooves <del class='del'>(A2)</del></td><td>Hooves <ins class='add'>(A2, AP(1))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Spear Crew <del class='del'>(A2,</del> Thrust)</td><td>Spear Crew <ins class='add'>(A3,</ins> Thrust)</td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>Chariot Shock (Impact(4))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Spear Crew</td><td>Replace Spear Crew <ins class='add'>and Chariot Shock</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bow Crew (24&quot;, A6) · <del class='del'>+35</del> pts</td><td>Bow Crew (24&quot;, A6) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Realm-Shortbow Crew (18&quot;, A8, Fracture) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master-Crafted Shortbow Crew (18&quot;, A6, Crack) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Lion Chariot</h3><p class='stats'>195 pts · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Impact(2)</del></td><td><ins class='add'>Impact(4)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Spell Resistance</ins><br><span class='muted'>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Resistance</del><br><span class='muted'>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Lion Axe Crew (A3, Bane)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Heavy</del> Claws (A2, <del class='del'>AP(1))</del></td><td><ins class='add'>Lion</ins> Claws (A2, <ins class='add'>Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Axe Crew (A4, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Lion Axe Crew</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon Crew (A3, AP(2)) · +15 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with (2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Coastal Warding (Precision Shooting Mark) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>High Elf Artillery</h3><p class='stats'>125 pts · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Highborn</ins><br><span class='muted'>This model gets +6&quot; range when using Hold actions and shooting, and moves +2&quot; when using Charge actions.</span></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Cumbersome</ins><br><span class='muted'>May only use Hold or Advance actions, but can’t shoot when moving.</span></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Entrenched</ins><br><span class='muted'>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Repeater Realm-Bolt Thrower (36&quot;, A6, Ignores Cover, Fracture)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Light Bolt Thrower (30&quot;, A1, AP(3), Deadly(6))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Light Bolt</del> Thrower</td><td>Replace <ins class='add'>Repeater Realm-Bolt</ins> Thrower</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Repeater Bolt Thrower <del class='del'>(30&quot;,</del> A6, AP(1)) · <del class='del'>+5</del> pts</td><td>Repeater Bolt Thrower <ins class='add'>(36&quot;,</ins> A6, AP(1)) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Bolt Thrower (36&quot;, A1, AP(4), Deadly(6)) · +20 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Coastal Warding (Precision Shooting Mark) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Crossing Strike</td><td>Once per activation, when this model moves through enemy units, pick one of them and attack it with this weapon as if it was shooting. This weapon may only be used in this way.</td></tr>
+<tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Extra Reach</td><td>If this model has Extra Reach, it gets +12&quot; range when using Hold actions and shooting, and moves +4&quot; when using Charge actions from Extra Reach (instead of only +6&quot; and +2&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Highborn</td><td>If this model has Highborn, it gets +12&quot; range when using Hold actions and shooting, and moves +4&quot; when using Charge actions from Highborn (instead of only +6&quot; and +2&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Highborn Aura</td><td>This model and its unit get Enhanced Highborn.</td></tr>
+<tr class='add'><td>➕</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
+<tr class='add'><td>➕</td><td>Extra Reach</td><td>This model gets +6&quot; range when using Hold actions and shooting, and moves +2&quot; when using Charge actions.</td></tr>
+<tr class='add'><td>➕</td><td>Fracture</td><td>For each unmodified result of 6 to hit, those hits get AP(+2).</td></tr>
+<tr class='add'><td>➕</td><td>Hit &amp; Run</td><td>Once per round, this model may move by up to 3&quot; after shooting or being in melee.</td></tr>
+<tr class='add'><td>➕</td><td>Slayer</td><td>When shooting enemies over 9&quot; away, or when charging, this model&#x27;s weapons get AP(+2) if most models in the target have Tough(3) or higher.</td></tr>
+<tr class='add'><td>➕</td><td>Spell Resistance</td><td>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='del'><td>➖</td><td>Breath Attack</td><td>Once per activation, before attacking, roll one die. On a 2+ one enemy unit within 6&quot; in line of sight takes 1 hit with Blast(3) and AP(1).</td></tr>
+<tr class='del'><td>➖</td><td>Crack</td><td>On unmodified results of 6 to hit, those hits get AP(+2).</td></tr>
+<tr class='del'><td>➖</td><td>Highborn Boost</td><td>If this model has Highborn, it moves +4&quot; on Advance and +4&quot; on Rush/Charge from Highborn (instead of only +2&quot; and +2&quot;).</td></tr>
+<tr class='del'><td>➖</td><td>Highborn Boost Aura</td><td>This model and its unit get Highborn Boost.</td></tr>
+<tr class='del'><td>➖</td><td>Quick</td><td>Moves +2&quot; when using Advance, and +2” when using Rush/Charge.</td></tr>
+<tr class='del'><td>➖</td><td>Resistance</td><td>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='del'><td>➖</td><td>Strafing</td><td>Once per activation, when this model moves through enemy units, pick one of them and attack it with this weapon as if it was shooting. This weapon may only be used in this way.</td></tr>
+<tr class='mod'><td>✏️</td><td>Bounding</td><td><span class='del'>3.5.1:</span> When this unit is activated, you may <del class='del'>place</del> all models with this rule in it <del class='del'>anywhere fully within D3+1&quot; of their position.</del><br><span class='add'>3.6.0:</span> When this unit is activated, you may <ins class='add'>move</ins> all models with this rule in it <ins class='add'>by up to D3+1&quot;.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Caster<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Gets X spell tokens at the start of each round, but can’t <del class='del'>hold</del> more than 6 <del class='del'>tokens</del> at once. <del class='del'>At any point</del> before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). <del class='del'>Roll</del> one die, on 4+ resolve the <del class='del'>effect on a target in line of sight in any direction.</del> Models within 18” <del class='del'>in line of sight</del> of the <del class='del'>caster’s unit</del> may spend any number of spell tokens at the same time before <del class='del'>rolling,</del> to give the <del class='del'>caster</del> +1/-1 to the roll per token.<br><span class='add'>3.6.0:</span> Gets X spell tokens at the start of each round, but can’t <ins class='add'>have</ins> more than 6 at once. <ins class='add'>Once per activation,</ins> before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). <ins class='add'>Pick a target and roll</ins> one die, <ins class='add'>and</ins> on 4+ resolve the <ins class='add'>spell’s effect.</ins> Models within 18” of the <ins class='add'>Caster</ins> may spend any number of spell tokens at the same time before <ins class='add'>rolling</ins> to give the <ins class='add'>Caster</ins> +1/-1 to the roll per token.</td></tr>
+<tr class='mod'><td>✏️</td><td>Fearless<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule fails a <del class='del'>morale test,</del> roll one die. On a 4+ it counts as passed instead.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule fails a <ins class='add'>Morale Test,</ins> roll one die. On a 4+ it counts as passed instead.</td></tr>
+<tr class='mod'><td>✏️</td><td>Highborn</td><td><span class='del'>3.5.1:</span> <del class='del'>Moves</del> +2&quot; when using <del class='del'>Advance, and +2” when using Rush/Charge.</del><br><span class='add'>3.6.0:</span> <ins class='add'>This model gets +6&quot; range when using Hold actions and shooting, and moves</ins> +2&quot; when using <ins class='add'>Charge actions.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Piercing Tag</td><td><span class='del'>3.5.1:</span> Once per game, during this model&#x27;s activation, <del class='del'>pick</del> one enemy unit within 24&quot; and in line of <del class='del'>sight</del> of <del class='del'>it, and place X markers on it.</del> When attacking, friendly units may remove <del class='del'>markers</del> from their target before rolling to block to get <del class='del'>+AP(Y)</del> on their <del class='del'>weapons, where Y is the number of removed markers.</del><br><span class='add'>3.6.0:</span> Once per game, during this model&#x27;s activation, <ins class='add'>place X tokens on</ins> one enemy unit within 24&quot; and in line of <ins class='add'>sight, or one token on X enemy units within 24&quot; and in line</ins> of <ins class='add'>sight.</ins> When attacking, friendly units may remove <ins class='add'>one token</ins> from their target before rolling to block to get <ins class='add'>+AP(+1)</ins> on their <ins class='add'>weapons.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Quick Shot</td><td><span class='del'>3.5.1:</span> If <del class='del'>all</del> models in this unit have this rule, they may use Rush actions to move sideways or backward (by up to half their move), and may shoot after using Rush actions.<br><span class='add'>3.6.0:</span> If <ins class='add'>most</ins> models in this unit have this rule, they may use Rush actions to move sideways or backward (by up to half their move), and may shoot after using Rush actions.</td></tr>
+<tr class='mod'><td>✏️</td><td>Relentless<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When this model shoots at enemies over <del class='del'>9&quot;</del> away, unmodified <del class='del'>results</del> of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).<br><span class='add'>3.6.0:</span> When this model shoots at enemies over <ins class='add'>9”</ins> away, unmodified <ins class='add'>result</ins> of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Sergeant<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>When this</del> model <del class='del'>attacks, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</del><br><span class='add'>3.6.0:</span> <ins class='add'>This</ins> model <ins class='add'>gets AP(+1) when attacking.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Shielded</td><td><span class='del'>3.5.1:</span> Units where <del class='del'>all</del> models have this rule get +1 to <del class='del'>defense</del> rolls against hits that are not from spells.<br><span class='add'>3.6.0:</span> Units where <ins class='add'>most</ins> models have this rule get +1 to <ins class='add'>Defense</ins> rolls against hits that are not from spells.</td></tr>
+<tr class='mod'><td>✏️</td><td>Shred<br><span class='muted'>becomes a core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>On</del> unmodified <del class='del'>results</del> of 1 to block hits, this weapon deals 1 extra wound.<br><span class='add'>3.6.0:</span> <ins class='add'>For each</ins> unmodified <ins class='add'>result</ins> of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
+<tr class='mod'><td>✏️</td><td>Vanguard</td><td><span class='del'>3.5.1:</span> After this model is deployed, it may be placed anywhere fully within <del class='del'>9”</del> of its <del class='del'>position.</del><br><span class='add'>3.6.0:</span> After this model is deployed, it may be placed anywhere fully within <ins class='add'>9&quot;</ins> of its <ins class='add'>position, over 9&quot; away from non-Vanguard enemy units.</ins></td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Arcane Blast</td><td><span class='del'>3.5.1:</span> (1) Pick one enemy unit within <del class='del'>18&quot;,</del> which takes 1 hit with Blast(3).<br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within <ins class='add'>18&quot; in line of sight in any direction,</ins> which takes 1 hit with Blast(3).</td></tr>
+<tr class='mod'><td>✏️</td><td>Eagle-Eyed Focus</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick <del class='del'>one</del> enemy <del class='del'>unit</del> within <del class='del'>18&quot;,</del> which friendly units get +1 to hit rolls when shooting against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick <ins class='add'>up to two</ins> enemy <ins class='add'>units</ins> within <ins class='add'>18&quot; in line of sight in any direction,</ins> which friendly units get +1 to hit rolls when shooting against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Magic Arrows</td><td><span class='del'>3.5.1:</span> (3) Pick one enemy unit within <del class='del'>12&quot;,</del> which takes 6 hits with <del class='del'>AP(1) and Crack.</del> Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.<br><span class='add'>3.6.0:</span> (3) Pick one enemy unit within <ins class='add'>24&quot; in line of sight in any direction,</ins> which takes 6 hits with <ins class='add'>Fracture.</ins> Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.</td></tr>
+<tr class='mod'><td>✏️</td><td>Magical Surge</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>two</del> friendly units within <del class='del'>12&quot;,</del> which get Bane in melee once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get Bane in melee once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Path to Glory</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to three</del> friendly <del class='del'>units</del> within 12&quot;, which <del class='del'>get</del> Highborn <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> friendly <ins class='add'>unit</ins> within 12&quot;, which <ins class='add'>gets Enhanced</ins> Highborn once (next time the effect would apply).</td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

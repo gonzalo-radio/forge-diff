@@ -1,0 +1,430 @@
+<title>Robot Legions 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Robot Legions — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>grimdark-future-firefight. <code>stable 2026-09-28: Robot Legions</code> (versionString 3.5.3, edited 2026-04-29, modified 2026-07-14) → <code>beta 2026-09-28: Robot Legions</code> (versionString 3.5.1, edited 2026-09-08, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 1</li>
+<li>Removed units: 0</li>
+<li>Changed units: 17 (17 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 0, Size 0</li>
+<li>Special rules: +8 / -7 / ~17</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Tri-Scorpion Lord</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>205</td><td class='num'>465</td><td class='num'><b class='del'>+260</b></td></tr>
+<tr><td>Annihilator Lord</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>120</td><td class='num'>350</td><td class='num'><b class='del'>+230</b></td></tr>
+<tr><td>Robot Lord</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>45</td><td class='num'>160</td><td class='num'><b class='del'>+115</b></td></tr>
+<tr><td>Oath-U7X1</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>160</td><td class='num'>465</td><td class='num'><b class='del'>+305</b></td></tr>
+<tr><td>Xyros-Z320</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>70</td><td class='num'>275</td><td class='num'><b class='del'>+205</b></td></tr>
+<tr><td>Echo-3G01</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>80</td><td class='num'>220</td><td class='num'><b class='del'>+140</b></td></tr>
+<tr><td>Warrior</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>20</td><td class='num'>45</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Guardian</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>25</td><td class='num'>50</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Sniper</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>30</td><td class='num'>50</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Flesh-Eater</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>25</td><td class='num'>60</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td>Eternal</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>30</td><td class='num'>75</td><td class='num'><b class='del'>+45</b></td></tr>
+<tr><td>Bot Swarm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>35</td><td class='num'>115</td><td class='num'><b class='del'>+80</b></td></tr>
+<tr><td>Robot Snake</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>150</td><td class='num'><b class='del'>+90</b></td></tr>
+<tr><td>Hover Bike</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>70</td><td class='num'>155</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td>Destroyer Snake</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>160</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td>Annihilator</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>80</td><td class='num'>190</td><td class='num'><b class='del'>+110</b></td></tr>
+<tr><td>Tri-Scorpion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>85</td><td class='num'>195</td><td class='num'><b class='del'>+110</b></td></tr>
+</table></div>
+<h2>New units</h2><div class='scroll'><table>
+<tr class='add'><td><b>Forge Spiderling</b></td><td>1x Q4+ D4+ — 155 pts. Rules: Self-Repair, Strider, Tough(9). Weapons: Burst Ion Rifle (18&quot;, A6, Shred), Spider Fangs (A2, Bane)</td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Tri-Scorpion Lord</h3><p class='stats'>205 → 465 pts (+260) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>205</del> pts</td><td><ins class='add'>465</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(6)</del></td><td><ins class='add'>Tough(18)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Relentless</del><br><span class='muted'>When this model shoots at enemies over 9&quot; away, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Heavy Ion Blades (A16, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Annihilation Gun (18&quot;, A2, AP(1), Blast(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Harvest Blade (A2, AP(2), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Deadly Stinger <del class='del'>(Ravage(4))</del></td><td>Deadly Stinger <ins class='add'>(Ravage(12))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Psychomancer (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Psychomancer (Stealth Aura) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Overseer (No Retreat Aura) · <del class='del'>+15</del> pts</td><td>Overseer (No Retreat Aura) · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Re-Animator (Reanimation Aura) · <del class='del'>+15</del> pts</td><td>Re-Animator (Reanimation Aura) · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Controller (Piercing <del class='del'>Assault</del> Aura) · <del class='del'>+15</del> pts</td><td>Controller (Piercing <ins class='add'>Charge</ins> Aura) · <ins class='add'>+125</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Chronomancer (Ambush Aura) · <del class='del'>+15</del> pts</td><td>Chronomancer (Ambush Aura) · <ins class='add'>+140</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Heavy Ion Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Radium Pulse Gun (15&quot;, A2, AP(1), Blast(3), Assault), Dual Ion Blades (A12, Shred) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fusion Pulse Gun (15&quot;, A1, AP(2), Deadly(6), Assault), Dual Ion Blades (A12, Shred) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Radium Pulse Gun (15&quot;, A2, AP(1), Blast(3), Assault), Heavy Ion Scythe (A2, AP(2), Deadly(6), Shred) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fusion Pulse Gun (15&quot;, A1, AP(2), Deadly(6), Assault), Heavy Ion Scythe (A2, AP(2), Deadly(6), Shred) · +75 pts</ins></td></tr>
+</table></div>
+<h3>Annihilator Lord</h3><p class='stats'>120 → 350 pts (+230) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>350</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(6)</del></td><td><ins class='add'>Tough(18)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Technomancer Staff (A8, Spell Amplifier)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Lord Gauss Pistol (12&quot;, A2, Destructive)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x CCWs (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Technomancer Staff</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Wrist-Spark (6&quot;, A2, Blast(3), Reliable, Assault), Hand Weapon (A12) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Atomizer Swords (A16, Rending) · +95 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Power Staff (9&quot;, A16, Assault, Bane) · +175 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Photon Cannon (30&quot;, A12, AP(1), Shatter), Hand Weapon (A4) · +195 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Photon Cannon (36&quot;, A12, AP(1), Ignores Cover, Shatter), Hand Weapon (A4) · +240 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Burst Wrist-Spark</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Wrist-Plasma (12&quot;, A4, AP(2), Assault) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Photon Pistol (9&quot;, A6, AP(1), Assault, Shatter) · +65 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any CCW</del></td><td>Replace <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Uranium Dagger (A4, AP(1), Blast(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Atomizer Sword (A12, Rending) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Doom Scythe (A2, AP(4), Deadly(6)) · +50 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Legion Glaive (A12, AP(2)) · +70 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Void Sword (A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Doom Scythe (A1, AP(2), Deadly(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hyper Sword (A3, AP(1), Rending) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Phase Glaive (A3, AP(4)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Phase Core (Ambush) · <del class='del'>+20</del> pts</td><td>Phase Core (Ambush) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Technomancer (Caster(2)) · <del class='del'>+30</del> pts</td><td>Technomancer (Caster(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Warden (Relentless Aura) · <del class='del'>+5</del> pts</td><td>Warden (Relentless Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Psychomancer (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Psychomancer (Stealth Aura) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Controller (Piercing <del class='del'>Assault</del> Aura) · <del class='del'>+15</del> pts</td><td>Controller (Piercing <ins class='add'>Charge</ins> Aura) · <ins class='add'>+90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Overseer (No Retreat Aura) · <del class='del'>+15</del> pts</td><td>Overseer (No Retreat Aura) · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Re-Animator (Reanimation Aura) · <del class='del'>+15</del> pts</td><td>Re-Animator (Reanimation Aura) · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Lord Gauss Pistol and 2x CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Hyper Swords (A4, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Staff-Shots (12&quot;, A3, AP(1)), Hyper Sword (A3, AP(1), Rending), Combat Staff (A3, AP(1)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Lord Gauss Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Shield (Shielded) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Wrist-Flamer (12&quot;, A1, Blast(3), Reliable) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Wrist-Plasma (24&quot;, A1, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Gauss Cannon (30&quot;, A6, Destructive) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Robot Lord</h3><p class='stats'>45 → 160 pts (+115) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Wrist-Spark (6&quot;, A2, Ignores Cover, Reliable, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A6)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Combat Shield (Shielded)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon and Wrist-Spark</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Technomancer Staff (A4, Spell Amplifier) · +-20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Ion Rifle (18&quot;, A6, Shred), Hand Weapon (A2) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Photon Rifle (24&quot;, A6, Shatter), Hand Weapon (A2) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Photon Gun (18&quot;, A6, AP(1), Shatter), Hand Weapon (A2) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Power Staff (9&quot;, A8, Assault, Bane) · +60 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Combat Shield</del></td><td>Replace <ins class='add'>Wrist-Spark</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Photon Pistol (9&quot;, A2, AP(1), Assault, Shatter) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Shield (Armor(2)) · +15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wrist-Plasma <del class='del'>(24&quot;, A1, AP(4))</del> · +20 pts</td><td>Wrist-Plasma <ins class='add'>(12&quot;, A2, AP(2), Assault)</ins> · +20 pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Lord Gauss Pistol (12&quot;, A2, Destructive) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Wrist-Flamer (12&quot;, A1, Blast(3), Reliable) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Lord Reaper Rifle (18&quot;, A2, AP(1), Shred) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Lord Gauss Rifle (24&quot;, A2, Destructive) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gauss Blaster (18&quot;, A4, Destructive) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Uranium Dagger (A2, AP(1), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Atomizer Sword (A6, Rending) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Doom Scythe (A1, AP(4), Deadly(6)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Legion Glaive (A6, AP(2)) · +35 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Pet Technoaide (Repel Ambushers) · <del class='del'>+10</del> pts</td><td>Pet Technoaide (Repel Ambushers) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetpack <del class='del'>(Ambush, Flying,</del> Swift) · <del class='del'>+25</del> pts</td><td>Jetpack <ins class='add'>(Flying,</ins> Swift) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Teleport Jetpack (Ambush, Flying, Swift) · +85 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Thruster Bike (Radium Cannon (24&quot;, A2, Blast(3)), Fast, Strider, Swift, Tough(9)) · +280 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Skimmer Bike (Radium Cannon (24&quot;, A2, Blast(3)), Scout, Strider, Swift, Tough(9)) · +315 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Radium Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Transonic Carbine (18&quot;, A6, Surge) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Photon Gun (18&quot;, A6, AP(1), Shatter) · +45 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Technomancer (Caster(2)) · <del class='del'>+30</del> pts</td><td>Technomancer (Caster(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Warden (Relentless Aura) · <del class='del'>+5</del> pts</td><td>Warden (Relentless Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Psychomancer (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Psychomancer (Stealth Aura) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Overseer (No Retreat Aura) · <del class='del'>+15</del> pts</td><td>Overseer (No Retreat Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Re-Animator (Reanimation Aura) · <del class='del'>+15</del> pts</td><td>Re-Animator (Reanimation Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Chronomancer (Ambush Aura) · <del class='del'>+15</del> pts</td><td>Chronomancer (Ambush Aura) · <ins class='add'>+100</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Combat Shield and CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Staff-Shots (12&quot;, A3, AP(1)), Combat Staff (A3, AP(1)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Void Sword (A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Doom Scythe (A1, AP(2), Deadly(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hyper Sword (A3, AP(1), Rending) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Phase Glaive (A3, AP(4)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Oath-U7X1</h3><p class='stats'>160 → 465 pts (+305) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>465</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(6)</del></td><td><ins class='add'>Tough(18)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Friendly units within 12” may take morale tests using the hero’s Quality, as long as the hero isn’t Shaken. </span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Enforcement Blades <del class='del'>(A8, AP(1),</del> Surge)</td><td>Enforcement Blades <ins class='add'>(A16,</ins> Surge)</td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Mission Critical (Protection <del class='del'>Feat Aura)</del></td><td>Mission Critical (Protection <ins class='add'>Feat)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Mission Critical</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mission Critical - Leader (Protection Feat Aura) · +45 pts</ins></td></tr>
+</table></div>
+<h3>Xyros-Z320</h3><p class='stats'>70 → 275 pts (+205) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>275</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Friendly units within 12” may take morale tests using the hero’s Quality, as long as the hero isn’t Shaken. </span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Experimental <del class='del'>Shooting</del> Arms (9&quot;, <del class='del'>A2,</del> AP(1), <del class='del'>Destructive)</del></td><td>Experimental Arms (9&quot;, <ins class='add'>A8,</ins> AP(1), <ins class='add'>Assault, Shatter)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Experimental Melee Arms (A2, AP(1), Destructive)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Optimized Optics (Unstoppable when <del class='del'>Shooting Aura)</del></td><td>Optimized Optics (Unstoppable when <ins class='add'>Shooting)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Optimized Optic</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Optimized Optics - Leader (Unstoppable when Shooting Aura) · +40 pts</ins></td></tr>
+</table></div>
+<h3>Echo-3G01</h3><p class='stats'>80 → 220 pts (+140) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>220</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Caster(1)</del><br><span class='muted'>Gets X spell tokens at the start of each round, but can’t hold more than 6 tokens at once. At any point before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). Roll one die, on 4+ resolve the effect on a target in line of sight. Models within 18” in line of sight of the caster’s unit may spend any number of spell tokens at the same time before rolling, to give the caster +1/-1 to the roll per token.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Friendly units within 12” may take morale tests using the hero’s Quality, as long as the hero isn’t Shaken. </span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Panoptic Staff <del class='del'>(A3, Rending)</del></td><td>Panoptic Staff <ins class='add'>(9&quot;, A6, Rending, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Paradox Shielding Device (Stealth Aura)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Paradox Shielding Device (Stealth Buff) · +10 pts</ins></td></tr>
+</table></div>
+<h3>Warrior</h3><p class='stats'>20 → 45 pts (+25) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Reaper</del> Rifle (18&quot;, <del class='del'>A1, AP(1),</del> Shred)</td><td><ins class='add'>Ion</ins> Rifle (18&quot;, <ins class='add'>A2,</ins> Shred)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Reaper</del> Rifle</td><td>Replace <ins class='add'>Ion</ins> Rifle</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Photon Gun (18&quot;, A2, AP(1), Shatter) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Flame</del> Caster (12&quot;, <del class='del'>A1,</del> Blast(3), Reliable) · <del class='del'>+10</del> pts</td><td><ins class='add'>Spark-Pulse</ins> Caster (12&quot;, <ins class='add'>A2,</ins> Blast(3), Reliable) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fusion Caster (12&quot;, A1, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+15</del> pts</td><td>Fusion Caster (12&quot;, A1, AP(4), <ins class='add'>Deadly(6))</ins> · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Plasma Caster (24&quot;, <del class='del'>A1, AP(4))</del> · <del class='del'>+10</del> pts</td><td>Plasma Caster (24&quot;, <ins class='add'>A4, AP(2))</ins> · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ray <del class='del'>Caster</del> (18&quot;, <del class='del'>A2, AP(4),</del> Unstoppable) · <del class='del'>+20</del> pts</td><td><ins class='add'>Radium</ins> Ray (18&quot;, <ins class='add'>A6, AP(1),</ins> Unstoppable) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gauss Rifle (24&quot;, A1, Destructive) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Guardian</h3><p class='stats'>25 → 50 pts (+25) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Doom Scythe (A2, AP(4), Imprecise)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Atom-Caster (12&quot;, A1, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Void Blade (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Doom Scythe</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Atomizer Sword (A2, Rending), Combat Shield (Armor(2)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Radium Pistol (12&quot;, A2, Assault), Hand Weapon (A2) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Power Staff (9&quot;, A4, Assault, Bane) · +35 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with <ins class='add'>one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jetpack (Flying, Swift) · +15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Jetpacks</del> (Ambush, Flying, Swift) · <del class='del'>+10</del> pts</td><td><ins class='add'>Teleport Jetpack</ins> (Ambush, Flying, Swift) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Atom-Casters and Void Blade</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>War Scythe (A2, AP(2)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rod-Shots (12&quot;, A2, AP(1)), Rod (A1) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hyper Sword (A2, AP(1), Rending), Combat Shields (Shielded) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Sniper</h3><p class='stats'>30 → 50 pts (+20) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Reaper Sniper Rifle (30&quot;, A1, AP(1), Deadly(2), Reliable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>D-Mark (24&quot;, A1, AP(1), Reliable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Reaper Sniper Rifle</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spark-Sniper Carbine (18&quot;, A2, Blast(3), Reliable) · +30 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Hyperspace</del> Reapers (Ambushing Piercing Shot) · <del class='del'>+5</del> pts</td><td><ins class='add'>Voidspace</ins> Reapers (Ambushing Piercing Shot) · <ins class='add'>+15</ins> pts</td></tr>
+</table></div>
+<h3>Flesh-Eater</h3><p class='stats'>25 → 60 pts (+35) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Metal</del> Claws (A2, <del class='del'>AP(1))</del></td><td><ins class='add'>Rusted</ins> Claws (A2, <ins class='add'>Bane)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Rusted Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spiked Claws (A2, AP(2)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Razor Claws (A4) · +10 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Machine-Horror <del class='del'>(Fear(1))</del> · <del class='del'>+10</del> pts</td><td>Machine-Horror <ins class='add'>(Fear(2))</ins> · <ins class='add'>+25</ins> pts</td></tr>
+</table></div>
+<h3>Eternal</h3><p class='stats'>30 → 75 pts (+45) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Flux</del> Carbine (18&quot;, A2, Surge)</td><td><ins class='add'>Transonic</ins> Carbine (18&quot;, A2, Surge)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Flux</del> Carbine</td><td>Replace <ins class='add'>Transonic</ins> Carbine</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy Gauss</del> Rifle (24&quot;, A2, <del class='del'>Destructive)</del> · <del class='del'>+10</del> pts</td><td><ins class='add'>Photon</ins> Rifle (24&quot;, A2, <ins class='add'>Shatter)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spark-Pulse Caster (12&quot;, A2, Blast(3), Reliable) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fusion Caster (12&quot;, A1, AP(4), Deadly(6)) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plasma Caster (24&quot;, A4, AP(2)) · +50 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fusion Ray (18&quot;, A1, AP(4), Deadly(6)) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Radium Ray (18&quot;, A6, AP(1), Unstoppable) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Photon Cannon (30&quot;, A6, AP(1), Shatter) · +95 pts</ins></td></tr>
+</table></div>
+<h3>Bot Swarm</h3><p class='stats'>35 → 115 pts (+80) · Size 1 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Bot Claws (A6, Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Swarm Attacks (A3, Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Bot Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Atomizer Beams (9&quot;, A8, Rending), Claws (A2) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Robot Snake</h3><p class='stats'>60 → 150 pts (+90) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>150</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Transonic Scourges (A6, Surge)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Spike Whips (A1, AP(2), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Spike Whip</del></td><td>Replace <ins class='add'>Transonic Scourge</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spiked Scourges (A1, AP(4), Deadly(6)) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>2x</del> Metal Fangs <del class='del'>(A2,</del> Rending) · <del class='del'>+5</del> pts</td><td>Metal Fangs <ins class='add'>(A6,</ins> Rending) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Radium Pistols (12&quot;, A6, Assault), Tail Strike (A2) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Death Gaze (9&quot;, A8, AP(2)), Tail Strike (A2) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shock Whips (A4, AP(1), Surge) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one Metal Fang</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Atom-Caster (12&quot;, A2, AP(1)) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Death Gaze (12&quot;, A2, AP(4)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Hover Bike</h3><p class='stats'>70 → 155 pts (+85) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Fast</del><br><span class='muted'>Moves +2&quot; when using Advance, and +4” when using Rush/Charge.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Radium Cannon (24&quot;, A2, Blast(3))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A2)</td><td><ins class='add'>Strike</ins> (A2)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Rapid Flux Carbine (18&quot;, A4, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>Advanced Jet Thrusters (Fast)</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Rapid Flux Carbine</del></td><td>Replace <ins class='add'>Radium Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Transonic Carbine (18&quot;, A6, Surge) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Photon Gun (18&quot;, A6, AP(1), Shatter) · +40 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Gauss Rifle (24&quot;, A3, Destructive) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Atom-Beamer (24&quot;, A3, AP(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Advanced Jet Thruster</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Skimmer Module (Scout) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Destroyer Snake</h3><p class='stats'>75 → 160 pts (+85) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Dual <del class='del'>Reaper</del> Blades <del class='del'>(A4, AP(1),</del> Shred)</td><td>Dual <ins class='add'>Ion</ins> Blades <ins class='add'>(A6,</ins> Shred)</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Dual <del class='del'>Reaper</del> Blade</td><td>Replace Dual <ins class='add'>Ion</ins> Blade</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy <del class='del'>Reaper</del> Blade <del class='del'>(A1, AP(3), Deadly(6),</del> Shred) · <del class='del'>+20</del> pts</td><td>Heavy <ins class='add'>Ion</ins> Blade <ins class='add'>(A12,</ins> Shred) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Plasmabot (Rending in Melee) · <del class='del'>+10</del> pts</td><td>Plasmabot (Rending in Melee) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Elite Vanguard (Scout) · <del class='del'>+10</del> pts</td><td>Elite Vanguard (Scout) · <ins class='add'>+40</ins> pts</td></tr>
+</table></div>
+<h3>Annihilator</h3><p class='stats'>80 → 190 pts (+110) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>190</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Dual <del class='del'>Hyper</del> Swords <del class='del'>(A4, AP(1),</del> Rending)</td><td>Dual <ins class='add'>Atomizer</ins> Swords <ins class='add'>(A6,</ins> Rending)</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Dual <del class='del'>Hyper</del> Sword</td><td>Replace Dual <ins class='add'>Atomizer</ins> Sword</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fusion Ray (18&quot;, A1, AP(4), Deadly(6)), Strike (A2) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Photon Cannon (30&quot;, A6, AP(1), Shatter), Strike (A2) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Fusion Ray (18&quot;, A1, AP(4), Deadly(12), Ignores Regeneration), Strike (A2) · +115 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Radium Ray (18&quot;, A8, AP(3), Unstoppable), Strike (A2) · +125 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Radium Ray (18&quot;, A12, AP(1), Unstoppable), Strike (A2) · +130 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Photon Cannon (36&quot;, A12, AP(1), Ignores Cover, Shatter), Strike (A2) · +235 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gauss Cannon (24&quot;, A4, Destructive), CCW (A1) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Phase Core (Ambush) · <del class='del'>+10</del> pts</td><td>Phase Core (Ambush) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Gauss Cannon</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ray Cannon (24&quot;, A2, AP(4), Unstoppable) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Gauss Cannon (30&quot;, A6, Destructive) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Tri-Scorpion</h3><p class='stats'>85 → 195 pts (+110) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>195</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Dual <del class='del'>Reaper</del> Blades <del class='del'>(A4, AP(1),</del> Shred)</td><td>Dual <ins class='add'>Ion</ins> Blades <ins class='add'>(A6,</ins> Shred)</td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Deadly Stinger <del class='del'>(Ravage(2))</del></td><td>Deadly Stinger <ins class='add'>(Ravage(4))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Dual <del class='del'>Reaper</del> Blade</td><td>Replace Dual <ins class='add'>Ion</ins> Blade</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy <del class='del'>Reaper</del> Blade <del class='del'>(A1, AP(3), Deadly(6),</del> Shred) · <del class='del'>+20</del> pts</td><td>Heavy <ins class='add'>Ion</ins> Blade <ins class='add'>(A12,</ins> Shred) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Plasmabot (Rending in Melee) · <del class='del'>+10</del> pts</td><td>Plasmabot (Rending in Melee) · <ins class='add'>+25</ins> pts</td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Enhanced Protected</td><td>If most models in this unit have Protected, they ignore wounds on rolls of 5-6 from Protected (instead of only on 6+).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Self-Repair</td><td>If most models in this unit have Self-Repair, they ignore wounds on rolls of 5-6 from Self-Repair (instead of only on 6+).</td></tr>
+<tr class='add'><td>➕</td><td>Imprecise</td><td>Gets -1 to hit when attacking.</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Charge</td><td>This model gets AP(+1) when charging.</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Charge Aura</td><td>This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Piercing Charge. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Shatter</td><td>For each unmodified result of 6 to hit, those hits get AP(+3).</td></tr>
+<tr class='add'><td>➕</td><td>Stealth Buff</td><td>Once per activation, before attacking, pick up to 3 friendly units within 12&quot;, which gets Stealth once (next time the effect would apply).</td></tr>
+<tr class='add'><td>➕</td><td>Unique Hero</td><td>Counts as having Hero, and this model may only be taken once per army.</td></tr>
+<tr class='del'><td>➖</td><td>Destructive</td><td>On unmodified results of 6 to hit, those hits get AP(+4).</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Assault</td><td>This model gets AP(+1) when charging.</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Assault Aura</td><td>This model and up to 3 friendly units picked before the start of the game get Piercing Assault. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Self-Repair Boost</td><td>If all models in this unit have Self-Repair, they ignore wounds on rolls of 5-6 from Self-Repair (instead of only on 6+).</td></tr>
+<tr class='del'><td>➖</td><td>Shielded</td><td>Units where all models have this rule get +1 to defense rolls against hits that are not from spells.</td></tr>
+<tr class='del'><td>➖</td><td>Shred</td><td>On unmodified results of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
+<tr class='del'><td>➖</td><td>Surge</td><td>On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Ambush Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Ambush. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Ambush. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Indirect<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>Gets -1 to hit rolls when shooting after moving. May</del> target enemies that are not in line of sight as if in line of sight, and ignores <del class='del'>cover</del> from <del class='del'>sight obstructions.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When using Hold actions and shooting, may</ins> target enemies that are not in line of sight as if in line of sight, and ignores <ins class='add'>Cover</ins> from <ins class='add'>Sight Blockers.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>No Retreat</td><td><span class='del'>3.5.1:</span> <del class='del'>Whenever</del> a unit where most models have this rule fails a <del class='del'>morale test</del> that causes it to be Shaken or Routed, the test counts as passed instead. Then, roll as many dice as the number of wounds it would take to <del class='del'>check for wound effects (must always roll at least 1 die),</del> and for each result of 1-3 the unit takes one wound, which can&#x27;t be ignored.<br><span class='add'>3.6.0:</span> <ins class='add'>When</ins> a unit where most models have this rule fails a <ins class='add'>Morale Test</ins> that causes it to be Shaken or Routed, the test counts as passed instead. Then, roll as many dice as the number of wounds it would take to <ins class='add'>fully destroy it,</ins> and for each result of 1-3 the unit takes one wound, which can&#x27;t be ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>No Retreat Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get No Retreat. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get No Retreat. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Protected</td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Protection Feat</td><td><span class='del'>3.5.1:</span> Once per game, when this unit takes wounds and <del class='del'>all</del> its models have this rule, you may use this rule and roll one die per wound, and on a 5+ it is ignored.<br><span class='add'>3.6.0:</span> Once per game, when this unit takes wounds and <ins class='add'>most of</ins> its models have this rule, you may use this rule and roll one die per wound, and on a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Protection Feat Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Protection Feat. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Protection Feat. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Ravage</td><td><span class='del'>3.5.1:</span> <del class='del'>When it&#x27;s</del> this <del class='del'>model&#x27;s</del> turn to <del class='del'>attack</del> in melee, roll X <del class='del'>dice.</del> For each 6+ the target takes one wound.<br><span class='add'>3.6.0:</span> <ins class='add'>Once per round, when it’s</ins> this <ins class='add'>model’s</ins> turn to <ins class='add'>strike</ins> in melee, roll X <ins class='add'>dice before attacking, unless this unit is Fatigued.</ins> For each 6+ the target takes one wound.</td></tr>
+<tr class='mod'><td>✏️</td><td>Reanimation Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Reanimation. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Reanimation. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Relentless<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When this model shoots at enemies over <del class='del'>9&quot;</del> away, unmodified <del class='del'>results</del> of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).<br><span class='add'>3.6.0:</span> When this model shoots at enemies over <ins class='add'>9”</ins> away, unmodified <ins class='add'>result</ins> of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Relentless Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Relentless. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Relentless. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Rending<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Ignores Regeneration, and <del class='del'>on</del> unmodified <del class='del'>results</del> of 6 to hit, those hits get AP(+4).<br><span class='add'>3.6.0:</span> Ignores Regeneration, and <ins class='add'>for each</ins> unmodified <ins class='add'>result</ins> of 6 to hit, those hits get AP(+4).</td></tr>
+<tr class='mod'><td>✏️</td><td>Self-Repair</td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Unstoppable<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Ignores Regeneration, and ignores all negative modifiers to this <del class='del'>weapon.</del><br><span class='add'>3.6.0:</span> Ignores Regeneration, and ignores all negative modifiers to this <ins class='add'>weapon which are not from this model&#x27;s special rules.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Unstoppable when Shooting Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Unstoppable when shooting. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Unstoppable when shooting. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Flame Bots</td><td><span class='del'>3.5.1:</span> (2) Pick up to <del class='del'>four</del> enemy units within 9&quot;, which take <del class='del'>2</del> hits each.<br><span class='add'>3.6.0:</span> (2) Pick up to <ins class='add'>two</ins> enemy units within 9&quot;, which take <ins class='add'>4</ins> hits each.</td></tr>
+<tr class='mod'><td>✏️</td><td>Gauss Bots</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within 6&quot;, which <del class='del'>take</del> 3 hits with <del class='del'>Destructive each.</del> Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within 6&quot;, which <ins class='add'>takes</ins> 3 hits with <ins class='add'>AP(1) and Shatter.</ins> Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.</td></tr>
+<tr class='mod'><td>✏️</td><td>Inspiring Bots</td><td><span class='del'>3.5.1:</span> (2) Pick up to <del class='del'>four</del> friendly units within 12&quot;, which get Rapid Advance once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (2) Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get Rapid Advance once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Mending Bots</td><td><span class='del'>3.5.1:</span> (3) Pick up to <del class='del'>six</del> friendly units within <del class='del'>12&quot;,</del> which get Self-Repair <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (3) Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Self-Repair once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Piercing Bots</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>2</del> hits with AP(2).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which takes <ins class='add'>6</ins> hits with AP(2).</td></tr>
+<tr class='mod'><td>✏️</td><td>Triangulation Bots</td><td><span class='del'>3.5.1:</span> (1) Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which friendly units gets Indirect <del class='del'>when shooting</del> against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which friendly units gets Indirect against once (next time the effect would apply).</td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

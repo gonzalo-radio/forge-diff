@@ -1,0 +1,733 @@
+<title>Custodian Brothers 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Custodian Brothers — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>grimdark-future-star-quest-ai. <code>stable 2026-09-28: Custodian Brothers</code> (versionString 3.5.3, edited 2026-04-30, modified 2026-07-14) → <code>beta 2026-09-28: Custodian Brothers</code> (versionString 3.5.1, edited 2026-09-10, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 22 (21 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 3, Size 0</li>
+<li>Special rules: +7 / -6 / ~20</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Vigilant Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>60</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Prosecution Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>85</td><td class='num'>65</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td>Hunter Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>100</td><td class='num'>100</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Great Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>170</td><td class='num'>160</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Custodian Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>210</td><td class='num'>285</td><td class='num'><b class='del'>+75</b></td></tr>
+<tr><td>Veteran Custodian Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>230</td><td class='num'>315</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td>Jetpack Brother → Jetpack Custodian Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>310</td><td class='num'>325</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Sagittarius Brother → Support Custodian Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>350</td><td class='num'>405</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td>Custodian APC</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>595</td><td class='num'>485</td><td class='num'><b class='add'>-110</b></td></tr>
+<tr><td>Master Custodian</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>460</td><td class='num'>545</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td>Veteran Master Custodian</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>500</td><td class='num'>595</td><td class='num'><b class='del'>+95</b></td></tr>
+<tr><td>Anti-Grav Light Tank → Anti-Grav Attack Vehicle</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>895</td><td class='num'>595</td><td class='num'><b class='add'>-300</b></td></tr>
+<tr><td>Destroyer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>525</td><td class='num'>690</td><td class='num'><b class='del'>+165</b></td></tr>
+<tr><td>Custodian Jetbiker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>825</td><td class='num'>725</td><td class='num'><b class='add'>-100</b></td></tr>
+<tr><td>Destructor → Veteran Destroyer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>630</td><td class='num'>840</td><td class='num'><b class='del'>+210</b></td></tr>
+<tr><td>Master Destroyer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>875</td><td class='num'>1050</td><td class='num'><b class='del'>+175</b></td></tr>
+<tr><td>Custodian Combat Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1330</td><td class='num'>1325</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Custodian Assault Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1520</td><td class='num'>1415</td><td class='num'><b class='add'>-105</b></td></tr>
+<tr><td>Anti-Grav Battle Tank</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1910</td><td class='num'>1570</td><td class='num'><b class='add'>-340</b></td></tr>
+<tr><td>Custodian Heavy Walker → Custodian Heavy Combat Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2425</td><td class='num'>2055</td><td class='num'><b class='add'>-370</b></td></tr>
+<tr><td>Anti-Grav Heavy Battle Tank → Heavy Anti-Grav Carrier</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>2990</td><td class='num'>2270</td><td class='num'><b class='add'>-720</b></td></tr>
+<tr><td>Custodian Heavy Battle Tank → Custodian Heavy Tank</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>3040</td><td class='num'>2865</td><td class='num'><b class='add'>-175</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Vigilant Sister</h3><p class='stats'>75 → 60 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Flail (A3, Disintegrate)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Energy Sword (A6, AP(1), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heretic Spotter (Piercing Target(3)) · <del class='del'>+10</del> pts</td><td>Heretic Spotter (Piercing Target(3)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Guardian Flail</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Sword (A3, Rending) · +5 pts</ins></td></tr>
+</table></div>
+<h3>Prosecution Sister</h3><p class='stats'>85 → 65 pts (-20) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Prosecution</del> Rifle (24&quot;, <del class='del'>A6)</del></td><td><ins class='add'>Battle</ins> Rifle (24&quot;, <ins class='add'>A3)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heretic Spotter (Piercing Target(3)) · <del class='del'>+10</del> pts</td><td>Heretic Spotter (Piercing Target(3)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Battle Rifle</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Carbine (18&quot;, A6) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shotgun (12&quot;, A6, AP(1)) · +30 pts</ins></td></tr>
+</table></div>
+<h3>Hunter Sister</h3><p class='stats'>100 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heretic Spotter (Piercing Target(3)) · <del class='del'>+10</del> pts</td><td>Heretic Spotter (Piercing Target(3)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shredder Shotgun (9&quot;, A12, Rending) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fusion Rifle (12&quot;, A3, AP(4), Deadly(3)) · +35 pts</ins></td></tr>
+</table></div>
+<h3>Great Sister</h3><p class='stats'>170 → 160 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>170</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Pistol (12&quot;, A3, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A9)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Energy Sword (A12, AP(1), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>Vigilant Oath (Furious)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Pistol and Hand Weapon and Vigilant Oath</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sorceress Staff (A6, Spell Amplifier) · +-45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Battle Rifle (24&quot;, A9), Hand Weapon (A3), Prosecution Ammo (Relentless) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flamer (12&quot;, A3, Blast(3), Reliable), Hand Weapon (A3), Hunter Instincts (Scout) · +15 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Burst Battle Rifle</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Carbine (18&quot;, A12) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shotgun (12&quot;, A12, AP(1)) · +30 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shredder Shotgun (9&quot;, A12, Rending) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fusion Rifle (12&quot;, A3, AP(4), Deadly(3)) · +35 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Pistol</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flamer Pistol (6&quot;, A3, Ignores Cover, Reliable, Assault) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shredder Pistol (9&quot;, A3, Rending, Assault) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plasma Pistol (12&quot;, A3, AP(2), Assault) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fusion Pistol (6&quot;, A3, AP(4), Assault) · +45 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Axe (A3, AP(1), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Halberd (A9, AP(2)) · +50 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Flail (A9, Disintegrate) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Sword (A9, Rending) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Spear (A3, AP(4), Deadly(3)) · +65 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sorceress (Caster(2)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Captain (Enhanced Guardian Aura) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Sorceress (Caster(3)) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Warden (Unstoppable in Melee Aura) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Accuser (Shred when Shooting Aura) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Disruptor (Stealth Aura) · +55 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Prosecution Ammo (Relentless) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Vigilant Oath (Furious) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hunter Instincts (Scout) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Energy Sword</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Prosecution Rifle (24&quot;, A6), CCW (A12) · +-5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flamer (12&quot;, A3, Blast(3), Reliable), CCW (A12) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one (2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Captain (Guardian Boost Aura) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Warden (Unstoppable in Melee Aura) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Accuser (Shred when Shooting Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Disruptor (Stealth Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sorceress (Caster(2)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Sorceress (Caster(3)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Custodian Brother</h3><p class='stats'>210 → 285 pts (+75) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>210</del> pts</td><td><ins class='add'>285</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle-Mount (9&quot;, A3, Assault, Bane)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Custodian</del> Axe (A3, Blast(3))</td><td><ins class='add'>Guardian</ins> Axe (A3, <ins class='add'>AP(1),</ins> Blast(3))</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Shot-Mount (12&quot;, A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Guardian Axes and Needle-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cyclic-Mount (18&quot;, A9, Surge), Guardian Blade (A3) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shot-Mount (12&quot;, A12, AP(1)), Guardian Blade (A3) · +20 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Custodian</del> Axe</td><td>Replace <ins class='add'>Guardian</ins> Axe</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Custodian</del> Sword (A9, <del class='del'>AP(1),</del> Rending) · <del class='del'>+50</del> pts</td><td><ins class='add'>Guardian</ins> Sword (A9, Rending) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Flail (A9, Disintegrate) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Halberd (A9, AP(2)) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Spear (A3, AP(4), Deadly(3)) · +60 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Halberd (A3, Deadly(3), Tear) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Spear (A9, AP(3)) · +70 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Shot-Mount</del></td><td>Replace <ins class='add'>Needle-Mount</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Flame-Mount <del class='del'>(12&quot;,</del> A3, <del class='del'>Blast(3), Reliable)</del> · <del class='del'>+35</del> pts</td><td>Flame-Mount <ins class='add'>(6&quot;,</ins> A3, <ins class='add'>Ignores Cover, Reliable, Assault)</ins> · <ins class='add'>+-5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shredder-Mount (9&quot;, A3, Rending, Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pulverizer-Mount (12&quot;, A3, Assault, Disintegrate) · +25 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fuse-Mount <del class='del'>(12&quot;,</del> A3, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+80</del> pts</td><td>Fuse-Mount <ins class='add'>(6&quot;,</ins> A3, AP(4), <ins class='add'>Assault)</ins> · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bolt-Mount (18&quot;, A9, Rending) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needler-Mount (24&quot;, A9, Bane) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Destructor-Mount (24&quot;, A6, Tear) · +110 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm-Mount (24&quot;, A9, AP(1)) · +110 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy Banner (Dash Aura) · <del class='del'>+15</del> pts</td><td>Envoy Banner (Dash Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Guardian Banner (Steadfast Aura) · <del class='del'>+10</del> pts</td><td>Guardian Banner (Steadfast Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <del class='del'>+15</del> pts</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Shot-Mounts and Custodian Axe</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Burst Shot-Mount (12&quot;, A9, AP(1)), Heavy CCW (A3, AP(1)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Veteran Custodian Brother</h3><p class='stats'>230 → 315 pts (+85) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>230</del> pts</td><td><ins class='add'>315</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Versatile Expert</ins><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation all models with this rule in this unit either get AP(+1) when attacking, or get +1 to hit rolls when attacking.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Versatile Attack</del><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation, when shooting or charging enemies over 9&quot; away, all models with this rule in this unit either get AP(+1) or get +1 to hit rolls.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Flame-Mount (6&quot;, A3, Ignores Cover, Reliable, Assault)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Custodian</del> Axe (A3, Blast(3))</td><td><ins class='add'>Guardian</ins> Axe (A3, <ins class='add'>AP(1),</ins> Blast(3))</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Shot-Mount (12&quot;, A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy Banner (Dash Aura) · <del class='del'>+15</del> pts</td><td>Envoy Banner (Dash Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Guardian Banner (Steadfast Aura) · <del class='del'>+10</del> pts</td><td>Guardian Banner (Steadfast Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <del class='del'>+15</del> pts</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Guardian Axes and Flame-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cyclic-Mount (18&quot;, A9, Surge), Guardian Blade (A3) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shot-Mount (12&quot;, A12, AP(1)), Guardian Blade (A3) · +30 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Custodian</del> Axe</td><td>Replace any <ins class='add'>Guardian</ins> Axe</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Custodian</del> Sword (A9, <del class='del'>AP(1),</del> Rending) · <del class='del'>+60</del> pts</td><td><ins class='add'>Guardian</ins> Sword (A9, Rending) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Halberd (A9, AP(2)) · +50 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Flail (A9, Disintegrate) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Spear (A3, AP(4), Deadly(3)) · +65 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Halberd (A3, Deadly(3), Tear) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Spear (A9, AP(3)) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Shot-Mount</del></td><td>Replace any <ins class='add'>Flame-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle-Mount (9&quot;, A3, Assault, Bane) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shredder-Mount (9&quot;, A3, Rending, Assault) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pulverizer-Mount (12&quot;, A3, Assault, Disintegrate) · +40 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fuse-Mount <del class='del'>(12&quot;,</del> A3, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+95</del> pts</td><td>Fuse-Mount <ins class='add'>(6&quot;,</ins> A3, AP(4), <ins class='add'>Assault)</ins> · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flame-Mount (12&quot;, A3, Blast(3), Reliable) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bolt-Mount (18&quot;, A9, Rending) · +100 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needler-Mount (24&quot;, A9, Bane) · +120 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Destructor-Mount (24&quot;, A6, Tear) · +145 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm-Mount (24&quot;, A9, AP(1)) · +150 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Shot-Mounts and Custodian Axe</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Burst Shot-Mount (12&quot;, A9, AP(1)), Heavy CCW (A3, AP(1)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Jetpack Custodian Brother</h3><p class='stats'>310 → 325 pts (+15) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Jetpack Brother</td><td>Jetpack <ins class='add'>Custodian</ins> Brother</td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>310</del> pts</td><td><ins class='add'>325</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Ambush</del><br><span class='muted'>Only deploys D3 rounds afters its wave is deployed, and at the start of the round it&#x27;s placed at the centre of a random table quarter.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Needle-Mount (9&quot;, A3, Assault, Bane)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Lance (A9, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Shot-Mount (12&quot;, A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy CCW (A9, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Guardian Lances and Needle-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ion Revolver Carbine (18&quot;, A9, Shred), Strike (A3), Combat Buckler (Dodge) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ion Revolver (9&quot;, A9, Assault, Shred), Strike (A3), Combat Buckler (Dodge) · +55 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Shot-Mount</del></td><td>Replace <ins class='add'>Needle-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flame-Mount (6&quot;, A3, Ignores Cover, Reliable, Assault) · +-5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shredder-Mount (9&quot;, A3, Rending, Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pulverizer-Mount (12&quot;, A3, Assault, Disintegrate) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fuse-Mount (6&quot;, A3, AP(4), Assault) · +40 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Destroyer Long Pistol (18&quot;, A9, Rending) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm-Mount (24&quot;, A9, AP(1)) · +110 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Inhibitor Array (Ranged Shrouding Aura) · <del class='del'>+15</del> pts</td><td>Inhibitor Array (Ranged Shrouding Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Aerial Drop (Ambush) · +40 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy Banner (Dash Aura) · <del class='del'>+15</del> pts</td><td>Envoy Banner (Dash Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Guardian Banner (Steadfast Aura) · <del class='del'>+10</del> pts</td><td>Guardian Banner (Steadfast Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <del class='del'>+15</del> pts</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Shot-Mounts and Heavy CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Burst Shot-Mount (12&quot;, A9, AP(1)), Heavy Hand Weapon (A3, AP(1)) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Heavy CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Sword (A9, AP(1), Rending) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Spear (A9, AP(3)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Support Custodian Brother</h3><p class='stats'>350 → 405 pts (+55) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Sagittarius</del> Brother</td><td><ins class='add'>Support Custodian</ins> Brother</td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>350</del> pts</td><td><ins class='add'>405</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Relentless</ins><br><span class='muted'>When this model shoots at enemies over 9” away, unmodified result of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Storm-Volley Rifle (30&quot;, A9, AP(1))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Flamer-Mod (12&quot;, A3, Blast(3), Limited, Reliable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Bolt Rifle (18&quot;, A6, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Disintegrator-Mod (18&quot;, A6, AP(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy CCW (A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy Banner (Dash Aura) · <del class='del'>+15</del> pts</td><td>Envoy Banner (Dash Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Guardian Banner (Steadfast Aura) · <del class='del'>+10</del> pts</td><td>Guardian Banner (Steadfast Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <del class='del'>+15</del> pts</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Flamer-Mod</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Grenade-Mod (24&quot;, A3, Blast(3), Limited) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser-Mod (18&quot;, A3, AP(3), Deadly(3), Limited) · +40 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Inhibitor Array (Ranged Shrouding Aura) · <del class='del'>+15</del> pts</td><td>Inhibitor Array (Ranged Shrouding Aura) · <ins class='add'>+20</ins> pts</td></tr>
+</table></div>
+<h3>Custodian APC</h3><p class='stats'>595 → 485 pts (-110) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>595</del> pts</td><td><ins class='add'>485</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(9)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A9, Surge)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A6, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Storm Rifle (24&quot;, A9, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pintle Burst Cyclic Rifle (9&quot;, A9, Assault, Surge) · +135 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Fusion Rifle <del class='del'>(18&quot;,</del> A3, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+150</del> pts</td><td><ins class='add'>Pintle</ins> Heavy Fusion Rifle <ins class='add'>(9&quot;,</ins> A3, AP(4), <ins class='add'>Deadly(3), Assault)</ins> · <ins class='add'>+225</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Rifle (24&quot;, A9, AP(1)) · +135 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dozer Blade (Strider) · <del class='del'>+45</del> pts</td><td>Dozer Blade (Strider) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Hunter Missiles (24&quot;,</del> A3, AP(2), Deadly(3), Limited, Unstoppable) · <del class='del'>+50</del> pts</td><td><ins class='add'>Disposable Guided Missile (18&quot;,</ins> A3, AP(2), Deadly(3), Limited, Unstoppable) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +85 pts</ins></td></tr>
+</table></div>
+<h3>Master Custodian</h3><p class='stats'>460 → 545 pts (+85) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>460</del> pts</td><td><ins class='add'>545</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Lance (A18, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Rapid Shot-Mount (12&quot;, A6, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Custodian Axe (A6, Blast(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetpack <del class='del'>(Ambush, Flying)</del> · <del class='del'>+135</del> pts</td><td>Jetpack <ins class='add'>(Flying)</ins> · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Airdrop Jetpack (Ambush, Flying) · +130 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Custodian Jetbike <del class='del'>(Heavy Rifle Array (24&quot;, A18, AP(1)),</del> Fast, Strider, Tough(9)) · <del class='del'>+660</del> pts</td><td>Custodian Jetbike <ins class='add'>(Assault Linked Rifle-Array (12&quot;, A9, Assault),</ins> Fast, Strider, Tough(9)) · <ins class='add'>+470</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy Rifle Array</del></td><td>Replace <ins class='add'>Assault Linked Rifle-Array</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Pulverizer Array (12&quot;, A6, Assault, Disintegrate) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Machinegun Array (15&quot;, A9, AP(1), Assault) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Laser Array (9&quot;, A3, AP(3), Deadly(3), Assault) · +90 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Fusion Array (6&quot;, A3, AP(4), Deadly(3), Assault) · +105 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Laser Pulser (24&quot;, A6, AP(2), Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Devastator (24&quot;, A12, AP(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fusion Missiles (18&quot;, A6, AP(4), Deadly(3)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Heavy Machinegun (30&quot;, A18, AP(1)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Custodian Axe</del></td><td>Replace <ins class='add'>Guardian Lance</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Flame-Mount (6&quot;, A3, Blast(3), Reliable, Assault), Guardian Blade (A18) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Chain-Sword (A24, Shred) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic-Mount (18&quot;, A18, Surge), Guardian Blade (A6) · +80 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shot-Mount (12&quot;, A24, AP(1)), Guardian Blade (A6) · +105 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Halberd (A6, Deadly(3), Tear) · +95 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Sword (A18, AP(1), Rending) · +105 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Spear (A18, AP(3)) · +140 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Guardian Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Axe (A6, AP(1), Blast(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Sword (A18, Rending) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Halberd (A18, AP(2)) · +100 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Flail (A18, Disintegrate) · +100 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Spear (A6, AP(4), Deadly(3)) · +135 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Rapid Shot-Mount</del></td><td>Replace <ins class='add'>Burst Flame-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Needle-Mount (9&quot;, A9, Assault, Bane) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Pulverizer-Mount (12&quot;, A6, Assault, Disintegrate) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shredder-Mount (9&quot;, A9, Rending, Assault) · +65 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fuse-Mount <del class='del'>(12&quot;,</del> A3, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+55</del> pts</td><td><ins class='add'>Burst</ins> Fuse-Mount <ins class='add'>(6&quot;,</ins> A3, AP(4), <ins class='add'>Deadly(3), Assault)</ins> · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flame-Mount (12&quot;, A3, Blast(3), Reliable) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bolt-Mount (18&quot;, A9, Rending) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needler-Mount (24&quot;, A9, Bane) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Destructor-Mount (24&quot;, A6, Tear) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm-Mount (24&quot;, A9, AP(1)) · +90 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Watcher (Hit &amp; Run Shooter Aura) · <del class='del'>+10</del> pts</td><td>Watcher (Hit &amp; Run Shooter Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Warden (Unstoppable in Melee Aura) · <del class='del'>+5</del> pts</td><td>Warden (Unstoppable in Melee Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Captain <del class='del'>(Guardian Boost</del> Aura) · <del class='del'>+5</del> pts</td><td>Captain <ins class='add'>(Enhanced Guardian</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(6)) · <del class='del'>+60</del> pts</td><td>Army Standard Bearer (Fear(6)) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Disruptor (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Disruptor (Stealth Aura) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Rapid Shot-Mount and Custodian Axe</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Wrist-GL (18&quot;, A3, Blast(3)), Burst Shot-Mount (12&quot;, A9, AP(1)), Heavy CCW (A6, AP(1)) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Lance (A18, AP(1), Thrust) · +95 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Veteran Master Custodian</h3><p class='stats'>500 → 595 pts (+95) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>500</del> pts</td><td><ins class='add'>595</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Versatile Expert</ins><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation all models with this rule in this unit either get AP(+1) when attacking, or get +1 to hit rolls when attacking.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Versatile Attack</del><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation, when shooting or charging enemies over 9&quot; away, all models with this rule in this unit either get AP(+1) or get +1 to hit rolls.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Lance (A18, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Rapid Shot-Mount (12&quot;, A6, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Custodian Axe (A6, Blast(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetpack <del class='del'>(Ambush, Flying)</del> · <del class='del'>+135</del> pts</td><td>Jetpack <ins class='add'>(Flying)</ins> · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Airdrop Jetpack (Ambush, Flying) · +130 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Custodian Jetbike <del class='del'>(Heavy Rifle Array (24&quot;, A18, AP(1)),</del> Fast, Strider, Tough(9)) · <del class='del'>+750</del> pts</td><td>Custodian Jetbike <ins class='add'>(Assault Linked Rifle-Array (12&quot;, A9, Assault),</ins> Fast, Strider, Tough(9)) · <ins class='add'>+515</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy Rifle Array</del></td><td>Replace <ins class='add'>Assault Linked Rifle-Array</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Pulverizer Array (12&quot;, A6, Assault, Disintegrate) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Machinegun Array (15&quot;, A9, AP(1), Assault) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Laser Array (9&quot;, A3, AP(3), Deadly(3), Assault) · +90 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Fusion Array (6&quot;, A3, AP(4), Deadly(3), Assault) · +100 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Laser Pulser (24&quot;, A6, AP(2), Blast(3)) · +-5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Devastator (24&quot;, A12, AP(3)) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fusion Missiles (18&quot;, A6, AP(4), Deadly(3)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Heavy Machinegun (30&quot;, A18, AP(1)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Custodian Axe</del></td><td>Replace <ins class='add'>Guardian Lance</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Flame-Mount (6&quot;, A3, Blast(3), Reliable, Assault), Guardian Blade (A18) · +80 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Chain-Sword (A24, Shred) · +80 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic-Mount (18&quot;, A18, Surge), Guardian Blade (A6) · +125 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shot-Mount (12&quot;, A24, AP(1)), Guardian Blade (A6) · +135 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Halberd (A6, Deadly(3), Tear) · +125 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Sword (A18, AP(1), Rending) · +125 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Spear (A18, AP(3)) · +170 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Guardian Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Axe (A6, AP(1), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Sword (A18, Rending) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Halberd (A18, AP(2)) · +110 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Flail (A18, Disintegrate) · +130 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Spear (A6, AP(4), Deadly(3)) · +140 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Rapid Shot-Mount</del></td><td>Replace <ins class='add'>Burst Flame-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Needle-Mount (9&quot;, A9, Assault, Bane) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Pulverizer-Mount (12&quot;, A6, Assault, Disintegrate) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shredder-Mount (9&quot;, A9, Rending, Assault) · +80 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fuse-Mount <del class='del'>(12&quot;,</del> A3, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+65</del> pts</td><td><ins class='add'>Burst</ins> Fuse-Mount <ins class='add'>(6&quot;,</ins> A3, AP(4), <ins class='add'>Deadly(3), Assault)</ins> · <ins class='add'>+130</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flame-Mount (12&quot;, A3, Blast(3), Reliable) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bolt-Mount (18&quot;, A9, Rending) · +70 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needler-Mount (24&quot;, A9, Bane) · +95 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Destructor-Mount (24&quot;, A6, Tear) · +115 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm-Mount (24&quot;, A9, AP(1)) · +120 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Watcher (Hit &amp; Run Shooter Aura) · <del class='del'>+10</del> pts</td><td>Watcher (Hit &amp; Run Shooter Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Warden (Unstoppable in Melee Aura) · <del class='del'>+5</del> pts</td><td>Warden (Unstoppable in Melee Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Captain <del class='del'>(Guardian Boost</del> Aura) · <del class='del'>+5</del> pts</td><td>Captain <ins class='add'>(Enhanced Guardian</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(6)) · <del class='del'>+60</del> pts</td><td>Army Standard Bearer (Fear(6)) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Disruptor (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Disruptor (Stealth Aura) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Rapid Shot-Mount and Custodian Axe</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Wrist-GL (18&quot;, A3, Blast(3)), Burst Shot-Mount (12&quot;, A9, AP(1)), Heavy CCW (A6, AP(1)) · +70 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Lance (A18, AP(1), Thrust) · +95 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Anti-Grav Attack Vehicle</h3><p class='stats'>895 → 595 pts (-300) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Anti-Grav <del class='del'>Light Tank</del></td><td>Anti-Grav <ins class='add'>Attack Vehicle</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>895</del> pts</td><td><ins class='add'>595</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(9)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Blaster (30&quot;, A3, AP(1), Blast(3))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Flamer (12&quot;, A3, Blast(3), Reliable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A6, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Blazer (30&quot;, A6, AP(3), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Laser Blaster</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Burster (18&quot;, A6, AP(3), Ignores Cover) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Beamer (36&quot;, A3, AP(3), Deadly(3)) · +95 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +85 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hull Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Pulverizer Gun (24&quot;, A6, Disintegrate) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Machineguns (30&quot;, A9, AP(1)) · +85 pts</ins></td></tr>
+</table></div>
+<h3>Destroyer</h3><p class='stats'>525 → 690 pts (+165) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>525</del> pts</td><td><ins class='add'>690</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Flame-Mount (6&quot;, A3, Blast(3), Reliable, Assault)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Custodian</del> Axe (A6, Blast(3))</td><td><ins class='add'>Guardian</ins> Axe (A6, <ins class='add'>AP(1),</ins> Blast(3))</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Rapid Shot-Mount (12&quot;, A6, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Guardian Axe and Burst Flame-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cyclic-Mount (18&quot;, A18, Surge), Guardian Blade (A6) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shot-Mount (12&quot;, A24, AP(1)), Guardian Blade (A6) · +35 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Custodian</del> Axe</td><td>Replace <ins class='add'>Guardian</ins> Axe</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Custodian</del> Sword (A18, <del class='del'>AP(1),</del> Rending) · <del class='del'>+105</del> pts</td><td><ins class='add'>Guardian</ins> Sword (A18, Rending) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Flail (A18, Disintegrate) · +85 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Halberd (A18, AP(2)) · +90 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Spear (A6, AP(4), Deadly(3)) · +120 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Halberd (A6, Deadly(3), Tear) · +95 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Spear (A18, AP(3)) · +140 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Rapid Shot-Mount</del></td><td>Replace <ins class='add'>Burst Flame-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Pulverizer-Mount (12&quot;, A6, Assault, Disintegrate) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Needle-Mount (9&quot;, A9, Assault, Bane) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shredder-Mount (9&quot;, A9, Rending, Assault) · +65 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fuse-Mount <del class='del'>(12&quot;,</del> A3, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+55</del> pts</td><td><ins class='add'>Burst</ins> Fuse-Mount <ins class='add'>(6&quot;,</ins> A3, AP(4), <ins class='add'>Deadly(3), Assault)</ins> · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flame-Mount (12&quot;, A3, Blast(3), Reliable) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bolt-Mount (18&quot;, A9, Rending) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needler-Mount (24&quot;, A9, Bane) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Destructor-Mount (24&quot;, A6, Tear) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm-Mount (24&quot;, A9, AP(1)) · +90 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Wrist-GL (12&quot;, A3, Blast(3), Limited, Assault) · +30 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy Banner (Dash) · <del class='del'>+65</del> pts</td><td>Envoy Banner (Dash) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Guardian Banner (Steadfast) · <del class='del'>+40</del> pts</td><td>Guardian Banner (Steadfast) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Warding (Regeneration) · <del class='del'>+70</del> pts</td><td>The Founder&#x27;s Warding (Regeneration) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Rapid Shot-Mount and Custodian Axe</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm-Mount (24&quot;, A9, AP(1)), Wrist-GL (18&quot;, A3, Blast(3)), Heavy CCW (A6, AP(1)) · +125 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Custodian Jetbiker</h3><p class='stats'>825 → 725 pts (-100) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>825</del> pts</td><td><ins class='add'>725</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Linked Rifle-Array (12&quot;, A9, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Lance (A18, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Rifle Array (24&quot;, A18, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Energy Lance (A9, AP(1), Thrust)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy Rifle Array</del></td><td>Replace <ins class='add'>Assault Linked Rifle-Array</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Pulverizer Array (12&quot;, A6, Assault, Disintegrate) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Machinegun Array (15&quot;, A9, AP(1), Assault) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Laser Array (9&quot;, A3, AP(3), Deadly(3), Assault) · +90 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Fusion Array (6&quot;, A3, AP(4), Deadly(3), Assault) · +105 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Laser Pulser (24&quot;, A6, AP(2), Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Devastator (24&quot;, A12, AP(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fusion Missiles (18&quot;, A6, AP(4), Deadly(3)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Heavy Machinegun (30&quot;, A18, AP(1)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Veteran Destroyer</h3><p class='stats'>630 → 840 pts (+210) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Destructor</del></td><td><ins class='add'>Veteran Destroyer</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>630</del> pts</td><td><ins class='add'>840</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Versatile Expert</ins><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation all models with this rule in this unit either get AP(+1) when attacking, or get +1 to hit rolls when attacking.</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Heavy Flamer <del class='del'>(12&quot;,</del> A3, AP(1), Blast(3), <del class='del'>Reliable)</del></td><td><ins class='add'>Assault</ins> Heavy Flamer <ins class='add'>(6&quot;,</ins> A3, AP(1), Blast(3), <ins class='add'>Reliable, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Claw (A18, Surge)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Energy Claws (A9, Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Stomp (A9, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Heavy Flamer and Energy Claw</td><td>Replace <ins class='add'>Assault</ins> Heavy Flamer and Energy Claw</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Pulverizer Gun (12&quot;, A6, Assault, Disintegrate), Energy Claw (A18, Surge) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Missile Rack (15&quot;, A3, AP(2), Deadly(3), Assault, Unstoppable), Heavy Flamer (12&quot;, A6, AP(1), Blast(3), Reliable), Strike (A6) · +125 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pulverizer Gun (24&quot;, A12, Disintegrate), Assault Missile Rack (15&quot;, A3, AP(2), Deadly(3), Assault, Unstoppable), Strike (A6) · +205 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Heavy Flamer (12&quot;, A6, AP(1), Blast(3), Reliable) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Destructor (24&quot;, A12, Tear) · +115 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Storm Rifle (24&quot;, A18, AP(1)) · +120 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Energy Claw</td><td>Replace Energy Claw</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Fist <del class='del'>(A9, AP(4))</del> · <del class='del'>+55</del> pts</td><td>Energy Fist <ins class='add'>(A18, AP(2))</ins> · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Heavy Flamer</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Heavy Flamer (12&quot;, A6, AP(1), Blast(3), Reliable) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Destructor (24&quot;, A12, Tear) · +180 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Storm Rifle (24&quot;, A18, AP(1)) · +185 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Master Destroyer</h3><p class='stats'>875 → 1050 pts (+175) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>875</del> pts</td><td><ins class='add'>1050</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Flame-Mount <del class='del'>(12&quot;,</del> A3, Blast(3), <del class='del'>Reliable)</del></td><td><ins class='add'>Burst</ins> Flame-Mount <ins class='add'>(6&quot;,</ins> A3, Blast(3), <ins class='add'>Reliable, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Blade (A18)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Custodian Axe (A6, Blast(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy Banner (Dash) · <del class='del'>+100</del> pts</td><td>Envoy Banner (Dash) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Guardian Banner (Steadfast) · <del class='del'>+65</del> pts</td><td>Guardian Banner (Steadfast) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Warding (Regeneration) · <del class='del'>+115</del> pts</td><td>The Founder&#x27;s Warding (Regeneration) · <ins class='add'>+105</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Watcher (Hit &amp; Run Shooter) · <del class='del'>+55</del> pts</td><td>Watcher (Hit &amp; Run Shooter) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Warden (Unstoppable in Melee) · <del class='del'>+5</del> pts</td><td>Warden (Unstoppable in Melee) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Accuser (Shred when Shooting) · <del class='del'>+25</del> pts</td><td>Accuser (Shred when Shooting) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Captain <del class='del'>(Guardian Boost)</del> · +35 pts</td><td>Captain <ins class='add'>(Enhanced Guardian)</ins> · +35 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Disruptor (Stealth) · <del class='del'>+70</del> pts</td><td>Disruptor (Stealth) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(6)) · <del class='del'>+60</del> pts</td><td>Army Standard Bearer (Fear(6)) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Guardian Blade and Burst Flame-Mount and Stomp</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Chain-Sword (A36, Shred) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cyclic-Mount (18&quot;, A27, Surge), Guardian Blade (A9) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shot-Mount (12&quot;, A36, AP(1)), Guardian Blade (A9) · +95 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Custodian Axe</del></td><td>Replace <ins class='add'>Guardian Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Axe (A6, AP(1), Blast(3)) · +15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Custodian</del> Sword (A18, <del class='del'>AP(1),</del> Rending) · <del class='del'>+105</del> pts</td><td><ins class='add'>Guardian</ins> Sword (A18, Rending) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Flail (A18, Disintegrate) · +100 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Halberd (A18, AP(2)) · +100 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guardian Spear (A6, AP(4), Deadly(3)) · +135 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Halberd (A6, Deadly(3), Tear) · +95 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Custodian Spear (A18, AP(3)) · +140 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Flame-Mount</td><td>Replace <ins class='add'>Burst</ins> Flame-Mount</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Pulverizer-Mount (12&quot;, A6, Assault, Disintegrate) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Needle-Mount (9&quot;, A9, Assault, Bane) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shredder-Mount (9&quot;, A9, Rending, Assault) · +65 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fuse-Mount <del class='del'>(12&quot;,</del> A3, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+45</del> pts</td><td><ins class='add'>Burst</ins> Fuse-Mount <ins class='add'>(6&quot;,</ins> A3, AP(4), <ins class='add'>Deadly(3), Assault)</ins> · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Burst Shot-Mount (12&quot;, A9, AP(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bolt-Mount (18&quot;, A9, Rending) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Needler-Mount (24&quot;, A9, Bane) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Destructor-Mount (24&quot;, A6, Tear) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm-Mount (24&quot;, A9, AP(1)) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Wrist-GL (12&quot;, A3, Blast(3), Limited, Assault) · +30 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Flame-Mount and Custodian Axe</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Wrist-GL (18&quot;, A6, Blast(3)), Burst Shot-Mount (12&quot;, A9, AP(1)) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Custodian Combat Walker</h3><p class='stats'>1330 → 1325 pts (-5) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1330</del> pts</td><td><ins class='add'>1325</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Heavy Flamers (12&quot;, A3, AP(1), Blast(3), Reliable)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>2x Walker Fists <del class='del'>(A12, AP(4))</del></td><td>2x <ins class='add'>Light</ins> Walker Fists <ins class='add'>(A3, AP(2))</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Heavy Flamer and Light Walker Fist</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Cyclic Rifle (9&quot;, A9, Assault, Surge), Walker Fist (A9, AP(2)) · +125 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Gatling Cannon (30&quot;, A18, Surge) · +135 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Cyclic Rifle (9&quot;, A9, Assault, Surge), Walker Chainsaw (A3, AP(4), Deadly(3)) · +140 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Heavy Machinegun (30&quot;, A18, AP(1)) · +165 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plasma Beamer (18&quot;, A18, AP(2)) · +165 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plasma Cannon (30&quot;, A6, AP(2), Blast(3)) · +175 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Shredder Cannon (30&quot;, A18, Rending) · +180 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Heavy Fusion Rifle (18&quot;, A6, AP(4), Deadly(3)) · +210 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Laser Cannon (36&quot;, A6, AP(3), Deadly(3)) · +305 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Autocannon (36&quot;, A18, AP(2)) · +305 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Walker Fist</del></td><td>Replace any <ins class='add'>Heavy Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A18, Surge) · +110 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shredder Rifle (18&quot;, A18, Rending) · +150 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fusion Rifle (12&quot;, A6, AP(4), Deadly(3)) · +160 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Super-Heavy Fusion Rifle (18&quot;, A3, AP(4), Deadly(6)) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Minigun (24&quot;, A18, AP(2)) · +185 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Assault Burst Cyclic Rifle</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Heavy Flamer (6&quot;, A3, AP(1), Blast(3), Reliable, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Shredder Rifle (9&quot;, A9, Rending, Assault) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Fusion Rifle (6&quot;, A3, AP(4), Deadly(3), Assault) · +75 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with <ins class='add'>any</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Super-Charging Array (Shred Mark) · <del class='del'>+15</del> pts</td><td>Super-Charging Array (Shred Mark) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Disposable Missile Rack (30&quot;, A3, AP(2), Deadly(3), Unstoppable) · +165 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade any Walker Fist with one</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Rifle (24&quot;, A9, AP(1)) · +135 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Custodian Assault Walker</h3><p class='stats'>1520 → 1415 pts (-105) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1520</del> pts</td><td><ins class='add'>1415</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Flame-Mount (6&quot;, A3, Blast(3), Reliable, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Walker Guardian Axe (A9, AP(1), Blast(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Rapid Burst Shot-Mount (12&quot;, A12, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Sword (A36, AP(1), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Combat Shield <del class='del'>(Shielded)</del></td><td>Combat Shield <ins class='add'>(Dodge)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Walker Guardian Axe and Burst Flame-Mount and Combat Shield</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Arm-Mounted Pulverizer Gun (24&quot;, A6, Disintegrate), Burst Pulverizer-Mount (12&quot;, A6, Assault, Disintegrate), Walker Guardian Flail (A18, Disintegrate) · +125 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Walker Guardian Axe</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Walker Guardian Sword (A24, Rending) · +45 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Rapid</del> Burst <del class='del'>Shot-Mount</del></td><td>Replace Burst <ins class='add'>Flame-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Needle-Mount (9&quot;, A9, Assault, Bane) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shredder-Mount (9&quot;, A9, Rending, Assault) · +65 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Flame-Mount (12&quot;, A6, Blast(3), Reliable) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Destructor-Mount (24&quot;, A12, Tear) · +170 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Storm-Mount (24&quot;, A18, AP(1)) · +180 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Walker Guardian Flail</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Walker Guardian Halberd (A18, AP(2)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Walker Guardian Spear (A6, AP(4), Deadly(3)) · +35 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Burst Pulverizer-Mount</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Laser-Mount (9&quot;, A3, AP(3), Deadly(3), Assault) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Fuse-Mount (6&quot;, A3, AP(4), Deadly(3), Assault) · +75 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Arm-Mounted Pulverizer Gun</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Arm-Mounted Cyclic Rifle (9&quot;, A9, Assault, Surge) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Arm-Mounted Heavy Flamer (6&quot;, A3, AP(1), Blast(3), Reliable, Assault) · +35 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Super-Charging Array (Shred Mark) · <del class='del'>+15</del> pts</td><td>Super-Charging Array (Shred Mark) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Combat Shield and Heavy Sword</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>2x Flamer (12&quot;, A3, Blast(3), Reliable), Heavy Custodian Spear (A12, AP(3), Deadly(3)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Flamer</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Destroyer (24&quot;, A9, Rending) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Rifle (24&quot;, A9, AP(1)) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Anti-Grav Battle Tank</h3><p class='stats'>1910 → 1570 pts (-340) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1910</del> pts</td><td><ins class='add'>1570</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(18)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Blaster (30&quot;, A9, AP(1), Blast(3))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Flamer (12&quot;, A3, Blast(3), Reliable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A12, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Heavy Blazer (36&quot;, A6, AP(3), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Bolt Cannon (30&quot;, A18, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Twin Heavy Blazer</del></td><td>Replace <ins class='add'>Laser Blaster</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Burster (18&quot;, A18, AP(3), Ignores Cover) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Twin <del class='del'>Accelerator</del> (36&quot;, A18, <del class='del'>Tear)</del> · <del class='del'>+50</del> pts</td><td>Twin <ins class='add'>Pulverizer Cannon</ins> (36&quot;, A18, <ins class='add'>Disintegrate)</ins> · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Beamer (36&quot;, A9, AP(3), Deadly(3)) · +290 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hull Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Pulverizer Gun (24&quot;, A6, Disintegrate) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Machineguns (30&quot;, A9, AP(1)) · +85 pts</ins></td></tr>
+</table></div>
+<h3>Custodian Heavy Combat Walker</h3><p class='stats'>2425 → 2055 pts (-370) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Custodian Heavy Walker</td><td>Custodian Heavy <ins class='add'>Combat</ins> Walker</td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2425</del> pts</td><td><ins class='add'>2055</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Missile Battery (30&quot;, A3, AP(2), Deadly(3), Unstoppable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Twin Alternator Ion Cannons (18&quot;, A18, Shred)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Stomp <del class='del'>(A18,</del> AP(2))</td><td>Stomp <ins class='add'>(A15,</ins> AP(2))</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Bolt Launcher (24&quot;, A18, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Twin Plasmas (12&quot;, A6, AP(4), Blast(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Walker Fists (A12, AP(4))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Twin Alternator Ion Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Plasma Rifle (12&quot;, A6, AP(2), Assault), Walker Fist (A9, AP(2)) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Plasma Rifle (24&quot;, A12, AP(2)), Light Walker Fist (A3, AP(2)) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Pulverizer Cannon (36&quot;, A12, Disintegrate) · +85 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Laser Cannon (36&quot;, A6, AP(3), Deadly(3)) · +230 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Missile Battery</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Missile Battery (15&quot;, A3, AP(2), Deadly(3), Assault, Unstoppable) · +35 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Super-Charging Array (Shred Mark) · <del class='del'>+15</del> pts</td><td>Super-Charging Array (Shred Mark) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Walker Fist and Twin Plasma</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Cannon (30&quot;, A6, AP(3), Deadly(3)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Accelerator Gun (36&quot;, A18, Tear) · +125 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Heavy Anti-Grav Carrier</h3><p class='stats'>2990 → 2270 pts (-720) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Anti-Grav <del class='del'>Heavy Battle Tank</del></td><td><ins class='add'>Heavy</ins> Anti-Grav <ins class='add'>Carrier</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2990</del> pts</td><td><ins class='add'>2270</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(27)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Laser Blaster (30&quot;, A9, AP(2), Blast(6))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Flamer (12&quot;, A3, Blast(3), Reliable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A18, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Blazer (30&quot;, A6, AP(3), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Heavy Bolt Cannon (30&quot;, A36, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hull Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Pulverizer Gun (24&quot;, A6, Disintegrate) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Machineguns (30&quot;, A9, AP(1)) · +85 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Heavy Laser Blaster</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Burster (18&quot;, A36, AP(3), Ignores Cover) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Laser Beamer (36&quot;, A9, AP(4), Deadly(6)) · +440 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +350 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Transport(18) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Custodian Heavy Tank</h3><p class='stats'>3040 → 2865 pts (-175) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Custodian Heavy <del class='del'>Battle</del> Tank</td><td>Custodian Heavy Tank</td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>3040</del> pts</td><td><ins class='add'>2865</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(27)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Sponson Heavy Laser Cannons (36&quot;, A6, AP(4), Deadly(6))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A18, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Quad Laser Cannon (36&quot;, A12, AP(3), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Disposable Guided Missile (18&quot;, A3, AP(2), Deadly(3), Limited, Unstoppable) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pintle Burst Cyclic Rifle (9&quot;, A9, Assault, Surge) · +135 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dozer Blade (Strider) · +95 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cargo Space (Transport(33)) · +280 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hunter Missiles (24&quot;, A3, AP(2), Deadly(3), Limited, Unstoppable) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Rifle (24&quot;, A9, AP(1)) · +135 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Disintegrate</td><td>Ignores Regeneration, and when attacking units where most models have Tough(27) or higher, this weapon gets AP(+2).</td></tr>
+<tr class='add'><td>➕</td><td>Dodge</td><td>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Fortified</td><td>If most models in this unit have Fortified, hits they take count as having AP(-2) from Fortified (instead of only AP(-1)).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Guardian</td><td>If most models in this unit have Guardian, hits they take count as having AP(-2) from Guardian (instead of only AP(-1)).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Guardian Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Enhanced Guardian. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Fortified</td><td>When units where most models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='add'><td>➕</td><td>Versatile Expert</td><td>When this unit is activated, pick one effect: until the end of the activation all models with this rule in this unit either get AP(+1) when attacking, or get +1 to hit rolls when attacking.</td></tr>
+<tr class='del'><td>➖</td><td>Guardian Boost</td><td>If all models in this unit have Guardian, enemy hits always count as having AP(-1) from Guardian (instead of only when being shot/charged from over 9&quot; away).</td></tr>
+<tr class='del'><td>➖</td><td>Guardian Boost Aura</td><td>This model and up to 3 nearest friendly units picked before the start of the game get Guardian Boost. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Reinforced</td><td>When units where all models have this rule are shot or charged from over 9&quot; away and take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='del'><td>➖</td><td>Shielded</td><td>Units where all models have this rule get +1 to defense rolls against hits that are not from spells.</td></tr>
+<tr class='del'><td>➖</td><td>Tear</td><td>Against non-Hero units with Tough(3) or more, this weapon gets AP(+4).</td></tr>
+<tr class='del'><td>➖</td><td>Versatile Attack</td><td>When this unit is activated, pick one effect: until the end of the activation, when shooting or charging enemies over 9&quot; away, all models with this rule in this unit either get AP(+1) or get +1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Dash</td><td><span class='del'>3.5.1:</span> Once per round, at the end of this unit&#x27;s activation, you may <del class='del'>place</del> all models with this rule in it <del class='del'>anywhere fully within D3+1&quot; of their position.</del><br><span class='add'>3.6.0:</span> Once per round, at the end of this unit&#x27;s activation, you may <ins class='add'>move</ins> all models with this rule in it <ins class='add'>by up to D3+1&quot;.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Dash Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Dash. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Dash. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Guardian</td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule <del class='del'>are shot or charged from over 9&quot; away and</del> take hits, those hits count as having AP(-1), to a min. of AP(0).<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='mod'><td>✏️</td><td>Hit &amp; Run</td><td><span class='del'>3.5.1:</span> Once per round, <del class='del'>units where all models have</del> this <del class='del'>rule</del> may move by up to 3&quot; after shooting or being in melee.<br><span class='add'>3.6.0:</span> Once per round, this <ins class='add'>model</ins> may move by up to 3&quot; after shooting or being in melee.</td></tr>
+<tr class='mod'><td>✏️</td><td>Hit &amp; Run Shooter</td><td><span class='del'>3.5.1:</span> Once per round, <del class='del'>units where all models have</del> this <del class='del'>rule</del> may move by up to 3&quot; after shooting.<br><span class='add'>3.6.0:</span> Once per round, this <ins class='add'>model</ins> may move by up to 3&quot; after shooting.</td></tr>
+<tr class='mod'><td>✏️</td><td>Hit &amp; Run Shooter Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Hit &amp; Run Shooter. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Hit &amp; Run Shooter. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Piercing Target</td><td><span class='del'>3.5.1:</span> Once per game, during this model&#x27;s activation, pick <del class='del'>one</del> enemy <del class='del'>unit</del> within 18&quot; and in line of sight of it, and place <del class='del'>X markers</del> on <del class='del'>it.</del> Friendly units get <del class='del'>+AP(X)</del> on their weapons when attacking <del class='del'>it.</del><br><span class='add'>3.6.0:</span> Once per game, during this model&#x27;s activation, pick <ins class='add'>X</ins> enemy <ins class='add'>units</ins> within 18&quot; and in line of sight of it, and place <ins class='add'>one token</ins> on <ins class='add'>them.</ins> Friendly units get <ins class='add'>AP(+1)</ins> on their weapons when attacking <ins class='add'>them.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Ranged Shrouding</td><td><span class='del'>3.5.1:</span> <del class='del'>Enemies</del> get <del class='del'>-6&quot;</del> range to a min. of 6&quot; when <del class='del'>trying to shoot units where all models have this rule.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When a unit where most models have this rule is targeted by an enemy, as long as this unit hasn&#x27;t started an activation yet this round, attackers</ins> get <ins class='add'>-4&quot;&quot;</ins> range to a min. of 6&quot; when <ins class='add'>shooting at it.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Ranged Shrouding Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Ranged Shrouding. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Ranged Shrouding. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Regeneration. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Regeneration. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Shred<br><span class='muted'>becomes a core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>On</del> unmodified <del class='del'>results</del> of 1 to block hits, this weapon deals 1 extra wound.<br><span class='add'>3.6.0:</span> <ins class='add'>For each</ins> unmodified <ins class='add'>result</ins> of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
+<tr class='mod'><td>✏️</td><td>Shred Mark</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick up to <del class='del'>4</del> enemy units within 18&quot; in line of sight, which friendly units gets Shred when attacking against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> enemy units within 18&quot; in line of sight, which friendly units gets Shred when attacking against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Shred when Shooting Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Shred when shooting. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Shred when shooting. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Steadfast</td><td><span class='del'>3.5.1:</span> If a unit where <del class='del'>all</del> models have this rule is Shaken at the beginning of the round, roll one die. On a 4+, it stops being Shaken.<br><span class='add'>3.6.0:</span> If a unit where <ins class='add'>most</ins> models have this rule is Shaken at the beginning of the round, roll one die. On a 4+, it stops being Shaken.</td></tr>
+<tr class='mod'><td>✏️</td><td>Steadfast Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Steadfast. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Steadfast. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Unstoppable<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Ignores Regeneration, and ignores all negative modifiers to this <del class='del'>weapon.</del><br><span class='add'>3.6.0:</span> Ignores Regeneration, and ignores all negative modifiers to this <ins class='add'>weapon which are not from this model&#x27;s special rules.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Unstoppable in Melee Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Unstoppable in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Unstoppable in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Dread Strike</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>models</del> within <del class='del'>24&quot;,</del> which <del class='del'>take</del> 1 hit with <del class='del'>Tear each.</del> This effect is resolved as if the target was a unit of [1].<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>model</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>takes</ins> 1 hit with <ins class='add'>AP(2) and Disintegrate.</ins> This effect is resolved as if the target was a unit of [1].</td></tr>
+<tr class='mod'><td>✏️</td><td>Focused Defender</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>four</del> friendly units within <del class='del'>12&quot;,</del> which get Unpredictable Fighter once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get Unpredictable Fighter once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Guardian Protection</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to six</del> friendly <del class='del'>units</del> within 12&quot;, which <del class='del'>get</del> Guardian <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> friendly <ins class='add'>unit</ins> within 12&quot;, which <ins class='add'>gets Enhanced</ins> Guardian once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Mind Gash</td><td><span class='del'>3.5.1:</span> (3) Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within <del class='del'>12&quot;,</del> which <del class='del'>take 2</del> hits with <del class='del'>AP(1) and Shred each.</del><br><span class='add'>3.6.0:</span> (3) Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>takes 6</ins> hits with <ins class='add'>Shred.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>The Founder&#x27;s Curse</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick up to two enemy units within <del class='del'>18&quot;,</del> which friendly units gets Shred when attacking against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to two enemy units within <ins class='add'>18&quot; in line of sight,</ins> which friendly units gets Shred when attacking against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Thunderous Mist</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick one enemy unit within <del class='del'>18&quot;,</del> which takes <del class='del'>2</del> hits.<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which takes <ins class='add'>4</ins> hits.</td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

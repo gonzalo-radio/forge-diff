@@ -1,0 +1,407 @@
+<title>Jackals 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Jackals — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>grimdark-future-firefight. <code>stable 2026-09-28: Jackals</code> (versionString 3.5.3, edited 2026-04-30, modified 2026-07-14) → <code>beta 2026-09-28: Jackals</code> (versionString 3.5.1, edited 2026-09-10, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 13 (13 with cost changes)</li>
+<li>Profile changes: Quality 3, Defense 0, Size 1</li>
+<li>Special rules: +6 / -8 / ~15</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Elite Veteran</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>135</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td>Veteran</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>25</td><td class='num'>90</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td>Ranjo &quot;Swiftsnare&quot;</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>70</td><td class='num'>185</td><td class='num'><b class='del'>+115</b></td></tr>
+<tr><td>Ruyi &quot;Lonespear&quot;</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>95</td><td class='num'>165</td><td class='num'><b class='del'>+70</b></td></tr>
+<tr><td>Tayra &quot;Shipspeaker&quot;</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>115</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td>Elite</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>25</td><td class='num'>55</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td>Stalkers → Stalker</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'><b class=add>5+ → 4+</b></td><td class='num'>5+</td><td class='num'>40</td><td class='num'>55</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Vulture</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>30</td><td class='num'>55</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Tracker</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>70</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td>Hounds</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>90</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td>Nomads</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>105</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td>Beast Rider</td><td class='num'>1</td><td class='num'><b class=add>5+ → 4+</b></td><td class='num'>4+</td><td class='num'>50</td><td class='num'>145</td><td class='num'><b class='del'>+95</b></td></tr>
+<tr><td>Beast Gunner</td><td class='num'>1</td><td class='num'><b class=add>5+ → 4+</b></td><td class='num'>4+</td><td class='num'>65</td><td class='num'>155</td><td class='num'><b class='del'>+90</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Elite Veteran</h3><p class='stats'>50 → 135 pts (+85) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Pistol (9&quot;, A2, Assault, Surge)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A6)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Elite Shotgun (12&quot;, A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunt Master (Ranged Shrouding Aura) · <del class='del'>+15</del> pts</td><td>Hunt Master (Ranged Shrouding Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Warlord (Precision Fighter Aura) · <del class='del'>+10</del> pts</td><td>Warlord (Precision Fighter Aura) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shaman (Caster(2)) · <del class='del'>+25</del> pts</td><td>Shaman (Caster(2)) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wasteland Survivor <del class='del'>(Scrapper Boost</del> Aura) · <del class='del'>+10</del> pts</td><td>Wasteland Survivor <ins class='add'>(Enhanced Scrapper</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Merchant (Unpredictable Shooter Aura) · <del class='del'>+20</del> pts</td><td>Merchant (Unpredictable Shooter Aura) · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Energy Pistol and Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shaman Staff (A4, Spell Amplifier) · +-15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Explosive Spear (A8, Shred) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Energy Rifle (18&quot;, A6, Surge), Hand Weapon (A2) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shotgun (12&quot;, A8, AP(1)), Hand Weapon (A2) · +15 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Energy Pistol</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shred Long Pistol (15&quot;, A2, Rending, Assault) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plasma Long Pistol (15&quot;, A2, AP(2), Assault) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Heavy Flamer Pistol (6&quot;, A2, AP(1), Ignores Cover, Reliable, Assault) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Hook (6&quot;, A2, AP(4), Assault) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Missile Long Pistol (15&quot;, A2, AP(2), Assault, Unstoppable) · +20 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Elite Shotgun and CCW</del></td><td>Replace <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Harpoon <del class='del'>(A3,</del> Thrust) · <del class='del'>+-5</del> pts</td><td><ins class='add'>Barbed</ins> Harpoon <ins class='add'>(A6,</ins> Thrust) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Goad-Spear <del class='del'>(A3, Precise, Shatter)</del> · <del class='del'>+10</del> pts</td><td>Goad-Spear <ins class='add'>(A6, Disintegrate)</ins> · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hunting Hook (A3, Rending) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Explosive Spear (A3, AP(2)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Satellite Backpack (Repel Ambushers) · <del class='del'>+10</del> pts</td><td>Satellite Backpack (Repel Ambushers) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetpack <del class='del'>(Ambush, Crossing Attack(1), Flying)</del> · +20 pts</td><td>Jetpack <ins class='add'>(Flying)</ins> · +20 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Raider Jetpack (Ambush, Flying) · +50 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gunner Beast (Bounding, <del class='del'>Fortified, Tough(3))</del> · <del class='del'>+60</del> pts</td><td>Gunner Beast (Bounding, <ins class='add'>Relentless, Tough(9))</ins> · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Assault Beast (Bounding, <del class='del'>Impact(2), Tough(3))</del> · <del class='del'>+60</del> pts</td><td>Assault Beast (Bounding, <ins class='add'>Impact(6), Tough(9))</ins> · <ins class='add'>+155</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Stalker (Furious, Melee Evasion) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Elite Shotgun</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Energy Rifle (24&quot;, A2, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Veteran</h3><p class='stats'>25 → 90 pts (+65) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Elite</del> Scrap Pistol (12&quot;, <del class='del'>A2)</del></td><td>Scrap Pistol (12&quot;, <ins class='add'>A2, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A6)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Elite</del> Scrap Pistol and <del class='del'>CCW</del></td><td>Replace Scrap Pistol and <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Sniper Rifle (30&quot;, A1, AP(1), Deadly(2), Reliable), Hand Weapon (A2) · +-5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Explosive Spear <del class='del'>(A3, AP(2))</del> · <del class='del'>+10</del> pts</td><td>Explosive Spear <ins class='add'>(A8, Shred)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Scrap Rifle (24&quot;, A6), Hand Weapon (A2) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shaman Staff (A4, Spell Amplifier) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shotgun (12&quot;, A8, AP(1)), Hand Weapon (A2) · +15 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Harpoon (A3, Thrust) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hunting Hook (A3, Rending) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Goad-Spear (A3, Precise, Shatter) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Elite</del> Scrap Pistol</td><td>Replace Scrap Pistol</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Zapper Pistol (9&quot;, A2, Assault, Surge) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rocket Pistol (9&quot;, A2, AP(2), Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Force Blaster Pistol (12&quot;, A2, AP(2), Assault) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Power Spiker Pistol (9&quot;, A2, Rending, Assault) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Hook (6&quot;, A2, AP(4), Assault) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fumigator Pistol (6&quot;, A2, Ignores Cover, Reliable, Assault) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Scrap Rifle (24&quot;, A2) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Hunting Shotgun (9&quot;, A3, Shatter) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Elite Hunting Rifle (24&quot;, A1, Reliable, Shatter) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>CCW</del></td><td>Replace <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Scrap Club <del class='del'>(A1,</del> Blast(3)) · +5 pts</td><td>Scrap Club <ins class='add'>(A2, AP(1),</ins> Blast(3)) · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Barbed Harpoon (A6, Thrust) · +15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jagged Hook (A1, <del class='del'>AP(2), Deadly(3))</del> · <del class='del'>+10</del> pts</td><td>Jagged Hook (A1, <ins class='add'>AP(4), Deadly(6))</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Claw Gauntlet <del class='del'>(A2, AP(4))</del> · <del class='del'>+15</del> pts</td><td>Claw Gauntlet <ins class='add'>(A6, AP(2))</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Junk Sword <del class='del'>(A2, AP(1),</del> Rending) · <del class='del'>+10</del> pts</td><td>Junk Sword <ins class='add'>(A6,</ins> Rending) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Goad-Spear (A6, Disintegrate) · +40 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunt Master (Ranged Shrouding Aura) · <del class='del'>+15</del> pts</td><td>Hunt Master (Ranged Shrouding Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Warlord (Precision Fighter Aura) · <del class='del'>+10</del> pts</td><td>Warlord (Precision Fighter Aura) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shaman (Caster(2)) · <del class='del'>+25</del> pts</td><td>Shaman (Caster(2)) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wasteland Survivor <del class='del'>(Scrapper Boost</del> Aura) · <del class='del'>+10</del> pts</td><td>Wasteland Survivor <ins class='add'>(Enhanced Scrapper</ins> Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Pathfinder (Scout Aura) · <del class='del'>+15</del> pts</td><td>Pathfinder (Scout Aura) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Satellite Backpack (Repel Ambushers) · <del class='del'>+10</del> pts</td><td>Satellite Backpack (Repel Ambushers) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetpack <del class='del'>(Ambush, Crossing Attack(1), Flying)</del> · <del class='del'>+15</del> pts</td><td>Jetpack <ins class='add'>(Flying)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Raider Jetpack (Ambush, Flying) · +30 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gunner Beast (Bounding, <del class='del'>Fortified, Tough(3))</del> · <del class='del'>+40</del> pts</td><td>Gunner Beast (Bounding, <ins class='add'>Relentless, Tough(9))</ins> · <ins class='add'>+90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Assault Beast (Bounding, <del class='del'>Impact(2), Tough(3))</del> · <del class='del'>+45</del> pts</td><td>Assault Beast (Bounding, <ins class='add'>Impact(6), Tough(9))</ins> · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Stalker (Furious, Melee Evasion) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Ranjo &quot;Swiftsnare&quot;</h3><p class='stats'>70 → 185 pts (+115) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Friendly units within 12” may take morale tests using the hero’s Quality, as long as the hero isn’t Shaken. </span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Energy Pistol (9&quot;, <del class='del'>A1, AP(1),</del> Surge)</td><td>Energy Pistol (9&quot;, <ins class='add'>A2, Assault,</ins> Surge)</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Renegade Sword <del class='del'>(A2,</del> Shred)</td><td>Renegade Sword <ins class='add'>(A6,</ins> Shred)</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Salvaged Charge (A1, AP(4), <del class='del'>Deadly(3),</del> Limited)</td><td>Salvaged Charge (A1, AP(4), <ins class='add'>Deadly(6),</ins> Limited)</td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Dazzle Cloak <del class='del'>(Stealth Aura)</del></td><td>Dazzle Cloak <ins class='add'>(Stealth)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dazzle Cloak</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dazzle Cloak - Leader (Stealth Aura) · +35 pts</ins></td></tr>
+</table></div>
+<h3>Ruyi &quot;Lonespear&quot;</h3><p class='stats'>95 → 165 pts (+70) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Ambush</del><br><span class='muted'>May be set aside before deployment. At the start of any round after the first, may be deployed anywhere over 9” away from enemy units. Players alternate in placing Ambush units, starting with the player that activates next. Units that deploy via Ambush can’t seize or contest objectives on the round they deploy.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Friendly units within 12” may take morale tests using the hero’s Quality, as long as the hero isn’t Shaken. </span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Photon Pistol (9&quot;, A2, AP(1), Assault, Shatter)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Explosive Spear <del class='del'>(A3, AP(2))</del></td><td>Explosive Spear <ins class='add'>(A6, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Gauss Pistol (12&quot;, A2, Destructive)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Vengeful Warhead (A1, AP(1), Blast(3), Limited, Strafing)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Advanced Bombs (Crossing Attack(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with any</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sky Raider (Ambush) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Vengeful Warheads (Crossing Attack(12)) · +55 pts</ins></td></tr>
+</table></div>
+<h3>Tayra &quot;Shipspeaker&quot;</h3><p class='stats'>60 → 115 pts (+55) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Friendly units within 12” may take morale tests using the hero’s Quality, as long as the hero isn’t Shaken. </span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Caster(1)</del><br><span class='muted'>Gets X spell tokens at the start of each round, but can’t hold more than 6 tokens at once. At any point before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). Roll one die, on 4+ resolve the effect on a target in line of sight. Models within 18” in line of sight of the caster’s unit may spend any number of spell tokens at the same time before rolling, to give the caster +1/-1 to the roll per token.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Droideridoo (9&quot;, <del class='del'>A3,</del> Unstoppable)</td><td>Droideridoo (9&quot;, <ins class='add'>A6, Assault,</ins> Unstoppable)</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Strike <del class='del'>(A1)</del></td><td>Strike <ins class='add'>(A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Mechanical Whispers (Mind Control)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mechanical Whispers (Mind Control) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Elite</h3><p class='stats'>25 → 55 pts (+30) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Energy Rifle <del class='del'>(24&quot;, A1, AP(1))</del></td><td>Energy Rifle <ins class='add'>(18&quot;, A2, Surge)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Energy Rifle</td><td>Replace Energy Rifle</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shotgun (12&quot;, A4, AP(1)) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Flamer (12&quot;, <del class='del'>A1,</del> AP(1), Blast(3), Reliable) · <del class='del'>+20</del> pts</td><td>Heavy Flamer (12&quot;, <ins class='add'>A2,</ins> AP(1), Blast(3), Reliable) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Missile Launcher (30&quot;, A1, AP(2), <del class='del'>Deadly(3),</del> Unstoppable) · <del class='del'>+35</del> pts</td><td>Missile Launcher (30&quot;, A1, AP(2), <ins class='add'>Deadly(6),</ins> Unstoppable) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plasma Cannon (30&quot;, A2, AP(2), Blast(3)) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shredder Cannon (30&quot;, A6, Rending) · +85 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Shred Rifle (18&quot;, A2, AP(1), Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Plasma Rifle (30&quot;, A1, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Satellite Backpack (Repel Ambushers) · <del class='del'>+10</del> pts</td><td>Satellite Backpack (Repel Ambushers) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunter&#x27;s Mark (Precision <del class='del'>Tag(1))</del> · +5 pts</td><td>Hunter&#x27;s Mark (Precision <ins class='add'>Tag(2))</ins> · +5 pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Energy Rifle</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shotgun (12&quot;, A2, AP(1)) · free</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Stalker</h3><p class='stats'>40 → 55 pts (+15) · Size 3 → 1 · Quality 5+ → 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Stalkers</del></td><td><ins class='add'>Stalker</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Size</td><td><del class='del'>3</del></td><td><ins class='add'>1</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Quality</td><td><del class='del'>5+</del></td><td><ins class='add'>4+</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Dodge</ins><br><span class='muted'>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</span></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Melee Evasion</del><br><span class='muted'>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Junk Swords (A2, Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>6x 2x CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Junk Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Claw Gauntlets (A2, AP(2)) · +-5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4) · +-5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Scrap Clubs (A2, AP(1), Blast(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Jagged Hooks (A1, AP(4), Deadly(6)) · +35 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Junk Sword (A1, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Claw Hand (A1, AP(4)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scrap Club (A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Jagged Hook (A1, AP(2), Deadly(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Vulture</h3><p class='stats'>30 → 55 pts (+25) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Ambush</del><br><span class='muted'>May be set aside before deployment. At the start of any round after the first, may be deployed anywhere over 9” away from enemy units. Players alternate in placing Ambush units, starting with the player that activates next. Units that deploy via Ambush can’t seize or contest objectives on the round they deploy.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Crossing Attack(1)</del><br><span class='muted'>Once per activation, when this model moves through enemy units, pick one of them and roll X dice. For each 6+ the target takes one wound.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Explosive Spear (A4, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Scrap Pistol (12&quot;, A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Explosive Spear</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Pistol (12&quot;, A2, Assault), Hand Weapon (A2) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Rifle (18&quot;, A2, Surge), Strike (A2) · +5 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Scrap Pistol</del></td><td>Replace <ins class='add'>Energy Rifle</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Zapper Gun <del class='del'>(12&quot;, A2,</del> Surge) · <del class='del'>+5</del> pts</td><td>Zapper Gun <ins class='add'>(18&quot;, A6,</ins> Surge) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Force Blaster <del class='del'>(12&quot;, A1, AP(4))</del> · <del class='del'>+5</del> pts</td><td>Force Blaster <ins class='add'>(24&quot;, A4, AP(2))</ins> · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunting Shotgun <del class='del'>(9&quot;, A2, Shatter)</del> · <del class='del'>+10</del> pts</td><td>Hunting Shotgun <ins class='add'>(12&quot;, A8, Disintegrate)</ins> · <ins class='add'>+95</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Rifle (24&quot;, A1, AP(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any CCW</del></td><td>Replace <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Junk Sword (A2, <del class='del'>AP(1),</del> Rending) · +10 pts</td><td>Junk Sword (A2, Rending) · +10 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Claw Gauntlet (A2, <del class='del'>AP(4))</del> · <del class='del'>+15</del> pts</td><td>Claw Gauntlet (A2, <ins class='add'>AP(2))</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Club (A2, AP(1), Blast(3)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jagged Hook (A1, AP(4), Deadly(6)) · +40 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with any</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sky Raider (Ambush) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Vulture Nades (Crossing Attack(2)) · +10 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Scrap Pistols and CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Explosive Spear (A2, AP(2)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scrap Club (A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Jagged Hook (A1, AP(2), Deadly(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Tracker</h3><p class='stats'>40 → 70 pts (+30) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Marksman Carbine (18&quot;, A4, AP(1), Ignores Cover, Precise)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hunting Rifle (24&quot;, A1, Reliable, Shatter)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Satellite Backpack (Repel Ambushers) · <del class='del'>+10</del> pts</td><td>Satellite Backpack (Repel Ambushers) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunter&#x27;s Mark (Precision <del class='del'>Tag(1))</del> · +5 pts</td><td>Hunter&#x27;s Mark (Precision <ins class='add'>Tag(2))</ins> · +5 pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Marksman Carbine</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Sniper Rifle (30&quot;, A1, AP(1), Deadly(2), Reliable) · +-25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Sniper Carbine (18&quot;, A2, Deadly(2), Reliable) · +-20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Carbine (18&quot;, A1, Deadly(2), Reliable, Disintegrate) · +-15 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Charged Ammo (Ambushing Piercing Shot) · <del class='del'>+5</del> pts</td><td>Charged Ammo (Ambushing Piercing Shot) · <ins class='add'>+15</ins> pts</td></tr>
+</table></div>
+<h3>Hounds</h3><p class='stats'>35 → 90 pts (+55) · Size 3 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Claws <del class='del'>(A2)</del></td><td>3x <ins class='add'>Jagged</ins> Claws <ins class='add'>(A2, Shred)</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all Claws</td><td>Replace all <ins class='add'>Jagged</ins> Claws</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Razor Claws (A4) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Sharp</del> Claws (A2, <del class='del'>Shatter)</del> · <del class='del'>+15</del> pts</td><td><ins class='add'>Hunting</ins> Claws (A2, <ins class='add'>Disintegrate)</ins> · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hunting Hounds</td><td>Replace all Hunting Hounds</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Territorial Beast (Scout) · <del class='del'>+5</del> pts</td><td>Territorial Beast (Scout) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade all models with <del class='del'>any</del></td><td>Upgrade all models with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunter Breed (Furious) · <del class='del'>+5</del> pts</td><td>Hunter Breed (Furious) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Vicious Bite (Ignores Regeneration in Melee) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Nomads</h3><p class='stats'>40 → 105 pts (+65) · Size 3 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>105</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Scrap Rifle (24&quot;, <del class='del'>A1)</del></td><td>3x Scrap Rifle (24&quot;, <ins class='add'>A2)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all Scrap Rifles and <del class='del'>CCWS</del></td><td>Replace all Scrap Rifles and <ins class='add'>Strikes</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Scrap Pistol (12&quot;, <del class='del'>A1), CCW</del> (A2) · <del class='del'>free</del></td><td>Scrap Pistol (12&quot;, <ins class='add'>A2, Assault), Hand Weapon</ins> (A2) · <ins class='add'>+10 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace one Scrap <del class='del'>Rifle</del></td><td>Replace one Scrap <ins class='add'>Rifles</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rocket Launcher (18&quot;, A1, AP(2), <del class='del'>Deadly(3))</del> · <del class='del'>+15</del> pts</td><td>Rocket Launcher (18&quot;, A1, AP(2), <ins class='add'>Deadly(6))</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shotgun (12&quot;, A8, AP(1)) · +30 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Force Blaster (24&quot;, <del class='del'>A1, AP(4))</del> · <del class='del'>+10</del> pts</td><td>Force Blaster (24&quot;, <ins class='add'>A4, AP(2))</ins> · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fumigator (12&quot;, <del class='del'>A1,</del> Blast(3), <del class='del'>Reliable, Surge)</del> · <del class='del'>+15</del> pts</td><td>Fumigator (12&quot;, <ins class='add'>A2,</ins> Blast(3), <ins class='add'>Reliable)</ins> · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Zapper Gun <del class='del'>(12&quot;, A3,</del> Surge) · <del class='del'>+5</del> pts</td><td>Zapper Gun <ins class='add'>(18&quot;, A6,</ins> Surge) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Marksman Carbine (18&quot;, A4, AP(1), Ignores Cover, Precise) · +35 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Power Spiker (18&quot;, <del class='del'>A2,</del> Rending) · <del class='del'>+10</del> pts</td><td>Power Spiker (18&quot;, <ins class='add'>A6,</ins> Rending) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunting Shotgun <del class='del'>(9&quot;, A2, Shatter)</del> · <del class='del'>+5</del> pts</td><td>Hunting Shotgun <ins class='add'>(12&quot;, A8, Disintegrate)</ins> · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hunting Rifle (24&quot;, A1, Reliable, Shatter) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Satellite Backpack (Repel Ambushers) · <del class='del'>+10</del> pts</td><td>Satellite Backpack (Repel Ambushers) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunter&#x27;s Mark (Precision <del class='del'>Tag(1))</del> · +5 pts</td><td>Hunter&#x27;s Mark (Precision <ins class='add'>Tag(2))</ins> · +5 pts</td></tr>
+</table></div>
+<h3>Beast Rider</h3><p class='stats'>50 → 145 pts (+95) · Size 1 · Quality 5+ → 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>145</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Quality</td><td><del class='del'>5+</del></td><td><ins class='add'>4+</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Impact(2)</del></td><td><ins class='add'>Impact(4)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Explosive Spear <del class='del'>(A2, AP(2))</del></td><td>Explosive Spear <ins class='add'>(A4, Shred)</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Explosive Spear</td><td>Replace Explosive Spear</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Harpoon <del class='del'>(A2,</del> Thrust) · <del class='del'>free</del></td><td><ins class='add'>Barbed</ins> Harpoon <ins class='add'>(A4,</ins> Thrust) · <ins class='add'>+5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Pistol (12&quot;, A2, Assault), Hand Weapon (A2) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Pistol (12&quot;, A2, Assault), Junk Sword (A2, Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Pistol (12&quot;, A2, Assault), Claw Gauntlet (A2, AP(2)) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunting Hook <del class='del'>(A2, Rending)</del> · <del class='del'>+5</del> pts</td><td>Hunting Hook <ins class='add'>(6&quot;, A2, AP(4), Assault)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Goad-Spear <del class='del'>(A2, Precise, Shatter)</del> · <del class='del'>+5</del> pts</td><td>Goad-Spear <ins class='add'>(A4, Disintegrate)</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Pistol (12&quot;, A2, Assault), Scrap Club (A2, AP(1), Blast(3)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Pistol (12&quot;, A2, Assault), Jagged Hook (A1, AP(4), Deadly(6)) · +45 pts</ins></td></tr>
+</table></div>
+<h3>Beast Gunner</h3><p class='stats'>65 → 155 pts (+90) · Size 1 · Quality 5+ → 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Quality</td><td><del class='del'>5+</del></td><td><ins class='add'>4+</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Relentless</ins><br><span class='muted'>When this model shoots at enemies over 9” away, unmodified result of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Fortified</del><br><span class='muted'>When units where all models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Fumigator (12&quot;, A2, Blast(3), Reliable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Machinegun (30&quot;, A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Fumigator</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scrap Sniper Carbine (18&quot;, A2, Deadly(2), Reliable) · +-25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rocket Launcher (18&quot;, A1, AP(2), Deadly(6)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Marksman Carbine (18&quot;, A4, AP(1), Ignores Cover, Precise) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shotgun (12&quot;, A8, AP(1)) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Machinegun (30&quot;, A6, AP(1)) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Shotgun (12&quot;, A8, Disintegrate) · +120 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Heavy Machinegun</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hunting Rifle (24&quot;, A1, Reliable, Shatter) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade one model with one</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hunter&#x27;s Mark (Precision Tag(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Satellite Backpack (Repel Ambushers) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Disintegrate</td><td>Ignores Regeneration, and when attacking units where most models have Tough(9) or higher, this weapon gets AP(+2).</td></tr>
+<tr class='add'><td>➕</td><td>Dodge</td><td>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Scrapper</td><td>If this model has Scrapper, enemies taking hits from it must re-roll successful unmodified Defense results of 5-6 from Scrapper (instead of only results of 6).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Scrapper Aura</td><td>This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Enhanced Scrapper. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Vicious</td><td>If this model has Vicious, enemies taking hits from it must re-roll successful unmodified Defense results of 5-6 from Vicious (instead of only results of 6).</td></tr>
+<tr class='add'><td>➕</td><td>Unique Hero</td><td>Counts as having Hero, and this model may only be taken once per army.</td></tr>
+<tr class='del'><td>➖</td><td>Destructive</td><td>On unmodified results of 6 to hit, those hits get AP(+4).</td></tr>
+<tr class='del'><td>➖</td><td>Fortified</td><td>When units where all models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='del'><td>➖</td><td>Melee Evasion</td><td>Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.</td></tr>
+<tr class='del'><td>➖</td><td>Scrapper Boost</td><td>If this model has Scrapper, when it shoots or charges enemies over 9&quot; away, enemies taking hits from it must re-roll successful unmodified defense results of 5-6 from Scrapper (instead of only on 6).</td></tr>
+<tr class='del'><td>➖</td><td>Scrapper Boost Aura</td><td>This model and up to 3 friendly units picked before the start of the game get Scrapper Boost. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Shred</td><td>On unmodified results of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
+<tr class='del'><td>➖</td><td>Strafing</td><td>Once per activation, when this model moves through enemy units, pick one of them and attack it with this weapon as if it was shooting. This weapon may only be used in this way.</td></tr>
+<tr class='del'><td>➖</td><td>Surge</td><td>On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Bounding</td><td><span class='del'>3.5.1:</span> When this unit is activated, you may <del class='del'>place</del> all models with this rule in it <del class='del'>anywhere fully within D3+1&quot; of their position.</del><br><span class='add'>3.6.0:</span> When this unit is activated, you may <ins class='add'>move</ins> all models with this rule in it <ins class='add'>by up to D3+1&quot;.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Mind Control</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick up to <del class='del'>4</del> enemy units within 18&quot; in line of sight, which must take a <del class='del'>morale test.</del> If failed you may move it by up to 6&quot; in a straight line in any direction.<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> enemy units within 18&quot; in line of sight, which must take a <ins class='add'>Morale Test.</ins> If failed you may move it by up to 6&quot; in a straight line in any direction. <ins class='add'>Units may only be moved once per round in this way.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Precision Fighter Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get +1 to hit rolls in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get +1 to hit rolls in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Precision Tag</td><td><span class='del'>3.5.1:</span> Once per game, during this model&#x27;s activation, <del class='del'>pick</del> one enemy unit within 24&quot; and in line of <del class='del'>sight</del> of <del class='del'>it, and place X markers on it.</del> When attacking, friendly units may remove <del class='del'>markers</del> from their target before rolling to hit to get <del class='del'>+Y</del> to hit <del class='del'>rolls, where Y is the number of removed markers.</del><br><span class='add'>3.6.0:</span> Once per game, during this model&#x27;s activation, <ins class='add'>place X tokens on</ins> one enemy unit within 24&quot; and in line of <ins class='add'>sight, or one token on X enemy units within 24&quot; and in line</ins> of <ins class='add'>sight.</ins> When attacking, friendly units may remove <ins class='add'>one token</ins> from their target before rolling to hit to get <ins class='add'>+1</ins> to hit <ins class='add'>rolls.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Ranged Shrouding</td><td><span class='del'>3.5.1:</span> <del class='del'>Enemies</del> get <del class='del'>-6&quot;</del> range to a min. of 6&quot; when <del class='del'>trying to shoot units where all models have this rule.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When a unit where most models have this rule is targeted by an enemy, as long as this unit hasn&#x27;t started an activation yet this round, attackers</ins> get <ins class='add'>-4&quot;&quot;</ins> range to a min. of 6&quot; when <ins class='add'>shooting at it.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Ranged Shrouding Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Ranged Shrouding. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Ranged Shrouding. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Scout<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> May be set aside before deployment. After all other units are deployed, may be deployed anywhere fully within <del class='del'>12”</del> of their deployment <del class='del'>zone.</del> Players alternate in placing Scout units, starting with the player that activates next.<br><span class='add'>3.6.0:</span> May be set aside before deployment. After all other units are deployed, may be deployed anywhere fully within <ins class='add'>9”</ins> of their deployment <ins class='add'>zone, over 9” away from non-Scout enemy units.</ins> Players alternate in placing Scout units, starting with the player that activates next.</td></tr>
+<tr class='mod'><td>✏️</td><td>Scout Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Scout. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Scout. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Shatter</td><td><span class='del'>3.5.1:</span> <del class='del'>Against non-Hero units with Tough(3) or more, this weapon gets AP(+2).</del><br><span class='add'>3.6.0:</span> <ins class='add'>For each unmodified result of 6 to hit, those hits get AP(+3).</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Shielded</td><td><span class='del'>3.5.1:</span> Units where <del class='del'>all</del> models have this rule get +1 to <del class='del'>defense</del> rolls against hits that are not from spells.<br><span class='add'>3.6.0:</span> Units where <ins class='add'>most</ins> models have this rule get +1 to <ins class='add'>Defense</ins> rolls against hits that are not from spells.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Tough<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>This</del> model <del class='del'>only rolls to check wound effects once it</del> has taken <del class='del'>at least X wounds, and</del> is <del class='del'>only Knocked Out on rolls of 5+X or more.</del><br><span class='add'>3.6.0:</span> <ins class='add'>Once a</ins> model has taken <ins class='add'>as many wounds as its Tough value, it</ins> is <ins class='add'>killed (remove from play).</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Unpredictable Shooter Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Unpredictable Shooter. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Unpredictable Shooter. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Feral Strike</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within 6&quot;, which <del class='del'>take</del> 1 hit with AP(2) and <del class='del'>Deadly(3) each.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within 6&quot;, which <ins class='add'>takes</ins> 1 hit with AP(2) and <ins class='add'>Deadly(3).</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Mind Shaper</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick <del class='del'>up to four</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which <del class='del'>get</del> -1 to <del class='del'>morale test</del> rolls once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>gets</ins> -1 to <ins class='add'>Morale Test</ins> rolls once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Power Field</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick up to <del class='del'>six</del> friendly units within 12&quot;, which get Shielded once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get Shielded once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Power Maw</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick up to two enemy units within <del class='del'>12&quot;,</del> which take <del class='del'>1 hit</del> with AP(2) each.<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to two enemy units within <ins class='add'>6&quot;,</ins> which take <ins class='add'>4 hits</ins> with AP(2) each.</td></tr>
+<tr class='mod'><td>✏️</td><td>Psy-Hunter</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick up to <del class='del'>two</del> friendly units within <del class='del'>12&quot;,</del> which get Scrapper <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Scrapper once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Quill Blast</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within <del class='del'>12&quot;,</del> which <del class='del'>take 2</del> hits with <del class='del'>Shatter each.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>takes 6</ins> hits with <ins class='add'>Disintegrate.</ins></td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

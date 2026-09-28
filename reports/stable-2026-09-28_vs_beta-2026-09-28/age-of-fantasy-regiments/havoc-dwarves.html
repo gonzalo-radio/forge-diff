@@ -1,0 +1,463 @@
+<title>Havoc Dwarves 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Havoc Dwarves — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>age-of-fantasy-regiments. <code>stable 2026-09-28: Havoc Dwarves</code> (versionString 3.5.3, edited 2026-05-18, modified 2026-07-14) → <code>beta 2026-09-28: Havoc Dwarves</code> (versionString 3.5.1, edited 2026-09-03, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 21 (20 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 0, Size 0</li>
+<li>Special rules: +8 / -6 / ~11</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Bull Centaur Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>150</td><td class='num'>190</td><td class='num'><b class='del'>+40</b></td></tr>
+<tr><td>Iron Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>60</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Abyssal Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>40</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Cultists</td><td class='num'>10</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>110</td><td class='num'>90</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td>Warriors</td><td class='num'>10</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>100</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Gargoyles</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>65</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Immortals</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>90</td><td class='num'>80</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Berserkers</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>90</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Shooters</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>95</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Infernal Shooters</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>90</td><td class='num'>95</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Weapon Teams</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>140</td><td class='num'>145</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Sentinel Centaurs</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>110</td><td class='num'>115</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Bull Centaurs</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>205</td><td class='num'>225</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Golems → Rock Golems</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>145</td><td class='num'>145</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Flame Spirits</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>140</td><td class='num'>175</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td>Grotesques</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>170</td><td class='num'>190</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Greater Golem → Great Rock Golem</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>130</td><td class='num'>115</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Bull Construct</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>2+</td><td class='num'>235</td><td class='num'>245</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Giant Rhino</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>2+</td><td class='num'>295</td><td class='num'>355</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td>Siege Wagon</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>150</td><td class='num'>125</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td>Havoc Artillery</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>140</td><td class='num'>115</td><td class='num'><b class='add'>-25</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Bull Centaur Champion</h3><p class='stats'>150 → 190 pts (+40) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>190</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(4)</del><br><span class='muted'>Models in the two front rows roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Dual <del class='del'>Heavy</del> Hand Weapons <del class='del'>(A4, AP(1))</del></td><td>Dual Hand Weapons <ins class='add'>(A8)</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ashen Lord <del class='del'>(Havocbound Boost</del> Aura) · <del class='del'>+65</del> pts</td><td>Ashen Lord <ins class='add'>(Enhanced Havocbound</ins> Aura) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Pain Forger (Melee Slayer Aura) · <del class='del'>+25</del> pts</td><td>Pain Forger (Melee Slayer Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hex Caster (Caster(2)) · <del class='del'>+50</del> pts</td><td>Hex Caster (Caster(2)) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Dual <del class='del'>Heavy</del> Hand <del class='del'>Weapon</del></td><td>Replace Dual Hand <ins class='add'>Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Caster Staff (A4, Spell Amplifier) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Halberd (A6, AP(1), Rending) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A6, AP(4)) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Axes (12&quot;, A3, Assault), Halberd (A6, Rending) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Axes (12&quot;, A3, Assault), Great Weapon (A6, AP(2)) · +70 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Great Weapon (A4, AP(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Throwing Axes</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (12&quot;, A1, Blast(3), Indirect, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Impact Bombs (9&quot;, A1, AP(2), Deadly(3), Assault) · +20 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throwing Weapon (12&quot;, A4) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Iron Champion</h3><p class='stats'>45 → 60 pts (+15) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Hand Weapon (A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A3, AP(1), Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Halberd (A3, AP(1), Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Axes (12&quot;, A1, Assault), Hand Weapon (A3, Parry(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Hex Blunderbuss (9&quot;, A4, Purge), Strike (A1) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Spear (A3, AP(1), Counter, Brace(1)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A3, AP(4)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Matchlock Pistols (9&quot;, A4, AP(1), Assault) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hex Pistols (9&quot;, A4, Assault, Purge) · +50 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy</del> Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Halberd (A3, <del class='del'>AP(1),</del> Rending) · +5 pts</td><td>Halberd (A3, Rending) · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear (A3, Counter, Brace(1)) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Great Weapon (A3, <del class='del'>AP(3))</del> · +10 pts</td><td>Great Weapon (A3, <ins class='add'>AP(2))</ins> · +10 pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Heavy Hand Weapons (A4, AP(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Spear (A3, AP(1), Counter) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Throwing Axes</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Pistol (9&quot;, A1, AP(1), Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Pistol (12&quot;, A1, Assault, Purge) · +5 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Rapid Hex Blunderbuss</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Blunderbuss (12&quot;, A4, AP(1)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Matchlock Rifle (18&quot;, A3, AP(1)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Hex Rifle (24&quot;, A3, Purge) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (12&quot;, A1, Blast(3), Indirect, Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Impact Bombs (9&quot;, A1, AP(2), Deadly(3), Assault) · +20 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with <del class='del'>one (2)</del></td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Winged Beast <del class='del'>(Horn</del> (A6, <del class='del'>AP(2)),</del> Armor(3), Fear(1), Flying, Swift, Tough(6)) · +185 pts</td><td>Great Winged Beast <ins class='add'>(Heavy Horns</ins> (A6, <ins class='add'>Thrust),</ins> Armor(3), Fear(1), Flying, Swift, Tough(6)) · +185 pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Immortals Leader (Regeneration) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Oppressor (Increased Shooting Range Aura) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ashen Lord (Enhanced Havocbound Aura) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Army Standard Bearer (Fear(2)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Taskmaster (Swift Aura) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pain Forger (Melee Slayer Aura) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Shield (Fortified) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Abyssal Shotgun (9&quot;, A3, AP(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Abyssal Hex Shotgun (12&quot;, A3, Disintegrate) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Abyssal Rifle (18&quot;, A2, AP(1)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Abyssal Hex Rifle (24&quot;, A2, Disintegrate) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one (3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Taskmaster (Swift Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Army Standard Bearer (Fear(2)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Pain Forger (Melee Slayer Aura) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Oppressor (Increased Shooting Range Aura) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ashen Lord (Havocbound Boost Aura) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Abyssal Leader</h3><p class='stats'>30 → 40 pts (+10) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A3, AP(1), Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Halberd (A3, AP(1), Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Axes (12&quot;, A1, Assault), Hand Weapon (A3, Parry(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Hex Blunderbuss (9&quot;, A4, Purge), Strike (A1) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Spear (A3, AP(1), Counter, Brace(1)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A3, AP(4)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Caster Staff (A2, Spell Amplifier) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Matchlock Pistols (9&quot;, A4, AP(1), Assault) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hex Pistols (9&quot;, A4, Assault, Purge) · +40 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A3, Rending) · <del class='del'>+10</del> pts</td><td>Halberd (A3, Rending) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A3, <del class='del'>Counter)</del> · <del class='del'>+10</del> pts</td><td>Spear (A3, <ins class='add'>Counter, Brace(1))</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A3, AP(2)) · <del class='del'>+10</del> pts</td><td>Great Weapon (A3, AP(2)) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Hand Weapons (A4) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Throwing Axes</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Pistol (9&quot;, A1, AP(1), Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Pistol (12&quot;, A1, Assault, Purge) · +5 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Rapid Hex Blunderbuss</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Blunderbuss (12&quot;, A4, AP(1)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Matchlock Rifle (18&quot;, A3, AP(1)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (12&quot;, A1, Blast(3), Indirect, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Hex Rifle (24&quot;, A3, Purge) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Impact Bombs (9&quot;, A1, AP(2), Deadly(3), Assault) · +15 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Winged Beast <del class='del'>(Horn</del> (A6, <del class='del'>AP(2)),</del> Armor(3), Fear(1), Flying, Swift, Tough(6)) · <del class='del'>+155</del> pts</td><td>Great Winged Beast <ins class='add'>(Heavy Horns</ins> (A6, <ins class='add'>Thrust),</ins> Armor(3), Fear(1), Flying, Swift, Tough(6)) · <ins class='add'>+160</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flame Keeper (Melee Shrouding Aura) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Oppressor (Increased Shooting Range Aura) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Taskmaster (Swift Aura) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pain Forger (Melee Slayer Aura) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Caster (Caster(2)) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hex Caster (Caster(3)) · +75 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Shield (Fortified) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Abyssal Pistol (9&quot;, A2, AP(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Abyssal Hex Pistol (12&quot;, A2, Disintegrate) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one (2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flame Keeper (Melee Shrouding Aura) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Taskmaster (Swift Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Pain Forger (Melee Slayer Aura) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Oppressor (Increased Shooting Range Aura) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hex Caster (Caster(2)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Hex Caster (Caster(3)) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Cultists</h3><p class='stats'>110 → 90 pts (-20) · Size 10 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Scout</del><br><span class='muted'>May be set aside before deployment. After all other units are deployed, may be deployed anywhere fully within 12” of their deployment zone. Players alternate in placing Scout units, starting with the player that activates next.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>10x Hand Weapon <del class='del'>(A1)</del></td><td>10x Hand Weapon <ins class='add'>(A1, Parry(1))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>10x Throw Stones (12&quot;, A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sling (12&quot;, A1, Assault) · +20 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Havoc Favour (Steadfast <del class='del'>Buff)</del> · <del class='del'>+15</del> pts</td><td>Havoc Favour (Steadfast <ins class='add'>Aura)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Icon of Havoc (Versatile Defense Aura) · <del class='del'>+40</del> pts</td><td>Icon of Havoc (Versatile Defense Aura) · <ins class='add'>+25</ins> pts</td></tr>
+</table></div>
+<h3>Warriors</h3><p class='stats'>80 → 100 pts (+20) · Size 10 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>10x Hand Weapon <del class='del'>(A1)</del></td><td>10x Hand Weapon <ins class='add'>(A1, Parry(1))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+15</del> pts</td><td>Musician · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A1, Rending) · <del class='del'>+25</del> pts</td><td>Halberd (A1, Rending) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A1, <del class='del'>Counter)</del> · <del class='del'>+40</del> pts</td><td>Spear (A1, <ins class='add'>Counter, Brace(1))</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with</td><td>Upgrade all models with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Shield (Fortified) · <del class='del'>+10</del> pts</td><td>Heavy Shield (Fortified) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Havoc Favour (Steadfast <del class='del'>Buff)</del> · <del class='del'>+15</del> pts</td><td>Havoc Favour (Steadfast <ins class='add'>Aura)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Icon of Havoc (Versatile Defense Aura) · <del class='del'>+40</del> pts</td><td>Icon of Havoc (Versatile Defense Aura) · <ins class='add'>+30</ins> pts</td></tr>
+</table></div>
+<h3>Gargoyles</h3><p class='stats'>70 → 65 pts (-5) · Size 5 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Claws <del class='del'>(A2)</del></td><td>5x <ins class='add'>Stone</ins> Claws <ins class='add'>(A1, Shred)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Stone Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Razor Claws (A2) · +10 pts</ins></td></tr>
+</table></div>
+<h3>Immortals</h3><p class='stats'>90 → 80 pts (-10) · Size 5 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Great</del> Weapon (A1, <del class='del'>AP(2))</del></td><td>5x <ins class='add'>Hand</ins> Weapon (A1, <ins class='add'>Parry(1))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Havoc Favour (Steadfast <del class='del'>Buff)</del> · <del class='del'>+15</del> pts</td><td>Havoc Favour (Steadfast <ins class='add'>Aura)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Icon of Havoc (Versatile Defense Aura) · <del class='del'>+20</del> pts</td><td>Icon of Havoc (Versatile Defense Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A1, AP(2)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A2) · +30 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (12&quot;, A1, Blast(3), Indirect, Assault) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Impact Bombs (9&quot;, A1, AP(2), Deadly(3), Assault) · +50 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Matchlock Pistols (9&quot;, A4, AP(1), Assault) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hex Pistols (9&quot;, A4, Assault, Purge) · +75 pts</ins></td></tr>
+</table></div>
+<h3>Berserkers</h3><p class='stats'>75 → 90 pts (+15) · Size 5 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Great Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Berserker Axe (A1, AP(2), Deadly(3), Reliable) · +40 pts</ins></td></tr>
+</table></div>
+<h3>Shooters</h3><p class='stats'>90 → 95 pts (+5) · Size 5 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Matchlock Rifle (18&quot;, A1, AP(1))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Hand Weapon</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Shotgun (9&quot;, A2, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Shotguns</del></td><td>Replace all <ins class='add'>Matchlock Rifles</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hex Rifle (24&quot;, A1, <del class='del'>Disintegrate)</del> · <del class='del'>+20</del> pts</td><td>Hex Rifle (24&quot;, A1, <ins class='add'>Purge)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Blunderbuss (12&quot;, A2, AP(1)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Blunderbuss (9&quot;, A2, AP(1), Purge) · +35 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rifle (18&quot;, A1, AP(1)) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hex Shotgun (12&quot;, A2, Disintegrate) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Havoc Favour (Steadfast <del class='del'>Buff)</del> · <del class='del'>+15</del> pts</td><td>Havoc Favour (Steadfast <ins class='add'>Aura)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Icon of Havoc (Versatile Defense Aura) · <del class='del'>+20</del> pts</td><td>Icon of Havoc (Versatile Defense Aura) · <ins class='add'>+15</ins> pts</td></tr>
+</table></div>
+<h3>Infernal Shooters</h3><p class='stats'>90 → 95 pts (+5) · Size 3 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Flamethrower (12&quot;, A1, Blast(3), Reliable)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x <del class='del'>Hand Weapon</del> (A1)</td><td>3x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Blunderbuss (12&quot;, A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Blunderbusses</del></td><td>Replace all <ins class='add'>Flamethrowers</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Hex Blunderbuss (9&quot;, A4, Purge) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Blunderbuss (12&quot;, A4, AP(1)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Hex Rifle (24&quot;, A3, Purge) · +40 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flamethrower (12&quot;, A1, Blast(3), Reliable) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hex Blunderbuss (18&quot;, A3, Disintegrate) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Flamethrower and Strike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (12&quot;, A1, Blast(3), Indirect, Assault), Strike (A1) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Impact Bombs (9&quot;, A1, AP(2), Deadly(3), Assault), Strike (A1) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Matchlock Pistols (9&quot;, A4, AP(1), Assault) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hex Pistols (9&quot;, A4, Assault, Purge) · +35 pts</ins></td></tr>
+</table></div>
+<h3>Weapon Teams</h3><p class='stats'>140 → 145 pts (+5) · Size 3 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>145</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x <del class='del'>Flamethrower (12&quot;,</del> A1, Blast(3), <del class='del'>Reliable)</del></td><td>3x <ins class='add'>Mortar (24&quot;,</ins> A1, Blast(3), <ins class='add'>Indirect)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Strike (A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Crew (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>all Flamethrowers</del></td><td>Replace <ins class='add'>any Mortar</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Flamethrower (12&quot;, A1, AP(1), Blast(3), Reliable) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Mortar (24&quot;, A1, <del class='del'>Blast(3),</del> Indirect) · +20 pts</td><td><ins class='add'>Abyssal</ins> Mortar (24&quot;, A1, <ins class='add'>AP(2), Deadly(3),</ins> Indirect) · +20 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hex Launcher (24&quot;, A3, Indirect, <del class='del'>Disintegrate)</del> · <del class='del'>+80</del> pts</td><td>Hex Launcher (24&quot;, A3, Indirect, <ins class='add'>Purge)</ins> · <ins class='add'>+25</ins> pts</td></tr>
+</table></div>
+<h3>Sentinel Centaurs</h3><p class='stats'>110 → 115 pts (+5) · Size 5 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(1)</del><br><span class='muted'>Models in the two front rows roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Trample (Impact(1))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all Great Weapons</td><td>Replace all Great Weapons <ins class='add'>and Tramples</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rifle (18&quot;, A1, AP(1)), <del class='del'>Bash</del> (A1) · <del class='del'>+35</del> pts</td><td><ins class='add'>Matchlock</ins> Rifle (18&quot;, A1, AP(1)), <ins class='add'>Strike</ins> (A1) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hex Rifle (24&quot;, A1, <del class='del'>Disintegrate), Bash</del> (A1) · <del class='del'>+50</del> pts</td><td>Hex Rifle (24&quot;, A1, <ins class='add'>Purge), Strike</ins> (A1) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Shotgun (9&quot;,</del> A2, AP(1)), <del class='del'>Bash</del> (A1) · <del class='del'>+35</del> pts</td><td><ins class='add'>Blunderbuss (12&quot;,</ins> A2, AP(1)), <ins class='add'>Strike</ins> (A1) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Blunderbuss (9&quot;, A2, AP(1), Purge), Strike (A1) · +40 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hex Shotgun (12&quot;, A2, Disintegrate), Bash (A1) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Bull Centaurs</h3><p class='stats'>205 → 225 pts (+20) · Size 3 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>205</del> pts</td><td><ins class='add'>225</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Dual <del class='del'>Heavy</del> Hand Weapons <del class='del'>(A2, AP(1))</del></td><td>3x Dual Hand Weapons <ins class='add'>(A2)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Throwing Axes (12&quot;, A2, Assault) · +45 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade all models with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throwing Weapon (12&quot;, A2) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Rock Golems</h3><p class='stats'>145 pts · Size 3 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Golems</td><td><ins class='add'>Rock</ins> Golems</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Throw Rocks (12&quot;, A1, Blast(3), Indirect)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Strike (A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Stone Fists (A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Throw Rocks and Strikes</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Heavy Fists (A3, AP(2)) · +20 pts</ins></td></tr>
+</table></div>
+<h3>Flame Spirits</h3><p class='stats'>140 → 175 pts (+35) · Size 3 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>175</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Spit Flames (12&quot;, A1, Blast(3), Reliable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Strike (A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Dual Hand Weapons (A4)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Dual Hand Weapons</del></td><td>Replace all <ins class='add'>Spit Flames and Strikes</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Chain Whip (9&quot;, A4, Shred), Strike (A1) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Flame Axes (A3, Rending) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spit Fire (12&quot;, A1, Blast(3), Reliable), Hand Weapon (A2) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Grotesques</h3><p class='stats'>170 → 190 pts (+20) · Size 3 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>170</del> pts</td><td><ins class='add'>190</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x <del class='del'>Toxin</del> Claws (A3, Bane)</td><td>3x <ins class='add'>Infected</ins> Claws (A3, Bane)</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Infected Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Claws (A4) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Mutated Claws (A3, Surge) · +10 pts</ins></td></tr>
+</table></div>
+<h3>Great Rock Golem</h3><p class='stats'>130 → 115 pts (-15) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Greater</del> Golem</td><td><ins class='add'>Great Rock</ins> Golem</td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>130</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Throw Rocks (12&quot;, A2, Blast(3), Indirect)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Giant Fists (A6, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Throw Rocks</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Heavy Fists (A6, AP(2)) · +25 pts</ins></td></tr>
+</table></div>
+<h3>Bull Construct</h3><p class='stats'>235 → 245 pts (+10) · Size 1 · Quality 4+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>235</del> pts</td><td><ins class='add'>245</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Great Hammers (A3, AP(1), Blast(3))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Stomp <del class='del'>(A3,</del> AP(1))</td><td>Stomp <ins class='add'>(A2,</ins> AP(1))</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Great Weapon (A6, AP(4))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy</del> Great <del class='del'>Weapon</del></td><td>Replace <ins class='add'>Dual</ins> Great <ins class='add'>Hammers</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Twin Arm-Flamethrowers</del> (12&quot;, A3, AP(1), Blast(3), Reliable) · <del class='del'>+30</del> pts</td><td><ins class='add'>Dual Heavy Flamethrowers</ins> (12&quot;, A3, AP(1), Blast(3), Reliable) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Great Maces (A3, AP(4), Deadly(3)) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Arm-Cannons (18&quot;, A3, AP(2), Deadly(3)) · +45 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Abyssal Targeting (Relentless Mark) · <del class='del'>+10</del> pts</td><td>Abyssal Targeting (Relentless Mark) · <ins class='add'>+45</ins> pts</td></tr>
+</table></div>
+<h3>Giant Rhino</h3><p class='stats'>295 → 355 pts (+60) · Size 1 · Quality 4+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>295</del> pts</td><td><ins class='add'>355</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Horn (A8, Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Horn (A2, AP(3), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Frightful Gaze (Morale Debuff)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Great Horn</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sharp Horn (A3, AP(4), Deadly(3)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Siege Cannon (18&quot;, A2, AP(3), Blast(6)) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Abyssal Siege Cannon (18&quot;, A2, AP(4), Deadly(6)) · +60 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Rifle Crew (9&quot;, A3, AP(1), Assault) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hex Rifle Crew (12&quot;, A3, Assault, Purge) · +50 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Abyssal Targeting (Relentless Mark) · <del class='del'>+10</del> pts</td><td>Abyssal Targeting (Relentless Mark) · <ins class='add'>+45</ins> pts</td></tr>
+</table></div>
+<h3>Siege Wagon</h3><p class='stats'>150 → 125 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Siege Cannon <del class='del'>(30&quot;,</del> A2, <del class='del'>AP(1),</del> Blast(3))</td><td>Siege Cannon <ins class='add'>(18&quot;,</ins> A2, <ins class='add'>AP(2),</ins> Blast(3))</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A2, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Crew Attacks (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Siege Cannon</td><td>Replace Siege Cannon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Siege Mortar <del class='del'>(24&quot;,</del> A2, AP(1), Blast(3), Indirect) · <del class='del'>+10</del> pts</td><td>Siege Mortar <ins class='add'>(18&quot;,</ins> A2, AP(1), Blast(3), Indirect) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Abyssal Siege Cannon (18&quot;, A2, AP(3), Deadly(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Siege Hex Cannon (24&quot;, A2, AP(2), Blast(3), Purge) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Abyssal Siege Mortar (18&quot;, A2, AP(3), Deadly(3), Indirect) · +40 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Siege Hex Launcher (24&quot;, A6, <del class='del'>AP(1),</del> Indirect, <del class='del'>Disintegrate)</del> · <del class='del'>+55</del> pts</td><td>Siege Hex Launcher (24&quot;, A6, Indirect, <ins class='add'>Purge)</ins> · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Cannon (30&quot;, A2, AP(2), Deadly(3)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Abyssal Targeting (Relentless Mark) · +45 pts</ins></td></tr>
+</table></div>
+<h3>Havoc Artillery</h3><p class='stats'>140 → 115 pts (-25) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Cumbersome</ins><br><span class='muted'>May only use Hold or Advance actions, but can’t shoot when moving.</span></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Entrenched</ins><br><span class='muted'>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Cannon (30&quot;, A2, AP(1), Blast(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Rocket Battery (24&quot;, A2, AP(1), Blast(3), Indirect)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Rocket Battery</del></td><td>Replace <ins class='add'>Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rocket Battery (18&quot;, A2, AP(1), Blast(3), Indirect) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Cannon (30&quot;, A2, AP(2), Deadly(3)) · +25 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Mortar <del class='del'>(36&quot;,</del> A2, <del class='del'>AP(1), Blast(3),</del> Indirect) · <del class='del'>+40</del> pts</td><td>Heavy Mortar <ins class='add'>(30&quot;,</ins> A2, <ins class='add'>AP(3), Deadly(3),</ins> Indirect) · <ins class='add'>+115</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Hex Launcher (36&quot;, A6, Indirect, Purge) · +125 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Abyssal Targeting (Relentless Mark) · +45 pts</ins></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Havocbound</td><td>If this model has Havocbound, it always gets AP(+1) from Havocbound (instead of only when attacking enemies that already finished an activation).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Havocbound Aura</td><td>This model and its unit get Enhanced Havocbound.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Piercing Warrior</td><td>If this model has Piercing Warrior, it always gets AP(+1) from Piercing Warrior (instead of only when attacking enemies that already finished an activation).</td></tr>
+<tr class='add'><td>➕</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Marksman</td><td>When shooting at enemies over 9&quot; away, this model&#x27;s weapons get AP(+1).</td></tr>
+<tr class='add'><td>➕</td><td>Purge</td><td>When attacking units that are Shaken or Fatigued, this weapon gets AP(+2).</td></tr>
+<tr class='add'><td>➕</td><td>Steadfast Aura</td><td>This model and its unit get Steadfast.</td></tr>
+<tr class='del'><td>➖</td><td>Disintegrate</td><td>Ignores Regeneration, and against units where most models have Defense 2+ to Defense 3+, this weapon gets AP(+2).</td></tr>
+<tr class='del'><td>➖</td><td>Havocbound Boost</td><td>If this model has Havocbound, it always gets AP(+1) from Havocbound (instead of only when shooting over 9&quot; away, or when charging).</td></tr>
+<tr class='del'><td>➖</td><td>Havocbound Boost Aura</td><td>This model and its unit get Havocbound Boost.</td></tr>
+<tr class='del'><td>➖</td><td>Morale Debuff</td><td>Once per activation, before attacking, pick one enemy unit within 18&quot; in line of sight, which gets -1 to morale test rolls once (next time the effect would apply).</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Hunter</td><td>When this model shoots at enemies over 9&quot; away, its weapons get AP(+1).</td></tr>
+<tr class='del'><td>➖</td><td>Steadfast Buff</td><td>Once per activation, before attacking, pick one friendly unit within 12&quot;, which gets Steadfast once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Caster<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Gets X spell tokens at the start of each round, but can’t <del class='del'>hold</del> more than 6 <del class='del'>tokens</del> at once. <del class='del'>At any point</del> before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). <del class='del'>Roll</del> one die, on 4+ resolve the <del class='del'>effect on a target in line of sight in any direction.</del> Models within 18” <del class='del'>in line of sight</del> of the <del class='del'>caster’s unit</del> may spend any number of spell tokens at the same time before <del class='del'>rolling,</del> to give the <del class='del'>caster</del> +1/-1 to the roll per token.<br><span class='add'>3.6.0:</span> Gets X spell tokens at the start of each round, but can’t <ins class='add'>have</ins> more than 6 at once. <ins class='add'>Once per activation,</ins> before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). <ins class='add'>Pick a target and roll</ins> one die, <ins class='add'>and</ins> on 4+ resolve the <ins class='add'>spell’s effect.</ins> Models within 18” of the <ins class='add'>Caster</ins> may spend any number of spell tokens at the same time before <ins class='add'>rolling</ins> to give the <ins class='add'>Caster</ins> +1/-1 to the roll per token.</td></tr>
+<tr class='mod'><td>✏️</td><td>Fortified</td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='mod'><td>✏️</td><td>Havocbound</td><td><span class='del'>3.5.1:</span> When this model <del class='del'>shoots at</del> enemies <del class='del'>over 9&quot; away, or when it charges,</del> its weapons get AP(+1).<br><span class='add'>3.6.0:</span> When this model <ins class='add'>attacks</ins> enemies <ins class='add'>that already finished an activation this round,</ins> its weapons get AP(+1).</td></tr>
+<tr class='mod'><td>✏️</td><td>Melee Shrouding</td><td><span class='del'>3.5.1:</span> <del class='del'>Enemies</del> get <del class='del'>-3&quot; movement</del> to a min. of 6&quot; when <del class='del'>trying to charge units where all models have this rule.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When a unit where most models have this rule is targeted by an enemy, as long as this unit hasn&#x27;t started an activation yet this round, attackers</ins> get <ins class='add'>-2&quot; range</ins> to a min. of 6&quot; when <ins class='add'>charging it.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Melee Slayer</td><td><span class='del'>3.5.1:</span> When this <del class='del'>model charges, its</del> weapons get AP(+2) if most models in the target have Tough(3) or higher.<br><span class='add'>3.6.0:</span> When <ins class='add'>charging,</ins> this <ins class='add'>model&#x27;s</ins> weapons get AP(+2) if most models in the target have Tough(3) or higher.</td></tr>
+<tr class='mod'><td>✏️</td><td>Piercing Warrior</td><td><span class='del'>3.5.1:</span> When this model <del class='del'>shoots at</del> enemies <del class='del'>over 9&quot; away, or when it charges,</del> its weapons get AP(+1).<br><span class='add'>3.6.0:</span> When this model <ins class='add'>attacks</ins> enemies <ins class='add'>that already finished an activation this round,</ins> its weapons get AP(+1).</td></tr>
+<tr class='mod'><td>✏️</td><td>Relentless<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When this model shoots at enemies over <del class='del'>9&quot;</del> away, unmodified <del class='del'>results</del> of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).<br><span class='add'>3.6.0:</span> When this model shoots at enemies over <ins class='add'>9”</ins> away, unmodified <ins class='add'>result</ins> of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Sergeant<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>When this</del> model <del class='del'>attacks, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</del><br><span class='add'>3.6.0:</span> <ins class='add'>This</ins> model <ins class='add'>gets AP(+1) when attacking.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Slayer</td><td><span class='del'>3.5.1:</span> When <del class='del'>this model shoots at</del> enemies over 9&quot; away, or when <del class='del'>it charges, its</del> weapons get AP(+2) if most models in the target have Tough(3) or higher.<br><span class='add'>3.6.0:</span> When <ins class='add'>shooting</ins> enemies over 9&quot; away, or when <ins class='add'>charging, this model&#x27;s</ins> weapons get AP(+2) if most models in the target have Tough(3) or higher.</td></tr>
+<tr class='mod'><td>✏️</td><td>Steadfast</td><td><span class='del'>3.5.1:</span> If a unit where <del class='del'>all</del> models have this rule is Shaken at the beginning of the round, roll one die. On a 4+, it stops being Shaken.<br><span class='add'>3.6.0:</span> If a unit where <ins class='add'>most</ins> models have this rule is Shaken at the beginning of the round, roll one die. On a 4+, it stops being Shaken.</td></tr>
+<tr class='mod'><td>✏️</td><td>Versatile Defense</td><td><span class='del'>3.5.1:</span> <del class='del'>When</del> a unit where <del class='del'>all</del> models have this rule <del class='del'>is deployed or activated,</del> pick one <del class='del'>effect:</del> when <del class='del'>shot or charged from over 9&quot; away,</del> the unit either gets +1 to <del class='del'>defense</del> rolls, or enemy units get -1 to hit rolls against it. <del class='del'>This</del> effect <del class='del'>lasts until</del> the <del class='del'>units&#x27; next activation.</del><br><span class='add'>3.6.0:</span> <ins class='add'>As long as</ins> a unit where <ins class='add'>most</ins> models have this rule <ins class='add'>hasn&#x27;t activated yet this round,</ins> pick one <ins class='add'>effect</ins> when <ins class='add'>it is attacked:</ins> the unit either gets +1 to <ins class='add'>Defense</ins> rolls, or enemy units get -1 to hit rolls against it. <ins class='add'>Note that you may pick a different</ins> effect <ins class='add'>each time</ins> the <ins class='add'>unit is attacked.</ins></td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Rune of Ashes</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>two</del> friendly units within <del class='del'>12&quot;,</del> which get Havocbound <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Havocbound once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Rune of Cracking</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which friendly units gets Relentless against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight in any direction,</ins> which friendly units gets Relentless against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Rune of Darkness</td><td><span class='del'>3.5.1:</span> (2) Pick one enemy unit within <del class='del'>6&quot;,</del> which takes 6 hits with <del class='del'>Disintegrate.</del><br><span class='add'>3.6.0:</span> (2) Pick one enemy unit within <ins class='add'>12&quot; in line of sight in any direction,</ins> which takes 6 hits with <ins class='add'>Purge.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Rune of Insanity</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick one enemy unit within <del class='del'>18&quot;,</del> which takes <del class='del'>3 hits</del> with Blast(3).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick one enemy unit within <ins class='add'>18&quot; in line of sight in any direction,</ins> which takes <ins class='add'>1 hit</ins> with Blast(3).</td></tr>
+<tr class='mod'><td>✏️</td><td>Rune of Lightning</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick one enemy model within <del class='del'>24&quot;,</del> which takes <del class='del'>1 hit</del> with AP(4). This effect is resolved as if the target was a unit of [1].<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick one enemy model within <ins class='add'>24&quot; in line of sight in any direction,</ins> which takes <ins class='add'>3 hits</ins> with AP(4). This effect is resolved as if the target was a unit of [1].</td></tr>
+<tr class='mod'><td>✏️</td><td>Rune of Piercing</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick <del class='del'>one</del> friendly <del class='del'>unit</del> within 12&quot;, which <del class='del'>gets</del> Piercing <del class='del'>Hunter</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick <ins class='add'>up to two</ins> friendly <ins class='add'>units</ins> within 12&quot;, which <ins class='add'>get</ins> Piercing <ins class='add'>Marksman</ins> once (next time the effect would apply).</td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

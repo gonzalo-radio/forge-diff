@@ -1,0 +1,401 @@
+<title>Hired Guards 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Hired Guards — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>age-of-fantasy-skirmish. <code>stable 2026-09-28: Hired Guards</code> (versionString 3.5.3, edited 2026-04-03, modified 2026-07-14) → <code>beta 2026-09-28: Hired Guards</code> (versionString 3.5.1, edited 2026-09-10, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 11 (10 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 0, Size 3</li>
+<li>Special rules: +8 / -8 / ~12</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Guard Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>95</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td>Guard Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>25</td><td class='num'>75</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td>Guard Veteran Fighters → Guard Veteran Fighter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>30</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Guard Pit Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>35</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Guard Pit Defenders → Guard Pit Defender</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>35</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Guard Shooters → Guard Shooter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>35</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Guard Veteran Shooter</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>45</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td>Guard Horse Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>50</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td>Guard Fighters</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>80</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td>Guard Attack Dogs</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>85</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td>Guard Brute Defender</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>30</td><td class='num'>100</td><td class='num'><b class='del'>+70</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Guard Leader</h3><p class='stats'>30 → 95 pts (+65) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A8)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Pistol (9&quot;, A1, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Wizard Staff (A4, Spell Amplifier) · free</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (9&quot;, A2, Assault, Shred), Smashing Weapon (A2, AP(1), Blast(3)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Crossbow (24&quot;, A4, Disintegrate), Strike (A2) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Rapid Matchlock Pistols (9&quot;, A8, AP(1), Assault) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Rapid Handbows (9&quot;, A8, Rending, Assault) · +90 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Pistol and</del> Hand Weapon</td><td>Replace <ins class='add'>Dual</ins> Hand Weapon <ins class='add'>(2)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Blade Weapon <del class='del'>(A4, AP(2),</del> Rending) · <del class='del'>+25</del> pts</td><td>Heavy Blade Weapon <ins class='add'>(A8,</ins> Rending) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Great Weapon <del class='del'>(A4, AP(4))</del> · <del class='del'>+30</del> pts</td><td>Heavy Great Weapon <ins class='add'>(A8, AP(2))</ins> · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Whip (6&quot;, A2, Blast(3), Reliable, Assault), Strike (A2) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Harpoon Gun (9&quot;, A1, AP(2), Deadly(6), Assault), Strike (A2) · +35 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Smashing Weapon (A1, AP(1), Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>2x Hand Weapon (A2) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Piercing Weapon (A1, AP(3), Deadly(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Spear (A4, AP(1), Counter) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Hand</del> Weapon</td><td>Replace <ins class='add'>Smashing</ins> Weapon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A6, Parry(9)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lance (A6, Thrust) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear <del class='del'>(A2, Counter)</del> · <del class='del'>+5</del> pts</td><td>Spear <ins class='add'>(A6, Counter, Brace(2))</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Piercing Weapon (A1, AP(4), Deadly(6)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A6, Rending) · +20 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A2, AP(3))</del> · <del class='del'>+10</del> pts</td><td>Great Weapon <ins class='add'>(A6, AP(2))</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Pistol</del></td><td>Replace <ins class='add'>Shrapnel Bomb</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fire Bombs <del class='del'>(12&quot;, A1, AP(1), Rending)</del> · +5 pts</td><td>Fire Bombs <ins class='add'>(6&quot;, A2, Ignores Cover, Reliable, Assault)</ins> · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Pistol (9&quot;, A2, AP(1), Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Handbow (9&quot;, A2, Rending, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Bombs (12&quot;, A2, Assault, Disintegrate) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rifle (18&quot;, A1, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Whip (12&quot;, A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shotgun (12&quot;, A2, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Crossbow (24&quot;, A1, Rending) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Slayer Crossbow (24&quot;, A1, Tear) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Slayer Crossbow</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sniper Rifle (30&quot;, A1, AP(1), Deadly(2), Reliable) · +-50 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Blunderbuss (12&quot;, A8, AP(1)) · +-15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Matchlock Rifle (18&quot;, A6, AP(1)) · +-15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Crossbow (18&quot;, A6, Rending) · free</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Repeater Crossbow (12&quot;, A8, Rending) · free</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Beast Companion (Repel Ambushers) · <del class='del'>+10</del> pts</td><td>Beast Companion (Repel Ambushers) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Horse (Fast, <del class='del'>Impact(1))</del> · <del class='del'>+15</del> pts</td><td>Horse (Fast, <ins class='add'>Impact(2))</ins> · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Overseer (Delayed Action) · <del class='del'>+15</del> pts</td><td>Overseer (Delayed Action) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Security Guard <del class='del'>(Guardian Boost</del> Aura) · <del class='del'>+5</del> pts</td><td>Security Guard <ins class='add'>(Enhanced Guardian</ins> Aura) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Tactical Wizard (Caster(2)) · <del class='del'>+35</del> pts</td><td>Tactical Wizard (Caster(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Investigator (Fast Aura) · <del class='del'>+15</del> pts</td><td>Investigator (Fast Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Captain (Shred in Melee Aura) · <del class='del'>+15</del> pts</td><td>Captain (Shred in Melee Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Undercover Agent (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Undercover Agent (Stealth Aura) · <ins class='add'>+55</ins> pts</td></tr>
+</table></div>
+<h3>Guard Champion</h3><p class='stats'>25 → 75 pts (+50) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A8)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Pistol (9&quot;, A1, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Pistol and</del> Hand Weapon</td><td>Replace <ins class='add'>Dual</ins> Hand Weapon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Wizard Staff (A4, Spell Amplifier) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (9&quot;, A2, Assault, Shred), Smashing Weapon (A2, AP(1), Blast(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Crossbow (24&quot;, A4, Disintegrate), Strike (A2) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Rapid Matchlock Pistols (9&quot;, A8, AP(1), Assault) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Rapid Handbows (9&quot;, A8, Rending, Assault) · +80 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>2x Hand Weapon (A2) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Hand</del> Weapon</td><td>Replace <ins class='add'>Smashing</ins> Weapon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A6, Parry(9)) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear <del class='del'>(A2, Counter)</del> · <del class='del'>+5</del> pts</td><td>Spear <ins class='add'>(A6, Counter, Brace(2))</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lance (A6, Thrust) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Piercing Weapon (A1, AP(4), Deadly(6)) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A2, AP(3))</del> · <del class='del'>+5</del> pts</td><td>Great Weapon <ins class='add'>(A6, AP(2))</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A6, Rending) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Pistol</del></td><td>Replace <ins class='add'>Shrapnel Bomb</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Pistol (9&quot;, A2, AP(1), Assault) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fire Bombs <del class='del'>(12&quot;, A1, AP(1), Rending)</del> · <del class='del'>+5</del> pts</td><td>Fire Bombs <ins class='add'>(6&quot;, A2, Ignores Cover, Reliable, Assault)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Handbow (9&quot;, A2, Rending, Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Bombs (12&quot;, A2, Assault, Disintegrate) · +15 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rifle (18&quot;, A1, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Whip (12&quot;, A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Crossbow (24&quot;, A1, Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Slayer Crossbow (24&quot;, A1, Tear) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Slayer Crossbow</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Matchlock Rifle (18&quot;, A6, AP(1)) · +-10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Crossbow (18&quot;, A6, Rending) · +10 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Beast Companion (Repel Ambushers) · <del class='del'>+10</del> pts</td><td>Beast Companion (Repel Ambushers) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Horse (Fast, <del class='del'>Impact(1))</del> · <del class='del'>+10</del> pts</td><td>Horse (Fast, <ins class='add'>Impact(2))</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Security Guard <del class='del'>(Guardian Boost</del> Aura) · <del class='del'>+5</del> pts</td><td>Security Guard <ins class='add'>(Enhanced Guardian</ins> Aura) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Tactical Wizard (Caster(2)) · <del class='del'>+35</del> pts</td><td>Tactical Wizard (Caster(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Investigator (Fast Aura) · <del class='del'>+15</del> pts</td><td>Investigator (Fast Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Undercover Agent (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Undercover Agent (Stealth Aura) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant (Piercing <del class='del'>Hunter</del> Aura) · <del class='del'>+20</del> pts</td><td>Sergeant (Piercing <ins class='add'>Marksman</ins> Aura) · <ins class='add'>+80</ins> pts</td></tr>
+</table></div>
+<h3>Guard Veteran Fighter</h3><p class='stats'>35 → 30 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Guard Veteran <del class='del'>Fighters</del></td><td>Guard Veteran <ins class='add'>Fighter</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Size</td><td><del class='del'>3</del></td><td><ins class='add'>1</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>6x 2x</del> Hand Weapon <del class='del'>(A1)</del></td><td>Hand Weapon <ins class='add'>(A2, Parry(3))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A2, Rending) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear <del class='del'>(A1, Counter)</del> · +5 pts</td><td>Spear <ins class='add'>(A2, Counter, Brace(2))</ins> · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A1, AP(3))</del> · +5 pts</td><td>Great Weapon <ins class='add'>(A2, AP(2))</ins> · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (9&quot;, A2, Assault, Shred), Dagger (A2) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Matchlock Pistols (9&quot;, A4, AP(1), Assault) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (9&quot;, A2, Assault, Shred), Smashing Weapon (A2, AP(1), Blast(3)) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Handbows (9&quot;, A4, Rending, Assault) · +50 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Blade Weapon <del class='del'>(A1, AP(1),</del> Rending) · <del class='del'>+5</del> pts</td><td><ins class='add'>Heavy</ins> Blade Weapon <ins class='add'>(A8,</ins> Rending) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Great Weapon (A8, AP(2)) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Whip (6&quot;, A2, Blast(3), Reliable, Assault), Strike (A2) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (9&quot;, A2, Assault, Shred), Piercing Weapon (A1, AP(4), Deadly(6)) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Harpoon Gun (9&quot;, A1, AP(2), Deadly(6), Assault), Strike (A2) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (9&quot;, A2, Assault, Shred), Great Weapon (A6, AP(2)) · +65 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Pistol</del></td><td>Replace <ins class='add'>Shrapnel Bomb</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Pistol (9&quot;, A2, AP(1), Assault) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fire Bombs <del class='del'>(12&quot;, A1, AP(1), Rending)</del> · +5 pts</td><td>Fire Bombs <ins class='add'>(6&quot;, A2, Ignores Cover, Reliable, Assault)</ins> · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slayer Bombs (12&quot;, <del class='del'>A1, Tear)</del> · <del class='del'>+5</del> pts</td><td>Slayer Bombs (12&quot;, <ins class='add'>A2, Assault, Disintegrate)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any 2x Hand Weapon</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Pistol (9&quot;, A1, AP(1)), Dagger (A2) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one 2x Hand Weapon</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Smashing Weapon (A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Piercing Weapon (A1, AP(2), Deadly(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Blade Weapon (A3, AP(1), Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Spear (A3, AP(1), Counter) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Great Weapon (A3, AP(4)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Whip (12&quot;, A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Dagger</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spear (A2, Counter) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Weapon (A2, AP(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Guard Pit Champion</h3><p class='stats'>15 → 35 pts (+20) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>15</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A2, Parry(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Hand Weapons (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A2, Rending) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear <del class='del'>(A1, Counter)</del> · +5 pts</td><td>Spear <ins class='add'>(A2, Counter, Brace(2))</ins> · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A2, AP(2)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Smashing Weapon (A2, AP(1), Blast(3)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Piercing Weapon (A1, AP(4), Deadly(6)) · +35 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Blade Weapon <del class='del'>(A1, AP(1),</del> Rending) · <del class='del'>+5</del> pts</td><td>Blade Weapon <ins class='add'>(A6,</ins> Rending) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A6, AP(2)) · +50 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Coordinated Arrest (Piercing Target(1)) · <del class='del'>+5</del> pts</td><td>Coordinated Arrest (Piercing Target(1)) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace 2x Hand Weapon</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Smashing Weapon (A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Piercing Weapon (A1, AP(2), Deadly(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Blade Weapon (A3, AP(1), Rending) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Spear (A3, AP(1), Counter) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Guard Pit Defender</h3><p class='stats'>30 → 35 pts (+5) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Guard Pit <del class='del'>Defenders</del></td><td>Guard Pit <ins class='add'>Defender</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Size</td><td><del class='del'>3</del></td><td><ins class='add'>1</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Shielded</del><br><span class='muted'>Units where all models have this rule get +1 to defense rolls against hits that are not from spells.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>3x</del> Hand Weapon <del class='del'>(A1)</del></td><td>Hand Weapon <ins class='add'>(A2, Parry(3))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Shield (Armor(4))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A2, Rending) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear <del class='del'>(A1, Counter)</del> · +5 pts</td><td>Spear <ins class='add'>(A2, Counter, Brace(2))</ins> · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A1, AP(3))</del> · +5 pts</td><td>Great Weapon <ins class='add'>(A2, AP(2))</ins> · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Pistol (9&quot;, A2, AP(1), Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Handbow (9&quot;, A2, Rending, Assault) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Whip (6&quot;, A2, Blast(3), Reliable, Assault) · +50 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Harpoon Gun (9&quot;, A1, AP(2), Deadly(6), Assault) · +50 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Pistol (9&quot;, A1, AP(1)), Bash (A1) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A1, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Coordinated Arrest (Piercing Target(1)) · <del class='del'>+5</del> pts</td><td>Coordinated Arrest (Piercing Target(1)) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fire Bombs (12&quot;, A1, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Slayer Bombs (12&quot;, A1, Tear) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Whip (12&quot;, A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Guard Shooter</h3><p class='stats'>35 pts · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Guard <del class='del'>Shooters</del></td><td>Guard <ins class='add'>Shooter</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Size</td><td><del class='del'>3</del></td><td><ins class='add'>1</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>3x</del> Rifle (18&quot;, <del class='del'>A1,</del> AP(1))</td><td><ins class='add'>Matchlock</ins> Rifle (18&quot;, <ins class='add'>A2,</ins> AP(1))</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Hand Weapon (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Rifle</td><td>Replace <ins class='add'>Matchlock</ins> Rifle</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Crossbow (24&quot;, <del class='del'>A1,</del> Rending) · <del class='del'>+5</del> pts</td><td>Crossbow (24&quot;, <ins class='add'>A2,</ins> Rending) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slayer Crossbow (24&quot;, <del class='del'>A1, Tear)</del> · <del class='del'>+5</del> pts</td><td>Slayer Crossbow (24&quot;, <ins class='add'>A4, Disintegrate)</ins> · <ins class='add'>+35</ins> pts</td></tr>
+</table></div>
+<h3>Guard Veteran Shooter</h3><p class='stats'>15 → 45 pts (+30) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>15</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Rifle (18&quot;, <del class='del'>A1,</del> AP(1))</td><td><ins class='add'>Matchlock</ins> Rifle (18&quot;, <ins class='add'>A2,</ins> AP(1))</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Rifle</td><td>Replace <ins class='add'>Matchlock</ins> Rifle</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Crossbow <del class='del'>(24&quot;, A1,</del> Rending) · +5 pts</td><td>Crossbow <ins class='add'>(18&quot;, A2,</ins> Rending) · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sniper Rifle (30&quot;, A1, AP(1), Reliable) · <del class='del'>+15</del> pts</td><td>Sniper Rifle (30&quot;, A1, AP(1), <ins class='add'>Deadly(2),</ins> Reliable) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Shotgun</del> (12&quot;, <del class='del'>A2,</del> AP(1)) · <del class='del'>+5</del> pts</td><td><ins class='add'>Blunderbuss</ins> (12&quot;, <ins class='add'>A4,</ins> AP(1)) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Repeater Crossbow (12&quot;, A4, Rending) · +15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slayer Crossbow (24&quot;, <del class='del'>A1, Tear)</del> · <del class='del'>+10</del> pts</td><td>Slayer Crossbow (24&quot;, <ins class='add'>A4, Disintegrate)</ins> · <ins class='add'>+50</ins> pts</td></tr>
+</table></div>
+<h3>Guard Horse Rider</h3><p class='stats'>20 → 50 pts (+30) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(1)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Hand Weapon <del class='del'>(A1)</del></td><td>Hand Weapon <ins class='add'>(A2, Parry(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Pistol (12&quot;, A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>Trample (Impact(2))</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapons and Trample</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Rifle (18&quot;, A2, AP(1)), Strike (A2) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Crossbow (18&quot;, A2, Rending), Strike (A2) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Matchlock Pistols (9&quot;, A4, AP(1), Assault) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Handbows (9&quot;, A4, Rending, Assault) · +40 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lance <del class='del'>(A1,</del> Thrust) · <del class='del'>+5 pts</del></td><td>Lance <ins class='add'>(A2,</ins> Thrust) · <ins class='add'>free</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A2, Rending) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A1, AP(3))</del> · +5 pts</td><td>Great Weapon <ins class='add'>(A2, AP(2))</ins> · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Pistol (9&quot;, A2, AP(1), Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Handbow (9&quot;, A2, Rending, Assault) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A1, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Coordinated Arrest (Piercing Target(1)) · <del class='del'>+5</del> pts</td><td>Coordinated Arrest (Piercing Target(1)) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Whip (12&quot;, A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Slayer Bombs (12&quot;, A1, Tear) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Guard Fighters</h3><p class='stats'>30 → 80 pts (+50) · Size 3 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>6x 2x</del> Hand Weapon <del class='del'>(A1)</del></td><td><ins class='add'>3x</ins> Hand Weapon <ins class='add'>(A2, Parry(3))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Hand <del class='del'>Weapon</del></td><td>Replace <ins class='add'>all</ins> Hand <ins class='add'>Weapons</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A1, AP(3))</del> · +5 pts</td><td>Great Weapon <ins class='add'>(A2, AP(2))</ins> · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear <del class='del'>(A1, Counter)</del> · +5 pts</td><td>Spear <ins class='add'>(A2, Counter, Brace(2))</ins> · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd (A2, Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrapnel Bombs (9&quot;, A2, Assault, Shred), Dagger (A2) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Matchlock Pistols (9&quot;, A4, AP(1), Assault) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Handbows (9&quot;, A4, Rending, Assault) · +125 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A1, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>one Pistols</del></td><td>Replace <ins class='add'>all Shrapnel Bombs</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Matchlock Pistol (9&quot;, A2, AP(1), Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Handbow (9&quot;, A2, Rending, Assault) · +30 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fire Bombs <del class='del'>(12&quot;, A1, AP(1), Rending)</del> · <del class='del'>+5</del> pts</td><td>Fire Bombs <ins class='add'>(6&quot;, A2, Ignores Cover, Reliable, Assault)</ins> · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slayer Bombs (12&quot;, <del class='del'>A1, Tear)</del> · <del class='del'>+5</del> pts</td><td>Slayer Bombs (12&quot;, <ins class='add'>A2, Assault, Disintegrate)</ins> · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Whip (12&quot;, A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any 2x Hand Weapon</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Pistol (9&quot;, A1, AP(1)), Dagger (A2) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Dagger</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Weapon (A2, AP(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spear (A2, Counter) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Guard Attack Dogs</h3><p class='stats'>35 → 85 pts (+50) · Size 3 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Strider</del><br><span class='muted'>May ignore the effects of difficult terrain when moving, and only needs 2+ to pass jumping rolls.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Frenzied Bites (A2, Surge)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Claws (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade all models with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sniffer Hound Handler (Vanguard) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Hound Handler (Unpredictable Fighter) · +20 pts</ins></td></tr>
+</table></div>
+<h3>Guard Brute Defender</h3><p class='stats'>30 → 100 pts (+70) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Rule</td><td><del class='del'>Tough(3)</del></td><td><ins class='add'>Tough(9)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Heavy</del> Smashing Weapon <del class='del'>(A1,</del> Blast(3))</td><td>Smashing Weapon <ins class='add'>(A2, AP(1),</ins> Blast(3))</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Hand</del> Weapon</td><td>Replace <ins class='add'>Smashing</ins> Weapon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A8) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Piercing Weapon (A1, AP(4), Deadly(6)) · +15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Blade Weapon <del class='del'>(A2, AP(1),</del> Rending) · <del class='del'>+10</del> pts</td><td>Blade Weapon <ins class='add'>(A6,</ins> Rending) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A2, AP(3))</del> · <del class='del'>+10</del> pts</td><td>Great Weapon <ins class='add'>(A6, AP(2))</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spear (A2, Counter) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Warrant Officer (Quick Shot Mark) · <del class='del'>+20</del> pts</td><td>Warrant Officer (Quick Shot Mark) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Heavy Smashing Weapon</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>2x Hand Weapon (A2) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Piercing Weapon (A1, AP(2), Deadly(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Blade Weapon (A3, AP(1), Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Spear (A3, AP(1), Counter) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Great Weapon (A3, AP(4)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Enhanced Fortified</td><td>If most models in this unit have Fortified, hits they take count as having AP(-2) from Fortified (instead of only AP(-1)).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Guardian</td><td>If most models in this unit have Guardian, hits they take count as having AP(-2) from Guardian (instead of only AP(-1)).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Guardian Aura</td><td>This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Enhanced Guardian. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Fortified</td><td>When units where most models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Fighter</td><td>This model gets AP(+1) in melee.</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Marksman</td><td>When shooting at enemies over 9&quot; away, this model&#x27;s weapons get AP(+1).</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Marksman Aura</td><td>This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Piercing Marksman. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Vanguard</td><td>After this model is deployed, it may be placed anywhere fully within 9&quot; of its position, over 9&quot; away from non-Vanguard enemy units.</td></tr>
+<tr class='del'><td>➖</td><td>Guardian Boost</td><td>If all models in this unit have Guardian, enemy hits always count as having AP(-1) from Guardian (instead of only when being shot/charged from over 9&quot; away).</td></tr>
+<tr class='del'><td>➖</td><td>Guardian Boost Aura</td><td>This model and up to 3 friendly units picked before the start of the game get Guardian Boost. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Assault</td><td>This model gets AP(+1) when charging.</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Hunter</td><td>When this model shoots at enemies over 9&quot; away, its weapons get AP(+1).</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Hunter Aura</td><td>This model and up to 3 friendly units picked before the start of the game get Piercing Hunter. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Reinforced</td><td>When units where all models have this rule are shot or charged from over 9&quot; away and take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='del'><td>➖</td><td>Shielded</td><td>Units where all models have this rule get +1 to defense rolls against hits that are not from spells.</td></tr>
+<tr class='del'><td>➖</td><td>Tear</td><td>Against non-Hero units with Tough(3) or more, this weapon gets AP(+4).</td></tr>
+<tr class='mod'><td>✏️</td><td>Blast<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Ignores <del class='del'>cover,</del> and after resolving other special rules, each hit is multiplied by <del class='del'>X, where X is up to as many hits as enemy models in the target unit and within 3” of it.</del> Hits must be split evenly between all enemy units within 3” of any model from the target (defender picks <del class='del'>how).</del><br><span class='add'>3.6.0:</span> Ignores <ins class='add'>Cover,</ins> and after resolving other special rules, each hit is multiplied by <ins class='add'>X.</ins> Hits must be split evenly between <ins class='add'>the target and</ins> all enemy units within 3” of any model from the target (defender picks <ins class='add'>how), but each unit may only take up to as many hits as models in it</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Disintegrate</td><td><span class='del'>3.5.1:</span> Ignores Regeneration, and <del class='del'>against</del> units where most models have <del class='del'>Defense 2+ to Defense 3+,</del> this weapon gets AP(+2).<br><span class='add'>3.6.0:</span> Ignores Regeneration, and <ins class='add'>when attacking</ins> units where most models have <ins class='add'>Tough(9) or higher,</ins> this weapon gets AP(+2).</td></tr>
+<tr class='mod'><td>✏️</td><td>Fast Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game moves +2&quot; when using Advance actions and +4&quot; when using Rush/Charge actions. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game moves +2&quot; when using Advance actions and +4&quot; when using Rush/Charge actions. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Guardian</td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule <del class='del'>are shot or charged from over 9&quot; away and</del> take hits, those hits count as having AP(-1), to a min. of AP(0).<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='mod'><td>✏️</td><td>Piercing Target</td><td><span class='del'>3.5.1:</span> Once per game, during this model&#x27;s activation, pick <del class='del'>one</del> enemy <del class='del'>unit</del> within 18&quot; and in line of sight of it, and place <del class='del'>X markers</del> on <del class='del'>it.</del> Friendly units get <del class='del'>+AP(X)</del> on their weapons when attacking <del class='del'>it.</del><br><span class='add'>3.6.0:</span> Once per game, during this model&#x27;s activation, pick <ins class='add'>X</ins> enemy <ins class='add'>units</ins> within 18&quot; and in line of sight of it, and place <ins class='add'>one token</ins> on <ins class='add'>them.</ins> Friendly units get <ins class='add'>AP(+1)</ins> on their weapons when attacking <ins class='add'>them.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Quick Shot Mark</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick up to <del class='del'>4</del> enemy units within 18&quot; in line of sight, which friendly units gets Quick Shot against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> enemy units within 18&quot; in line of sight, which friendly units gets Quick Shot against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Shred<br><span class='muted'>becomes a core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>On</del> unmodified <del class='del'>results</del> of 1 to block hits, this weapon deals 1 extra wound.<br><span class='add'>3.6.0:</span> <ins class='add'>For each</ins> unmodified <ins class='add'>result</ins> of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
+<tr class='mod'><td>✏️</td><td>Shred in Melee Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Shred in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Shred in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Tough<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>This</del> model <del class='del'>only rolls to check wound effects once it</del> has taken <del class='del'>at least X wounds, and</del> is <del class='del'>only Knocked Out on rolls of 5+X or more.</del><br><span class='add'>3.6.0:</span> <ins class='add'>Once a</ins> model has taken <ins class='add'>as many wounds as its Tough value, it</ins> is <ins class='add'>killed (remove from play).</ins></td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Deadly Attraction</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to six</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which friendly units gets Quick Shot against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which friendly units gets Quick Shot against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Electrified Weapons</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick up to two friendly units within 12&quot;, which get Piercing <del class='del'>Assault</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to two friendly units within 12&quot;, which get Piercing <ins class='add'>Fighter</ins> once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Flame Blast</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which <del class='del'>take</del> 1 hit with <del class='del'>Blast(3) each.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>takes</ins> 1 hit with <ins class='add'>Blast(3).</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Fortified Dome</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>four</del> friendly units within <del class='del'>12&quot;,</del> which get Guardian <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Guardian once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Mind Shackler</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick one enemy model within <del class='del'>24&quot;,</del> which takes <del class='del'>1 hit</del> with <del class='del'>AP(4).</del> This effect is resolved as if the target was a unit of [1].<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick one enemy model within <ins class='add'>30&quot; in line of sight,</ins> which takes <ins class='add'>3 hits</ins> with <ins class='add'>AP(2) and Disintegrate.</ins> This effect is resolved as if the target was a unit of [1].</td></tr>
+<tr class='mod'><td>✏️</td><td>Poison Gas</td><td><span class='del'>3.5.1:</span> (2) Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within 6&quot;, which <del class='del'>take 3</del> hits with <del class='del'>Disintegrate each.</del><br><span class='add'>3.6.0:</span> (2) Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within 6&quot;, which <ins class='add'>takes 6</ins> hits with <ins class='add'>Bane.</ins></td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

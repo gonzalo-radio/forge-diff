@@ -1,0 +1,709 @@
+<title>High Elf Fleets 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>High Elf Fleets — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>grimdark-future-star-quest-ai. <code>stable 2026-09-28: High Elf Fleets</code> (versionString 3.5.3, edited 2026-05-20, modified 2026-07-14) → <code>beta 2026-09-28: High Elf Fleets</code> (versionString 3.5.1, edited 2026-09-11, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 28 (27 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 5, Size 0</li>
+<li>Special rules: +11 / -8 / ~15</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Retributor</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>70</td><td class='num'>65</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Protector</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>70</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Striker</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>80</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Elite Protector</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>110</td><td class='num'>110</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Revenant</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>120</td><td class='num'>110</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Glider</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>105</td><td class='num'>110</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Stinger</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>120</td><td class='num'>115</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Sniper</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>130</td><td class='num'>120</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Shifter</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>155</td><td class='num'>125</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td>Scorcher</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>125</td><td class='num'>130</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Acolyte</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>105</td><td class='num'>140</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td>Elven Noble</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>145</td><td class='num'>155</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Vanquisher</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>205</td><td class='num'>215</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Jetbike Striker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>255</td><td class='num'>220</td><td class='num'><b class='add'>-35</b></td></tr>
+<tr><td>Jetbike Protector</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>240</td><td class='num'>230</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Trasara Ioncrinius</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>335</td><td class='num'>275</td><td class='num'><b class='add'>-60</b></td></tr>
+<tr><td>Elemental Protector</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>225</td><td class='num'>275</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td>Elemental Striker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>245</td><td class='num'>285</td><td class='num'><b class='del'>+40</b></td></tr>
+<tr><td>Anti-Gravity APC</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>520</td><td class='num'>485</td><td class='num'><b class='add'>-35</b></td></tr>
+<tr><td>Support Artillery</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>445</td><td class='num'>545</td><td class='num'><b class='del'>+100</b></td></tr>
+<tr><td>Combat Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>740</td><td class='num'>575</td><td class='num'><b class='add'>-165</b></td></tr>
+<tr><td>Seer Plane</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1070</td><td class='num'>580</td><td class='num'><b class='add'>-490</b></td></tr>
+<tr><td>Heavy Jetbike</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>670</td><td class='num'>715</td><td class='num'><b class='del'>+45</b></td></tr>
+<tr><td>Venator Plane</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1530</td><td class='num'>765</td><td class='num'><b class='add'>-765</b></td></tr>
+<tr><td>Great Elemental</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1300</td><td class='num'>1250</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td>Anti-Gravity Tank</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1735</td><td class='num'>1555</td><td class='num'><b class='add'>-180</b></td></tr>
+<tr><td>Elemental Avatar</td><td class='num'>1</td><td class='num'>2+</td><td class='num'>2+</td><td class='num'>3140</td><td class='num'>2585</td><td class='num'><b class='add'>-555</b></td></tr>
+<tr><td>Titan Elemental</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>3295</td><td class='num'>2785</td><td class='num'><b class='add'>-510</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Retributor</h3><p class='stats'>70 → 65 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Energy</del> Sword (A3, <del class='del'>AP(1),</del> Rending)</td><td><ins class='add'>Ancient</ins> Sword (A3, Rending)</td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Combat Shield <del class='del'>(Shielded)</del></td><td>Combat Shield <ins class='add'>(Defense(1))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Energy</del> Swords and Combat Shield</td><td>Replace <ins class='add'>Ancient</ins> Swords and Combat Shield</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shard Rifle (24&quot;, A3, Fracture), Strike (A3) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shard Carbine (18&quot;, A6, Crack), CCW (A3) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Energy</del> Sword and Combat Shield</td><td>Replace <ins class='add'>Ancient</ins> Sword and Combat Shield</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sgt. Shard Pistol (12&quot;, A3, Assault, Fracture), Sgt. Hand Weapon (A3), Sgt. Armor (Defense(1)) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shard Rifle (24&quot;, A9, Fracture), Strike (A3) · +90 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shard Pistol (12&quot;, A3, Crack), Dire Sword (A3, Blast(3)), Sgt. Armor (Shielded) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shard Pistol (12&quot;, A3, Crack), Energy Sword (A6, AP(1), Rending), Sgt. Armor (Shielded) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Shard Pistol</td><td>Replace <ins class='add'>Sgt.</ins> Shard Pistol</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shred-Blaster Pistol (9&quot;, A3, Rending, Assault) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Flicker Shield (Regeneration Aura) · <del class='del'>+-5</del> pts</td><td>Flicker Shield (Regeneration Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Pistol (9&quot;, A3, AP(3), Assault) · +35 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Shard Carbine</del></td><td>Replace <ins class='add'>Sgt. Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sweeping Sword (A3, AP(1), Blast(3)) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A9, Rending) · +65 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Shard Carbine (18&quot;, A12, Crack) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Protector</h3><p class='stats'>65 → 70 pts (+5) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Shardgun (12&quot;, A6, <del class='del'>Crack)</del></td><td>Shardgun (12&quot;, A6, <ins class='add'>Fracture)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Shardgun</td><td>Replace Shardgun</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gun Platform (Shard Cannon (24&quot;, A9, <del class='del'>AP(1), Crack))</del> · <del class='del'>+90</del> pts</td><td>Gun Platform (Shard Cannon (24&quot;, A9, <ins class='add'>Ignores Cover, Fracture))</ins> · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gun Platform <del class='del'>(Missile Launcher</del> (30&quot;, <del class='del'>A3, AP(2), Deadly(3), Unstoppable))</del> · <del class='del'>+95</del> pts</td><td>Gun Platform <ins class='add'>(Burst Laser</ins> (30&quot;, <ins class='add'>A6, AP(3)))</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gun Platform <del class='del'>(Burst Laser</del> (30&quot;, A9, <del class='del'>AP(2)))</del> · <del class='del'>+115</del> pts</td><td>Gun Platform <ins class='add'>(Shatter Cannon</ins> (30&quot;, A9, <ins class='add'>Rending))</ins> · <ins class='add'>+90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gun Platform <del class='del'>(Laser Cannon (36&quot;,</del> A3, <del class='del'>AP(3), Deadly(3)))</del> · <del class='del'>+135</del> pts</td><td>Gun Platform <ins class='add'>(Missile Launcher (30&quot;,</ins> A3, <ins class='add'>AP(2), Deadly(3), Unstoppable))</ins> · <ins class='add'>+90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gun Platform <del class='del'>(Shatter</del> Cannon (36&quot;, <del class='del'>A9, AP(1), Rending))</del> · <del class='del'>+145</del> pts</td><td>Gun Platform <ins class='add'>(High-Energy</ins> Cannon (36&quot;, <ins class='add'>A3, AP(3), Deadly(3)))</ins> · <ins class='add'>+125</ins> pts</td></tr>
+</table></div>
+<h3>Striker</h3><p class='stats'>65 → 80 pts (+15) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Shard Pistol (12&quot;, A3, <del class='del'>Crack)</del></td><td>Shard Pistol (12&quot;, A3, <ins class='add'>Assault, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Shard Pistol and Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sgt. Shard Pistol (12&quot;, A3, Assault, Fracture), Sgt. Hand Weapon (A3) · free</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Flamer (6&quot;, A3, Blast(3), Reliable, Assault), Strike (A3) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Fusion Rifle (6&quot;, A3, AP(4), Deadly(3), Assault), Strike (A3) · +130 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Shard Pistol</td><td>Replace <ins class='add'>Sgt.</ins> Shard Pistol</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shred-Blaster Pistol (9&quot;, A3, Rending, Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Pistol (9&quot;, A3, AP(3), Assault) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flamer (12&quot;, A3, Blast(3), Reliable) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fusion Rifle (12&quot;, A3, AP(4), Deadly(3)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sgt. Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A9, Rending) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Spear (A9, AP(2)) · +65 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hologram Platform (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Hologram Platform (Stealth Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Sword (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Elite Protector</h3><p class='stats'>110 pts · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A9)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Combat Shield <del class='del'>(Shielded)</del></td><td>Combat Shield <ins class='add'>(Defense(1))</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon and Combat Shield</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Oracle Staff (A6, Spell Amplifier) · +-10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sniper Rifle (30&quot;, A3, AP(1), Reliable, Takedown), Hand Weapon (A3) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shard Rifle (24&quot;, A9, Fracture), Hand Weapon (A3) · +50 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>CCW and</del> Combat Shield</td><td>Replace Combat Shield</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shard Pistol (12&quot;, A3, Assault, Fracture) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shred-Blaster Pistol (9&quot;, A3, Rending, Assault) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Pistol (9&quot;, A3, AP(3), Assault) · +50 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Shard Pistol (12&quot;, A6, Crack), CCW (A6) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>CCW</del></td><td>Replace <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Dire</del> Sword (A3, Blast(3)) · +5 pts</td><td><ins class='add'>Sweeping</ins> Sword (A3, <ins class='add'>AP(1),</ins> Blast(3)) · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A9, Rending) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Spear (A9, AP(2)) · +40 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Killing Axe (A3, <del class='del'>AP(2),</del> Deadly(3)) · <del class='del'>+30</del> pts</td><td>Killing Axe (A3, <ins class='add'>AP(4),</ins> Deadly(3)) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Sword (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Spear (A6, AP(4)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Stinger Blade (A9, Reliable, Bane) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Striker Leader (Scout) · <del class='del'>+25</del> pts</td><td>Striker Leader (Scout) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shield Projector (Stealth Aura) · +55 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sniper Leader (Scout, Stealth, Strider) · <del class='del'>+65</del> pts</td><td>Sniper Leader (Scout, Stealth, Strider) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetbike <del class='del'>(Mounted Shardguns</del> (12&quot;, <del class='del'>A6, Crack),</del> Fast, Strider, Tough(9)) · <del class='del'>+215</del> pts</td><td><ins class='add'>Combat</ins> Jetbike <ins class='add'>(Rapid Bike-Shardguns</ins> (12&quot;, <ins class='add'>A9, Fracture),</ins> Fast, Strider, Tough(9)) · <ins class='add'>+190</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Jetbike (Rapid Assault Bike-Shardguns (6&quot;, A9, Assault, Fracture), Fast, Strider, Tough(9)) · +230 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Acolyte Psy-Seer (Spell Conduit) · <del class='del'>+15</del> pts</td><td>Acolyte Psy-Seer (Spell Conduit) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>High Avenger (Hit &amp; Run Shooter Aura) · <del class='del'>+10</del> pts</td><td>High Avenger (Hit &amp; Run Shooter Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>High Oracle (Caster(2)) · <del class='del'>+45</del> pts</td><td>High Oracle (Caster(2)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Elemental Hexer (Shred in Melee Aura) · <del class='del'>+15</del> pts</td><td>Elemental Hexer (Shred in Melee Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Psy-Weaver <del class='del'>(Increased</del> Shooting <del class='del'>Range</del> Aura) · <del class='del'>+15</del> pts</td><td>Psy-Weaver <ins class='add'>(Shred when</ins> Shooting Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Guardian Cleric <del class='del'>(Resistance</del> Aura) · <del class='del'>+15</del> pts</td><td>Guardian Cleric <ins class='add'>(Spell Resistance</ins> Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Master Shard Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Laser Pistol (9&quot;, A6, AP(2)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Shard Carbine (18&quot;, A9, Crack) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Laser Blaster (18&quot;, A6, AP(2)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Flamer Axe (12&quot;, A3, AP(1), Blast(3), Reliable) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Fusion Axe (12&quot;, A3, AP(4), Deadly(3)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Web Spinner (12&quot;, A9, AP(4)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Surge Rockets (24&quot;, A9, AP(1), Unstoppable), Vanquisher Leader (Relentless) · +100 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Sniper Rifle (30&quot;, A6, AP(1), Reliable) · +120 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Impact Rockets (30&quot;, A3, AP(3), Deadly(3)), Vanquisher Leader (Relentless) · +135 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shield Projector (Stealth Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Revenant</h3><p class='stats'>120 → 110 pts (-10) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Shard Pistol (12&quot;, A3, <del class='del'>Crack)</del></td><td>Shard Pistol (12&quot;, A3, <ins class='add'>Assault, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A3, Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Energy Sword (A6, AP(1), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Shard Pistol and <del class='del'>Energy</del> Sword</td><td>Replace Shard Pistol and <ins class='add'>Ancient</ins> Sword</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sgt. Shard Pistol (12&quot;, A3, <del class='del'>Crack),</del> Sgt. <del class='del'>Energy</del> Sword <del class='del'>(A6, AP(1),</del> Rending) · free</td><td>Sgt. Shard Pistol (12&quot;, A3, <ins class='add'>Assault, Fracture),</ins> Sgt. <ins class='add'>Ancient</ins> Sword <ins class='add'>(A3,</ins> Rending) · free</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Mirror</del> Scythe (A12, <del class='del'>Rending)</del> · <del class='del'>+10</del> pts</td><td><ins class='add'>Revenant</ins> Scythe (A12, <ins class='add'>Shred)</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Revenant Chakram (9&quot;, A9, Assault, Unstoppable), Ancient Sword (A3, Rending) · +95 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Tri-Chakram (12&quot;, A9, AP(1), Reliable), Sword (A6) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sgt. Shard Pistol</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shred-Blaster Pistol (9&quot;, A3, Rending, Assault) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Pistol (9&quot;, A3, AP(3), Assault) · +35 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Sgt. <del class='del'>Energy</del> Sword</td><td>Replace Sgt. <ins class='add'>Ancient</ins> Sword</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A9, Rending) · +55 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Killing Axe (A3, <del class='del'>AP(2),</del> Deadly(3)) · <del class='del'>+15</del> pts</td><td>Killing Axe (A3, <ins class='add'>AP(4),</ins> Deadly(3)) · <ins class='add'>+95</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Banshee</del> Howl (Fear(6)) · <del class='del'>+60</del> pts</td><td><ins class='add'>Ghostly</ins> Howl (Fear(6)) · <ins class='add'>+70</ins> pts</td></tr>
+</table></div>
+<h3>Glider</h3><p class='stats'>105 → 110 pts (+5) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Ambush</del><br><span class='muted'>Only deploys D3 rounds afters its wave is deployed, and at the start of the round it&#x27;s placed at the centre of a random table quarter.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Carbine (18&quot;, A3, AP(3))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Laser Pistol (9&quot;, A3, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Laser <del class='del'>Pistol</del> and <del class='del'>CCW</del></td><td>Replace Laser <ins class='add'>Carbines</ins> and <ins class='add'>Strike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Pistol (9&quot;, A3, AP(3), Assault), Hand Weapon (A3) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Laser Pistol (9&quot;, A3, AP(2)), Energy Sword (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shred Blaster Pistol (12&quot;, A6, Rending), Energy Sword (A6, AP(1), Rending) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with any</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Grenade Packs (Crossing Attack(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sky Glider (Ambush) · +15 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Grenade Packs (Crossing Attack(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Laser <del class='del'>Pistols</del> and <del class='del'>CCW</del></td><td>Replace Laser <ins class='add'>Carbine</ins> and <ins class='add'>Strike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sgt. Laser Pistol (9&quot;, A3, AP(3), Assault), Sgt. Hand Weapon (A3) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shred-Blaster Gun (18&quot;, A9, Rending), Strike (A3) · +60 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Laser <del class='del'>Blaster</del> (18&quot;, A3, <del class='del'>AP(2)), CCW</del> (A3) · <del class='del'>+5</del> pts</td><td><ins class='add'>Heavy</ins> Laser <ins class='add'>Carbine</ins> (18&quot;, A3, <ins class='add'>AP(3), Deadly(3)), Strike</ins> (A3) · <ins class='add'>+90</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Laser Pistol</td><td>Replace <ins class='add'>Sgt.</ins> Laser Pistol</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shard Pistol (12&quot;, A9, Assault, Fracture) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shred-Blaster Pistol (9&quot;, A9, Rending, Assault) · +85 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Laser Blaster (18&quot;, A9, AP(2)) · +110 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shred Blaster (24&quot;, A12, Rending) · +155 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sgt. Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A3, Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Spear (A3, AP(2)) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Stinger</h3><p class='stats'>120 → 115 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Shard Pistol (12&quot;, A3, <del class='del'>Crack)</del></td><td>Shard Pistol (12&quot;, A3, <ins class='add'>Assault, Fracture)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Stinger Blade <del class='del'>(A6, Reliable,</del> Bane)</td><td>Stinger Blade <ins class='add'>(A3,</ins> Bane)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Shard Pistol and Stinger Blade</td><td>Replace Shard Pistol and Stinger Blade</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sgt. Shard Pistol (12&quot;, A3, <del class='del'>Crack),</del> Sgt. Stinger Blade <del class='del'>(A6, Reliable,</del> Bane) · free</td><td>Sgt. Shard Pistol (12&quot;, A3, <ins class='add'>Assault, Fracture),</ins> Sgt. Stinger Blade <ins class='add'>(A3,</ins> Bane) · free</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual <del class='del'>Energy</del> Swords (A12, <del class='del'>AP(1),</del> Rending) · +40 pts</td><td>Dual <ins class='add'>Ancient</ins> Swords (A12, Rending) · +40 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shard Pistol (12&quot;, A3, Assault, Fracture), Stinger Dagger (A6, AP(1), Bane, Takedown) · +60 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Sgt. Shard Pistol</td><td>Replace Sgt. Shard Pistol</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Stinger Fist-Gun (9&quot;, A9, Assault, Bane) · +95 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shred-Blaster Pistol (9&quot;, A9, Rending, Assault) · +120 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scorpion Fist (12&quot;, A9, Rending) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Sgt. Stinger Blade</td><td>Replace Sgt. Stinger Blade</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A3, Rending) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Spear (A3, AP(2)) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Stinger Dagger (A3, Blast(3), Reliable, Bane) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Sniper</h3><p class='stats'>130 → 120 pts (-10) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>130</del> pts</td><td><ins class='add'>120</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Shard-Sniper Rifle (24&quot;, A6, Fracture, Takedown)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Sniper Rifle (30&quot;, A3, AP(1), Reliable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Shard-Sniper Rifle</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sniper Rifle (30&quot;, A3, AP(1), Reliable, Takedown) · +5 pts</ins></td></tr>
+</table></div>
+<h3>Shifter</h3><p class='stats'>155 → 125 pts (-30) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>155</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Phaser Shooters (12&quot;, A6, Assault)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Web Spinner (12&quot;, A6, AP(4))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Web Spinner</del></td><td>Replace <ins class='add'>Phaser Shooter</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Phaser Blaster (9&quot;, A6, AP(2)), Strike (A3) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spinner Carbine (18&quot;, A6, AP(4)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Web Spinner (12&quot;, A12, AP(4)) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Phaser Blaster</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Phaser Blaster (9&quot;, A12, AP(2)) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Phaser Carbine (18&quot;, A9, AP(2)) · +80 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td><del class='del'>Replace CCW</del></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Shifter Picks (A6, <del class='del'>Bane)</del> · <del class='del'>+20</del> pts</td><td>Dual Shifter Picks (A6, <ins class='add'>AP(2))</ins> · <ins class='add'>+70</ins> pts</td></tr>
+</table></div>
+<h3>Scorcher</h3><p class='stats'>125 → 130 pts (+5) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>125</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Heavy Flamer</td><td>Replace Heavy Flamer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fusion Rifle (12&quot;, A3, AP(4), Deadly(3)) · <del class='del'>+20</del> pts</td><td>Fusion Rifle (12&quot;, A3, AP(4), Deadly(3)) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fusion <del class='del'>Pike</del> (18&quot;, A3, AP(4), Deadly(3)) · <del class='del'>+70</del> pts</td><td>Fusion <ins class='add'>Lance-Gun</ins> (18&quot;, A3, AP(4), Deadly(3)) · <ins class='add'>+80</ins> pts</td></tr>
+</table></div>
+<h3>Acolyte</h3><p class='stats'>105 → 140 pts (+35) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Shard Pistol (12&quot;, A3, <del class='del'>Crack)</del></td><td>Shard Pistol (12&quot;, A3, <ins class='add'>Assault, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A9, Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Energy Sword (A6, AP(1), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Energy</del> Sword</td><td>Replace <ins class='add'>Ancient</ins> Sword</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Spear (A9, AP(2)) · +5 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Spear (A6, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Jetbike (Assault Bike-Shardguns (6&quot;, A3, Assault, Fracture), Fast, Strider, Tough(9)) · +140 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Jetbike (Mounted Shardguns (12&quot;, A6, Crack), Fast, Strider, Tough(9)) · +175 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Elven Noble</h3><p class='stats'>145 → 155 pts (+10) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>145</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A9)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Combat Shield <del class='del'>(Shielded)</del></td><td>Combat Shield <ins class='add'>(Defense(1))</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hand Weapon and Combat Shield</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Oracle Staff (A6, Spell Amplifier) · +-25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sniper Rifle (30&quot;, A3, AP(1), Reliable, Takedown), Hand Weapon (A3) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Stinger Blades (A12, Bane) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Phaser Shooters (12&quot;, A12, Assault) · +80 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Vanquisher Rocket Launcher (18&quot;, A9, AP(2)), Strike (A3), Vanquisher Leader (Relentless) · +135 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sniper Rifle</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shard Rifle (24&quot;, A9, Fracture) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Laser Carbine (18&quot;, A6, AP(3), Ignores Cover) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Phaser Blasters (9&quot;, A12, AP(2)) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Scorcher Axe (9&quot;, A3, AP(1), Blast(3), Reliable, Assault) · +75 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>CCW and</del> Combat Shield</td><td>Replace Combat Shield</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shard Pistol (12&quot;, A3, Assault, Fracture) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shred-Blaster Pistol (9&quot;, A3, Rending, Assault) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Laser Pistol (9&quot;, A3, AP(3), Assault) · +65 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Shard Pistol (12&quot;, A6, Crack), CCW (A6) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>CCW</del></td><td>Replace <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Dire</del> Sword (A3, Blast(3)) · +5 pts</td><td><ins class='add'>Sweeping</ins> Sword (A3, <ins class='add'>AP(1),</ins> Blast(3)) · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A9, Rending) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Spear (A9, AP(2)) · +50 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Killing Axe (A3, <del class='del'>AP(2),</del> Deadly(3)) · <del class='del'>+45</del> pts</td><td>Killing Axe (A3, <ins class='add'>AP(4),</ins> Deadly(3)) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Sword (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Spear (A6, AP(4)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Stinger Blade (A9, Reliable, Bane) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jetpack (Flying) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shield Projector (Stealth Aura) · +55 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Revenant <del class='del'>Leader</del> (Agile, Fear(3), Strider) · <del class='del'>+70</del> pts</td><td>Revenant <ins class='add'>Mask</ins> (Agile, Fear(3), Strider) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stinger <del class='del'>Leader</del> (Scout, Stealth) · <del class='del'>+55</del> pts</td><td><ins class='add'>Master</ins> Stinger (Scout, Stealth) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Glider <del class='del'>Leader</del> (Ambush, <del class='del'>Crossing Attack(3),</del> Flying) · <del class='del'>+80</del> pts</td><td>Glider <ins class='add'>Jetpack</ins> (Ambush, Flying) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shifter <del class='del'>Leader</del> (Ambush, Teleport) · <del class='del'>+85</del> pts</td><td>Shifter <ins class='add'>Backpack</ins> (Ambush, Teleport) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetbike <del class='del'>(Mounted Shardguns</del> (12&quot;, <del class='del'>A6, Crack),</del> Fast, Strider, Tough(9)) · <del class='del'>+280</del> pts</td><td><ins class='add'>Combat</ins> Jetbike <ins class='add'>(Bike-Shardguns</ins> (12&quot;, <ins class='add'>A9, Fracture),</ins> Fast, Strider, Tough(9)) · <ins class='add'>+265</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Jetbike (Assault Bike-Shardguns (6&quot;, A9, Assault, Fracture), Fast, Strider, Tough(9)) · +315 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Retributor Leader (Fearless) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ancient Commander <del class='del'>(Highborn Boost</del> Aura) · <del class='del'>+10</del> pts</td><td>Ancient Commander <ins class='add'>(Enhanced Highborn</ins> Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>High Avenger (Hit &amp; Run Shooter Aura) · <del class='del'>+10</del> pts</td><td>High Avenger (Hit &amp; Run Shooter Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>High Oracle (Caster(2)) · <del class='del'>+45</del> pts</td><td>High Oracle (Caster(2)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Elemental Hexer (Shred in Melee Aura) · <del class='del'>+15</del> pts</td><td>Elemental Hexer (Shred in Melee Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master High Oracle (Caster(3)) · <del class='del'>+70</del> pts</td><td>Master High Oracle (Caster(3)) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Guardian Cleric <del class='del'>(Resistance</del> Aura) · <del class='del'>+15</del> pts</td><td>Guardian Cleric <ins class='add'>(Spell Resistance</ins> Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Master Shard Pistol</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Laser Pistol (9&quot;, A6, AP(2)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Shard Carbine (18&quot;, A9, Crack) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Laser Blaster (18&quot;, A6, AP(2)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Flamer Axe (12&quot;, A3, AP(1), Blast(3), Reliable) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Fusion Axe (12&quot;, A3, AP(4), Deadly(3)) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Web Spinner (12&quot;, A9, AP(4)) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Surge Rockets (24&quot;, A9, AP(1), Unstoppable), Vanquisher Leader (Relentless) · +120 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Sniper Rifle (30&quot;, A6, AP(1), Reliable) · +115 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Impact Rockets (30&quot;, A3, AP(3), Deadly(3)), Vanquisher Leader (Relentless) · +170 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shield Projector (Stealth Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Vanquisher</h3><p class='stats'>205 → 215 pts (+10) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>205</del> pts</td><td><ins class='add'>215</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Surge Rockets (24&quot;,</del> A9, AP(1), Unstoppable)</td><td><ins class='add'>Dart-Rocket Launcher (18&quot;,</ins> A9, AP(1), Unstoppable)</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Surge Rocket</del></td><td>Replace <ins class='add'>Dart-Rocket Launcher</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heat-Rocket Launcher (18&quot;, A3, AP(2), Deadly(3)) · +-15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shard Cannon (24&quot;, <del class='del'>A9, AP(1), Crack)</del> · <del class='del'>+10</del> pts</td><td>Shard Cannon (24&quot;, <ins class='add'>A18, Ignores Cover, Fracture)</ins> · <ins class='add'>+140</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Arcing Rockets</del> (30&quot;, <del class='del'>A3,</del> AP(1), Blast(3), Indirect) · <del class='del'>+15</del> pts</td><td><ins class='add'>Arc-Rocket Launcher</ins> (30&quot;, <ins class='add'>A6,</ins> AP(1), Blast(3), Indirect) · <ins class='add'>+325</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Surge Rocket</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Impact Rockets (30&quot;, A3, AP(3), Deadly(3)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Jetbike Striker</h3><p class='stats'>255 → 220 pts (-35) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>255</del> pts</td><td><ins class='add'>220</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(3)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Bike-Shardguns (6&quot;, A6, Assault, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Lance (A3, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Mounted Shardguns (12&quot;, A6, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Shard Pistol (12&quot;, A3, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Ancient Lance</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shard Pistol (12&quot;, A3, Assault, Fracture), Hand Weapon (A3) · +40 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Assault Bike-Shardguns and Ancient Lance</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shard Pistol (12&quot;, A3, Assault, Fracture), Ancient Sword (A9, Rending) · +25 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Energy Lance</del></td><td>Replace <ins class='add'>Ancient Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Spear (A9, AP(2)) · +20 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Killing Axe (A3, <del class='del'>AP(2),</del> Deadly(3)) · <del class='del'>+5</del> pts</td><td>Killing Axe (A3, <ins class='add'>AP(4),</ins> Deadly(3)) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Spear (A6, AP(4)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Sword (A9, AP(1), Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hologram Field (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Hologram Field (Stealth Aura) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master-Crafted Engines (Scout Aura) · <del class='del'>+15</del> pts</td><td>Master-Crafted Engines (Scout Aura) · <ins class='add'>+100</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Shard Pistols and CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Lance (A6, AP(1), Thrust) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Jetbike Protector</h3><p class='stats'>240 → 230 pts (-10) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>240</del> pts</td><td><ins class='add'>230</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Bike-Shardguns (12&quot;, A12, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Mounted Shardguns (12&quot;, A6, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Shard Pistol (12&quot;, A3, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A6)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Mounted Shardgun and Sniper Rifle</del></td><td>Replace <ins class='add'>Burst Bike-Shardgun</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shard Cannon (24&quot;, A9, <del class='del'>AP(1), Crack)</del> · <del class='del'>+40</del> pts</td><td>Shard Cannon (24&quot;, A9, <ins class='add'>Ignores Cover, Fracture)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sniper Rifle (30&quot;, A3, AP(1), Reliable, Takedown), Bike-Shardguns (12&quot;, A6, Fracture) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shard-Sniper Rifle (24&quot;, A6, Fracture, Takedown), Bike-Shardguns (12&quot;, A6, Fracture) · +40 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burst Laser (30&quot;, <del class='del'>A9, AP(2))</del> · <del class='del'>+85</del> pts</td><td>Burst Laser (30&quot;, <ins class='add'>A6, AP(3))</ins> · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hologram Field (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Hologram Field (Stealth Aura) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Flicker Shield (Regeneration Aura) · <del class='del'>+15</del> pts</td><td>Flicker Shield (Regeneration Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sniper Rifle (30&quot;, A3, AP(1), Reliable) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Trasara Ioncrinius</h3><p class='stats'>335 → 275 pts (-60) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>335</del> pts</td><td><ins class='add'>275</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>AI units within 12” may take morale tests using the Villain’s Qua if it is better than their own, as long as the Villain isn’t Shaken.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Shred-Blaster Pistol (9&quot;, A9, Rending, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A3, Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Orbital Bombardment (24&quot;, A9, AP(2), Blast(3), Limited)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Shred Blaster Pistol (12&quot;, A6, Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Energy Sword (A6, AP(1), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Orbital Bombardment (18&quot;, A3, AP(1), Blast(3), Indirect, Limited) · +40 pts</ins></td></tr>
+</table></div>
+<h3>Elemental Protector</h3><p class='stats'>225 → 275 pts (+50) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>225</del> pts</td><td><ins class='add'>275</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Elemental Cannon (9&quot;, A9, AP(4))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Distortion Gun (12&quot;, A3, AP(2), Blast(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Elemental Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Warp-Blast Gun (18&quot;, A3, AP(2), Blast(3)) · +10 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Distortion Gun</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Wraith Cannon (12&quot;, A9, AP(4)) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Elemental Striker</h3><p class='stats'>245 → 285 pts (+40) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>245</del> pts</td><td><ins class='add'>285</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Ancient Swords (A12, Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Killing Axe (A3, AP(2), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Combat Shield (Shielded)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Ancient Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Sword (A9, Rending), Combat Shield (Defense(1)) · free</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ancient Spear (A9, AP(2)), Combat Shield (Defense(1)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Killing Axe (A3, AP(4), Deadly(3)), Combat Shield (Defense(1)) · +20 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Killing Axes and Combat Shield</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Energy Swords (A12, AP(1), Rending) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Killing Axe</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Sword (A9, AP(1), Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Spear (A9, AP(4)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Anti-Gravity APC</h3><p class='stats'>520 → 485 pts (-35) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>520</del> pts</td><td><ins class='add'>485</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(9)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Shard Cannon (12&quot;, A9, Ignores Cover, Assault, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A6, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Mounted Shardguns (12&quot;, A6, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Mounted Shardgun</del></td><td>Replace <ins class='add'>Hull Shard Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Shardguns (6&quot;, A9, AP(1), Assault, Fracture) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Light Shard Cannon (24&quot;, A6, AP(1), Crack) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>2x Shard Cannon (24&quot;, A9, <del class='del'>AP(1), Crack)</del> · <del class='del'>+305</del> pts</td><td>2x Shard Cannon (24&quot;, A9, <ins class='add'>Ignores Cover, Fracture)</ins> · <ins class='add'>+235</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace any Shard Cannon</td><td>Replace any Shard Cannon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shatter Cannon <del class='del'>(36&quot;,</del> A9, <del class='del'>AP(1),</del> Rending) · <del class='del'>+60</del> pts</td><td>Shatter Cannon <ins class='add'>(30&quot;,</ins> A9, Rending) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burst Laser (30&quot;, <del class='del'>A9, AP(2))</del> · <del class='del'>+45</del> pts</td><td>Burst Laser (30&quot;, <ins class='add'>A6, AP(3))</ins> · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Missile Launcher (30&quot;, A3, AP(2), Deadly(3), Unstoppable) · <del class='del'>+15</del> pts</td><td>Missile Launcher (30&quot;, A3, AP(2), Deadly(3), Unstoppable) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Laser</del> Cannon (36&quot;, A3, AP(3), Deadly(3)) · <del class='del'>+65</del> pts</td><td><ins class='add'>High-Energy</ins> Cannon (36&quot;, A3, AP(3), Deadly(3)) · <ins class='add'>+100</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with <del class='del'>(2)</del></td><td>Upgrade with <ins class='add'>any</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hologram Field (Stealth) · <del class='del'>+45</del> pts</td><td>Hologram Field (Stealth) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +85 pts</ins></td></tr>
+</table></div>
+<h3>Support Artillery</h3><p class='stats'>445 → 545 pts (+100) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>445</del> pts</td><td><ins class='add'>545</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Highborn</ins><br><span class='muted'>This model gets +6&quot; range when using Hold actions and shooting, and moves +2&quot; when using Charge actions.</span></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Cumbersome</ins><br><span class='muted'>May only use Hold or Advance actions, but can’t shoot when moving.</span></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Entrenched</ins><br><span class='muted'>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Sonic AA-Cannon (30&quot;, A18, AP(1), Unstoppable)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Artillery</del> Crew (A9)</td><td>Crew (A9)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Burst Mortar (30&quot;, A6, Blast(3), Indirect)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sonic AA-Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Sonic AA-Cannon (30&quot;, A12, AP(3), Unstoppable) · +-10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Phaser Mortar (30&quot;, A6, AP(1), Blast(3), Indirect) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Warp-Blast Mortar (30&quot;, A6, AP(3), Deadly(3), Indirect) · +315 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hologram Field (Stealth) · <del class='del'>+25</del> pts</td><td>Hologram Field (Stealth) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Burst Mortar</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Mortar (24&quot;, A3, AP(2), Deadly(6), Indirect) · +70 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>AA-Cannon (36&quot;, A18, AP(1), Unstoppable) · +180 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Combat Walker</h3><p class='stats'>740 → 575 pts (-165) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>740</del> pts</td><td><ins class='add'>575</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Rapid</del> Shard Cannon (24&quot;, A18, <del class='del'>AP(1), Crack)</del></td><td>Shard Cannon (24&quot;, A18, <ins class='add'>Ignores Cover, Fracture)</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Rapid</del> Shard Cannon</td><td>Replace Shard Cannon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid</del> Burst Laser (30&quot;, <del class='del'>A18, AP(2))</del> · <del class='del'>+85</del> pts</td><td>Burst Laser (30&quot;, <ins class='add'>A12, AP(3))</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid</del> Shatter Cannon <del class='del'>(36&quot;,</del> A18, <del class='del'>AP(1),</del> Rending) · <del class='del'>+125</del> pts</td><td>Shatter Cannon <ins class='add'>(30&quot;,</ins> A18, Rending) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid</del> Missile Launcher (30&quot;, A6, AP(2), Deadly(3), Unstoppable) · <del class='del'>+30</del> pts</td><td>Missile Launcher (30&quot;, A6, AP(2), Deadly(3), Unstoppable) · <ins class='add'>+110</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid Laser</del> Cannon (36&quot;, A6, AP(3), Deadly(3)) · <del class='del'>+130</del> pts</td><td><ins class='add'>High-Energy</ins> Cannon (36&quot;, A6, AP(3), Deadly(3)) · <ins class='add'>+205</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with <ins class='add'>any</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hologram Field (Stealth) · <del class='del'>+45</del> pts</td><td>Hologram Field (Stealth) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +85 pts</ins></td></tr>
+</table></div>
+<h3>Seer Plane</h3><p class='stats'>1070 → 580 pts (-490) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1070</del> pts</td><td><ins class='add'>580</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Shardguns (6&quot;, A18, Fracture)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Distortion Guns (18&quot;, A12, AP(3), Blast(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Strafing Shardgun</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Warp-Blast Guns (9&quot;, A9, AP(2), Blast(3)) · +135 pts</ins></td></tr>
+</table></div>
+<h3>Heavy Jetbike</h3><p class='stats'>670 → 715 pts (+45) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>670</del> pts</td><td><ins class='add'>715</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(9)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Shard Cannon (24&quot;, <del class='del'>A9, AP(1), Crack)</del></td><td>Shard Cannon (24&quot;, <ins class='add'>A18, Ignores Cover, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Shard Cannon (12&quot;, A9, Ignores Cover, Assault, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A6, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Mounted Shardguns (12&quot;, A6, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Shard Cannon</td><td>Replace Shard Cannon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burst Laser (30&quot;, <del class='del'>A9, AP(2))</del> · <del class='del'>+45</del> pts</td><td>Burst Laser (30&quot;, <ins class='add'>A12, AP(3))</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shatter Cannon <del class='del'>(36&quot;, A9, AP(1),</del> Rending) · <del class='del'>+60</del> pts</td><td>Shatter Cannon <ins class='add'>(30&quot;, A18,</ins> Rending) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Missile Launcher (30&quot;, <del class='del'>A3,</del> AP(2), Deadly(3), Unstoppable) · <del class='del'>+15</del> pts</td><td>Missile Launcher (30&quot;, <ins class='add'>A6,</ins> AP(2), Deadly(3), Unstoppable) · <ins class='add'>+110</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Laser</del> Cannon (36&quot;, <del class='del'>A3,</del> AP(3), Deadly(3)) · <del class='del'>+65</del> pts</td><td><ins class='add'>High-Energy</ins> Cannon (36&quot;, <ins class='add'>A6,</ins> AP(3), Deadly(3)) · <ins class='add'>+205</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Mounted Shardgun</del></td><td>Replace <ins class='add'>Hull Shard Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Shardguns (6&quot;, A9, AP(1), Assault, Fracture) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Light Shard Cannon (24&quot;, A6, AP(1), Crack) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with <ins class='add'>any</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hologram Field (Stealth) · <del class='del'>+45</del> pts</td><td>Hologram Field (Stealth) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +85 pts</ins></td></tr>
+</table></div>
+<h3>Venator Plane</h3><p class='stats'>1530 → 765 pts (-765) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1530</del> pts</td><td><ins class='add'>765</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing AA-Laser Beamer (15&quot;, A9, AP(1), Unstoppable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Shard Cannons (12&quot;, A18, Ignores Cover, Fracture)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Rapid Pulse Laser (36&quot;, A18, AP(3), Unstoppable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Shatter Cannon (36&quot;, A18, AP(1), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Twin Shatter</del> Cannon</td><td>Replace <ins class='add'>Strafing Shard</ins> Cannon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Burst Lasers (15&quot;, A12, AP(3)) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Shatter Cannons (15&quot;, A18, Rending) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Missile Launchers (15&quot;, A6, AP(2), Deadly(3), Unstoppable) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing High-Energy Cannons (18&quot;, A6, AP(3), Deadly(3)) · +110 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Laser Cannon (36&quot;, A6, AP(3), Deadly(3)) · +-5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Great Elemental</h3><p class='stats'>1300 → 1250 pts (-50) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1300</del> pts</td><td><ins class='add'>1250</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Arm-Shardguns (6&quot;, A12, Assault, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Elemental Claws (A3, AP(1), Blast(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Shardguns (12&quot;, A6, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Great Axe (A3, AP(2), Deadly(6))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Great Shield (Fortified)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace 2x Elemental Claw</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Shard Cannon (12&quot;, A9, Ignores Cover, Assault, Fracture), Elemental Claw (A3, AP(1), Blast(3)), Elemental Shield (Fortified) · +240 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Shard Cannon (12&quot;, A9, Ignores Cover, Assault, Fracture), Elemental Spear (A9, AP(2)), Elemental Shield (Fortified) · +285 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Elemental Claw</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Elemental Sword (A9, Rending) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Elemental Axe (A3, AP(4), Deadly(3)) · +60 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Assault Shard Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Shatter Cannon (15&quot;, A9, Rending, Assault) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Laser (15&quot;, A6, AP(3), Assault) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Missile Launcher (15&quot;, A3, AP(2), Deadly(3), Assault, Unstoppable) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Laser Cannon (18&quot;, A3, AP(3), Deadly(3), Assault) · +105 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Shardgun</del></td><td>Replace <ins class='add'>Dual Arm-Shardgun</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Arm-Flamers (6&quot;, A6, Blast(3), Reliable, Assault) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flamer (12&quot;, A3, Blast(3), Reliable) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Elemental Curse (Unwieldy Debuff) · <del class='del'>+10</del> pts</td><td>Elemental Curse (Unwieldy Debuff) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Elemental Seer (Caster(2)) · <del class='del'>+45</del> pts</td><td>Elemental Seer (Caster(2)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Great Axe and Great Shield</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>2x Great Claw (A12, Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>2x Great Axe (A3, AP(2), Deadly(6)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Elemental Sword (A18, AP(1), Rending), Great Shield (Fortified) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Spear (A18, AP(4)), Great Shield (Fortified) · +130 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>2x Great Elemental Sword (A18, AP(1), Rending) · +170 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Shard Cannon (24&quot;, A18, AP(1), Crack) · +305 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Missile Launcher (30&quot;, A6, AP(2), Deadly(3), Unstoppable) · +335 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Burst Laser (30&quot;, A18, AP(2)) · +390 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Shatter Cannon (36&quot;, A18, AP(1), Rending) · +430 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Laser Cannon (36&quot;, A6, AP(3), Deadly(3)) · +435 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Anti-Gravity Tank</h3><p class='stats'>1735 → 1555 pts (-180) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1735</del> pts</td><td><ins class='add'>1555</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(18)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>2x <del class='del'>Rapid</del> Shard Cannons (24&quot;, A18, <del class='del'>AP(1), Crack)</del></td><td>2x Shard Cannons (24&quot;, A18, <ins class='add'>Ignores Cover, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Shard Cannon (12&quot;, A9, Ignores Cover, Assault, Fracture)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A12, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Mounted Shardguns (12&quot;, A6, Crack)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Mounted Shardgun</del></td><td>Replace <ins class='add'>Hull Shard Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Shardguns (6&quot;, A9, AP(1), Assault, Fracture) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Light Shard Cannon (24&quot;, A6, AP(1), Crack) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace 2x <del class='del'>Rapid</del> Shard Cannon</td><td>Replace 2x Shard Cannon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Phaser Cannon (24&quot;, A6, AP(3), Blast(6), Indirect) · +220 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Prism</del> Cannon (36&quot;, A6, AP(4), Deadly(6)) · <del class='del'>+140</del> pts</td><td><ins class='add'>Heavy Focal</ins> Cannon (36&quot;, A6, AP(4), Deadly(6)) · <ins class='add'>+285</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spinner Cannon (30&quot;, A12, AP(4), Blast(3), Indirect) · +590 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Rapid</del> Shard Cannon</td><td>Replace any Shard Cannon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid</del> Burst Laser (30&quot;, <del class='del'>A18, AP(2))</del> · <del class='del'>+85</del> pts</td><td>Burst Laser (30&quot;, <ins class='add'>A12, AP(3))</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid</del> Shatter Cannon <del class='del'>(36&quot;,</del> A18, <del class='del'>AP(1),</del> Rending) · <del class='del'>+125</del> pts</td><td>Shatter Cannon <ins class='add'>(30&quot;,</ins> A18, Rending) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid</del> Missile Launcher (30&quot;, A6, AP(2), Deadly(3), Unstoppable) · <del class='del'>+30</del> pts</td><td>Missile Launcher (30&quot;, A6, AP(2), Deadly(3), Unstoppable) · <ins class='add'>+110</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid Laser</del> Cannon (36&quot;, A6, AP(3), Deadly(3)) · <del class='del'>+130</del> pts</td><td><ins class='add'>High-Energy</ins> Cannon (36&quot;, A6, AP(3), Deadly(3)) · <ins class='add'>+205</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hologram Field (Stealth) · <del class='del'>+95</del> pts</td><td>Hologram Field (Stealth) · <ins class='add'>+70</ins> pts</td></tr>
+</table></div>
+<h3>Elemental Avatar</h3><p class='stats'>3140 → 2585 pts (-555) · Size 1 · Quality 2+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>3140</del> pts</td><td><ins class='add'>2585</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Flame Sword (A36, <del class='del'>AP(2), Rending)</del></td><td>Flame Sword (A36, <ins class='add'>Shred)</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Oracle Avatar</td><td>Replace Oracle Avatar</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Avatar <del class='del'>(Gaze of Doom</del> (12&quot;, <del class='del'>A9,</del> AP(4), <del class='del'>Deadly(3)))</del> · <del class='del'>+360</del> pts</td><td>Great Avatar <ins class='add'>(Elemental Gaze</ins> (12&quot;, <ins class='add'>A3,</ins> AP(4), <ins class='add'>Deadly(6), Assault, Ignores Regeneration))</ins> · <ins class='add'>+435</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Elemental Curse (Unwieldy Debuff) · <del class='del'>+10</del> pts</td><td>Elemental Curse (Unwieldy Debuff) · <ins class='add'>+5</ins> pts</td></tr>
+</table></div>
+<h3>Titan Elemental</h3><p class='stats'>3295 → 2785 pts (-510) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>3295</del> pts</td><td><ins class='add'>2785</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Dual Titan Claws <del class='del'>(A72, Rending)</del></td><td>Dual Titan Claws <ins class='add'>(A9, AP(2), Blast(6))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Dual Titan <del class='del'>Claw</del></td><td>Replace Dual Titan <ins class='add'>Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Titan Sword (A36, Rending), Titan Shield (Fortified) · +380 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Titan Axe <del class='del'>(A18, AP(2), Deadly(3)),</del> Titan Shield (Fortified) · <del class='del'>+85</del> pts</td><td>Titan Axe <ins class='add'>(A6, AP(4), Deadly(6), Ignores Regeneration),</ins> Titan Shield (Fortified) · <ins class='add'>+410</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Titan Spear (A36, AP(2)), Titan Shield (Fortified) · +460 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Heavy Elemental Cannons (24&quot;, A12, AP(4), Deadly(6), Ignores Regeneration) · +805 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Celestial Cannon (30&quot;, A9, AP(3), Blast(6)), Titan Shield (Fortified) · +845 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Heavy Wraith Cannon (24&quot;, A6, AP(4), Deadly(9)) · +375 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with up to two</td><td>Upgrade with up to two</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Shard Cannon (12&quot;, A9, Ignores Cover, Assault, Fracture) · +145 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Laser (15&quot;, A6, AP(3), Assault) · +185 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Shatter Cannon (15&quot;, A9, Rending, Assault) · +190 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Shard Cannon (24&quot;, A18, AP(1), Crack) · +305 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Burst Laser (30&quot;, A18, AP(2)) · +390 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Shatter Cannon (36&quot;, A18, AP(1), Rending) · +430 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Elemental Curse (Unwieldy Debuff) · <del class='del'>+10</del> pts</td><td>Elemental Curse (Unwieldy Debuff) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Titan Axe</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Sword (A60, AP(1), Rending) · +135 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Spear (A48, AP(4)) · +205 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sun Cannon (36&quot;, A9, AP(2), Blast(6)) · +305 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Extra Reach</td><td>If this model has Extra Reach, it gets +12&quot; range when using Hold actions and shooting, and moves +4&quot; when using Charge actions from Extra Reach (instead of only +6&quot; and +2&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Highborn</td><td>If this model has Highborn, it gets +12&quot; range when using Hold actions and shooting, and moves +4&quot; when using Charge actions from Highborn (instead of only +6&quot; and +2&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Highborn Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Enhanced Highborn. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
+<tr class='add'><td>➕</td><td>Extra Reach</td><td>This model gets +6&quot; range when using Hold actions and shooting, and moves +2&quot; when using Charge actions.</td></tr>
+<tr class='add'><td>➕</td><td>Fracture</td><td>For each unmodified result of 6 to hit, those hits get AP(+2).</td></tr>
+<tr class='add'><td>➕</td><td>Shred when Shooting Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Shred when shooting. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Spell Resistance</td><td>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='add'><td>➕</td><td>Spell Resistance Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Spell Resistance. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Unique Hero</td><td>Counts as having Hero, and this model may only be taken once per army.</td></tr>
+<tr class='del'><td>➖</td><td>Crack</td><td>On unmodified results of 6 to hit, those hits get AP(+2).</td></tr>
+<tr class='del'><td>➖</td><td>Highborn Boost</td><td>If this model has Highborn, it moves +4&quot; on Advance and +4&quot; on Rush/Charge from Highborn (instead of only +2&quot; and +2&quot;).</td></tr>
+<tr class='del'><td>➖</td><td>Highborn Boost Aura</td><td>This model and up to 3 nearest friendly units picked before the start of the game get Highborn Boost. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Increased Shooting Range Aura</td><td>This model and up to 3 nearest friendly units picked before the start of the game get +6&quot; range when shooting. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Quick</td><td>Moves +2&quot; when using Advance, and +2” when using Rush/Charge.</td></tr>
+<tr class='del'><td>➖</td><td>Resistance</td><td>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='del'><td>➖</td><td>Resistance Aura</td><td>This model and up to 3 nearest friendly units picked before the start of the game get Resistance. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Shielded</td><td>Units where all models have this rule get +1 to defense rolls against hits that are not from spells.</td></tr>
+<tr class='mod'><td>✏️</td><td>Blast<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Ignores <del class='del'>Cover,</del> and after resolving other special rules, each hit is multiplied by <del class='del'>X.</del> Hits must be split evenly between <del class='del'>the target and</del> all enemy units within 3” of any model from the target (players pick <del class='del'>how), but each unit may only take up to as many hits as models in it.</del><br><span class='add'>3.6.0:</span> Ignores <ins class='add'>cover,</ins> and after resolving other special rules, each hit is multiplied by <ins class='add'>X, where X is up to as many hits as enemy models in the target unit and within 3” of it.</ins> Hits must be split evenly between all enemy units within 3” of any model from the target (players pick <ins class='add'>how).</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Fortified</td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='mod'><td>✏️</td><td>Highborn</td><td><span class='del'>3.5.1:</span> <del class='del'>Moves</del> +2&quot; when using <del class='del'>Advance, and +2” when using Rush/Charge.</del><br><span class='add'>3.6.0:</span> <ins class='add'>This model gets +6&quot; range when using Hold actions and shooting, and moves</ins> +2&quot; when using <ins class='add'>Charge actions.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Hit &amp; Run</td><td><span class='del'>3.5.1:</span> Once per round, <del class='del'>units where all models have</del> this <del class='del'>rule</del> may move by up to 3&quot; after shooting or being in melee.<br><span class='add'>3.6.0:</span> Once per round, this <ins class='add'>model</ins> may move by up to 3&quot; after shooting or being in melee.</td></tr>
+<tr class='mod'><td>✏️</td><td>Hit &amp; Run Shooter</td><td><span class='del'>3.5.1:</span> Once per round, <del class='del'>units where all models have</del> this <del class='del'>rule</del> may move by up to 3&quot; after shooting.<br><span class='add'>3.6.0:</span> Once per round, this <ins class='add'>model</ins> may move by up to 3&quot; after shooting.</td></tr>
+<tr class='mod'><td>✏️</td><td>Hit &amp; Run Shooter Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Hit &amp; Run Shooter. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Hit &amp; Run Shooter. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Piercing Spotter</td><td><span class='del'>3.5.1:</span> Once per activation, pick one enemy unit within 30&quot; and in line of sight of this model and roll one die, on a 4+ place a <del class='del'>marker</del> on it. When attacking, friendly units may remove <del class='del'>markers</del> from their target before rolling to block to get +AP(X) on their weapons, where X is the number of removed <del class='del'>markers.</del><br><span class='add'>3.6.0:</span> Once per activation, pick one enemy unit within 30&quot; and in line of sight of this model and roll one die, on a 4+ place a <ins class='add'>token</ins> on it. When attacking, friendly units may remove <ins class='add'>tokens</ins> from their target before rolling to block to get +AP(X) on their weapons, where X is the number of removed <ins class='add'>tokens.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Regeneration. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Regeneration. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Scout Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Scout. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Scout. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Shred<br><span class='muted'>becomes a core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>On</del> unmodified <del class='del'>results</del> of 1 to block hits, this weapon deals 1 extra wound.<br><span class='add'>3.6.0:</span> <ins class='add'>For each</ins> unmodified <ins class='add'>result</ins> of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
+<tr class='mod'><td>✏️</td><td>Shred in Melee Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Shred in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Shred in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Stealth Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Unwieldy Debuff</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick up to <del class='del'>4</del> enemy units within 18&quot; in line of sight, which gets Unwieldy in melee once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> enemy units within 18&quot; in line of sight, which gets Unwieldy in melee once (next time the effect would apply).</td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Blessing of Souls</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick up to <del class='del'>six</del> friendly units within 12&quot;, which get Highborn <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get <ins class='add'>Enhanced</ins> Highborn once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Creator of Illusions</td><td><span class='del'>3.5.1:</span> (1) Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which <del class='del'>get</del> Unwieldy in melee once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>gets</ins> Unwieldy in melee once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Elemental Seeker</td><td><span class='del'>3.5.1:</span> (1) Pick one enemy unit within <del class='del'>18&quot;,</del> which takes 1 hit with Blast(3).<br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which takes 1 hit with Blast(3).</td></tr>
+<tr class='mod'><td>✏️</td><td>Hidden Spirits</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>four</del> friendly units within <del class='del'>12&quot;,</del> which get Unpredictable Shooter once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get Unpredictable Shooter once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Psy-Destruction</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>models</del> within <del class='del'>24&quot;,</del> which <del class='del'>take 1 hit</del> with <del class='del'>AP(4) each.</del> This effect is resolved as if the target was a unit of [1].<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>model</ins> within <ins class='add'>24&quot; in line of sight,</ins> which <ins class='add'>takes 3 hits</ins> with <ins class='add'>AP(4).</ins> This effect is resolved as if the target was a unit of [1].</td></tr>
+<tr class='mod'><td>✏️</td><td>Shattering Curse</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within <del class='del'>12&quot;,</del> which <del class='del'>take 2</del> hits with <del class='del'>AP(1) and Crack each.</del> Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>takes 4</ins> hits with <ins class='add'>Fracture.</ins> Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.</td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>
