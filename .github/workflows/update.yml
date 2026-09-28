@@ -1,0 +1,89 @@
+name: Update Forge Diff
+
+# Once a day: download new Army Forge snapshots, generate the change reports and publish them
+# to GitHub Pages. Snapshots and reports persist in the "snapshots" branch between runs.
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # push the snapshots branch
+  pages: write
+  id-token: write
+
+concurrency:
+  group: forge-diff
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check out stored snapshots
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir store && cd store
+          git init -q -b snapshots
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch -q --depth=1 origin snapshots; then
+            git reset -q --hard FETCH_HEAD
+          else
+            echo "No snapshots branch yet: first run downloads everything"
+          fi
+
+      - name: Fetch stable
+        run: python fetch_books.py --source stable --system all --out store/data
+
+      # The beta is temporary: when it disappears, this step fails and the run goes on with stable only.
+      - name: Fetch beta
+        id: beta
+        continue-on-error: true
+        run: python fetch_books.py --source beta --system all --out store/data
+
+      - name: Generate reports
+        env:
+          BETA_OK: ${{ steps.beta.outcome == 'success' }}
+          STABLE_LABEL: ${{ vars.STABLE_LABEL }}
+          BETA_LABEL: ${{ vars.BETA_LABEL }}
+        run: |
+          if [ "$BETA_OK" = "true" ]; then
+            python generate_html.py --data store/data --out store/reports --old stable --new beta \
+              --old-label "$STABLE_LABEL" --new-label "$BETA_LABEL"
+          fi
+          if [ "$(ls -d store/data/snapshots/stable/*/ | wc -l)" -ge 2 ]; then
+            python generate_html.py --data store/data --out store/reports --old stable@previous --new stable
+          fi
+          mkdir -p store/reports
+          test -f store/reports/index.html \
+            || echo "<title>Forge Diff</title><p>No reports yet.</p>" > store/reports/index.html
+
+      - name: Save snapshots
+        run: |
+          cd store
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing new"
+          else
+            git -c user.name="github-actions[bot]" \
+                -c user.email="41898283+github-actions[bot]@users.noreply.github.com" \
+                commit -q -m "Snapshot $(date -u +%F)"
+            git push -q origin snapshots
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: store/reports
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
