@@ -1,0 +1,576 @@
+<title>Knight Brothers 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Knight Brothers — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>grimdark-future. <code>stable 2026-09-29: Knight Brothers</code> (versionString 3.5.3, edited 2026-04-07, modified 2026-07-14) → <code>beta 2026-09-28: Knight Brothers</code> (versionString 3.5.1, edited 2026-09-03, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 16 (16 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 4, Size 0</li>
+<li>Special rules: +8 / -8 / ~8</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Knight Master Destroyer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>150</td><td class='num'>185</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td>Knight Veteran Master Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>65</td><td class='num'>95</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td>Knight Master Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>60</td><td class='num'>85</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Knight Battle Brothers</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>230</td><td class='num'>140</td><td class='num'><b class='add'>-90</b></td></tr>
+<tr><td>Knight Veteran Brothers</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>150</td><td class='num'>140</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Knight Purgation Brothers</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>145</td><td class='num'>150</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Knight Destroyers</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>325</td><td class='num'>255</td><td class='num'><b class='add'>-70</b></td></tr>
+<tr><td>Knight APC</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>225</td><td class='num'>190</td><td class='num'><b class='add'>-35</b></td></tr>
+<tr><td>Knight Attack APC → Knight Attack Vehicle</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>220</td><td class='num'>180</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td>Knight Heavy Tank → Knight Heavy Battle Tank</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>795</td><td class='num'>740</td><td class='num'><b class='add'>-55</b></td></tr>
+<tr><td>Knight Combat Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>390</td><td class='num'>430</td><td class='num'><b class='del'>+40</b></td></tr>
+<tr><td>Knight Veteran Combat Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>430</td><td class='num'>460</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td>Knight Nemesis Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>855</td><td class='num'>785</td><td class='num'><b class='add'>-70</b></td></tr>
+<tr><td>Knight Light Gunship</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>320</td><td class='num'>270</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td>Knight Heavy Gunship</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>640</td><td class='num'>380</td><td class='num'><b class='add'>-260</b></td></tr>
+<tr><td>Knight Artillery Gun</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>180</td><td class='num'>155</td><td class='num'><b class='add'>-25</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Knight Master Destroyer</h3><p class='stats'>150 → 185 pts (+35) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Archivist Staff (A4, Spell Amplifier)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A4)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Combat Shield (Shielded)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Combat Shield and CCW</del></td><td>Replace <ins class='add'>Archivist Staff</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Energy <del class='del'>Falchions</del> (A8, <del class='del'>Reliable)</del> · <del class='del'>+20 pts</del></td><td>Dual Energy <ins class='add'>Sabers</ins> (A8, <ins class='add'>Unstoppable)</ins> · <ins class='add'>free</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Energy Claws (A8, <del class='del'>Rending)</del> · <del class='del'>+20</del> pts</td><td>Dual Energy Claws (A8, <ins class='add'>Surge)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A6), Combat Shield (Armor(2)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A6, Surge), Hand Weapon (A2) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Cyclic Rifle (9&quot;, A3, Assault, Surge), Hand Weapon (A6) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Storm Rifle (24&quot;, A6, AP(1)), CCW (A4) · +70 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>CCW</del></td><td>Replace <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Hammer (A2, Blast(3)) · +5 pts</td><td>Energy Hammer (A2, <ins class='add'>AP(1),</ins> Blast(3)) · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Halberd <del class='del'>(A4, AP(1), Reliable)</del> · <del class='del'>+25</del> pts</td><td>Energy Halberd <ins class='add'>(A6, Unstoppable)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Staff <del class='del'>(A4, AP(1),</del> Bane) · <del class='del'>+15</del> pts</td><td>Energy Staff <ins class='add'>(A6,</ins> Bane) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword <del class='del'>(A4, AP(1),</del> Rending) · <del class='del'>+20</del> pts</td><td>Energy Sword <ins class='add'>(A6,</ins> Rending) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slayer Hammer <del class='del'>(A2, AP(2), Deadly(3), Rending)</del> · <del class='del'>+35</del> pts</td><td>Slayer Hammer <ins class='add'>(A6, Shred)</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Fist <del class='del'>(A4, AP(4))</del> · +35 pts</td><td>Energy Fist <ins class='add'>(A6, AP(2))</ins> · +35 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Chain-Fist (A2, <del class='del'>AP(2),</del> Deadly(3)) · <del class='del'>+30</del> pts</td><td>Chain-Fist (A2, <ins class='add'>AP(4),</ins> Deadly(3)) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Gate-Projector Keeper (Enhanced Knightborn Aura) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lieutenant (Rapid Rush Aura) · <del class='del'>+25</del> pts</td><td>Lieutenant (Rapid Rush Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Preacher (Bane in Melee Aura) · <del class='del'>+15</del> pts</td><td>Preacher (Bane in Melee Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Archivist (Caster(2)) · <del class='del'>+50</del> pts</td><td>Archivist (Caster(2)) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Archivist (Caster(3)) · <del class='del'>+75</del> pts</td><td>Master Archivist (Caster(3)) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Knight Champion (Unpredictable Fighter Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Paladin <del class='del'>(Ravage(1))</del> · <del class='del'>+5</del> pts</td><td>Paladin <ins class='add'>(Ravage(6))</ins> · <ins class='add'>+20</ins> pts</td></tr>
+</table></div>
+<h3>Knight Veteran Master Brother</h3><p class='stats'>65 → 95 pts (+30) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Versatile Expert</ins><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation all models with this rule in this unit either get AP(+1) when attacking, or get +1 to hit rolls when attacking.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Versatile Attack</del><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation, when shooting or charging enemies over 9&quot; away, all models with this rule in this unit either get AP(+1) or get +1 to hit rolls.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Combat Shield <del class='del'>(Shielded)</del></td><td>Combat Shield <ins class='add'>(Armor(2))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetpack <del class='del'>(Ambush, Flying)</del> · <del class='del'>+20</del> pts</td><td>Jetpack <ins class='add'>(Flying)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Airdrop Jetpack (Ambush, Flying) · +20 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Combat Bike <del class='del'>(Twin Heavy Rifle</del> (24&quot;, <del class='del'>A2, AP(1)),</del> Fast, Tough(3)) · <del class='del'>+115</del> pts</td><td>Combat Bike <ins class='add'>(Bike-Rifle</ins> (24&quot;, <ins class='add'>A3),</ins> Fast, Tough(3)) · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Bike (Assault Bike-Rifle (12&quot;, A3, Assault), Fast, Tough(3)) · +130 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Gate-Projector Keeper (Enhanced Knightborn Aura) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lieutenant (Rapid Rush Aura) · <del class='del'>+25</del> pts</td><td>Lieutenant (Rapid Rush Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Preacher (Bane in Melee Aura) · <del class='del'>+15</del> pts</td><td>Preacher (Bane in Melee Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Archivist (Caster(2)) · <del class='del'>+50</del> pts</td><td>Archivist (Caster(2)) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Archivist (Caster(3)) · <del class='del'>+75</del> pts</td><td>Master Archivist (Caster(3)) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Commander (Re-Deployment) · <del class='del'>+65</del> pts</td><td>Commander (Re-Deployment) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Artillerist (Re-Position Artillery) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Knight Champion (Unpredictable Fighter Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Combat Shield <del class='del'>and CCW</del></td><td>Replace <ins class='add'>Hand Weapon and</ins> Combat Shield</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Chain-Sword (A4, Shred) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Battle Rifle (24&quot;, A3), Hand Weapon (A1) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Energy Claws (A4, <del class='del'>Rending)</del> · <del class='del'>+15</del> pts</td><td>Dual Energy Claws (A4, <ins class='add'>Surge)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Archivist Staff (A2, Spell Amplifier) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A3, Surge), Hand Weapon (A1) · +15 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flamer Pistol (6&quot;, A1, Blast(3), Reliable), CCW (A2) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flamer Pistol (6&quot;, A1, Blast(3), Reliable), Combat Shield (Bash (A1), Shielded) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Chainsaw Sword (A4, AP(1)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Take one <del class='del'>Master Heavy</del> Rifle attachment</td><td>Take one <ins class='add'>Burst Battle</ins> Rifle attachment</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Plasma-Mod (24&quot;, <del class='del'>A1, AP(4),</del> Limited) · <del class='del'>+10</del> pts</td><td>Plasma-Mod (24&quot;, <ins class='add'>A2, AP(2),</ins> Limited) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Arc-Charger-Mod (18&quot;, A3, Limited, Rending) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Anti-Matter-Mod (24&quot;, A3, AP(1), Limited, Smash) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gravity-Mod (18&quot;, A1, AP(1), Blast(3), Limited, Lacerate) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Flamer Pistol</del></td><td>Replace <ins class='add'>Combat Shield</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pistol (12&quot;, A1, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flamer Pistol (6&quot;, A1, Ignores Cover, Reliable, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Arc-Charger Pistol (9&quot;, A1, Rending, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Anti-Matter Pistol (12&quot;, A1, AP(1), Assault, Smash) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Master</del> Plasma Pistol (12&quot;, <del class='del'>A2, AP(4))</del> · <del class='del'>+20</del> pts</td><td>Plasma Pistol (12&quot;, <ins class='add'>A1, AP(2), Assault)</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fusion Pistol (6&quot;, A1, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+10</del> pts</td><td>Fusion Pistol (6&quot;, A1, AP(4), <ins class='add'>Assault)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Heavy Pistol (12&quot;, A2, AP(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gravity Pistol (9&quot;, A1, AP(1), Blast(3), Lacerate) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Heavy Rifle (24&quot;, A2, AP(1)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Storm Rifle (24&quot;, A4, AP(1)) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>CCW</del></td><td>Replace <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Hammer (A1, Blast(3)) · +5 pts</td><td>Energy Hammer (A1, <ins class='add'>AP(1),</ins> Blast(3)) · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword <del class='del'>(A2, AP(1),</del> Rending) · +10 pts</td><td>Energy Sword <ins class='add'>(A3,</ins> Rending) · +10 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Fist <del class='del'>(A2, AP(4))</del> · +20 pts</td><td>Energy Fist <ins class='add'>(A3, AP(2))</ins> · +20 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Chain-Fist (A1, <del class='del'>AP(2),</del> Deadly(3)) · <del class='del'>+15</del> pts</td><td>Chain-Fist (A1, <ins class='add'>AP(4),</ins> Deadly(3)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (3)</td><td>Upgrade with one (3)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Purifier <del class='del'>(Ravage(1))</del> · <del class='del'>+5</del> pts</td><td>Purifier <ins class='add'>(Ravage(3))</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Inceptor (Teleport) · <del class='del'>+15</del> pts</td><td>Inceptor (Teleport) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Striker (Ambush) · <del class='del'>+10</del> pts</td><td>Striker (Ambush) · <ins class='add'>+15</ins> pts</td></tr>
+</table></div>
+<h3>Knight Master Brother</h3><p class='stats'>60 → 85 pts (+25) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Pistol (12&quot;, A1, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Flamer Pistol (6&quot;, A1, Blast(3), Reliable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>CCW (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Gravity</del> Pistol and <del class='del'>CCW</del></td><td>Replace <ins class='add'>Flamer</ins> Pistol and <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Energy <del class='del'>Falchions</del> (A4, <del class='del'>Reliable)</del> · <del class='del'>+5</del> pts</td><td>Dual Energy <ins class='add'>Sabres</ins> (A4, <ins class='add'>Unstoppable)</ins> · <ins class='add'>+-5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Chain-Sword (A4, Shred) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Battle Rifle (24&quot;, A3), Hand Weapon (A1) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Energy Claws (A4, <del class='del'>Rending)</del> · +5 pts</td><td>Dual Energy Claws (A4, <ins class='add'>Surge)</ins> · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A3, Surge), Hand Weapon (A1) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Archivist Staff (A2, Spell Amplifier) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Chainsaw Sword (A4, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Take one <del class='del'>Master Heavy</del> Rifle attachment</td><td>Take one <ins class='add'>Burst Battle</ins> Rifle attachment</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Plasma-Mod (24&quot;, <del class='del'>A1, AP(4),</del> Limited) · +10 pts</td><td>Plasma-Mod (24&quot;, <ins class='add'>A2, AP(2),</ins> Limited) · +10 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Arc-Charger-Mod (18&quot;, A3, Limited, Rending) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fusion-Mod (12&quot;, A1, AP(4), Deadly(3), Limited) · <del class='del'>+10</del> pts</td><td>Fusion-Mod (12&quot;, A1, AP(4), Deadly(3), Limited) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Anti-Matter-Mod (24&quot;, A3, AP(1), Limited, Smash) · +15 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gravity-Mod (18&quot;, A1, AP(1), Blast(3), Limited, Lacerate) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Flamer</del> Pistol</td><td>Replace Pistol</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flamer Pistol (6&quot;, A1, Ignores Cover, Reliable, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Arc-Charger Pistol (9&quot;, A1, Rending, Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Anti-Matter Pistol (12&quot;, A1, AP(1), Assault, Smash) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Master</del> Plasma Pistol (12&quot;, <del class='del'>A2, AP(4))</del> · <del class='del'>+15</del> pts</td><td>Plasma Pistol (12&quot;, <ins class='add'>A1, AP(2), Assault)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fusion Pistol (6&quot;, A1, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+5</del> pts</td><td>Fusion Pistol (6&quot;, A1, AP(4), <ins class='add'>Assault)</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Alternator Gun (9&quot;, A3, AP(1), Assault, Surge) · +55 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Heavy Pistol (12&quot;, A2, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gravity Pistol (9&quot;, A1, AP(1), Blast(3), Lacerate) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Heavy Rifle (24&quot;, A2, AP(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Storm Rifle (24&quot;, A4, AP(1)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>CCW</del></td><td>Replace <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Hammer (A1, Blast(3)) · +5 pts</td><td>Energy Hammer (A1, <ins class='add'>AP(1),</ins> Blast(3)) · +5 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Staff <del class='del'>(A2, AP(1),</del> Bane) · <del class='del'>+10</del> pts</td><td>Energy Staff <ins class='add'>(A3,</ins> Bane) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Halberd <del class='del'>(A2, AP(1), Reliable)</del> · <del class='del'>+10</del> pts</td><td>Energy Halberd <ins class='add'>(A3, Unstoppable)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword <del class='del'>(A2, AP(1),</del> Rending) · +10 pts</td><td>Energy Sword <ins class='add'>(A3,</ins> Rending) · +10 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slayer Hammer <del class='del'>(A1, AP(2), Deadly(3), Rending)</del> · <del class='del'>+20</del> pts</td><td>Slayer Hammer <ins class='add'>(A3, Shred)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Fist <del class='del'>(A2, AP(4))</del> · +15 pts</td><td>Energy Fist <ins class='add'>(A3, AP(2))</ins> · +15 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Chain-Fist (A1, <del class='del'>AP(2),</del> Deadly(3)) · <del class='del'>+15</del> pts</td><td>Chain-Fist (A1, <ins class='add'>AP(4),</ins> Deadly(3)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jetpack <del class='del'>(Ambush, Flying)</del> · <del class='del'>+20</del> pts</td><td>Jetpack <ins class='add'>(Flying)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Airdrop Jetpack (Ambush, Flying) · +20 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Combat Bike <del class='del'>(Twin Heavy Rifle</del> (24&quot;, <del class='del'>A2, AP(1)),</del> Fast, Tough(3)) · <del class='del'>+95</del> pts</td><td>Combat Bike <ins class='add'>(Bike-Rifle</ins> (24&quot;, <ins class='add'>A3),</ins> Fast, Tough(3)) · <ins class='add'>+90</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Bike (Assault Bike-Rifle (12&quot;, A3, Assault), Fast, Tough(3)) · +100 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Gate-Projector Keeper (Enhanced Knightborn Aura) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lieutenant (Rapid Rush Aura) · <del class='del'>+25</del> pts</td><td>Lieutenant (Rapid Rush Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Preacher (Bane in Melee Aura) · <del class='del'>+15</del> pts</td><td>Preacher (Bane in Melee Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Archivist (Caster(2)) · <del class='del'>+50</del> pts</td><td>Archivist (Caster(2)) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Archivist (Caster(3)) · <del class='del'>+75</del> pts</td><td>Master Archivist (Caster(3)) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Commander (Re-Deployment) · <del class='del'>+65</del> pts</td><td>Commander (Re-Deployment) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Artillerist (Re-Position Artillery) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Knight Champion (Unpredictable Fighter Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (3)</td><td>Upgrade with one (3)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Purifier <del class='del'>(Ravage(1))</del> · <del class='del'>+5</del> pts</td><td>Purifier <ins class='add'>(Ravage(3))</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Inceptor (Teleport) · <del class='del'>+15</del> pts</td><td>Inceptor (Teleport) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Striker (Ambush) · <del class='del'>+10</del> pts</td><td>Striker (Ambush) · <ins class='add'>+15</ins> pts</td></tr>
+</table></div>
+<h3>Knight Battle Brothers</h3><p class='stats'>230 → 140 pts (-90) · Size 5 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>230</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Cyclic Rifle (18&quot;, A1, Surge)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>CCW</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Assault Storm Rifle (24&quot;, A2, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Cyclic Rifles and Strikes</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Cyclic Rifle (9&quot;, A1, Assault, Surge), Hand Weapon (A1) · +20 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace one <del class='del'>Assault Storm</del> Rifle</td><td>Replace one <ins class='add'>Cyclic</ins> Rifle</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Incinerator</del> (12&quot;, A1, AP(1), Blast(3), Reliable) · <del class='del'>+-5</del> pts</td><td><ins class='add'>Slayer Flamer</ins> (12&quot;, A1, AP(1), Blast(3), Reliable) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Psychic Cannon</del> (18&quot;, A1, AP(2), Blast(3)) · <del class='del'>+5</del> pts</td><td><ins class='add'>Slayer Chain-Cannon</ins> (18&quot;, A1, AP(2), Blast(3)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Volley-Gun (30&quot;, A3, Surge) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Psychic Silencer (24&quot;, A4, Rending) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any CCW</del></td><td>Replace <ins class='add'>all Hand Weapons</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Halberd <del class='del'>(A2, AP(1), Reliable)</del> · <del class='del'>+15</del> pts</td><td>Energy Halberd <ins class='add'>(A1, Unstoppable)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Staff <del class='del'>(A2, AP(1),</del> Bane) · <del class='del'>+15</del> pts</td><td>Energy Staff <ins class='add'>(A1,</ins> Bane) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword <del class='del'>(A2, AP(1),</del> Rending) · +15 pts</td><td>Energy Sword <ins class='add'>(A1,</ins> Rending) · +15 pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Cyclic Rifle and Strike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Energy Sabres (A4, Unstoppable) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Cyclic Rifle (9&quot;, A1, Assault, Surge), Slayer Hammer (A3, Shred) · +25 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with one</td><td>Upgrade all models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Purifiers (Ravage(1)) · <del class='del'>+15</del> pts</td><td>Purifiers (Ravage(1)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Inceptors (Teleport) · <del class='del'>+30</del> pts</td><td>Inceptors (Teleport) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Strikers (Ambush) · <del class='del'>+20</del> pts</td><td>Strikers (Ambush) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Banner (Versatile Reach Aura) · <del class='del'>+10</del> pts</td><td>The Founder&#x27;s Banner (Versatile Reach Aura) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Detachment Banner <del class='del'>(Courage</del> Aura) · <del class='del'>+10</del> pts</td><td>Detachment Banner <ins class='add'>(Bravery</ins> Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Medical Training (Regeneration Aura) · <del class='del'>+20</del> pts</td><td>Medical Training (Regeneration Aura) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Slayer Hammer (A1, AP(2), Deadly(3), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Energy Falchions (A4, Reliable) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Knight Veteran Brothers</h3><p class='stats'>150 → 140 pts (-10) · Size 3 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Versatile Expert</ins><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation all models with this rule in this unit either get AP(+1) when attacking, or get +1 to hit rolls when attacking.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Versatile Attack</del><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation, when shooting or charging enemies over 9&quot; away, all models with this rule in this unit either get AP(+1) or get +1 to hit rolls.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Dual Energy Sabres (A4, Unstoppable)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Incinerator (12&quot;, A1, AP(1), Blast(3), Reliable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x CCW (A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Dual Energy Sabres</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Flamer (12&quot;, A1, AP(1), Blast(3), Reliable), Strike (A1) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Cyclic Rifle (9&quot;, A1, Assault, Surge), Hand Weapon (A3) · +30 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Incinerator</del></td><td>Replace any <ins class='add'>Slayer Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A3, Surge) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Psychic Cannon</del> (18&quot;, A1, AP(2), Blast(3)) · <del class='del'>+10</del> pts</td><td><ins class='add'>Slayer Chain-Cannon</ins> (18&quot;, A1, AP(2), Blast(3)) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Volley-Gun (30&quot;, A3, Surge) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Assault Storm Rifle (24&quot;, A2, AP(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Psychic Silencer (24&quot;, A4, Rending) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>CCW</del></td><td>Replace any <ins class='add'>Hand Weapon</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Staff <del class='del'>(A2, AP(1),</del> Bane) · <del class='del'>+15</del> pts</td><td>Energy Staff <ins class='add'>(A3,</ins> Bane) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Halberd <del class='del'>(A2, AP(1), Reliable)</del> · <del class='del'>+20</del> pts</td><td>Energy Halberd <ins class='add'>(A3, Unstoppable)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword <del class='del'>(A2, AP(1),</del> Rending) · <del class='del'>+15</del> pts</td><td>Energy Sword <ins class='add'>(A3,</ins> Rending) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slayer Hammer <del class='del'>(A1, AP(2), Deadly(3), Rending)</del> · <del class='del'>+30</del> pts</td><td>Slayer Hammer <ins class='add'>(A3, Shred)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Energy Falchions (A4, Reliable) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with one</td><td>Upgrade all models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Inceptors (Teleport) · <del class='del'>+15</del> pts</td><td>Inceptors (Teleport) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Strikers (Ambush) · <del class='del'>+10</del> pts</td><td>Strikers (Ambush) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Detachment Banner <del class='del'>(Courage</del> Aura) · <del class='del'>+5</del> pts</td><td>Detachment Banner <ins class='add'>(Bravery</ins> Aura) · <ins class='add'>+10</ins> pts</td></tr>
+</table></div>
+<h3>Knight Purgation Brothers</h3><p class='stats'>145 → 150 pts (+5) · Size 3 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>145</del> pts</td><td><ins class='add'>150</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x <del class='del'>Incinerator</del> (12&quot;, A1, AP(1), Blast(3), Reliable)</td><td>3x <ins class='add'>Slayer Flamer</ins> (12&quot;, A1, AP(1), Blast(3), Reliable)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Strike (A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x CCW (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Incinerator</del></td><td>Replace any <ins class='add'>Slayer Flamer</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Psychic Cannon</del> (18&quot;, A1, AP(2), Blast(3)) · <del class='del'>+10</del> pts</td><td><ins class='add'>Slayer Chain-Cannon</ins> (18&quot;, A1, AP(2), Blast(3)) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Volley-Gun (30&quot;, A3, Surge) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Psychic Silencer (24&quot;, A4, Rending) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Knight Destroyers</h3><p class='stats'>325 → 255 pts (-70) · Size 3 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>325</del> pts</td><td><ins class='add'>255</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Dual Energy Sabres (A4, Unstoppable)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Storm Rifle (24&quot;, A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x CCW (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Dual Energy Sabres</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Cyclic Rifle (9&quot;, A1, Assault, Surge), Hand Weapon (A3) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A3, Surge), Hand Weapon (A1) · +35 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any CCW</del></td><td>Replace <ins class='add'>all Hand Weapons</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Halberd <del class='del'>(A4, AP(1), Reliable)</del> · <del class='del'>+35</del> pts</td><td>Energy Halberd <ins class='add'>(A3, Unstoppable)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Staff <del class='del'>(A4, AP(1),</del> Bane) · <del class='del'>+25</del> pts</td><td>Energy Staff <ins class='add'>(A3,</ins> Bane) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Hammer (A3, Shred) · +25 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword <del class='del'>(A4, AP(1),</del> Rending) · <del class='del'>+30</del> pts</td><td>Energy Sword <ins class='add'>(A3,</ins> Rending) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace one <del class='del'>Storm</del> Rifle</td><td>Replace one <ins class='add'>Burst Cyclic</ins> Rifle</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid Incinerator</del> (12&quot;, A2, AP(1), Blast(3), Reliable) · <del class='del'>+10</del> pts</td><td><ins class='add'>Slayer Flamer</ins> (12&quot;, A2, AP(1), Blast(3), Reliable) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Rapid Psychic Cannon</del> (18&quot;, A2, AP(2), Blast(3)) · <del class='del'>+25</del> pts</td><td><ins class='add'>Slayer Chain-Cannon</ins> (18&quot;, A2, AP(2), Blast(3)) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Volley-Gun (30&quot;, A6, Surge) · +50 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Psychic Silencer (24&quot;, A4, Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with</td><td>Upgrade all models with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Paladins <del class='del'>(Ravage(1))</del> · <del class='del'>+10</del> pts</td><td>Paladins <ins class='add'>(Ravage(2))</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Banner (Versatile Reach Aura) · <del class='del'>+15</del> pts</td><td>The Founder&#x27;s Banner (Versatile Reach Aura) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Detachment Banner <del class='del'>(Courage</del> Aura) · <del class='del'>+30</del> pts</td><td>Detachment Banner <ins class='add'>(Bravery</ins> Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Medical Training (Regeneration Aura) · <del class='del'>+55</del> pts</td><td>Medical Training (Regeneration Aura) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one CCW</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Energy Falchions (A6, Reliable) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Slayer Hammer (A2, AP(2), Deadly(3), Rending) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Knight APC</h3><p class='stats'>225 → 190 pts (-35) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>225</del> pts</td><td><ins class='add'>190</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(3)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A3, Surge)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A2, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Storm Rifle (24&quot;, A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pintle Burst Cyclic Rifle (9&quot;, A3, Assault, Surge) · +45 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Fusion Rifle <del class='del'>(18&quot;,</del> A1, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+50</del> pts</td><td><ins class='add'>Pintle</ins> Heavy Fusion Rifle <ins class='add'>(9&quot;,</ins> A1, AP(4), <ins class='add'>Deadly(3), Assault)</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Rifle (24&quot;, A3, AP(1)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dozer Blade (Strider) · <del class='del'>+15</del> pts</td><td>Dozer Blade (Strider) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Hunter Missiles (24&quot;,</del> A1, AP(2), Deadly(3), Limited, Unstoppable) · +15 pts</td><td><ins class='add'>Disposable Guided Missile (18&quot;,</ins> A1, AP(2), Deadly(3), Limited, Unstoppable) · +15 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Armor(2)) · +30 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Targeting Array (Unstoppable Mark) · <del class='del'>+25</del> pts</td><td>Targeting Array (Unstoppable Mark) · <ins class='add'>+20</ins> pts</td></tr>
+</table></div>
+<h3>Knight Attack Vehicle</h3><p class='stats'>220 → 180 pts (-40) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Knight Attack <del class='del'>APC</del></td><td>Knight Attack <ins class='add'>Vehicle</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>220</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(3)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Transport(6)</del><br><span class='muted'>May transport up to X models or Heroes with up to Tough(6), and non-Heroes with up to Tough(3) which occupy 3 spaces each. Transports may deploy with units inside, and units may enter/exit by using any move action, but must stay fully within 6&quot; of it when exiting. Units inside/outside transports may not target other units outside/inside transports, but may target the transport itself. When a transport is destroyed, units inside must take a dangerous terrain test, are Shaken, and must be placed fully within 6” of the transport before it’s removed.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Twin</del> Heavy Flamer (12&quot;, A2, AP(1), Blast(3), Reliable)</td><td>Heavy Flamer (12&quot;, A2, AP(1), Blast(3), Reliable)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A2, Thrust)</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Twin</del> Heavy Flamer</td><td>Replace Heavy Flamer</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Gatling Cannon (30&quot;, A6, Surge) · +30 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Twin</del> Heavy Machinegun (30&quot;, A6, AP(1)) · <del class='del'>+45</del> pts</td><td>Heavy Machinegun (30&quot;, A6, AP(1)) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Laser Cannon (36&quot;, A1, AP(3), Deadly(3)), <del class='del'>Twin</del> Plasma Rifle (24&quot;, A2, <del class='del'>AP(4))</del> · <del class='del'>+70</del> pts</td><td>Laser Cannon (36&quot;, A1, AP(3), Deadly(3)), Plasma Rifle (24&quot;, A2, <ins class='add'>AP(2))</ins> · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Twin</del> Laser Cannon (36&quot;, A2, AP(3), Deadly(3)) · <del class='del'>+90</del> pts</td><td>Laser Cannon (36&quot;, A2, AP(3), Deadly(3)) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Minigun (24&quot;, A8, AP(1)) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with <ins class='add'>any</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dozer Blade (Strider) · <del class='del'>+15</del> pts</td><td>Dozer Blade (Strider) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cargo Space (Transport(6)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Armor(2)) · +30 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Targeting Array (Unstoppable Mark) · <del class='del'>+25</del> pts</td><td>Targeting Array (Unstoppable Mark) · <ins class='add'>+20</ins> pts</td></tr>
+</table></div>
+<h3>Knight Heavy Battle Tank</h3><p class='stats'>795 → 740 pts (-55) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Knight Heavy Tank</td><td>Knight Heavy <ins class='add'>Battle</ins> Tank</td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>795</del> pts</td><td><ins class='add'>740</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(9)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Transport(11)</del><br><span class='muted'>May transport up to X models or Heroes with up to Tough(6), and non-Heroes with up to Tough(3) which occupy 3 spaces each. Transports may deploy with units inside, and units may enter/exit by using any move action, but must stay fully within 6&quot; of it when exiting. Units inside/outside transports may not target other units outside/inside transports, but may target the transport itself. When a transport is destroyed, units inside must take a dangerous terrain test, are Shaken, and must be placed fully within 6” of the transport before it’s removed.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Gatling Cannon (30&quot;, A6, Surge)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Sponson Linked Rifle-Arrays (24&quot;, A12)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Overrun (A6, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Heavy Machinegun (30&quot;, A6, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Quad Flamer Cannon (18&quot;, A4, AP(1), Blast(3), Reliable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Sponson Linked Rifle-Arrays</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sponson Heavy Flamer Cannons (18&quot;, A2, AP(2), Blast(6), Reliable) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sponson Heavy Laser Cannons (36&quot;, A2, AP(4), Deadly(6)) · +135 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Quad Flamer</del> Cannon</td><td>Replace <ins class='add'>Hull Gatling</ins> Cannon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hull Heavy Machinegun (30&quot;, A6, AP(1)) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Heavy Rifle Array (24&quot;, A12, AP(1)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Quad Laser Cannon (36&quot;, A4, AP(3), Deadly(3)) · +130 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pintle Burst Cyclic Rifle (9&quot;, A3, Assault, Surge) · +45 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Fusion Rifle <del class='del'>(18&quot;,</del> A1, AP(4), <del class='del'>Deadly(3))</del> · <del class='del'>+50</del> pts</td><td><ins class='add'>Pintle</ins> Heavy Fusion Rifle <ins class='add'>(9&quot;,</ins> A1, AP(4), <ins class='add'>Deadly(3), Assault)</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Rifle (24&quot;, A3, AP(1)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Hunter Missiles (24&quot;,</del> A1, AP(2), Deadly(3), Limited, Unstoppable) · +15 pts</td><td><ins class='add'>Disposable Guided Missile (18&quot;,</ins> A1, AP(2), Deadly(3), Limited, Unstoppable) · +15 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cargo Space (Transport(11)) · +30 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dozer Blade (Strider) · <del class='del'>+45</del> pts</td><td>Dozer Blade (Strider) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Twin Heavy Machinegun</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Minigun (24&quot;, A8, AP(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Knight Combat Walker</h3><p class='stats'>390 → 430 pts (+40) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>390</del> pts</td><td><ins class='add'>430</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>2x Walker Fist (A4, <del class='del'>AP(4))</del></td><td>2x Walker <ins class='add'>Combat</ins> Fist (A4, <ins class='add'>AP(2))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>one</del> Walker Fist</td><td>Replace <ins class='add'>any</ins> Walker <ins class='add'>Combat</ins> Fist</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Linked Rifle-Array (24&quot;, A6) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Flamer (12&quot;, A2, AP(1), Blast(3), Reliable), Light Walker Fist (A1, AP(2)) · +20 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Twin <del class='del'>Heavy</del> Flamer <del class='del'>(12&quot;,</del> A2, AP(1), Blast(3), Reliable) · <del class='del'>+5</del> pts</td><td>Twin Flamer <ins class='add'>Cannon (18&quot;,</ins> A2, AP(1), Blast(3), Reliable) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Heavy Flamer (6&quot;, A1, AP(1), Blast(3), Reliable, Assault), Walker Fist (A3, AP(2)) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Gatling Cannon (30&quot;, A6, Surge) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plasma Cannon (30&quot;, A2, AP(2), Blast(3)) · +50 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Twin Heavy Machinegun (30&quot;, A6, AP(1)) · <del class='del'>+45</del> pts</td><td>Twin Heavy Machinegun (30&quot;, A6, AP(1)) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Missile Battery (30&quot;, A2, AP(2), Deadly(3), Unstoppable) · +60 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Super-Heavy</del> Fusion Rifle (18&quot;, <del class='del'>A1,</del> AP(4), <del class='del'>Deadly(6))</del> · <del class='del'>+20</del> pts</td><td><ins class='add'>Twin Heavy</ins> Fusion Rifle (18&quot;, <ins class='add'>A2,</ins> AP(4), <ins class='add'>Deadly(3))</ins> · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Twin Laser Cannon (36&quot;, A2, AP(3), Deadly(3)) · <del class='del'>+90</del> pts</td><td>Twin Laser Cannon (36&quot;, A2, AP(3), Deadly(3)) · <ins class='add'>+95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Autocannon (36&quot;, A6, AP(2)) · +95 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Rifle Array (24&quot;, A6, AP(1)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Plasma Cannon (30&quot;, A1, AP(4), Blast(6)) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Minigun (24&quot;, A6, AP(2)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td><del class='del'>Upgrade</del> any <del class='del'>Walker Fist with one</del></td><td><ins class='add'>Replace</ins> any <ins class='add'>Heavy Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A6, Surge) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fusion Rifle (12&quot;, <del class='del'>A1,</del> AP(4), Deadly(3)) · <del class='del'>+35</del> pts</td><td>Fusion Rifle (12&quot;, <ins class='add'>A2,</ins> AP(4), Deadly(3)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Flamer (12&quot;, A1, AP(1), Blast(3), Reliable) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Rifle (24&quot;, A3, AP(1)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Assault Heavy Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Cyclic Rifle (9&quot;, A3, Assault, Surge) · free</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Fusion Rifle (6&quot;, A1, AP(4), Deadly(3), Assault) · +25 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one Walker Fist (2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Missile Array (30&quot;, A4, AP(2), Unstoppable) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Autocannon (36&quot;, A6, AP(2)) · +90 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Knight Veteran Combat Walker</h3><p class='stats'>430 → 460 pts (+30) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>430</del> pts</td><td><ins class='add'>460</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Versatile Expert</ins><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation all models with this rule in this unit either get AP(+1) when attacking, or get +1 to hit rolls when attacking.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Versatile Attack</del><br><span class='muted'>When this unit is activated, pick one effect: until the end of the activation, when shooting or charging enemies over 9&quot; away, all models with this rule in this unit either get AP(+1) or get +1 to hit rolls.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>2x Walker Fist (A4, <del class='del'>AP(4))</del></td><td>2x Walker <ins class='add'>Combat</ins> Fist (A4, <ins class='add'>AP(2))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>one</del> Walker Fist</td><td>Replace <ins class='add'>any</ins> Walker <ins class='add'>Combat</ins> Fist</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Linked Rifle-Array (24&quot;, A6) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Flamer (12&quot;, A2, AP(1), Blast(3), Reliable), Light Walker Fist (A1, AP(2)) · +25 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Twin <del class='del'>Heavy</del> Flamer <del class='del'>(12&quot;,</del> A2, AP(1), Blast(3), Reliable) · <del class='del'>+-5</del> pts</td><td>Twin Flamer <ins class='add'>Cannon (18&quot;,</ins> A2, AP(1), Blast(3), Reliable) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Heavy Flamer (6&quot;, A1, AP(1), Blast(3), Reliable, Assault), Walker Fist (A3, AP(2)) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Gatling Cannon (30&quot;, A6, Surge) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plasma Cannon (30&quot;, A2, AP(2), Blast(3)) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Missile Battery (30&quot;, A2, AP(2), Deadly(3), Unstoppable) · +70 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Super-Heavy</del> Fusion Rifle (18&quot;, <del class='del'>A1,</del> AP(4), <del class='del'>Deadly(6))</del> · <del class='del'>+25</del> pts</td><td><ins class='add'>Twin Heavy</ins> Fusion Rifle (18&quot;, <ins class='add'>A2,</ins> AP(4), <ins class='add'>Deadly(3))</ins> · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Twin Autocannon (36&quot;, A6, AP(2)) · +115 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Rifle Array (24&quot;, A6, AP(1)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Plasma Cannon (30&quot;, A1, AP(4), Blast(6)) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Minigun (24&quot;, A6, AP(2)) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td><del class='del'>Upgrade</del> any <del class='del'>Walker Fist with one</del></td><td><ins class='add'>Replace</ins> any <ins class='add'>Heavy Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Burst Cyclic Rifle (18&quot;, A6, Surge) · +25 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fusion Rifle (12&quot;, <del class='del'>A1,</del> AP(4), Deadly(3)) · <del class='del'>+40</del> pts</td><td>Fusion Rifle (12&quot;, <ins class='add'>A2,</ins> AP(4), Deadly(3)) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Flamer (12&quot;, A1, AP(1), Blast(3), Reliable) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Rifle (24&quot;, A3, AP(1)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Assault Heavy Flamer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Cyclic Rifle (9&quot;, A3, Assault, Surge) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Fusion Rifle (6&quot;, A1, AP(4), Deadly(3), Assault) · +30 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one Walker Fist (2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Missile Array (30&quot;, A4, AP(2), Unstoppable) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Autocannon (36&quot;, A6, AP(2)) · +120 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Knight Nemesis Walker</h3><p class='stats'>855 → 785 pts (-70) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>855</del> pts</td><td><ins class='add'>785</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Heavy Walker Slayer Hammer (A6, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Super-Heavy Incinerator (18&quot;, A2, AP(1), Blast(3), Reliable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Nemesis Fist (A4, AP(4))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Super-Heavy Incinerator</del></td><td>Replace any <ins class='add'>Heavy Walker Slayer Hammer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Walker Sword (A6, Rending) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Walker Fist (A6, AP(2)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Flamer Cannon (18&quot;, A3, AP(1), Blast(3), Reliable) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Chain-Cannon (18&quot;, A3, AP(2), Blast(3)) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Slayer Flamer Cannon (9&quot;, A2, AP(1), Blast(3), Reliable, Assault), Walker Slayer Hammer (A3, Shred) · +70 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Slayer Chain-Cannon (9&quot;, A2, AP(2), Blast(3), Assault), Walker Slayer Hammer (A3, Shred) · +75 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slayer Volley-Gun (30&quot;, A9, Surge) · +75 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Slayer Volley-Gun (15&quot;, A6, Assault, Surge), Walker Slayer Hammer (A3, Shred) · +75 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Psychic Cannon (24&quot;, A2, AP(2), Blast(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gatling Psychic Silencer (24&quot;, A8, Rending) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Walker Slayer Hammer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Walker Sword (A3, Rending) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Walker Fist (A3, AP(2)) · +10 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Power Shield (Stealth) · <del class='del'>+45</del> pts</td><td>Power Shield (Stealth) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Teleport Engine (Teleport) · <del class='del'>+100</del> pts</td><td>Teleport Engine (Teleport) · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one Nemesis Fist</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Nemesis Great Sword (A6, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Nemesis Slayer Hammer (A2, AP(2), Deadly(3), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Knight Light Gunship</h3><p class='stats'>320 → 270 pts (-50) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>320</del> pts</td><td><ins class='add'>270</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Gatling Cannons (15&quot;, A3, Surge)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Light Laser Cannon (9&quot;, A1, AP(3), Deadly(3))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Linked Missile-Arrays (9&quot;, A1, AP(2), Deadly(3), Unstoppable)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Minigun (24&quot;, A4, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Typhoon Missiles (24&quot;, A4, AP(2), Unstoppable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Strafing Light Laser Cannon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Interceptor AA-Cannon (15&quot;, A3, AP(1), Unstoppable) · +5 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Twin Typhoon Missiles</del></td><td>Replace <ins class='add'>Strafing Linked Missile-Arrays</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Heavy Machineguns (15&quot;, A3, AP(1)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing AA-Missiles (15&quot;, A1, AP(2), Deadly(3), Unstoppable) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Laser Cannons (18&quot;, A1, AP(3), Deadly(3)) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Heavy Machinegun (30&quot;, A6, AP(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Laser Cannon (36&quot;, A2, AP(3), Deadly(3)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Hammer Missiles (36&quot;, A2, AP(3), Deadly(3), Unstoppable) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Laser Talon (24&quot;, A2, AP(3)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Cannon (30&quot;, A2, AP(2), Unstoppable) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Knight Heavy Gunship</h3><p class='stats'>640 → 380 pts (-260) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>640</del> pts</td><td><ins class='add'>380</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Defense</td><td><del class='del'>2+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Transport(11)</del><br><span class='muted'>May transport up to X models or Heroes with up to Tough(6), and non-Heroes with up to Tough(3) which occupy 3 spaces each. Transports may deploy with units inside, and units may enter/exit by using any move action, but must stay fully within 6&quot; of it when exiting. Units inside/outside transports may not target other units outside/inside transports, but may target the transport itself. When a transport is destroyed, units inside must take a dangerous terrain test, are Shaken, and must be placed fully within 6” of the transport before it’s removed.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Gatling Cannons (15&quot;, A3, Surge)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Linked Rifle-Arrays (12&quot;, A3)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Linked Missile-Arrays (9&quot;, A1, AP(2), Deadly(3), Unstoppable)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Rocket Launcher (9&quot;, A1, AP(2), Deadly(3))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Storm Missiles (36&quot;, A1, AP(3), Deadly(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Light Heavy Rifle Array (24&quot;, A4, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Twin Minigun (24&quot;, A8, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Typhoon Missiles (24&quot;, A2, AP(2), Unstoppable)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Strafing Gatling Cannons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Plasma Cannons (15&quot;, A1, AP(2), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Laser Cannons (18&quot;, A1, AP(3), Deadly(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cargo Space (Transport(11)) · +25 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Strafing Linked Missile-Arrays</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Heavy Machineguns (15&quot;, A3, AP(1)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Strafing Heavy Fusion Rifles (9&quot;, A1, AP(4), Deadly(3)) · +10 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Twin Minigun</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Laser Cannon (36&quot;, A2, AP(3), Deadly(3)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Plasma Cannon (30&quot;, A2, AP(4), Blast(3)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Typhoon Missiles</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Fusion Rifle (18&quot;, A1, AP(4), Deadly(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Machinegun (30&quot;, A3, AP(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Knight Artillery Gun</h3><p class='stats'>180 → 155 pts (-25) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>180</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Cumbersome</ins><br><span class='muted'>May only use Hold or Advance actions, but can’t shoot when moving.</span></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Entrenched</ins><br><span class='muted'>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Heavy</del> Gatling Cannon <del class='del'>(24&quot;,</del> A6, <del class='del'>AP(1))</del></td><td>Gatling Cannon <ins class='add'>(30&quot;,</ins> A6, <ins class='add'>Surge)</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy</del> Gatling Cannon</td><td>Replace Gatling Cannon</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>AA-Cannon (30&quot;, A6, AP(1), Unstoppable) · +25 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy <del class='del'>Flak Cannon</del> (30&quot;, <del class='del'>A2,</del> AP(3), <del class='del'>Deadly(3),</del> Unstoppable) · <del class='del'>+60</del> pts</td><td>Heavy <ins class='add'>AA-Cannon</ins> (30&quot;, <ins class='add'>A4,</ins> AP(3), Unstoppable) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy Thunder Cannon</del> (30&quot;, A2, <del class='del'>AP(2),</del> Blast(3), Indirect) · <del class='del'>+65</del> pts</td><td><ins class='add'>HE-Bombard</ins> (30&quot;, A2, <ins class='add'>AP(1),</ins> Blast(3), Indirect) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>AT-Bombard (30&quot;, A2, AP(3), Deadly(3), Indirect) · +135 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Crack Cannon (30&quot;, A6, AP(1), Indirect, Rending) · +100 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Bravery Aura</td><td>This model and its unit get +1 to Morale Test rolls.</td></tr>
+<tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Knightborn</td><td>If most models in this unit have Knightborn, they always ignore wounds on rolls of 6+/2+ from Knightborn (instead of only as long as they haven&#x27;t started an activation yet).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Knightborn Aura</td><td>This model and its unit get Enhanced Knightborn.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Warding</td><td>If most models in this unit have Warding, they always ignore wounds on rolls of 6+/2+ from Warding (instead of only as long as they haven&#x27;t started an activation yet).</td></tr>
+<tr class='add'><td>➕</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
+<tr class='add'><td>➕</td><td>Smash</td><td>When attacking units over half of this weapon&#x27;s range away, the target must re-roll unmodified Defense results of 6.</td></tr>
+<tr class='add'><td>➕</td><td>Versatile Expert</td><td>When this unit is activated, pick one effect: until the end of the activation all models with this rule in this unit either get AP(+1) when attacking, or get +1 to hit rolls when attacking.</td></tr>
+<tr class='del'><td>➖</td><td>Courage Aura</td><td>This model and its unit get +1 to morale test rolls.</td></tr>
+<tr class='del'><td>➖</td><td>Lacerate</td><td>When attacking the target must re-roll unmodified Defense results of 6.</td></tr>
+<tr class='del'><td>➖</td><td>Re-Position Artillery</td><td>Once per activation, pick one friendly model within 6&quot; with Artillery, which may immediately move by up to 9&quot;.
+
+</td></tr>
+<tr class='del'><td>➖</td><td>Shielded</td><td>Units where all models have this rule get +1 to defense rolls against hits that are not from spells.</td></tr>
+<tr class='del'><td>➖</td><td>Unpredictable</td><td>When attacking, roll one die and apply one effect to all models with this rule: on a 1-3 they get AP(+1), and on a 4-6 they get +1 to hit rolls instead.</td></tr>
+<tr class='del'><td>➖</td><td>Unpredictable Fighter</td><td>When in melee, roll one die and apply one effect to all models with this rule: on a 1-3 they get AP(+1), and on a 4-6 they get +1 to hit rolls instead.</td></tr>
+<tr class='del'><td>➖</td><td>Unpredictable Fighter Aura</td><td>This model and its unit get Unpredictable Fighter.</td></tr>
+<tr class='del'><td>➖</td><td>Versatile Attack</td><td>When this unit is activated, pick one effect: until the end of the activation, when shooting or charging enemies over 9&quot; away, all models with this rule in this unit either get AP(+1) or get +1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Evasive</td><td><span class='del'>3.5.1:</span> Enemies get -1 to hit rolls when attacking units where <del class='del'>all</del> models have this rule.<br><span class='add'>3.6.0:</span> Enemies get -1 to hit rolls when attacking units where <ins class='add'>most</ins> models have this rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Knightborn</td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a <del class='del'>4+</del> instead.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, <ins class='add'>as long as they haven&#x27;t started an activation yet this round,</ins> roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a <ins class='add'>2+</ins> instead.</td></tr>
+<tr class='mod'><td>✏️</td><td>Melee Shrouding</td><td><span class='del'>3.5.1:</span> <del class='del'>Enemies</del> get <del class='del'>-3&quot; movement</del> to a min. of 6&quot; when <del class='del'>trying to charge units where all models have this rule.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When a unit where most models have this rule is targeted by an enemy, as long as this unit hasn&#x27;t started an activation yet this round, attackers</ins> get <ins class='add'>-2&quot; range</ins> to a min. of 6&quot; when <ins class='add'>charging it.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Ravage</td><td><span class='del'>3.5.1:</span> <del class='del'>When it&#x27;s</del> this <del class='del'>model&#x27;s</del> turn to <del class='del'>attack</del> in melee, roll X <del class='del'>dice.</del> For each 6+ the target takes one wound.<br><span class='add'>3.6.0:</span> <ins class='add'>Once per round, when it’s</ins> this <ins class='add'>model’s</ins> turn to <ins class='add'>strike</ins> in melee, roll X <ins class='add'>dice before attacking, unless this unit is Fatigued.</ins> For each 6+ the target takes one wound.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Unstoppable<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Ignores Regeneration, and ignores all negative modifiers to this <del class='del'>weapon.</del><br><span class='add'>3.6.0:</span> Ignores Regeneration, and ignores all negative modifiers to this <ins class='add'>weapon which are not from this model&#x27;s special rules.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Versatile Reach</td><td><span class='del'>3.5.1:</span> When this unit is activated, pick one effect: until the end of the activation all models with this rule in <del class='del'>it</del> either get +4&quot; range when <del class='del'>shooting,</del> or move +2&quot; when charging.<br><span class='add'>3.6.0:</span> When this unit is activated, pick one effect: until the end of the <ins class='add'>activation, when attacking enemies that already finished an</ins> activation <ins class='add'>this round,</ins> all models with this rule in <ins class='add'>this unit</ins> either get +4&quot; range when <ins class='add'>shooting</ins> or move +2&quot; when charging.</td></tr>
+<tr class='mod'><td>✏️</td><td>Warding</td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a <del class='del'>4+</del> instead.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, <ins class='add'>as long as they haven&#x27;t started an activation yet this round,</ins> roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a <ins class='add'>2+</ins> instead.</td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Banishing Sigil</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>two enemy</del> units within 18&quot;, which get <del class='del'>-1 to defense rolls</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three friendly</ins> units within 18&quot;, which get <ins class='add'>Enhanced Knightborn</ins> once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Doom Strike</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick one enemy unit within 6&quot;, which takes <del class='del'>2 hits</del> with AP(2) and Deadly(3).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick one enemy unit within 6&quot;, which takes <ins class='add'>1 hit</ins> with AP(2) and Deadly(3).</td></tr>
+<tr class='mod'><td>✏️</td><td>Knight Dome</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to three</del> friendly <del class='del'>units</del> within 12&quot;, which <del class='del'>get</del> Evasive once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> friendly <ins class='add'>unit</ins> within 12&quot;, which <ins class='add'>gets</ins> Evasive once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Knight Sight</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick <del class='del'>one</del> enemy <del class='del'>unit</del> within <del class='del'>18&quot;,</del> which friendly units gets Unstoppable when shooting against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick <ins class='add'>up to two</ins> enemy <ins class='add'>units</ins> within <ins class='add'>18&quot; in line of sight,</ins> which friendly units gets Unstoppable when shooting against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Knight Trauma</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick one enemy unit within <del class='del'>18&quot;,</del> which takes <del class='del'>1 hit</del> with <del class='del'>Blast(3)</del> and <del class='del'>Lacerate.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick one enemy unit within <ins class='add'>24&quot; in line of sight,</ins> which takes <ins class='add'>6 hits</ins> with <ins class='add'>AP(1)</ins> and <ins class='add'>Smash.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Purge the Impure</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick up to two enemy units within <del class='del'>12&quot;,</del> which take <del class='del'>3</del> hits with AP(2) each.<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to two enemy units within <ins class='add'>6&quot;,</ins> which take <ins class='add'>4</ins> hits with AP(2) each.</td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

@@ -1,0 +1,439 @@
+<title>Daemons of Plague 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Daemons of Plague — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>grimdark-future-star-quest-ai. <code>stable 2026-09-29: Wormhole Daemons of Plague</code> (versionString 3.5.3, edited 2026-01-31, modified 2026-07-14) → <code>beta 2026-09-28: Daemons of Plague</code> (versionString 3.5.1, edited 2026-05-12, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 18 (17 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 0, Size 1</li>
+<li>Special rules: +7 / -4 / ~19</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Plague Warriors → Plague Warrior</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>35</td><td class='num'>45</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Plague Fury</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>45</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Sling-Fury</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>60</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Plague Slinger</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>65</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Plague Swarm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>105</td><td class='num'>130</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Champion of Plague</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>130</td><td class='num'>140</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Fury Champion of Plague</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>130</td><td class='num'>140</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Plague Soul Spawn</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>180</td><td class='num'>185</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Plague Harvester</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>195</td><td class='num'>190</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Plague Fly Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>185</td><td class='num'>190</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Fungusfester</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>205</td><td class='num'>235</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td>Plague Beast</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>430</td><td class='num'>420</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Poisonzeal</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>495</td><td class='num'>435</td><td class='num'><b class='add'>-60</b></td></tr>
+<tr><td>Harbinger of Plague</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>405</td><td class='num'>465</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td>Giant Slug</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>490</td><td class='num'>510</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Ascended Harbinger of Plague</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1100</td><td class='num'>1160</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td>Soul Daemon of Plague</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2510</td><td class='num'>2125</td><td class='num'><b class='add'>-385</b></td></tr>
+<tr><td>Avatar of Plague</td><td class='num'>1</td><td class='num'>2+</td><td class='num'>2+</td><td class='num'>2490</td><td class='num'>2365</td><td class='num'><b class='add'>-125</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Plague Warrior</h3><p class='stats'>35 → 45 pts (+10) · Size 3 → 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Name</td><td>Plague <del class='del'>Warriors</del></td><td>Plague <ins class='add'>Warrior</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Size</td><td><del class='del'>3</del></td><td><ins class='add'>1</ins></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Tough(3)</ins><br><span class='muted'>Once a model has taken as many wounds as its Tough value, it is killed (remove from play).</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Plague Sword (A3, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Infected Sword (A1, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+5</del> pts</td><td>Musician · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant · <del class='del'>+5</del> pts</td><td>Sergeant · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>all Infected Swords</del></td><td>Replace <ins class='add'>Plague Sword</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hand Weapon <del class='del'>(A1, Bane)</del> · <del class='del'>+5</del> pts</td><td>Hand Weapon <ins class='add'>(A3, Parry(1))</ins> · <ins class='add'>+-5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd <del class='del'>(A1, Rending, Bane)</del> · <del class='del'>+10</del> pts</td><td>Halberd <ins class='add'>(A3, Rending)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Infected Sword (A3, AP(1), Decimate) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear <del class='del'>(A1,</del> Counter, <del class='del'>Bane)</del> · <del class='del'>+15</del> pts</td><td>Spear <ins class='add'>(A3,</ins> Counter, <ins class='add'>Brace(1))</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A1, AP(2), Bane)</del> · <del class='del'>+15</del> pts</td><td>Great Weapon <ins class='add'>(A3, AP(2))</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Hand Weapons <del class='del'>(A2, Bane)</del> · <del class='del'>+15</del> pts</td><td>Dual Hand Weapons <ins class='add'>(A6)</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>all models</del> with</td><td>Upgrade with</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with</td><td>Upgrade with <ins class='add'>(2)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner of Plague <del class='del'>(Rending in Melee</del> Aura) · <del class='del'>+20</del> pts</td><td>Banner of Plague <ins class='add'>(Ravage</ins> Aura) · <ins class='add'>+25</ins> pts</td></tr>
+</table></div>
+<h3>Plague Fury</h3><p class='stats'>50 → 45 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Plague Claws (A3, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Infected Claws (A6, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Infected</del> Claws</td><td>Replace <ins class='add'>Plague</ins> Claws</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Infected Claws (A3, AP(1), Decimate) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Armblades (A6) · +5 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Armblades (A6, AP(1), Bane) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rending Claws (A6, Rending, Bane) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Sling-Fury</h3><p class='stats'>55 → 60 pts (+5) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Long-Sling (18&quot;, A3, Bane)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Claws</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Scatter-Sling (12&quot;, A6, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Scatter-Sling</del></td><td>Replace <ins class='add'>Long-Sling</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scatter-Sling (9&quot;, A6, Bane) · +5 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sling (18&quot;, A3, AP(1), Bane) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Plague Slinger</h3><p class='stats'>65 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Long-Sling (18&quot;, A3, Bane)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A3)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Scatter-Sling (12&quot;, A6, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+5</del> pts</td><td>Musician · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant · <del class='del'>+5</del> pts</td><td>Sergeant · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Scatter-Sling</del></td><td>Replace <ins class='add'>Long-Sling</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scatter-Sling (9&quot;, A6, Bane) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sling (18&quot;, A3, AP(1), Bane) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Plague Swarm</h3><p class='stats'>105 → 130 pts (+25) · Size 1 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear Plaguelings (A9, Counter)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Swarm Attacks (A9, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Spear Plagueling</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sling Plaguelings (12&quot;, A9, Assault) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Champion of Plague</h3><p class='stats'>130 → 140 pts (+10) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>130</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A12)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Plague Hammer (A3, Blast(3), Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Sword (A3, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A6, Spell Amplifier) · +-15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Hammer (A3, AP(2), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A9, AP(1), Parry(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Plague Sword (A9, AP(1), Bane) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scatter-Sling (9&quot;, A3, Assault, Bane), Daemon Hammer (A3, AP(1), Blast(3)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Long-Sling (18&quot;, A9, Bane), Strike (A3) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Infected Sword (A9, AP(2), Decimate) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Spear (A3, AP(4), Deadly(3), Ignores Regeneration) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Gauntlet (A9, AP(4)) · +55 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Sword and Plague</del> Hammer</td><td>Replace <ins class='add'>Daemon</ins> Hammer</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A9, Parry(3)) · free</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plague Sword (A9, Bane) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>2x</del> Infected Sword <del class='del'>(A6, Surge)</del> · <del class='del'>+5</del> pts</td><td>Infected Sword <ins class='add'>(A9, AP(1), Decimate)</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A9, AP(2)) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Spear (A3, AP(4), Deadly(3)) · +45 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scatter-Sling (12&quot;, A12, Bane), Infected Sword (A6, Surge) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sword (A3, Bane), Plague Spear (A3, AP(2), Deadly(3), Bane) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sling (18&quot;, A6, AP(1), Bane), Infected Sword (A6, Surge) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush Aura) · <del class='del'>+15</del> pts</td><td>Daemonic Incursion (Ambush Aura) · <ins class='add'>+90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Throne of Plague <del class='del'>(Claws</del> (A9, Bane), Tough(9)) · +155 pts</td><td>Throne of Plague <ins class='add'>(Toxin Claws</ins> (A9, Bane), Tough(9)) · +155 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Giant Snail <del class='del'>(Toxic</del> Maw (A18, <del class='del'>AP(1),</del> Bane), Slow, Tough(18)) · <del class='del'>+330</del> pts</td><td>Giant Snail <ins class='add'>(Toxin</ins> Maw (A18, Bane), Slow, Tough(18)) · <ins class='add'>+275</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Plague (Caster(2)) · <del class='del'>+40</del> pts</td><td>Lore of Plague (Caster(2)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Symbol of Plague (Steadfast Aura) · <del class='del'>+10</del> pts</td><td>Symbol of Plague (Steadfast Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Icon of Plague (Relentless Aura) · <del class='del'>+5</del> pts</td><td>Icon of Plague (Relentless Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy of Plague (Rending in Melee Aura) · <del class='del'>+20</del> pts</td><td>Envoy of Plague (Rending in Melee Aura) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(6)) · <del class='del'>+60</del> pts</td><td>Army Standard Bearer (Fear(6)) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Plague Favour <del class='del'>(Plaguebound Boost</del> Aura) · <del class='del'>+10</del> pts</td><td>Plague Favour <ins class='add'>(Enhanced Plaguebound</ins> Aura) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Infected Sword</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plague Gauntlet (A6, AP(1), Bane) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plague Sword (A6, Rending, Bane) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Fury Champion of Plague</h3><p class='stats'>130 → 140 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>130</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A12)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Plague Hammer (A3, Blast(3), Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Sword (A3, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Hammer (A3, AP(2), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scatter-Sling (9&quot;, A3, Assault, Bane), Daemon Hammer (A3, AP(1), Blast(3)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Plague Sword (A9, AP(1), Bane) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Infected Sword (A9, AP(2), Decimate) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Spear (A3, AP(4), Deadly(3), Ignores Regeneration) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Long-Sling (18&quot;, A9, Bane), Strike (A3) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Gauntlet (A9, AP(4)) · +35 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Sword and Plague</del> Hammer</td><td>Replace <ins class='add'>Daemon</ins> Hammer</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plague Sword (A9, Bane) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>2x</del> Infected Sword <del class='del'>(A6, Surge)</del> · <del class='del'>+5</del> pts</td><td>Infected Sword <ins class='add'>(A9, AP(1), Decimate)</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A9, AP(2)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Spear (A3, AP(4), Deadly(3)) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sword (A3, Bane), Plague Spear (A3, AP(2), Deadly(3), Bane) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scatter-Sling (12&quot;, A12, Bane), Infected Sword (A6, Surge) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sling (18&quot;, A6, AP(1), Bane), Infected Sword (A6, Surge) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Symbol of Plague (Steadfast Aura) · <del class='del'>+10</del> pts</td><td>Symbol of Plague (Steadfast Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Icon of Plague (Relentless Aura) · <del class='del'>+5</del> pts</td><td>Icon of Plague (Relentless Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy of Plague (Rending in Melee Aura) · <del class='del'>+20</del> pts</td><td>Envoy of Plague (Rending in Melee Aura) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Plague (Regeneration Aura) · <del class='del'>+15</del> pts</td><td>Gift of Plague (Regeneration Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Infected Sword</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plague Gauntlet (A6, AP(1), Bane) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plague Sword (A6, Rending, Bane) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Plague Soul Spawn</h3><p class='stats'>180 → 185 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>180</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Plague Sword (A9, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Mutated Infected Claws (A12, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Plague Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Infected Claws (A9, AP(1), Decimate) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Claws (A9, AP(2)) · +20 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Mutated Infected Claws</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mutated Claws (A12, Bane) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Plague Sword (A9, Rending, Bane) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Plague Harvester</h3><p class='stats'>195 → 190 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>195</del> pts</td><td><ins class='add'>190</ins> pts</td></tr>
+</table></div>
+<h3>Plague Fly Rider</h3><p class='stats'>185 → 190 pts (+5) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>190</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Hand Weapon</del> (A3, Bane)</td><td><ins class='add'>Plague Sword</ins> (A3, Bane)</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Stinger (A9, <del class='del'>AP(1))</del></td><td><ins class='add'>Toxin</ins> Stinger (A9, <ins class='add'>Bane)</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+5</del> pts</td><td>Musician · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant · <del class='del'>+5</del> pts</td><td>Sergeant · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Hand Weapon</del></td><td>Replace <ins class='add'>Plague Sword</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Infected Sword (A3, <del class='del'>Surge)</del> · <del class='del'>free</del></td><td>Infected Sword (A3, <ins class='add'>AP(1), Decimate)</ins> · <ins class='add'>+5 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Stinger</td><td>Replace <ins class='add'>Toxin</ins> Stinger</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Poisoned Spit (12&quot;, A3, Blast(3), Reliable, Bane) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Stinger (A9, AP(2)) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Poisoned Stinger (A9, AP(1), Bane) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with <del class='del'>any</del></td><td>Upgrade with</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Poisoned Spit (12&quot;, A9, Bane) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Fungusfester</h3><p class='stats'>205 → 235 pts (+30) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>205</del> pts</td><td><ins class='add'>235</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>AI units within 12” may take morale tests using the Villain’s Qua if it is better than their own, as long as the Villain isn’t Shaken.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Fungal Fist (A3, <del class='del'>Surge)</del></td><td>Fungal Fist (A3, <ins class='add'>AP(2))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Shrouding Spores <del class='del'>(Screened Aura)</del></td><td>Shrouding Spores <ins class='add'>(Screened)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Shrouding Spore</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shrouding Spores - Leader (Screened Aura) · +30 pts</ins></td></tr>
+</table></div>
+<h3>Plague Beast</h3><p class='stats'>430 → 420 pts (-10) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>430</del> pts</td><td><ins class='add'>420</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxin Maw (A12, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Toxic Maw (A18, AP(1), Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Toxin Maw</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxin Spit (18&quot;, A6, Deadly(3), Bane, Unstoppable) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxin Vomit (12&quot;, A6, Blast(3), Reliable, Bane) · +35 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with <ins class='add'>any</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Plague (Difficult Terrain Debuff) · <del class='del'>+15</del> pts</td><td>Curse of Plague (Difficult Terrain Debuff) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spew Bile (9&quot;, A9, Assault, Bane) · +125 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Toxic Spit (18&quot;, A6, Deadly(3), Bane, Unstoppable) · +105 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Toxic Vomit (12&quot;, A6, Blast(3), Reliable, Bane) · +135 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Poisonzeal</h3><p class='stats'>495 → 435 pts (-60) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>495</del> pts</td><td><ins class='add'>435</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>AI units within 12” may take morale tests using the Villain’s Qua if it is better than their own, as long as the Villain isn’t Shaken.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Sever &amp; Cleaver (A9, AP(1), <del class='del'>Surge)</del></td><td>Sever &amp; Cleaver (A9, AP(1), <ins class='add'>Decimate)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Toxic</del> Maw (A18, <del class='del'>AP(1),</del> Bane)</td><td><ins class='add'>Toxin</ins> Maw (A18, Bane)</td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Healing Miasma (Regeneration Buff)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Healing Miasma (Regeneration Buff) · +20 pts</ins></td></tr>
+</table></div>
+<h3>Harbinger of Plague</h3><p class='stats'>405 → 465 pts (+60) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>405</del> pts</td><td><ins class='add'>465</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>2x <del class='del'>Plague</del> Hammers (A3, <del class='del'>Blast(3), Bane)</del></td><td>2x <ins class='add'>Daemon</ins> Hammers (A3, <ins class='add'>AP(1), Blast(3))</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace 2x Daemon Hammer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A12, Spell Amplifier) · +-35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Long-Sling (18&quot;, A18, Bane) · +75 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Scatter-Sling (9&quot;, A9, Assault, Bane), Daemon Hammer (A3, AP(1), Blast(3)) · +75 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Plague</del> Hammer</td><td>Replace any <ins class='add'>Daemon</ins> Hammer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Plague Sword (A9, <del class='del'>Rending,</del> Bane) · <del class='del'>+40</del> pts</td><td>Plague Sword (A9, Bane) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Infected Sword (A9, <del class='del'>Surge)</del> · <del class='del'>+5</del> pts</td><td>Infected Sword (A9, <ins class='add'>AP(1), Decimate)</ins> · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A9, AP(2)) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Spear (A3, AP(4), Deadly(3)) · +60 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scatter-Sling (12&quot;, A12, Bane) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sling (18&quot;, A6, AP(1), Bane) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plague Spear (A3, AP(2), Deadly(3), Bane) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Plague Gauntlet (A9, AP(3), Bane) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plague Boon (Fortified Growth) · +55 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wings (Flying) · <del class='del'>+65</del> pts</td><td>Wings (Flying) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fury Wings (Flying, Scout) · <del class='del'>+135</del> pts</td><td>Fury Wings (Flying, Scout) · <ins class='add'>+130</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush Aura) · <del class='del'>+15</del> pts</td><td>Daemonic Incursion (Ambush Aura) · <ins class='add'>+140</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plague Boon (Fortified Growth) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Plague (Caster(3)) · <del class='del'>+60</del> pts</td><td>Lore of Plague (Caster(3)) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Symbol of Plague (Steadfast Aura) · <del class='del'>+10</del> pts</td><td>Symbol of Plague (Steadfast Aura) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy of Plague (Rending in Melee Aura) · <del class='del'>+20</del> pts</td><td>Envoy of Plague (Rending in Melee Aura) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Plague Favour <del class='del'>(Plaguebound Boost</del> Aura) · <del class='del'>+10</del> pts</td><td>Plague Favour <ins class='add'>(Enhanced Plaguebound</ins> Aura) · <ins class='add'>+100</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Plague (Regeneration Aura) · <del class='del'>+15</del> pts</td><td>Gift of Plague (Regeneration Aura) · <ins class='add'>+120</ins> pts</td></tr>
+</table></div>
+<h3>Giant Slug</h3><p class='stats'>490 → 510 pts (+20) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>490</del> pts</td><td><ins class='add'>510</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear Plaguelings (A18, Counter)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Claws (A9, Bane)</td><td><ins class='add'>Toxin</ins> Claws (A9, Bane)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Crew Attacks (A18, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with <ins class='add'>any</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Plague (Difficult Terrain Debuff) · <del class='del'>+15</del> pts</td><td>Curse of Plague (Difficult Terrain Debuff) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sling Plaguelings (12&quot;, A9, Assault) · +80 pts</ins></td></tr>
+</table></div>
+<h3>Ascended Harbinger of Plague</h3><p class='stats'>1100 → 1160 pts (+60) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1100</del> pts</td><td><ins class='add'>1160</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Heavy Plague Swords (A12, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Great Plague Hammers (A6, Blast(3), Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace 2x Heavy Plague Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A24, Spell Amplifier) · +-35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Scatter-Sling (9&quot;, A18, Assault, Bane), Heavy Plague Sword (A12, Bane) · +175 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Long-Sling (18&quot;, A36, Bane) · +200 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Great</del> Plague <del class='del'>Hammer</del></td><td>Replace any <ins class='add'>Heavy</ins> Plague <ins class='add'>Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Hammer (A3, AP(2), Blast(6)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Infected Sword (A12, AP(1), Decimate) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Gauntlet (A12, AP(2)) · +45 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Spear (A3, AP(4), Deadly(6), Ignores Regeneration) · +85 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Infected Sword (A18, Surge) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Plague Spear (A6, AP(1), Deadly(3), Bane) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Scatter-Sling (12&quot;, A24, Bane) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Sling (18&quot;, A12, AP(1), Bane) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Plague Sword (A18, Rending, Bane) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Plague Gauntlet (A18, AP(3), Bane) · +170 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush) · <del class='del'>+135</del> pts</td><td>Daemonic Incursion (Ambush) · <ins class='add'>+160</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Plague (Difficult Terrain Debuff) · <del class='del'>+15</del> pts</td><td>Curse of Plague (Difficult Terrain Debuff) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Plague (Caster(4)) · <del class='del'>+80</del> pts</td><td>Lore of Plague (Caster(4)) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Symbol of Plague (Steadfast) · <del class='del'>+95</del> pts</td><td>Symbol of Plague (Steadfast) · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Plague Favour <del class='del'>(Plaguebound Boost)</del> · <del class='del'>+105</del> pts</td><td>Plague Favour <ins class='add'>(Enhanced Plaguebound)</ins> · <ins class='add'>+120</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Plague (Regeneration) · <del class='del'>+170</del> pts</td><td>Gift of Plague (Regeneration) · <ins class='add'>+155</ins> pts</td></tr>
+</table></div>
+<h3>Soul Daemon of Plague</h3><p class='stats'>2510 → 2125 pts (-385) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2510</del> pts</td><td><ins class='add'>2125</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Plague Gauntlets (A18, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Plague Cannon (24&quot;, A27, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Giant Infected Sword (A54, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Plague Gauntlet</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Infected Sword (A18, AP(1), Decimate) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Sword (A18, AP(2)) · +65 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Plague <del class='del'>Cannon</del></td><td>Replace Plague <ins class='add'>Gauntlet</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Plague Cannon (15&quot;, A9, Blast(3), Assault, Bane) · +195 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Cannon (15&quot;, A9, AP(2), Blast(3), Assault) · +370 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Soul Cannon (15&quot;, A9, AP(2), Deadly(3), Assault) · +410 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Plague Cannon (24&quot;, A18, AP(2), Bane) · +90 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Infected Cannon (18&quot;, A54, Surge) · +100 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Giant Infected Sword</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plague Sword (A54, Bane) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Plague Gauntlet (A36, AP(2), Bane) · +130 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Avatar of Plague</h3><p class='stats'>2490 → 2365 pts (-125) · Size 1 · Quality 2+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2490</del> pts</td><td><ins class='add'>2365</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Heavy Daemon Hammers (A3, AP(2), Blast(6))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Exalted Plague Hammers (A9, Blast(3), Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace 2x Heavy Daemon Hammer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A36, Spell Amplifier) · +-10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Scatter-Sling (9&quot;, A27, Assault, Bane), Heavy Daemon Hammer (A3, AP(2), Blast(6)) · +350 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Long-Sling (18&quot;, A54, Bane) · +420 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Exalted Plague</del> Hammer</td><td>Replace any <ins class='add'>Heavy Daemon</ins> Hammer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Exalted</del> Plague Sword <del class='del'>(A27, Rending,</del> Bane) · <del class='del'>+150</del> pts</td><td>Plague Sword <ins class='add'>(A18,</ins> Bane) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Spear (A3, AP(4), Deadly(6), Ignores Regeneration) · +80 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Infected Sword (A18, AP(1), Decimate) · +80 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A18, AP(2)) · +115 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Infected Sword (A27, Surge) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Plague Spear (A9, AP(1), Deadly(3), Bane) · +115 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Scatter-Sling (12&quot;, A36, Bane) · +145 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Sling (18&quot;, A18, AP(1), Bane) · +180 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Plague Gauntlet (A27, AP(3), Bane) · +380 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush) · <del class='del'>+300</del> pts</td><td>Daemonic Incursion (Ambush) · <ins class='add'>+305</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Plague (Caster(5)) · <del class='del'>+100</del> pts</td><td>Lore of Plague (Caster(5)) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy of Plague (Rending in Melee) · <del class='del'>+165</del> pts</td><td>Envoy of Plague (Rending in Melee) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Storm of Plague (15&quot;, A6, Blast(3), Limited, Assault, Bane) · +100 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Plague Favour <del class='del'>(Plaguebound Boost)</del> · <del class='del'>+190</del> pts</td><td>Plague Favour <ins class='add'>(Enhanced Plaguebound)</ins> · <ins class='add'>+210</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Plague (Regeneration) · <del class='del'>+305</del> pts</td><td>Gift of Plague (Regeneration) · <ins class='add'>+260</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plague God&#x27;s Power (Storm of Plague) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Decimate</td><td>When attacking units with more than half of their total size or Tough value (for single-model units), the target must re-roll unmodified Defense results of 6.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Plaguebound</td><td>If most models in this unit have Plaguebound, they ignore wounds on rolls of 5-6 from Plaguebound (instead of only on 6+).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Plaguebound Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Enhanced Plaguebound. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Protected</td><td>If most models in this unit have Protected, they ignore wounds on rolls of 5-6 from Protected (instead of only on 6+).</td></tr>
+<tr class='add'><td>➕</td><td>Ravage</td><td>Once per round, when it’s this model’s turn to strike in melee, roll X dice before attacking, unless this unit is Fatigued. For each 6+ the target takes one wound.</td></tr>
+<tr class='add'><td>➕</td><td>Ravage Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Ravage(+1). If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='add'><td>➕</td><td>Unique Hero</td><td>Counts as having Hero, and this model may only be taken once per army.</td></tr>
+<tr class='del'><td>➖</td><td>Plaguebound Boost</td><td>If all models in this unit have Plaguebound, they ignore wounds on rolls of 5-6 from Plaguebound (instead of only on 6+).</td></tr>
+<tr class='del'><td>➖</td><td>Plaguebound Boost Aura</td><td>This model and up to 3 nearest friendly units picked before the start of the game get Plaguebound Boost. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='del'><td>➖</td><td>Storm of Plague</td><td>Once per game, when this model is activated, before attacking, roll 3 dice. For each 2+ one enemy unit within 12&quot; takes 3 hits with Bane.</td></tr>
+<tr class='del'><td>➖</td><td>Surge</td><td>On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Ambush<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Only deploys D3 rounds afters its <del class='del'>wave is deployed,</del> and at the start of the round it&#x27;s placed <del class='del'>at the centre</del> of a random <del class='del'>table quarter.</del><br><span class='add'>3.6.0:</span> Only deploys D3 rounds afters its <ins class='add'>wave,</ins> and at the start of the round it&#x27;s placed <ins class='add'>within 6”</ins> of a random <ins class='add'>AI Goal.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Ambush Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Ambush. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Ambush. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Difficult Terrain Debuff</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick up to <del class='del'>4</del> enemy units within 18&quot; in line of sight, which counts as being in Difficult <del class='del'>Terrain</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> enemy units within 18&quot; in line of sight, which counts as being in Difficult <ins class='add'>terrain</ins> once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Fortified Growth</td><td><span class='del'>3.5.1:</span> If <del class='del'>all</del> models in this unit have this rule, place one <del class='del'>marker</del> on it at the beginning of each round if it&#x27;s on the table and isn&#x27;t Shaken, up to a max. of four <del class='del'>markers.</del> For every two <del class='del'>markers,</del> enemies attacking this unit get AP(-1) to a min. of AP(0).<br><span class='add'>3.6.0:</span> If <ins class='add'>most</ins> models in this unit have this rule, place one <ins class='add'>token</ins> on it at the beginning of each round if it&#x27;s on the table and isn&#x27;t Shaken, up to a max. of four <ins class='add'>tokens.</ins> For every two <ins class='add'>tokens,</ins> enemies attacking this unit get AP(-1) to a min. of AP(0).</td></tr>
+<tr class='mod'><td>✏️</td><td>Plaguebound</td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Precision Attacks Buff</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick up to <del class='del'>4</del> nearest friendly units within 12&quot;, which gets +1 to hit rolls when attacking once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> nearest friendly units within 12&quot;, which gets +1 to hit rolls when attacking once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Protected</td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Regeneration. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Regeneration. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration Buff</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick up to <del class='del'>4</del> nearest friendly units within 12&quot;, which gets Regeneration once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> nearest friendly units within 12&quot;, which gets Regeneration once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Relentless<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When this model shoots at enemies over <del class='del'>9&quot;</del> away, unmodified <del class='del'>results</del> of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).<br><span class='add'>3.6.0:</span> When this model shoots at enemies over <ins class='add'>9”</ins> away, unmodified <ins class='add'>result</ins> of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Relentless Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Relentless. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Relentless. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Rending<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Ignores Regeneration, and <del class='del'>on</del> unmodified <del class='del'>results</del> of 6 to hit, those hits get AP(+4).<br><span class='add'>3.6.0:</span> Ignores Regeneration, and <ins class='add'>for each</ins> unmodified <ins class='add'>result</ins> of 6 to hit, those hits get AP(+4).</td></tr>
+<tr class='mod'><td>✏️</td><td>Rending in Melee Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Rending in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Rending in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Screened</td><td><span class='del'>3.5.1:</span> <del class='del'>When units where all</del> models have this <del class='del'>rule</del> are <del class='del'>shot or charged from over 9&quot; away,</del> enemy units get -1 to hit rolls.<br><span class='add'>3.6.0:</span> <ins class='add'>If most</ins> models <ins class='add'>in this unit</ins> have this <ins class='add'>rule, the first time they</ins> are <ins class='add'>attacked each round,</ins> enemy units <ins class='add'>attacking them</ins> get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Screened Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Screened. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Screened. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Sergeant<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>When this</del> model <del class='del'>attacks, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</del><br><span class='add'>3.6.0:</span> <ins class='add'>This</ins> model <ins class='add'>gets AP(+1) when attacking.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Steadfast</td><td><span class='del'>3.5.1:</span> If a unit where <del class='del'>all</del> models have this rule is Shaken at the beginning of the round, roll one die. On a 4+, it stops being Shaken.<br><span class='add'>3.6.0:</span> If a unit where <ins class='add'>most</ins> models have this rule is Shaken at the beginning of the round, roll one die. On a 4+, it stops being Shaken.</td></tr>
+<tr class='mod'><td>✏️</td><td>Steadfast Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Steadfast. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Steadfast. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Aura of Pestilence</td><td><span class='del'>3.5.1:</span> (1) Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which counts as being in Difficult Terrain once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which counts as being in Difficult Terrain once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Blessed Virus</td><td><span class='del'>3.5.1:</span> (2) Pick up to <del class='del'>four</del> friendly units within 12&quot;, which get Rapid Rush once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (2) Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get Rapid Rush once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Plague Boon</td><td><span class='del'>3.5.1:</span> (3) Pick up to <del class='del'>six</del> friendly units within <del class='del'>12&quot;,</del> which get Plaguebound <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (3) Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Plaguebound once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Plague Malediction</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>models</del> within <del class='del'>24&quot;,</del> which <del class='del'>take 1 hit</del> with <del class='del'>AP(4) each.</del> This effect is resolved as if the target was a unit of [1].<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>model</ins> within <ins class='add'>24&quot; in line of sight,</ins> which <ins class='add'>takes 3 hits</ins> with <ins class='add'>AP(4).</ins> This effect is resolved as if the target was a unit of [1].</td></tr>
+<tr class='mod'><td>✏️</td><td>Rapid Putrefaction</td><td><span class='del'>3.5.1:</span> (1) Pick one enemy unit within <del class='del'>12&quot;,</del> which takes 2 hits with AP(1) and <del class='del'>Surge. Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.</del><br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within <ins class='add'>12&quot; in line of sight,</ins> which takes 2 hits with AP(1) and <ins class='add'>Decimate.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Rot Wave</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which <del class='del'>take 2 hits each.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>takes 4 hits.</ins></td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

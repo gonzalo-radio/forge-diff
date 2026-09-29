@@ -1,0 +1,455 @@
+<title>Daemons of Change 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Daemons of Change — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>grimdark-future. <code>stable 2026-09-29: Wormhole Daemons of Change</code> (versionString 3.5.3, edited 2026-06-08, modified 2026-07-14) → <code>beta 2026-09-28: Daemons of Change</code> (versionString 3.5.1, edited 2026-09-05, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 21 (20 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 0, Size 0</li>
+<li>Special rules: +9 / -8 / ~11</li>
+<li>Spells: +0 / -0 / ~5</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Avatar of Change</td><td class='num'>1</td><td class='num'>2+</td><td class='num'>2+</td><td class='num'>795</td><td class='num'>815</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Ascended Harbinger of Change</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>380</td><td class='num'>420</td><td class='num'><b class='del'>+40</b></td></tr>
+<tr><td>Harbinger of Change</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>140</td><td class='num'>165</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Champion of Change</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>55</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Fury Champion of Change</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>50</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Horror Champion of Change</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>165</td><td class='num'>140</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td>Change Furies</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>105</td><td class='num'>75</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td>Change Warriors</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>90</td><td class='num'>70</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td>Change Horrors</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>205</td><td class='num'>140</td><td class='num'><b class='add'>-65</b></td></tr>
+<tr><td>Lesser Change Horrors</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>165</td><td class='num'>115</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td>Changelings</td><td class='num'>10</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>115</td><td class='num'>80</td><td class='num'><b class='add'>-35</b></td></tr>
+<tr><td>Hex-Furies</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>105</td><td class='num'>95</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Change Hexers</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>115</td><td class='num'>100</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Change Soul Spawns</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>195</td><td class='num'>190</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Screechers</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>215</td><td class='num'>205</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Scorchers</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>185</td><td class='num'>160</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td>Great Scorcher</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>145</td><td class='num'>130</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Screecher Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>215</td><td class='num'>165</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td>Soul Daemon of Change</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>715</td><td class='num'>665</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td>Swiftclaw</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>95</td><td class='num'>80</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Eonflux</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>65</td><td class='num'><b class='del'>+5</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Avatar of Change</h3><p class='stats'>795 → 815 pts (+20) · Size 1 · Quality 2+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>795</del> pts</td><td><ins class='add'>815</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Heavy Daemon Hammer (A1, AP(2), Blast(6))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Exalted Power Hammer (A3, Blast(3), Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace 2x Heavy Daemon Hammer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A12, Spell Amplifier) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Magic Blast (9&quot;, A9, Assault, Shred), Heavy Daemon Hammer (A1, AP(2), Blast(6)) · +135 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Hexed Chakram (24&quot;, A18, Lacerate) · +135 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Magic Bolt (18&quot;, A18, Shred) · +140 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Exalted Power</del> Hammer</td><td>Replace any <ins class='add'>Heavy Daemon</ins> Hammer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Exalted</del> Power Staff <del class='del'>(A9, Rending,</del> Shred) · <del class='del'>+40</del> pts</td><td>Power Staff <ins class='add'>(A6,</ins> Shred) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Spear (A1, AP(4), Deadly(6), Ignores Regeneration) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A6, AP(2)) · +40 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Hexed Chakram (18&quot;, A9, Surge) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Power Spear (A3, AP(1), Deadly(3), Shred) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Magic Bolt (18&quot;, A6, AP(1), Shred) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Magic Blast (12&quot;, A12, Shred) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Power Gauntlet (A9, AP(3), Shred) · +105 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Favour <del class='del'>(Changebound Boost)</del> · <del class='del'>+65</del> pts</td><td>Change Favour <ins class='add'>(Enhanced Changebound)</ins> · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Storm of Change (15&quot;, A2, Blast(3), Limited, Assault, Shred) · +65 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Change (Caster(5)) · <del class='del'>+115</del> pts</td><td>Lore of Change (Caster(5)) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Change <del class='del'>(Resistance)</del> · <del class='del'>+65</del> pts</td><td>Gift of Change <ins class='add'>(Spell Resistance)</ins> · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Change God&#x27;s Power (Storm of Change) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Ascended Harbinger of Change</h3><p class='stats'>380 → 420 pts (+40) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>380</del> pts</td><td><ins class='add'>420</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Heavy Power Staff (A4, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Great Power Hammer (A2, Blast(3), Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace 2x Heavy Power Staff</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A8, Spell Amplifier) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Hexed Chakram (24&quot;, A12, Lacerate) · +55 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Magic Bolt (18&quot;, A12, Shred) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Magic Blast (9&quot;, A6, Assault, Shred), Heavy Power Staff (A4, Shred) · +65 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Great</del> Power <del class='del'>Hammer</del></td><td>Replace any <ins class='add'>Heavy</ins> Power <ins class='add'>Staff</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Hammer (A1, AP(2), Blast(6)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Gauntlet (A4, AP(2)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Spear (A1, AP(4), Deadly(6), Ignores Regeneration) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Hexed Chakram (18&quot;, A6, Surge) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Power Spear (A2, AP(1), Deadly(3), Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Magic Bolt (18&quot;, A4, AP(1), Shred) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Magic Blast (12&quot;, A8, Shred) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Power Staff (A6, Rending, Shred) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Power Gauntlet (A6, AP(3), Shred) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush) · <del class='del'>+45</del> pts</td><td>Daemonic Incursion (Ambush) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Change <del class='del'>(Casting Debuff)</del> · +10 pts</td><td>Curse of Change <ins class='add'>(Spell Drain)</ins> · +10 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Favour <del class='del'>(Changebound Boost)</del> · <del class='del'>+40</del> pts</td><td>Change Favour <ins class='add'>(Enhanced Changebound)</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Symbol of Change (Fearless) · <del class='del'>+30</del> pts</td><td>Symbol of Change (Fearless) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Change <del class='del'>(Resistance)</del> · <del class='del'>+40</del> pts</td><td>Gift of Change <ins class='add'>(Spell Resistance)</ins> · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Change (Caster(4)) · <del class='del'>+95</del> pts</td><td>Lore of Change (Caster(4)) · <ins class='add'>+70</ins> pts</td></tr>
+</table></div>
+<h3>Harbinger of Change</h3><p class='stats'>140 → 165 pts (+25) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>2x <del class='del'>Power</del> Hammer (A1, <del class='del'>Blast(3), Shred)</del></td><td>2x <ins class='add'>Daemon</ins> Hammer (A1, <ins class='add'>AP(1), Blast(3))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any Power</del> Hammer</td><td>Replace <ins class='add'>2x Daemon</ins> Hammer</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A4, Spell Amplifier) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Hexed Chakram <del class='del'>(18&quot;, A3, Surge)</del> · <del class='del'>+5</del> pts</td><td>Heavy Hexed Chakram <ins class='add'>(24&quot;, A6, Lacerate)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Magic Bolt (18&quot;, <del class='del'>A2, AP(1),</del> Shred) · <del class='del'>+10</del> pts</td><td><ins class='add'>Heavy</ins> Magic Bolt (18&quot;, <ins class='add'>A6,</ins> Shred) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Magic Blast (9&quot;, A3, Assault, Shred), Daemon Hammer (A1, AP(1), Blast(3)) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Power Spear (A1, AP(1), Deadly(3), Shred) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Power Staff (A3, Rending, Shred) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Magic Blast (12&quot;, A4, Shred) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Power Gauntlet (A3, AP(3), Shred) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Daemon Hammer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Power Staff (A3, Shred) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A3, AP(2)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Spear (A1, AP(4), Deadly(3)) · +20 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Boon (Spell Accumulator(1)) · <del class='del'>+15</del> pts</td><td>Change Boon (Spell Accumulator(1)) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wings (Flying) · <del class='del'>+20</del> pts</td><td>Wings (Flying) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush Aura) · <del class='del'>+35</del> pts</td><td>Daemonic Incursion (Ambush Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Favour <del class='del'>(Changebound Boost</del> Aura) · <del class='del'>+40</del> pts</td><td>Change Favour <ins class='add'>(Enhanced Changebound</ins> Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Change <del class='del'>(Resistance</del> Aura) · +30 pts</td><td>Gift of Change <ins class='add'>(Spell Resistance</ins> Aura) · +30 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Change (Caster(3)) · <del class='del'>+70</del> pts</td><td>Lore of Change (Caster(3)) · <ins class='add'>+50</ins> pts</td></tr>
+</table></div>
+<h3>Champion of Change</h3><p class='stats'>50 → 55 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Power Hammer (A1, Blast(3), Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Staff (A1, Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Hammer (A1, AP(2), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A3, AP(1), Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Power Staff (A3, AP(1), Shred) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Magic Blast (9&quot;, A1, Assault, Shred), Daemon Hammer (A1, AP(1), Blast(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Hexed Chakram (24&quot;, A3, Lacerate), Strike (A1) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Spear (A1, AP(4), Deadly(3), Ignores Regeneration) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A2, Spell Amplifier) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Gauntlet (A3, AP(4)) · +20 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Power</del> Hammer <del class='del'>and Staff</del></td><td>Replace <ins class='add'>Daemon</ins> Hammer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>2x</del> Power Staff <del class='del'>(A2, Rending,</del> Shred) · <del class='del'>+10</del> pts</td><td>Power Staff <ins class='add'>(A3,</ins> Shred) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3, Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A3, AP(2)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Spear (A1, AP(4), Deadly(3)) · +15 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Power Spear (A1, AP(1), Deadly(3), Shred), Staff (A1, Shred) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Magic Bolt (18&quot;, A2, AP(1), Shred), Power Staff (A2, Rending, Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hexed Chakram (18&quot;, A3, Surge), Power Staff (A2, Rending, Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Magic Blast (12&quot;, A4, Shred), Power Staff (A2, Rending, Shred) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Heavy Hexed Chakram</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Magic Bolt (18&quot;, A3, Shred) · +5 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Boon (Spell Accumulator(1)) · <del class='del'>+15</del> pts</td><td>Change Boon (Spell Accumulator(1)) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush Aura) · <del class='del'>+35</del> pts</td><td>Daemonic Incursion (Ambush Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Disc of Change <del class='del'>(Fast,</del> Strider, Tough(3)) · <del class='del'>+60</del> pts</td><td>Disc of Change <ins class='add'>(Strike (A3), Fast,</ins> Strider, Tough(3)) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Screecher Chariot <del class='del'>(Sharp Beak (A6, AP(2)),</del> Armor(3), Fast, Strider, Tough(6)) · <del class='del'>+170</del> pts</td><td>Screecher Chariot <ins class='add'>(Screechers (A2, AP(1)),</ins> Armor(3), Fast, <ins class='add'>Impact(4),</ins> Strider, Tough(6)) · <ins class='add'>+155</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Favour <del class='del'>(Changebound Boost</del> Aura) · <del class='del'>+40</del> pts</td><td>Change Favour <ins class='add'>(Enhanced Changebound</ins> Aura) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(2)) · <del class='del'>+20</del> pts</td><td>Army Standard Bearer (Fear(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Icon of Change (Indirect when Shooting Aura) · <del class='del'>+20</del> pts</td><td>Icon of Change (Indirect when Shooting Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Change (Caster(2)) · <del class='del'>+45</del> pts</td><td>Lore of Change (Caster(2)) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Power Staff</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Power Gauntlet (A2, AP(3), Shred) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Fury Champion of Change</h3><p class='stats'>50 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Power Hammer (A1, Blast(3), Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Staff (A1, Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Magic Blast (9&quot;, A1, Assault, Shred), Daemon Hammer (A1, AP(1), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Hammer (A1, AP(2), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Power Staff (A3, AP(1), Shred) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Hexed Chakram (24&quot;, A3, Lacerate), Strike (A1) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Gauntlet (A3, AP(4)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Spear (A1, AP(4), Deadly(3), Ignores Regeneration) · +10 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Power</del> Hammer <del class='del'>and Staff</del></td><td>Replace <ins class='add'>Daemon</ins> Hammer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>2x</del> Power Staff <del class='del'>(A2, Rending,</del> Shred) · <del class='del'>+10</del> pts</td><td>Power Staff <ins class='add'>(A3,</ins> Shred) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A3, AP(2)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Spear (A1, AP(4), Deadly(3)) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Power Spear (A1, AP(1), Deadly(3), Shred), Staff (A1, Shred) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Magic Bolt (18&quot;, A2, AP(1), Shred), Power Staff (A2, Rending, Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Magic Blast (12&quot;, A4, Shred), Power Staff (A2, Rending, Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hexed Chakram (18&quot;, A3, Surge), Power Staff (A2, Rending, Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Heavy Hexed Chakram</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Magic Bolt (18&quot;, A3, Shred) · +5 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Change <del class='del'>(Resistance</del> Aura) · +30 pts</td><td>Gift of Change <ins class='add'>(Spell Resistance</ins> Aura) · +30 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Icon of Change (Indirect when Shooting Aura) · <del class='del'>+20</del> pts</td><td>Icon of Change (Indirect when Shooting Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Power Staff</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Power Gauntlet (A2, AP(3), Shred) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Horror Champion of Change</h3><p class='stats'>165 → 140 pts (-25) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>165</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Fireballs (12&quot;, A1, Assault)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Horror Claws (A3, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Power Hammer (A1, Blast(3), Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Staff (A1, Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Boon (Spell Accumulator(1)) · <del class='del'>+15</del> pts</td><td>Change Boon (Spell Accumulator(1)) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Power Hammer and Staff</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Power Spear (A1, AP(1), Deadly(3), Shred), Staff (A1, Shred) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>2x Power Staff (A2, Rending, Shred) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Magic Bolt (18&quot;, A2, AP(1), Shred), Power Staff (A2, Rending, Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hexed Chakram (18&quot;, A3, Surge), Power Staff (A2, Rending, Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Magic Blast (12&quot;, A4, Shred), Power Staff (A2, Rending, Shred) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Power Staff</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Power Gauntlet (A2, AP(3), Shred) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Change Furies</h3><p class='stats'>105 → 75 pts (-30) · Size 5 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Power Claws (A1, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Armblades (A2, AP(1), Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Armblades</del></td><td>Replace all <ins class='add'>Power Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Armblades (A2) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rending Claws (A2, Rending, Shred) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Change Warriors</h3><p class='stats'>90 → 70 pts (-20) · Size 5 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Hand Weapon (A1, <del class='del'>Shred)</del></td><td>5x Hand Weapon (A1, <ins class='add'>Parry(1))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Fireballs (12&quot;, A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Power Sword (A1, Shred) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A1, <del class='del'>Rending, Shred)</del> · <del class='del'>+10</del> pts</td><td>Halberd (A1, <ins class='add'>Rending)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A1, Counter, <del class='del'>Shred)</del> · <del class='del'>+15</del> pts</td><td>Spear (A1, Counter, <ins class='add'>Brace(1))</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A1, <del class='del'>AP(2), Shred)</del> · <del class='del'>+20</del> pts</td><td>Great Weapon (A1, <ins class='add'>AP(2))</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Hand Weapons <del class='del'>(A2, Shred)</del> · <del class='del'>+25</del> pts</td><td>Dual Hand Weapons <ins class='add'>(A2)</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with any</td><td>Upgrade one model with any</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Boon (Spell Accumulator(1)) · <del class='del'>+15</del> pts</td><td>Change Boon (Spell Accumulator(1)) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Wizard (Caster(1)) · +15 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner of Change (Bounding Aura) · <del class='del'>+35</del> pts</td><td>Banner of Change (Bounding Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade one model with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Wizard (Caster(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Change Horrors</h3><p class='stats'>205 → 140 pts (-65) · Size 5 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>205</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Claws <del class='del'>(A1, Shred)</del></td><td>5x Claws <ins class='add'>(A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Fireballs (12&quot;, A1)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Boon (Spell Accumulator(1)) · <del class='del'>+15</del> pts</td><td>Change Boon (Spell Accumulator(1)) · <ins class='add'>+10</ins> pts</td></tr>
+</table></div>
+<h3>Lesser Change Horrors</h3><p class='stats'>165 → 115 pts (-50) · Size 5 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>165</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Claws <del class='del'>(A1, Shred)</del></td><td>5x Claws <ins class='add'>(A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Fireballs (12&quot;, A1)</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Changelings</h3><p class='stats'>115 → 80 pts (-35) · Size 10 · Quality 6+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>115</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>10x Claws <del class='del'>(A2, Shred)</del></td><td>10x Claws <ins class='add'>(A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>10x Fireballs (12&quot;, A2)</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Hex-Furies</h3><p class='stats'>105 → 95 pts (-10) · Size 5 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Hexed Chakram (24&quot;, A1, Lacerate)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Claws</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Magic Blast (12&quot;, A2, Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Magic Blasts</del></td><td>Replace all <ins class='add'>Hexed Chakrams</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Magic Bolt (18&quot;, A1, <del class='del'>AP(1),</del> Shred) · <del class='del'>free</del></td><td>Magic Bolt (18&quot;, A1, Shred) · <ins class='add'>+5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Magic Blast (9&quot;, A2, Shred) · +15 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hexed Chakram (18&quot;, A2, Surge) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Change Hexers</h3><p class='stats'>115 → 100 pts (-15) · Size 5 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>115</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Hexed Chakram (24&quot;, A1, Lacerate)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Hand Weapon</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Magic Bolt (18&quot;, A1, AP(1), Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Magic Bolts</del></td><td>Replace all <ins class='add'>Hexed Chakrams</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Magic Bolt (18&quot;, A1, Shred) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Magic Blast <del class='del'>(12&quot;,</del> A2, Shred) · <del class='del'>+5</del> pts</td><td>Magic Blast <ins class='add'>(9&quot;,</ins> A2, Shred) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hexed Chakram (18&quot;, A2, Surge) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Change Boon (Spell Accumulator(1)) · <del class='del'>+15</del> pts</td><td>Change Boon (Spell Accumulator(1)) · <ins class='add'>+10</ins> pts</td></tr>
+</table></div>
+<h3>Change Soul Spawns</h3><p class='stats'>195 → 190 pts (-5) · Size 3 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>195</del> pts</td><td><ins class='add'>190</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Claws <del class='del'>(A1)</del></td><td>3x <ins class='add'>Power</ins> Claws <ins class='add'>(A3, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Hexed Spikes (12&quot;, A4, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Hexed Spikes and</del> Claws</td><td>Replace all <ins class='add'>Power</ins> Claws</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Claws (A3, AP(2)) · +20 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Magic Blast <del class='del'>(12&quot;,</del> A4, Shred), Claws (A1) · <del class='del'>+15</del> pts</td><td><ins class='add'>Heavy</ins> Magic Blast <ins class='add'>(9&quot;,</ins> A4, Shred), Claws (A1) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hexed Spikes (24&quot;, A3, Lacerate), Claws (A1) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mutated Claws (A4, Shred) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Screechers</h3><p class='stats'>215 → 205 pts (-10) · Size 3 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>215</del> pts</td><td><ins class='add'>205</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Sharp Beak (A3, <del class='del'>AP(2))</del></td><td>3x Sharp Beak (A3, <ins class='add'>Rending)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Sharp Beaks</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Beak (A3, AP(2)) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Scorchers</h3><p class='stats'>185 → 160 pts (-25) · Size 3 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Strike (A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Claws (A3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Spout Flames</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hexed Flames (18&quot;, A1, Blast(3), Reliable, Lacerate) · +35 pts</ins></td></tr>
+</table></div>
+<h3>Great Scorcher</h3><p class='stats'>145 → 130 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>145</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Infernal Blaze <del class='del'>(24&quot;,</del> A2, <del class='del'>AP(1),</del> Deadly(3), Unstoppable)</td><td>Infernal Blaze <ins class='add'>(18&quot;,</ins> A2, Deadly(3), <ins class='add'>Shred,</ins> Unstoppable)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Stomp (A2, AP(1))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Claws (A3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Infernal Blaze</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flame Torrent (18&quot;, A2, AP(1), Blast(3), Reliable) · +30 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fire Blast (6&quot;, A1, Blast(3), Reliable, Assault) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Curse of Change (Casting Debuff) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with (2)</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Curse of Change (Spell Drain) · +10 pts</ins></td></tr>
+</table></div>
+<h3>Screecher Chariot</h3><p class='stats'>215 → 165 pts (-50) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>215</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Great Scorcher Blaze <del class='del'>(24&quot;,</del> A2, <del class='del'>AP(1),</del> Deadly(3), Unstoppable)</td><td>Great Scorcher Blaze <ins class='add'>(18&quot;,</ins> A2, Deadly(3), <ins class='add'>Shred,</ins> Unstoppable)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Screechers (A2, AP(1))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Sharp Beak (A6, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Great Scorcher Blaze</td><td>Replace Great Scorcher Blaze</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Scorcher <del class='del'>Flame</del> (18&quot;, A2, AP(1), Blast(3), Reliable) · <del class='del'>+20</del> pts</td><td>Great Scorcher <ins class='add'>Torrent</ins> (18&quot;, A2, AP(1), Blast(3), Reliable) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Flame Blast (6&quot;, A1, AP(1), Blast(3), Reliable, Assault), Chariot Shock (Heavy Impact(4)) · +35 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Change <del class='del'>(Casting Debuff)</del> · +10 pts</td><td>Curse of Change <ins class='add'>(Spell Drain)</ins> · +10 pts</td></tr>
+</table></div>
+<h3>Soul Daemon of Change</h3><p class='stats'>715 → 665 pts (-50) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>715</del> pts</td><td><ins class='add'>665</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Power Axe (A6, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Change Cannon (24&quot;, A9, Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Change Sword (A18, Shred)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Power Axe</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Sword (A6, AP(2)) · +20 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Change Cannon</del></td><td>Replace <ins class='add'>one Power Axe</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Power Cannon (15&quot;, A3, Blast(3), Assault, Shred) · +85 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hexed Cannon (18&quot;, <del class='del'>A18, Surge)</del> · <del class='del'>+35</del> pts</td><td>Hexed Cannon (18&quot;, <ins class='add'>A9, Assault, Lacerate)</ins> · <ins class='add'>+95</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Cannon (15&quot;, A3, AP(2), Blast(3), Assault) · +120 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Soul Cannon (15&quot;, A3, AP(2), Deadly(3), Assault) · +135 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Change Cannon (24&quot;, A6, AP(2), Shred) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Change Sword</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Change Axe (A12, AP(2), Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Swiftclaw</h3><p class='stats'>95 → 80 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Heroes with up to Tough(6) may deploy as part of one multi-model unit without another Hero. The hero may take morale tests on behalf of the unit, but must use the unit’s Defense until all other models have been killed.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Dimension Slicer <del class='del'>(6&quot;,</del> A1, <del class='del'>Blast(3), Surge)</del></td><td>Dimension Slicer <ins class='add'>(12&quot;,</ins> A1, <ins class='add'>Assault, Lacerate)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Needle <del class='del'>(A2, Surge)</del></td><td>Needle <ins class='add'>(A3, AP(1), Lacerate)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Unbidden Infiltrator <del class='del'>(Teleport Aura)</del></td><td>Unbidden Infiltrator <ins class='add'>(Teleport)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Unbidden Infiltrator</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Unbidden Infiltrator - Leader (Teleport Aura) · +30 pts</ins></td></tr>
+</table></div>
+<h3>Eonflux</h3><p class='stats'>60 → 65 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Heroes with up to Tough(6) may deploy as part of one multi-model unit without another Hero. The hero may take morale tests on behalf of the unit, but must use the unit’s Defense until all other models have been killed.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Fireballs (12&quot;, A1, Assault)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Fungal Healing <del class='del'>(Protected Aura)</del></td><td>Fungal Healing <ins class='add'>(Protected)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Fungal Healing</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fungal Healing - Leader (Protected Aura) · +15 pts</ins></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Enhanced Changebound</td><td>If most models in this unit have Changebound, enemies attacking them always get -1 to hit rolls from Changebound (instead of only as long as they haven&#x27;t started an activation yet).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Changebound Aura</td><td>This model and its unit get Enhanced Changebound.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Screened</td><td>If most models in this unit have Screened, enemies attacking them always get -1 to hit rolls from Screened (instead of only as long as they haven&#x27;t started an activation yet).</td></tr>
+<tr class='add'><td>➕</td><td>Heavy Impact</td><td>Counts as having Impact(X) with hits that have AP(1).</td></tr>
+<tr class='add'><td>➕</td><td>Lacerate</td><td>When attacking, the target must re-roll unmodified Defense results of 6.</td></tr>
+<tr class='add'><td>➕</td><td>Spell Drain</td><td>Once per activation, before attacking, pick one enemy model within 18&quot; in line of sight, which must take a Morale Test. If failed, it loses 2 spell tokens.</td></tr>
+<tr class='add'><td>➕</td><td>Spell Resistance</td><td>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='add'><td>➕</td><td>Spell Resistance Aura</td><td>This model and its unit get Spell Resistance.</td></tr>
+<tr class='add'><td>➕</td><td>Unique Hero</td><td>Counts as having Hero, and this model may only be taken once per army.</td></tr>
+<tr class='del'><td>➖</td><td>Casting Debuff</td><td>Once per activation, before attacking, pick one enemy unit within 18&quot; in line of sight with Caster, which gets -1 to casting rolls once (next time the effect would apply).</td></tr>
+<tr class='del'><td>➖</td><td>Changebound Boost</td><td>If all models in this unit have Changebound, enemies attacking them always get -1 to hit rolls from Changebound (instead of only when being shot/charged from over 9&quot; away).</td></tr>
+<tr class='del'><td>➖</td><td>Changebound Boost Aura</td><td>This model and its unit get Changebound Boost.</td></tr>
+<tr class='del'><td>➖</td><td>Resistance</td><td>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='del'><td>➖</td><td>Resistance Aura</td><td>This model and its unit get Resistance.</td></tr>
+<tr class='del'><td>➖</td><td>Shred</td><td>On unmodified results of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
+<tr class='del'><td>➖</td><td>Storm of Change</td><td>Once per game, when this model is activated, before attacking, roll 3 dice. For each 2+ one enemy unit within 12&quot; takes 3 hits with Shred.</td></tr>
+<tr class='del'><td>➖</td><td>Surge</td><td>On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Bounding</td><td><span class='del'>3.5.1:</span> When this unit is activated, you may <del class='del'>place</del> all models with this rule in it <del class='del'>anywhere fully within D3+1&quot; of their position.</del><br><span class='add'>3.6.0:</span> When this unit is activated, you may <ins class='add'>move</ins> all models with this rule in it <ins class='add'>by up to D3+1&quot;.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Caster<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Gets X spell tokens at the start of each round, but can’t <del class='del'>hold</del> more than 6 <del class='del'>tokens</del> at once. <del class='del'>At any point</del> before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). <del class='del'>Roll</del> one die, on 4+ resolve the <del class='del'>effect on a target in line of sight.</del> Models within 18” <del class='del'>in line of sight</del> of the <del class='del'>caster’s unit</del> may spend any number of spell tokens at the same time before <del class='del'>rolling,</del> to give the <del class='del'>caster</del> +1/-1 to the roll per token.<br><span class='add'>3.6.0:</span> Gets X spell tokens at the start of each round, but can’t <ins class='add'>have</ins> more than 6 at once. <ins class='add'>Once per activation,</ins> before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). <ins class='add'>Pick a target and roll</ins> one die, <ins class='add'>and</ins> on 4+ resolve the <ins class='add'>spell’s effect.</ins> Models within 18” of the <ins class='add'>Caster</ins> may spend any number of spell tokens at the same time before <ins class='add'>rolling</ins> to give the <ins class='add'>Caster</ins> +1/-1 to the roll per token.</td></tr>
+<tr class='mod'><td>✏️</td><td>Changebound</td><td><span class='del'>3.5.1:</span> <del class='del'>When units where all</del> models have this <del class='del'>rule are shot or charged from over 9&quot; away,</del> enemy units get -1 to hit rolls.<br><span class='add'>3.6.0:</span> <ins class='add'>If most</ins> models <ins class='add'>in this unit</ins> have this <ins class='add'>rule, as long as they haven&#x27;t started an activation yet this round,</ins> enemy units <ins class='add'>attacking them</ins> get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Fearless<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule fails a <del class='del'>morale test,</del> roll one die. On a 4+ it counts as passed instead.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule fails a <ins class='add'>Morale Test,</ins> roll one die. On a 4+ it counts as passed instead.</td></tr>
+<tr class='mod'><td>✏️</td><td>Indirect<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>Gets -1 to hit rolls when shooting after moving. May</del> target enemies that are not in line of sight as if in line of sight, and ignores <del class='del'>cover</del> from <del class='del'>sight obstructions.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When using Hold actions and shooting, may</ins> target enemies that are not in line of sight as if in line of sight, and ignores <ins class='add'>Cover</ins> from <ins class='add'>Sight Blockers.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Protected</td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Regeneration<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.<br><span class='add'>3.6.0:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.</td></tr>
+<tr class='mod'><td>✏️</td><td>Screened</td><td><span class='del'>3.5.1:</span> <del class='del'>When units where all</del> models have this <del class='del'>rule are shot or charged from over 9&quot; away,</del> enemy units get -1 to hit rolls.<br><span class='add'>3.6.0:</span> <ins class='add'>If most</ins> models <ins class='add'>in this unit</ins> have this <ins class='add'>rule, as long as they haven&#x27;t started an activation yet this round,</ins> enemy units <ins class='add'>attacking them</ins> get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>Sergeant<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>When this</del> model <del class='del'>attacks, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</del><br><span class='add'>3.6.0:</span> <ins class='add'>This</ins> model <ins class='add'>gets AP(+1) when attacking.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Unstoppable<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Ignores Regeneration, and ignores all negative modifiers to this <del class='del'>weapon.</del><br><span class='add'>3.6.0:</span> Ignores Regeneration, and ignores all negative modifiers to this <ins class='add'>weapon which are not from this model&#x27;s special rules.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Vanguard</td><td><span class='del'>3.5.1:</span> After this model is deployed, it may be placed anywhere fully within <del class='del'>9”</del> of its <del class='del'>position.</del><br><span class='add'>3.6.0:</span> After this model is deployed, it may be placed anywhere fully within <ins class='add'>9&quot;</ins> of its <ins class='add'>position, over 9&quot; away from non-Vanguard enemy units.</ins></td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Change Boon</td><td><span class='del'>3.5.1:</span> (3) Pick up to three friendly units within <del class='del'>12&quot;,</del> which get Changebound <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (3) Pick up to three friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Changebound once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Mutating Inferno</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to two enemy units within <del class='del'>9&quot;,</del> which take <del class='del'>4</del> hits each.<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to two enemy units within <ins class='add'>24&quot; in line of sight,</ins> which take <ins class='add'>3</ins> hits each.</td></tr>
+<tr class='mod'><td>✏️</td><td>Power Bolt</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>6</del> hits with AP(2).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick one enemy unit within <ins class='add'>12&quot; in line of sight,</ins> which takes <ins class='add'>4</ins> hits with AP(2).</td></tr>
+<tr class='mod'><td>✏️</td><td>Shifting Form</td><td><span class='del'>3.5.1:</span> (1) Pick one enemy unit within <del class='del'>18&quot;,</del> which <del class='del'>gets -3</del> to <del class='del'>casting rolls once (next time the effect would apply).</del><br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>loses 2 spell tokens. Note that the target may not spend those spell tokens</ins> to <ins class='add'>prevent this effect.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Sky Blaze</td><td><span class='del'>3.5.1:</span> (1) Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>2</del> hits with <del class='del'>AP(1) and Surge. Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.</del><br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within <ins class='add'>12&quot; in line of sight,</ins> which takes <ins class='add'>3</ins> hits with <ins class='add'>Lacerate.</ins></td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

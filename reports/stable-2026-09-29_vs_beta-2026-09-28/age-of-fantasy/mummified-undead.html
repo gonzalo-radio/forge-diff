@@ -1,0 +1,493 @@
+<title>Mummified Undead 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Mummified Undead — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>age-of-fantasy. <code>stable 2026-09-29: Mummified Undead</code> (versionString 3.5.3, edited 2026-06-30, modified 2026-07-14) → <code>beta 2026-09-28: Mummified Undead</code> (versionString 3.5.1, edited 2026-09-10, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 26 (23 with cost changes)</li>
+<li>Profile changes: Quality 1, Defense 0, Size 0</li>
+<li>Special rules: +10 / -7 / ~8</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Rammit Den Geddul</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>100</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Royal Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>60</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Skeleton Leader</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>25</td><td class='num'>35</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Mummies</td><td class='num'>10</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>90</td><td class='num'>80</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Skeleton Warriors</td><td class='num'>10</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>90</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Skeleton Archers</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>60</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Skeleton Horsemen</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>65</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Hunting Beasts</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>85</td><td class='num'>70</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Royal Guard</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>70</td><td class='num'>75</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Beast Riders</td><td class='num'>5</td><td class='num'><b class=add>4+ → 3+</b></td><td class='num'>4+</td><td class='num'>110</td><td class='num'>130</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Scarab Swarms</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>70</td><td class='num'>85</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Vultures</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>135</td><td class='num'>135</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Great Snakes</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>130</td><td class='num'>135</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Snake Riders</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>145</td><td class='num'>145</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Guardian Statues</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>165</td><td class='num'>150</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Snakemen</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>200</td><td class='num'>205</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td>Death Casket</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>140</td><td class='num'>120</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td>Great Scorpion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>120</td><td class='num'>130</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Skeleton Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>115</td><td class='num'>130</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Skeleton Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>205</td><td class='num'>240</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td>War Sphinx</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>2+</td><td class='num'>260</td><td class='num'>310</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td>Giant God-Statue</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>300</td><td class='num'>320</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Sphinx Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>280</td><td class='num'>340</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td>Skull Catapult</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>140</td><td class='num'>135</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Desert Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>915</td><td class='num'>965</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td>God-Titan</td><td class='num'>1</td><td class='num'>2+</td><td class='num'>2+</td><td class='num'>1030</td><td class='num'>1090</td><td class='num'><b class='del'>+60</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Rammit Den Geddul</h3><p class='stats'>80 → 100 pts (+20) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Heroes with up to Tough(6) may deploy as part of one multi-model unit without another Hero. The hero may take morale tests on behalf of the unit, but must use the unit’s Defense until all other models have been killed.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Crescent Blades (A4, <del class='del'>AP(1))</del></td><td>Crescent Blades (A4, <ins class='add'>AP(2))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Gleaming Armour <del class='del'>(Fortified Aura)</del></td><td>Gleaming Armour <ins class='add'>(Fortified)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Gleaming Armour</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Gleaming Armour - Leader (Fortified Aura) · +5 pts</ins></td></tr>
+</table></div>
+<h3>Royal Champion</h3><p class='stats'>50 → 60 pts (+10) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Heavy Hand Weapon (A3, AP(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A3, AP(1), Parry(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Halberd (A3, AP(1), Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Lance (A3, AP(1), Thrust) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Priest Staff (A2, Spell Amplifier) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spirit Strike (9&quot;, A1, Assault, Bane), Hand Weapon (A3, Parry(3)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Spear (A3, AP(1), Counter, Brace(1)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A3, AP(4)) · +25 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy</del> Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Lance (A3, <del class='del'>AP(1),</del> Thrust) · <del class='del'>+10</del> pts</td><td>Lance (A3, Thrust) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Halberd (A3, <del class='del'>AP(1),</del> Rending) · +5 pts</td><td>Halberd (A3, Rending) · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear (A3, Counter, Brace(1)) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A3, <del class='del'>AP(3))</del> · <del class='del'>+15</del> pts</td><td>Great Weapon (A3, <ins class='add'>AP(2))</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Heavy Hand Weapons (A4, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Spear (A3, AP(1), Counter) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Spirit Strike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Curse Strike (9&quot;, A1, AP(1), Assault, Pierce) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Strike (12&quot;, A1, AP(2), Assault) · +10 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Royal Beast (Heavy Claws (A1, <del class='del'>AP(2)),</del> Fast) · <del class='del'>+20</del> pts</td><td>Royal Beast (Heavy Claws (A1, <ins class='add'>AP(1)),</ins> Fast) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Skeletal Steed (Fast, Impact(1), Vanguard) · <del class='del'>+25</del> pts</td><td>Skeletal Steed (Fast, Impact(1), Vanguard) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Royal Snake <del class='del'>(Snake Fangs (A1, Bane), Impact(2),</del> Tough(3)) · +45 pts</td><td>Royal Snake <ins class='add'>(Impact(3),</ins> Tough(3)) · +45 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Royal Chariot (Hooves <del class='del'>(A2),</del> Armor(3), Fast, Impact(4), Tough(6)) · <del class='del'>+135</del> pts</td><td>Royal Chariot (Hooves <ins class='add'>(A2, AP(1)),</ins> Armor(3), Fast, Impact(4), Tough(6)) · <ins class='add'>+150</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Sphinx <del class='del'>(Stomp</del> (A4, AP(1)), Armor(2), <del class='del'>Breath Attack,</del> Fear(2), Tough(12)) · <del class='del'>+275</del> pts</td><td>War Sphinx <ins class='add'>(Toxic Stinger (6&quot;, A1, Blast(3), Reliable, Assault, Bane), Stomp</ins> (A4, AP(1)), <ins class='add'>Toxin Claws (A8, Bane),</ins> Armor(2), Fear(2), Tough(12)) · <ins class='add'>+425</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Skeleton <del class='del'>Beast</del> (Heavy Claws <del class='del'>(A6, AP(1)),</del> Stomp (A6, AP(2)), <del class='del'>Toxin Claws (A6, Bane),</del> Armor(3), Fear(3), Flying, Tough(18)) · <del class='del'>+490</del> pts</td><td>Skeleton <ins class='add'>Dragon</ins> (Heavy <ins class='add'>Flame Breath (6&quot;, A1, AP(1), Blast(6), Reliable, Assault), Sharp</ins> Claws <ins class='add'>(A12, Rending),</ins> Stomp (A6, AP(2)), Armor(3), Fear(3), Flying, Tough(18)) · <ins class='add'>+625</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade Royal Snake with one</td><td>Upgrade Royal Snake with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dune Hunter (Fast) · <del class='del'>+20</del> pts</td><td>Dune Hunter (Fast) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Armor (Armor(3)) · <del class='del'>+10</del> pts</td><td>Heavy Armor (Armor(3)) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burrower (Ambush) · <del class='del'>+20</del> pts</td><td>Burrower (Ambush) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Tomb Queen Icon Bearer <del class='del'>(Royal</del> Legion <del class='del'>Boost</del> Aura) · <del class='del'>+30</del> pts</td><td>Tomb Queen Icon Bearer <ins class='add'>(Enhanced Royal</ins> Legion Aura) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Venom Expert (Bane in Melee Aura) · <del class='del'>+15</del> pts</td><td>Venom Expert (Bane in Melee Aura) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(2)) · <del class='del'>+20</del> pts</td><td>Army Standard Bearer (Fear(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Monarch (No Retreat Aura) · <del class='del'>+35</del> pts</td><td>Monarch (No Retreat Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Soul-Gem Keeper <del class='del'>(Resistance</del> Aura) · +30 pts</td><td>Soul-Gem Keeper <ins class='add'>(Spell Resistance</ins> Aura) · +30 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Priest (Caster(2)) · <del class='del'>+55</del> pts</td><td>Priest (Caster(2)) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Herald (Scout Aura) · <del class='del'>+35</del> pts</td><td>Herald (Scout Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Priest (Caster(3)) · <del class='del'>+85</del> pts</td><td>Master Priest (Caster(3)) · <ins class='add'>+60</ins> pts</td></tr>
+</table></div>
+<h3>Skeleton Leader</h3><p class='stats'>25 → 35 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Bow (24&quot;, A3), Strike (A1) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A3, AP(1), Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A3, AP(4)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Halberd (A3, AP(1), Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Spear (A3, AP(1), Counter, Brace(1)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spirit Strike (9&quot;, A1, Assault, Bane), Hand Weapon (A3, Parry(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Lance (A3, AP(1), Thrust) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Priest Staff (A2, Spell Amplifier) · +20 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Hand Weapon</td><td>Replace Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A3, <del class='del'>Counter)</del> · +5 pts</td><td>Spear (A3, <ins class='add'>Counter, Brace(1))</ins> · +5 pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Hand Weapons (A4) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Spirit Strike</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Strike (12&quot;, A1, AP(2), Assault) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Curse Strike (9&quot;, A1, AP(1), Assault, Pierce) · +5 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Rapid Bow</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Cursed Bow (18&quot;, A3, AP(1), Pierce) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Harpoons (9&quot;, A1, AP(2), Deadly(3), Assault) · +15 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with <del class='del'>one (2)</del></td><td>Upgrade with</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mummies Leader (Fearless, Slow) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Venom Expert (Bane in Melee Aura) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul-Gem Keeper (Spell Resistance Aura) · +30 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Nomad Hunter (Indirect when Shooting Aura) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Priest (Caster(2)) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Stone Shaper (Mend) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Herald (Scout Aura) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Priest (Caster(3)) · +60 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bow (24&quot;, A2) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Royal Bow (18&quot;, A2, Destructive) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with one (3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Venom Expert (Bane in Melee Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Nomad Hunter (Indirect when Shooting Aura) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Soul-Gem Keeper (Resistance Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Herald (Scout Aura) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Stone Shaper (Mend) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Priest (Caster(2)) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Priest (Caster(3)) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Mummies</h3><p class='stats'>90 → 80 pts (-10) · Size 10 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>10x Infected Bites (A1, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>10x Claws (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Infected Bites</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Grasping Claws (A1, Surge) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mummy Claws (A2) · +20 pts</ins></td></tr>
+</table></div>
+<h3>Skeleton Warriors</h3><p class='stats'>65 → 90 pts (+25) · Size 10 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>10x Hand Weapon <del class='del'>(A1)</del></td><td>10x Hand Weapon <ins class='add'>(A1, Parry(1))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A1, Rending) · <del class='del'>+25</del> pts</td><td>Halberd (A1, Rending) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A1, <del class='del'>Counter)</del> · <del class='del'>+25</del> pts</td><td>Spear (A1, <ins class='add'>Counter, Brace(1))</ins> · <ins class='add'>+15</ins> pts</td></tr>
+</table></div>
+<h3>Skeleton Archers</h3><p class='stats'>60 pts · Size 5 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Hand Weapon</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Bows</td><td>Replace all Bows</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Royal</del> Bow (18&quot;, A1, <del class='del'>Destructive)</del> · +15 pts</td><td><ins class='add'>Cursed</ins> Bow (18&quot;, A1, <ins class='add'>AP(1), Pierce)</ins> · +15 pts</td></tr>
+</table></div>
+<h3>Skeleton Horsemen</h3><p class='stats'>70 → 65 pts (-5) · Size 5 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(1)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Bow (24&quot;, A1)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Hand Weapon</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Hand Weapons</del></td><td>Replace all <ins class='add'>Bows and Strikes</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A1, Parry(1)), Trample (Impact(1)) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lance (A1, <del class='del'>Thrust)</del> · <del class='del'>+10</del> pts</td><td>Lance (A1, <ins class='add'>Thrust), Trample (Impact(1))</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Royal</del> Bow (18&quot;, A1, <del class='del'>Destructive), Hand Weapon</del> (A1) · <del class='del'>+40</del> pts</td><td><ins class='add'>Cursed</ins> Bow (18&quot;, A1, <ins class='add'>AP(1), Pierce), Strike</ins> (A1) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Bow (24&quot;, A1), Hand Weapon (A1) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Hunting Beasts</h3><p class='stats'>85 → 70 pts (-15) · Size 5 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Infected Bites (A1, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Claws (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Infected Bites</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sharp Claws (A1, Rending) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Razor Claws (A2) · +15 pts</ins></td></tr>
+</table></div>
+<h3>Royal Guard</h3><p class='stats'>70 → 75 pts (+5) · Size 5 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Heavy</del> Hand Weapon (A1, <del class='del'>AP(1))</del></td><td>5x Hand Weapon (A1, <ins class='add'>Parry(1))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+10</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Heavy</del> Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Halberd (A1, <del class='del'>AP(1),</del> Rending) · <del class='del'>+10</del> pts</td><td>Halberd (A1, Rending) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Great Weapon (A1, <del class='del'>AP(3))</del> · +20 pts</td><td>Great Weapon (A1, <ins class='add'>AP(2))</ins> · +20 pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Royal Axe (A1, Blast(3), Shred) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Royal Scythe (A1, AP(2), Deadly(3), Bane) · +25 pts</ins></td></tr>
+</table></div>
+<h3>Beast Riders</h3><p class='stats'>110 → 130 pts (+20) · Size 5 · Quality 4+ → 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Quality</td><td><del class='del'>4+</del></td><td><ins class='add'>3+</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Heavy</del> Hand Weapon (A1, <del class='del'>AP(1))</del></td><td>5x Hand Weapon (A1, <ins class='add'>Parry(1))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Heavy Claws (A1, <del class='del'>AP(2))</del></td><td>5x Heavy Claws (A1, <ins class='add'>AP(1))</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+5</del> pts</td><td>Banner · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Heavy</del> Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Lance (A1, <del class='del'>AP(1),</del> Thrust) · <del class='del'>+10</del> pts</td><td>Lance (A1, Thrust) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace one Hand Weapon</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Royal Axe (A1, Blast(3), Shred) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Royal Scythe (A1, AP(2), Deadly(3), Bane) · +25 pts</ins></td></tr>
+</table></div>
+<h3>Scarab Swarms</h3><p class='stats'>70 → 85 pts (+15) · Size 3 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x <del class='del'>Swarm Attacks</del> (A3, Bane)</td><td>3x <ins class='add'>Toxin Jaws</ins> (A3, Bane)</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Toxin Jaws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Scarab Onslaught (A3, Rending) · +20 pts</ins></td></tr>
+</table></div>
+<h3>Vultures</h3><p class='stats'>135 pts · Size 3 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Jagged Claws (A3, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Sharp Beak (A3, Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Jagged Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sharp Beak (A3, AP(2)) · +20 pts</ins></td></tr>
+</table></div>
+<h3>Great Snakes</h3><p class='stats'>130 → 135 pts (+5) · Size 3 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>130</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(2)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Snake Fangs <del class='del'>(A1,</del> Bane)</td><td>3x Snake Fangs <ins class='add'>(A3,</ins> Bane)</td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Dune Hunter (Fast)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>3x Heavy Armor (Armor(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Heavy Armors</del></td><td>Replace all <ins class='add'>Dune Hunters</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Armor (Armor(3)) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burrower (Ambush) · <del class='del'>+10</del> pts</td><td>Burrower (Ambush) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dune Hunter (Fast) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Snake Riders</h3><p class='stats'>145 pts · Size 3 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(2)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Skeleton <del class='del'>Spear</del> Rider <del class='del'>(A1, Thrust)</del></td><td>3x <ins class='add'>Dual Daggers</ins> Skeleton Rider <ins class='add'>(A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Snake Fangs (A1, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Dune Hunter (Fast)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Snake Charge (Impact(2))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>3x Heavy Armor (Armor(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+20</del> pts</td><td>Musician · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner · <del class='del'>+15</del> pts</td><td>Banner · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Heavy Armors</del></td><td>Replace all <ins class='add'>Dune Hunters</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Armor (Armor(3)) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burrower (Ambush) · <del class='del'>+10</del> pts</td><td>Burrower (Ambush) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dune Hunter (Fast) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Dual Daggers Skeleton Riders and Snake Charges</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lance Skeleton Rider (A1, Thrust), Heavy Snake Charge (Impact(3)) · +10 pts</ins></td></tr>
+</table></div>
+<h3>Guardian Statues</h3><p class='stats'>165 → 150 pts (-15) · Size 3 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>165</del> pts</td><td><ins class='add'>150</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Dual <del class='del'>Heavy</del> Hand Weapons <del class='del'>(A4, AP(1))</del></td><td>3x Dual Hand Weapons <ins class='add'>(A4)</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all Dual <del class='del'>Heavy</del> Hand Weapons</td><td>Replace all Dual Hand Weapons</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Great Weapon (A3, <del class='del'>AP(3))</del> · <del class='del'>+15</del> pts</td><td>Great Weapon (A3, <ins class='add'>AP(2))</ins> · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Bow (24&quot;, <del class='del'>A3, AP(1)), Hand Weapon</del> (A1) · <del class='del'>+65</del> pts</td><td>Great Bow (24&quot;, <ins class='add'>A3), Strike</ins> (A1) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great <del class='del'>Royal</del> Bow (18&quot;, A3, AP(1), <del class='del'>Destructive), Hand Weapon</del> (A1) · <del class='del'>+60</del> pts</td><td>Great <ins class='add'>Cursed</ins> Bow (18&quot;, A3, AP(1), <ins class='add'>Pierce), Strike</ins> (A1) · <ins class='add'>+90</ins> pts</td></tr>
+</table></div>
+<h3>Snakemen</h3><p class='stats'>200 → 205 pts (+5) · Size 3 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>200</del> pts</td><td><ins class='add'>205</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(2)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x Halberd <del class='del'>(A2,</del> Rending)</td><td>3x Halberd <ins class='add'>(A3,</ins> Rending)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Halberds</td><td>Replace all Halberds</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A2,</del> AP(2)) · <del class='del'>+15</del> pts</td><td>Great Weapon <ins class='add'>(A3,</ins> AP(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with</td><td>Upgrade all models with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Death Gaze (12&quot;, <del class='del'>A2, AP(2))</del> · <del class='del'>+65</del> pts</td><td>Death Gaze (12&quot;, <ins class='add'>A1, AP(2), Assault)</ins> · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Dune Hunters</td><td>Replace all Dune Hunters</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burrower (Ambush) · <del class='del'>+5</del> pts</td><td>Burrower (Ambush) · <ins class='add'>+20</ins> pts</td></tr>
+</table></div>
+<h3>Death Casket</h3><p class='stats'>140 → 120 pts (-20) · Size 1 · Quality 3+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>120</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Release Spirits <del class='del'>(24&quot;,</del> A2, Blast(3), <del class='del'>Rending)</del></td><td>Release Spirits <ins class='add'>(18&quot;,</ins> A2, Blast(3), <ins class='add'>Bane)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Casket Crew (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Crew (A3)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Release Spirits</td><td>Replace Release Spirits</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Unleash Souls <del class='del'>(24&quot;,</del> A2, AP(2), Deadly(3)) · <del class='del'>+25</del> pts</td><td>Unleash Souls <ins class='add'>(18&quot;,</ins> A2, AP(2), Deadly(3)) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Radiate Curse (18&quot;, A6, AP(1), <del class='del'>Destructive)</del> · <del class='del'>+20</del> pts</td><td>Radiate Curse (18&quot;, A6, AP(1), <ins class='add'>Pierce)</ins> · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Sand (Difficult Terrain Debuff) · <del class='del'>+20</del> pts</td><td>Curse of Sand (Difficult Terrain Debuff) · <ins class='add'>+30</ins> pts</td></tr>
+</table></div>
+<h3>Great Scorpion</h3><p class='stats'>120 → 130 pts (+10) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Pincers (A3, <del class='del'>AP(2))</del></td><td><ins class='add'>Infected</ins> Pincers (A3, <ins class='add'>Bane)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Stinger (A3, Bane)</td><td><ins class='add'>Infected</ins> Stinger (A3, Bane)</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Infected Pincers</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Pincers (A3, AP(2)) · +10 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Infected Stinger</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Piercing Stinger (A1, AP(4), Deadly(3)) · +15 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Venom Spurt (9&quot;, A1, Blast(3), Assault, Bane) · +25 pts</ins></td></tr>
+</table></div>
+<h3>Skeleton Chariot</h3><p class='stats'>115 → 130 pts (+15) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>115</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(4)</del><br><span class='muted'>Roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Hooves <del class='del'>(A2)</del></td><td>Hooves <ins class='add'>(A2, AP(1))</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Spear Crew <del class='del'>(A2,</del> Thrust)</td><td>Spear Crew <ins class='add'>(A3,</ins> Thrust)</td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>Chariot Shock (Impact(4))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Spear Crew</td><td>Replace Spear Crew <ins class='add'>and Chariot Shock</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bow Crew (24&quot;, A6) · <del class='del'>+35</del> pts</td><td>Bow Crew (24&quot;, A6) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Royal</del> Bow Crew (18&quot;, A6, <del class='del'>Destructive)</del> · <del class='del'>+50</del> pts</td><td><ins class='add'>Cursed</ins> Bow Crew (18&quot;, A6, <ins class='add'>AP(1), Pierce)</ins> · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Sand (Difficult Terrain Debuff) · <del class='del'>+20</del> pts</td><td>Curse of Sand (Difficult Terrain Debuff) · <ins class='add'>+30</ins> pts</td></tr>
+</table></div>
+<h3>Skeleton Giant</h3><p class='stats'>205 → 240 pts (+35) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>205</del> pts</td><td><ins class='add'>240</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Giant Swords (A8, Surge)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Dual Hand Weapons (A10)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Dual <del class='del'>Hand Weapon</del></td><td>Replace Dual <ins class='add'>Giant Swords</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Giant Sword (A8, Rending) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Giant Hammer (A8, AP(2)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Giant Scatter-Bow (24&quot;, A2, AP(1), Blast(6)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Giant Bow (18&quot;, A2, AP(4), Deadly(6)) · +75 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Giant Cursed Bow (18&quot;, A2, AP(3), Deadly(6), Pierce) · +80 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Hand Weapon (A8, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Weapon (A6, AP(2)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Giant Royal Bow (18&quot;, A1, AP(2), Deadly(6), Destructive), Hand Weapon (A6) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Giant Bow (24&quot;, A1, AP(2), Deadly(6)), Hand Weapon (A6) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>War Sphinx</h3><p class='stats'>260 → 310 pts (+50) · Size 1 · Quality 4+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>260</del> pts</td><td><ins class='add'>310</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Skeleton Spear Crew (A8, Thrust)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Sphinx Crew (A8, Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Skeleton Spear Crew</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Skeleton Bow Crew (24&quot;, A12) · +35 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Skeleton Cursed Bow Crew (18&quot;, A12, AP(1), Pierce) · +90 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td><del class='del'>Replace Stomp</del></td><td><ins class='add'>Upgrade with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flame Breath (6&quot;, A1, Blast(3), Reliable, Assault) · +35 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Toxic Stinger <del class='del'>(A5,</del> Bane) · <del class='del'>+5</del> pts</td><td>Toxic Stinger <ins class='add'>(6&quot;, A1, Blast(3), Reliable, Assault,</ins> Bane) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with <del class='del'>any</del></td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stone Shaper (Fortified) · <del class='del'>+15</del> pts</td><td>Stone Shaper (Fortified) · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spew Death (Breath Attack) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Giant God-Statue</h3><p class='stats'>300 → 320 pts (+20) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>300</del> pts</td><td><ins class='add'>320</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Royal Axe (A3, Blast(3), Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Great Weapon (A6, AP(2))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Royal Axe</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Royal Scythe (A3, AP(2), Deadly(3), Bane) · +40 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stone Shaper (Fortified) · <del class='del'>+30</del> pts</td><td>Stone Shaper (Fortified) · <ins class='add'>+40</ins> pts</td></tr>
+</table></div>
+<h3>Sphinx Champion</h3><p class='stats'>280 → 340 pts (+60) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>280</del> pts</td><td><ins class='add'>340</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Sphinx Sickles (A8, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Dual Hand Weapons (A10)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Dual <del class='del'>Hand Weapons</del></td><td>Replace Dual <ins class='add'>Sphinx Sickles</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon <del class='del'>(A6,</del> AP(2)) · <del class='del'>+10</del> pts</td><td><ins class='add'>Sphinx</ins> Great Weapon <ins class='add'>(A8,</ins> AP(2)) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sphinx Headtaker Blade (A3, AP(4), Deadly(3)) · +65 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td><del class='del'>Replace Stomp</del></td><td><ins class='add'>Upgrade with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flame Breath (6&quot;, A1, Blast(3), Reliable, Assault) · +35 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Toxic Stinger <del class='del'>(A5,</del> Bane) · <del class='del'>+5</del> pts</td><td>Toxic Stinger <ins class='add'>(6&quot;, A1, Blast(3), Reliable, Assault,</ins> Bane) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Decapitating Strike (A1, AP(2), Deadly(6)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with <del class='del'>any</del></td><td>Upgrade with <ins class='add'>one (2)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wings (Flying) · <del class='del'>+45</del> pts</td><td>Wings (Flying) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stone Shaper (Fortified) · <del class='del'>+15</del> pts</td><td>Stone Shaper (Fortified) · <ins class='add'>+50</ins> pts</td></tr>
+</table></div>
+<h3>Skull Catapult</h3><p class='stats'>140 → 135 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Cumbersome</ins><br><span class='muted'>May only use Hold or Advance actions, but can’t shoot when moving.</span></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Entrenched</ins><br><span class='muted'>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Skull Barrage (36&quot;, <del class='del'>A6,</del> AP(1), Indirect)</td><td>Skull Barrage (36&quot;, <ins class='add'>A2,</ins> AP(1), <ins class='add'>Blast(3),</ins> Indirect)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Skull Barrage</td><td>Replace Skull Barrage</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Royal</del> Skull Barrage (30&quot;, A6, AP(1), Indirect, <del class='del'>Destructive)</del> · <del class='del'>+20</del> pts</td><td><ins class='add'>Cursed</ins> Skull Barrage (30&quot;, A6, AP(1), Indirect, <ins class='add'>Pierce)</ins> · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Skull Volley (36&quot;, A2, AP(2), Deadly(3), Indirect) · +35 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Curse of Sand (Difficult Terrain Debuff) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Desert Titan</h3><p class='stats'>915 → 965 pts (+50) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>915</del> pts</td><td><ins class='add'>965</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Titanic Bash <del class='del'>(A2, AP(4), Blast(3))</del></td><td>Titanic Bash <ins class='add'>(A16, Surge)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Titan Strike (A12, AP(2), Rending)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Titanic Bash</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Titanic Strike (A16, Rending) · +15 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Summon Spirits (9&quot;, A2, Blast(3), Assault, Bane) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Summon Souls (9&quot;, A2, AP(2), Deadly(3), Assault) · +115 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Summon Curse (9&quot;, A6, AP(1), Assault, Pierce) · +130 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Ammut Titan</td><td>Replace Ammut Titan</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Scorpion Titan (Ambush, Bane in Melee) · <del class='del'>+30</del> pts</td><td>Scorpion Titan (Ambush, Bane in Melee) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Skeleton Titan (Surprise Attack(8)) · <del class='del'>+50</del> pts</td><td>Skeleton Titan (Surprise Attack(8)) · <ins class='add'>+110</ins> pts</td></tr>
+</table></div>
+<h3>God-Titan</h3><p class='stats'>1030 → 1090 pts (+60) · Size 1 · Quality 2+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1030</del> pts</td><td><ins class='add'>1090</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Godly Battle-Axe <del class='del'>(A4,</del> AP(2), Blast(6))</td><td>Godly Battle-Axe <ins class='add'>(A3,</ins> AP(2), Blast(6))</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Godly Battle-Axe</td><td>Replace Godly Battle-Axe</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Godly Spear (A3, AP(4), <del class='del'>Deadly(6))</del> · <del class='del'>+35</del> pts</td><td>Godly Spear (A3, AP(4), <ins class='add'>Deadly(6), Ignores Regeneration)</ins> · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Flame Breath (6&quot;, A1, AP(1), Blast(6), Reliable, Assault) · +70 pts</ins></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Extra Reach</td><td>If this model has Extra Reach, it gets +12&quot; range when using Hold actions and shooting, and moves +4&quot; when using Charge actions from Extra Reach (instead of only +6&quot; and +2&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Royal Legion</td><td>If this model has Royal Legion, it gets +12&quot; range when using Hold actions and shooting, and moves +4&quot; when using Charge actions from Royal Legion (instead of only +6&quot; and +2&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Royal Legion Aura</td><td>This model and its unit get Enhanced Royal Legion.</td></tr>
+<tr class='add'><td>➕</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
+<tr class='add'><td>➕</td><td>Extra Reach</td><td>This model gets +6&quot; range when using Hold actions and shooting, and moves +2&quot; when using Charge actions.</td></tr>
+<tr class='add'><td>➕</td><td>Pierce</td><td>Ignores Cover, and when attacking units over half of this weapon&#x27;s range away, this weapon gets AP(+1).</td></tr>
+<tr class='add'><td>➕</td><td>Spell Resistance</td><td>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='add'><td>➕</td><td>Spell Resistance Aura</td><td>This model and its unit get Spell Resistance.</td></tr>
+<tr class='add'><td>➕</td><td>Unique Hero</td><td>Counts as having Hero, and this model may only be taken once per army.</td></tr>
+<tr class='del'><td>➖</td><td>Breath Attack</td><td>Once per activation, before attacking, roll one die. On a 2+ one enemy unit within 6&quot; in line of sight takes 1 hit with Blast(3) and AP(1).</td></tr>
+<tr class='del'><td>➖</td><td>Destructive</td><td>On unmodified results of 6 to hit, those hits get AP(+4).</td></tr>
+<tr class='del'><td>➖</td><td>Reach Hunt</td><td>This model gets +4&quot; range when shooting and moves +2&quot; when using Charge actions.</td></tr>
+<tr class='del'><td>➖</td><td>Resistance</td><td>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='del'><td>➖</td><td>Resistance Aura</td><td>This model and its unit get Resistance.</td></tr>
+<tr class='del'><td>➖</td><td>Royal Legion Boost</td><td>If this model has Royal Legion, it gets +8&quot; range when shooting and moves +4&quot; when using Charge actions from Royal Legion (instead of only +4&quot; and +2&quot;).</td></tr>
+<tr class='del'><td>➖</td><td>Royal Legion Boost Aura</td><td>This model and its unit get Royal Legion Boost.</td></tr>
+<tr class='mod'><td>✏️</td><td>Fortified</td><td><span class='del'>3.5.1:</span> When units where <del class='del'>all</del> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).<br><span class='add'>3.6.0:</span> When units where <ins class='add'>most</ins> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
+<tr class='mod'><td>✏️</td><td>Indirect<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>Gets -1 to hit rolls when shooting after moving. May</del> target enemies that are not in line of sight as if in line of sight, and ignores <del class='del'>cover</del> from <del class='del'>sight obstructions.</del><br><span class='add'>3.6.0:</span> <ins class='add'>When using Hold actions and shooting, may</ins> target enemies that are not in line of sight as if in line of sight, and ignores <ins class='add'>Cover</ins> from <ins class='add'>Sight Blockers.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Piercing Spotter</td><td><span class='del'>3.5.1:</span> Once per activation, pick one enemy unit within 30&quot; and in line of sight of this model and roll one die, on a 4+ place a <del class='del'>marker</del> on it. When attacking, friendly units may remove <del class='del'>markers</del> from their target before rolling to block to get +AP(X) on their weapons, where X is the number of removed <del class='del'>markers.</del><br><span class='add'>3.6.0:</span> Once per activation, pick one enemy unit within 30&quot; and in line of sight of this model and roll one die, on a 4+ place a <ins class='add'>token</ins> on it. When attacking, friendly units may remove <ins class='add'>tokens</ins> from their target before rolling to block to get +AP(X) on their weapons, where X is the number of removed <ins class='add'>tokens.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Royal Legion</td><td><span class='del'>3.5.1:</span> This model gets <del class='del'>+4&quot;</del> range when <del class='del'>shooting</del> and moves +2&quot; when using Charge actions.<br><span class='add'>3.6.0:</span> This model gets <ins class='add'>+6&quot;</ins> range when <ins class='add'>using Hold actions and shooting,</ins> and moves +2&quot; when using Charge actions.</td></tr>
+<tr class='mod'><td>✏️</td><td>Scout<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> May be set aside before deployment. After all other units are deployed, may be deployed anywhere fully within <del class='del'>12”</del> of their deployment <del class='del'>zone.</del> Players alternate in placing Scout units, starting with the player that activates next.<br><span class='add'>3.6.0:</span> May be set aside before deployment. After all other units are deployed, may be deployed anywhere fully within <ins class='add'>9”</ins> of their deployment <ins class='add'>zone, over 9” away from non-Scout enemy units.</ins> Players alternate in placing Scout units, starting with the player that activates next.</td></tr>
+<tr class='mod'><td>✏️</td><td>Sergeant<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>When this</del> model <del class='del'>attacks, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</del><br><span class='add'>3.6.0:</span> <ins class='add'>This</ins> model <ins class='add'>gets AP(+1) when attacking.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Shred<br><span class='muted'>becomes a core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>On</del> unmodified <del class='del'>results</del> of 1 to block hits, this weapon deals 1 extra wound.<br><span class='add'>3.6.0:</span> <ins class='add'>For each</ins> unmodified <ins class='add'>result</ins> of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
+<tr class='mod'><td>✏️</td><td>Vanguard</td><td><span class='del'>3.5.1:</span> After this model is deployed, it may be placed anywhere fully within <del class='del'>9”</del> of its <del class='del'>position.</del><br><span class='add'>3.6.0:</span> After this model is deployed, it may be placed anywhere fully within <ins class='add'>9&quot;</ins> of its <ins class='add'>position, over 9&quot; away from non-Vanguard enemy units.</ins></td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Cursed Arrows</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>two</del> friendly units within <del class='del'>12&quot;,</del> which get Shred when shooting once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get Shred when shooting once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Desert Storm</td><td><span class='del'>3.5.1:</span> (1) Pick one enemy unit within <del class='del'>18&quot;,</del> which counts as being in Difficult Terrain once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which counts as being in Difficult Terrain once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Rapid Desiccation</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick one enemy model within <del class='del'>24&quot;,</del> which takes <del class='del'>2</del> hits with AP(4). This effect is resolved as if the target was a unit of [1].<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick one enemy model within <ins class='add'>24&quot; in line of sight,</ins> which takes <ins class='add'>3</ins> hits with AP(4). This effect is resolved as if the target was a unit of [1].</td></tr>
+<tr class='mod'><td>✏️</td><td>Storm of Skulls</td><td><span class='del'>3.5.1:</span> (1) Pick one enemy unit within <del class='del'>18&quot;,</del> which takes 1 hit with Blast(3).<br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which takes 1 hit with Blast(3).</td></tr>
+<tr class='mod'><td>✏️</td><td>Tomb Queen&#x27;s Guidance</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick up to <del class='del'>three</del> friendly units within 12&quot;, which get Royal Legion <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get <ins class='add'>Enhanced</ins> Royal Legion once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Tomb Queen&#x27;s Vengeance</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>6</del> hits with AP(1) and <del class='del'>Destructive. Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick one enemy unit within <ins class='add'>12&quot; in line of sight,</ins> which takes <ins class='add'>4</ins> hits with AP(1) and <ins class='add'>Pierce.</ins></td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>

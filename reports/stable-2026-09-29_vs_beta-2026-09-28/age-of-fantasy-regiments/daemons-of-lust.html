@@ -1,0 +1,448 @@
+<title>Daemons of Lust 3.5.1 → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Daemons of Lust — changes 3.5.1 → 3.6.0</h1>
+<p class='muted'>age-of-fantasy-regiments. <code>stable 2026-09-29: Rift Daemons of Lust</code> (versionString 3.5.3, edited 2026-04-13, modified 2026-07-14) → <code>beta 2026-09-28: Daemons of Lust</code> (versionString 3.5.1, edited 2026-09-10, modified 2026-09-11)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 19 (18 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 0, Size 0</li>
+<li>Special rules: +11 / -11 / ~11</li>
+<li>Spells: +0 / -0 / ~6</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Avatar of Lust</td><td class='num'>1</td><td class='num'>2+</td><td class='num'>2+</td><td class='num'>605</td><td class='num'>735</td><td class='num'><b class='del'>+130</b></td></tr>
+<tr><td>Ascended Harbinger of Lust</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>280</td><td class='num'>365</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td>Harbinger of Lust</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>110</td><td class='num'>155</td><td class='num'><b class='del'>+45</b></td></tr>
+<tr><td>Champion of Lust</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>35</td><td class='num'>50</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td>Fury Champion of Lust</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>45</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Infernal Siren</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>55</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Lust Furies</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>85</td><td class='num'>60</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td>Lust Warriors</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>60</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Shooter-Furies</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>90</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Lust Shooters</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>105</td><td class='num'>100</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Lust Beast Riders</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>90</td><td class='num'>100</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Snake Swarms</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>70</td><td class='num'>90</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Lust Soul Spawns</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>160</td><td class='num'>170</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Lust Fiend</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>125</td><td class='num'>125</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Razor-Flail Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>125</td><td class='num'>135</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td>Sacred Mirror</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>195</td><td class='num'>180</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Soul Daemon of Lust</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>625</td><td class='num'>585</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td>Moonmire</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>125</td><td class='num'>85</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td>Lithenote</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Avatar of Lust</h3><p class='stats'>605 → 735 pts (+130) · Size 1 · Quality 2+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>605</del> pts</td><td><ins class='add'>735</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Heavy Daemon Hammer (A1, AP(2), Blast(6))</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Exalted Ritual Hammer (A3, Blast(3), Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace 2x Heavy Daemon Hammer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A12, Spell Amplifier) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Fist-Crossbow (9&quot;, A9, Assault, Surge), Heavy Daemon Hammer (A1, AP(2), Blast(6)) · +110 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Arm-Crossbow (18&quot;, A18, Surge) · +130 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Exalted Ritual</del> Hammer</td><td>Replace any <ins class='add'>Heavy Daemon</ins> Hammer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Exalted</del> Ritual Blade <del class='del'>(A9, Rending,</del> Surge) · <del class='del'>+45</del> pts</td><td>Ritual Blade <ins class='add'>(A6,</ins> Surge) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Perfect Sword (A6, Obliterate) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Spear (A1, AP(4), Deadly(6), Ignores Regeneration) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A6, AP(2)) · +40 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Arm-Crossbow (12&quot;, A12, Surge) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Ritual Spear (A3, AP(2), Deadly(3), Surge) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Crossbow (18&quot;, A6, AP(1), Surge) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Perfect Sword (A9, Shatter) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Exalted Ritual Gauntlet (A9, AP(3), Surge) · +110 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy of Lust (Piercing <del class='del'>Assault)</del> · <del class='del'>+70</del> pts</td><td>Envoy of Lust (Piercing <ins class='add'>Charge)</ins> · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lust Favour <del class='del'>(Lustbound Boost)</del> · <del class='del'>+25</del> pts</td><td>Lust Favour <ins class='add'>(Enhanced Lustbound)</ins> · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Storm of Lust (15&quot;, A6, Limited, Assault, Surge) · +40 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Lust (Caster(5)) · <del class='del'>+130</del> pts</td><td>Lore of Lust (Caster(5)) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Lust <del class='del'>(Counter-Attack)</del> · +95 pts</td><td>Gift of Lust <ins class='add'>(Counter in Melee)</ins> · +95 pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Lust God&#x27;s Power (Storm of Lust) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Ascended Harbinger of Lust</h3><p class='stats'>280 → 365 pts (+85) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>280</del> pts</td><td><ins class='add'>365</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Heavy Perfect Sword (A4, Obliterate)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>2x Great Ritual Hammer (A2, Blast(3), Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace 2x Heavy Perfect Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A8, Spell Amplifier) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Fist-Crossbow (9&quot;, A6, Assault, Surge), Heavy Perfect Sword (A4, Obliterate) · +60 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Arm-Crossbow (18&quot;, A12, Surge) · +65 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Heavy Perfect Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Ritual Blade (A4, Surge) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Hammer (A1, AP(2), Blast(6)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Gauntlet (A4, AP(2)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Daemon Spear (A1, AP(4), Deadly(6), Ignores Regeneration) · +30 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush) · <del class='del'>+45</del> pts</td><td>Daemonic Incursion (Ambush) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Symbol of Lust (Hit &amp; Run Fighter) · <del class='del'>+10</del> pts</td><td>Symbol of Lust (Hit &amp; Run Fighter) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Lust (Quick Shot Mark) · <del class='del'>+35</del> pts</td><td>Curse of Lust (Quick Shot Mark) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lust Favour <del class='del'>(Lustbound Boost)</del> · <del class='del'>+10</del> pts</td><td>Lust Favour <ins class='add'>(Enhanced Lustbound)</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Lust <del class='del'>(Counter-Attack)</del> · <del class='del'>+35</del> pts</td><td>Gift of Lust <ins class='add'>(Counter in Melee)</ins> · <ins class='add'>+50</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Lust (Caster(4)) · <del class='del'>+100</del> pts</td><td>Lore of Lust (Caster(4)) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Great Ritual Hammer</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Ritual Spear (A2, AP(1), Deadly(3), Surge) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Ritual Blade (A6, Rending, Surge) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Perfect Sword (A6, Shatter) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Arm-Crossbow (12&quot;, A8, Surge) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Crossbow (18&quot;, A4, AP(1), Surge) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Ritual Gauntlet (A6, AP(3), Surge) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Harbinger of Lust</h3><p class='stats'>110 → 155 pts (+45) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>2x <del class='del'>Ritual</del> Hammer (A1, <del class='del'>Blast(3), Surge)</del></td><td>2x <ins class='add'>Daemon</ins> Hammer (A1, <ins class='add'>AP(1), Blast(3))</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace 2x Daemon Hammer</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A4, Spell Amplifier) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Fist-Crossbow (9&quot;, A3, Assault, Surge), Daemon Hammer (A1, AP(1), Blast(3)) · +25 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Arm-Crossbow (18&quot;, A6, Surge) · +25 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace any <del class='del'>Ritual</del> Hammer</td><td>Replace any <ins class='add'>Daemon</ins> Hammer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Perfect Sword (A3, <del class='del'>Shatter)</del> · <del class='del'>+15</del> pts</td><td>Perfect Sword (A3, <ins class='add'>Obliterate)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Ritual Blade (A3, <del class='del'>Rending,</del> Surge) · <del class='del'>+15</del> pts</td><td>Ritual Blade (A3, Surge) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A3, AP(2)) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Spear (A1, AP(4), Deadly(3)) · +20 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ritual Spear (A1, AP(1), Deadly(3), Surge) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Arm-Crossbow (12&quot;, A4, Surge) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Crossbow (18&quot;, A2, AP(1), Surge) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Ritual Gauntlet (A3, AP(3), Surge) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wings (Flying) · <del class='del'>+20</del> pts</td><td>Wings (Flying) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush Aura) · <del class='del'>+35</del> pts</td><td>Daemonic Incursion (Ambush Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Symbol of Lust (Hit &amp; Run Fighter Aura) · <del class='del'>+10</del> pts</td><td>Symbol of Lust (Hit &amp; Run Fighter Aura) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lust Favour <del class='del'>(Lustbound Boost</del> Aura) · <del class='del'>+30</del> pts</td><td>Lust Favour <ins class='add'>(Enhanced Lustbound</ins> Aura) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy of Lust (Piercing <del class='del'>Assault</del> Aura) · <del class='del'>+35</del> pts</td><td>Envoy of Lust (Piercing <ins class='add'>Charge</ins> Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Lust <del class='del'>(Counter-Attack</del> Aura) · <del class='del'>+35</del> pts</td><td>Gift of Lust <ins class='add'>(Counter in Melee</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Lust (Caster(3)) · <del class='del'>+75</del> pts</td><td>Lore of Lust (Caster(3)) · <ins class='add'>+50</ins> pts</td></tr>
+</table></div>
+<h3>Champion of Lust</h3><p class='stats'>35 → 50 pts (+15) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Blade (A1, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Ritual Hammer (A1, Blast(3), Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Hammer (A1, AP(2), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Hand Weapon (A3, AP(1), Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Perfect Sword (A3, AP(1), Obliterate) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fist-Crossbow (9&quot;, A1, Assault, Surge), Daemon Hammer (A1, AP(1), Blast(3)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Ritual Blade (A3, AP(1), Surge) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Loremaster Staff (A2, Spell Amplifier) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Spear (A1, AP(4), Deadly(3), Ignores Regeneration) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Arm-Crossbow (18&quot;, A3, Surge), Strike (A1) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Gauntlet (A3, AP(4)) · +20 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Ritual</del> Hammer <del class='del'>and Blade</del></td><td>Replace <ins class='add'>Daemon</ins> Hammer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>2x</del> Perfect Sword <del class='del'>(A2, Shatter)</del> · <del class='del'>+15</del> pts</td><td>Perfect Sword <ins class='add'>(A3, Obliterate)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3, Parry(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ritual Blade (A3, Surge) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A3, AP(2)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Spear (A1, AP(4), Deadly(3)) · +15 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade (A1, Surge), Ritual Spear (A1, AP(1), Deadly(3), Surge) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Arm-Crossbow (12&quot;, A4, Surge), Perfect Sword (A2, Shatter) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Crossbow (18&quot;, A2, AP(1), Surge), Perfect Sword (A2, Shatter) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lust Beast (Toxin <del class='del'>Claws</del> (A1, Bane), Fast) · +10 pts</td><td>Lust Beast (Toxin <ins class='add'>Jaws</ins> (A1, Bane), Fast) · +10 pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Daemonic Incursion (Ambush Aura) · <del class='del'>+35</del> pts</td><td>Daemonic Incursion (Ambush Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Razor-Flail Chariot <del class='del'>(Armor(3),</del> Fast, Fear(1), <del class='del'>Impact(6),</del> Tough(6)) · <del class='del'>+135</del> pts</td><td>Razor-Flail Chariot <ins class='add'>(Lust Beasts (A2, Bane), Armor(3),</ins> Fast, Fear(1), <ins class='add'>Impact(4),</ins> Tough(6)) · <ins class='add'>+140</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bonded Harbinger <del class='del'>(Great</del> Claws (A6, <del class='del'>AP(1),</del> Surge), Armor(2), Fear(1), Tough(6)) · <del class='del'>+145</del> pts</td><td>Bonded Harbinger <ins class='add'>(Ritual</ins> Claws (A6, Surge), Armor(2), Fear(1), Tough(6)) · <ins class='add'>+180</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Symbol of Lust (Hit &amp; Run Fighter Aura) · <del class='del'>+10</del> pts</td><td>Symbol of Lust (Hit &amp; Run Fighter Aura) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lust Favour <del class='del'>(Lustbound Boost</del> Aura) · <del class='del'>+30</del> pts</td><td>Lust Favour <ins class='add'>(Enhanced Lustbound</ins> Aura) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(2)) · <del class='del'>+20</del> pts</td><td>Army Standard Bearer (Fear(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy of Lust (Piercing <del class='del'>Assault</del> Aura) · <del class='del'>+35</del> pts</td><td>Envoy of Lust (Piercing <ins class='add'>Charge</ins> Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lore of Lust (Caster(2)) · <del class='del'>+50</del> pts</td><td>Lore of Lust (Caster(2)) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Perfect Sword</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ritual Blade (A2, Rending, Surge) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ritual Gauntlet (A2, AP(3), Surge) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Fury Champion of Lust</h3><p class='stats'>35 → 45 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Blade (A1, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Ritual Hammer (A1, Blast(3), Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapons</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Hammer (A1, AP(2), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Perfect Sword (A3, AP(1), Obliterate) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fist-Crossbow (9&quot;, A1, Assault, Surge), Daemon Hammer (A1, AP(1), Blast(3)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Gauntlet (A3, AP(4)) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Daemon Spear (A1, AP(4), Deadly(3), Ignores Regeneration) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Ritual Blade (A3, AP(1), Surge) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Arm-Crossbow (18&quot;, A3, Surge), Strike (A1) · +10 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Ritual</del> Hammer <del class='del'>and Blade</del></td><td>Replace <ins class='add'>Daemon</ins> Hammer</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>2x</del> Perfect Sword <del class='del'>(A2, Shatter)</del> · +5 pts</td><td>Perfect Sword <ins class='add'>(A3, Obliterate)</ins> · +5 pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Gauntlet (A3, AP(2)) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ritual Blade (A3, Surge) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Daemon Spear (A1, AP(4), Deadly(3)) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade (A1, Surge), Ritual Spear (A1, AP(1), Deadly(3), Surge) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Arm-Crossbow (12&quot;, A4, Surge), Perfect Sword (A2, Shatter) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Crossbow (18&quot;, A2, AP(1), Surge), Perfect Sword (A2, Shatter) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Symbol of Lust (Hit &amp; Run Fighter Aura) · <del class='del'>+10</del> pts</td><td>Symbol of Lust (Hit &amp; Run Fighter Aura) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy of Lust (Piercing <del class='del'>Assault</del> Aura) · <del class='del'>+35</del> pts</td><td>Envoy of Lust (Piercing <ins class='add'>Charge</ins> Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of Lust <del class='del'>(Counter-Attack</del> Aura) · <del class='del'>+35</del> pts</td><td>Gift of Lust <ins class='add'>(Counter in Melee</ins> Aura) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Perfect Sword</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ritual Blade (A2, Rending, Surge) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ritual Gauntlet (A2, AP(3), Surge) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Infernal Siren</h3><p class='stats'>45 → 55 pts (+10) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Infernal Harp (18&quot;, <del class='del'>A1, Blast(3), Indirect,</del> Unstoppable)</td><td>Infernal Harp (18&quot;, <ins class='add'>A3,</ins> Unstoppable)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A1)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Blade (A1, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Song of Banishment (Storm of <del class='del'>Lust)</del> · <del class='del'>+30</del> pts</td><td>Song of Banishment (Storm of <ins class='add'>Lust (15&quot;, A3, Limited, Assault, Surge))</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Song of War (Spawn(Lust Warriors [5])) · <del class='del'>+55</del> pts</td><td>Song of War (Spawn(Lust Warriors [5])) · <ins class='add'>+60</ins> pts</td></tr>
+</table></div>
+<h3>Lust Furies</h3><p class='stats'>85 → 60 pts (-25) · Size 5 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Perfect Claws <del class='del'>(A2, Shatter)</del></td><td>5x Perfect Claws <ins class='add'>(A1, Obliterate)</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Perfect Claws</td><td>Replace all Perfect Claws</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ritual Claws (A1, Surge) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Armblades (A2) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rending Claws (A2, Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Armblades (A2, AP(1), Surge) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Lust Warriors</h3><p class='stats'>50 → 60 pts (+10) · Size 5 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Perfect Sword (A1, Obliterate)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Hand Weapon (A1, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Hand Weapons</del></td><td>Replace all <ins class='add'>Perfect Swords</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A1, Parry(1)) · +5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A1, <del class='del'>Rending, Surge)</del> · <del class='del'>+15</del> pts</td><td>Halberd (A1, <ins class='add'>Rending)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Perfect</del> Sword (A1, <del class='del'>Shatter)</del> · <del class='del'>+10</del> pts</td><td><ins class='add'>Ritual</ins> Sword (A1, <ins class='add'>Surge)</ins> · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A1, Counter, <del class='del'>Surge)</del> · <del class='del'>+20</del> pts</td><td>Spear (A1, Counter, <ins class='add'>Brace(1))</ins> · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A1, <del class='del'>AP(2), Surge)</del> · <del class='del'>+20</del> pts</td><td>Great Weapon (A1, <ins class='add'>AP(2))</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Hand Weapons <del class='del'>(A2, Surge)</del> · <del class='del'>+20</del> pts</td><td>Dual Hand Weapons <ins class='add'>(A2)</ins> · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner of Lust (Strider Aura) · <del class='del'>+15</del> pts</td><td>Banner of Lust (Strider Aura) · <ins class='add'>+10</ins> pts</td></tr>
+</table></div>
+<h3>Shooter-Furies</h3><p class='stats'>95 → 90 pts (-5) · Size 5 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Arm-Crossbow <del class='del'>(12&quot;, A2,</del> Surge)</td><td>5x Arm-Crossbow <ins class='add'>(18&quot;, A1,</ins> Surge)</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Claws</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Arm-Crossbows</td><td>Replace all Arm-Crossbows</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fist-Crossbow (9&quot;, A2, Surge) · +10 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Crossbow (18&quot;, A1, AP(1), Surge) · free</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Lust Shooters</h3><p class='stats'>105 → 100 pts (-5) · Size 5 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Arm-Crossbow <del class='del'>(12&quot;, A2,</del> Surge)</td><td>5x Arm-Crossbow <ins class='add'>(18&quot;, A1,</ins> Surge)</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x <del class='del'>Hand Weapon</del> (A1)</td><td>5x <ins class='add'>Strike</ins> (A1)</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace all Arm-Crossbows</td><td>Replace all Arm-Crossbows</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fist-Crossbow (9&quot;, A2, Surge) · +15 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Crossbow (18&quot;, A1, AP(1), Surge) · free</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Lust Beast Riders</h3><p class='stats'>90 → 100 pts (+10) · Size 5 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>5x Perfect Sword (A1, Obliterate)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>5x Toxin <del class='del'>Claws</del> (A1, Bane)</td><td>5x Toxin <ins class='add'>Jaws</ins> (A1, Bane)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>5x Hand Weapon (A1, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade up to three models with one</td><td>Upgrade up to three models with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+10</del> pts</td><td>Musician · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Perfect Swords</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ritual Sword (A1, Surge) · +5 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace all Hand Weapons</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Perfect Sword (A1, Shatter) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Snake Swarms</h3><p class='stats'>70 → 90 pts (+20) · Size 3 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>3x <del class='del'>Swarm Attacks</del> (A3, Bane)</td><td>3x <ins class='add'>Toxin Fangs</ins> (A3, Bane)</td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade all models with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Snake Master (Unpredictable Fighter) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Vanguard Snake Master (Scout) · +20 pts</ins></td></tr>
+</table></div>
+<h3>Lust Soul Spawns</h3><p class='stats'>160 → 170 pts (+10) · Size 3 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>170</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>3x Perfect Claws (A3, Obliterate)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>3x Mutated Claws (A4, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace all <del class='del'>Mutated</del> Claws</td><td>Replace all <ins class='add'>Perfect</ins> Claws</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy</del> Ritual Blade (A3, <del class='del'>Rending,</del> Surge) · <del class='del'>+15</del> pts</td><td>Ritual Blade (A3, Surge) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Claws (A3, AP(2)) · +25 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mutated Perfect Claws (A4, Shatter) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Lust Fiend</h3><p class='stats'>125 pts · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(4)</del><br><span class='muted'>Models in the two front rows roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Scout</del><br><span class='muted'>May be set aside before deployment. After all other units are deployed, may be deployed anywhere fully within 12” of their deployment zone. Players alternate in placing Scout units, starting with the player that activates next.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Stomp (A2, AP(1))</ins></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Advance (Fast)</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Toxin Claws</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ritual Claws (A4, Surge) · +5 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spit Venom (9&quot;, A1, Blast(3), Assault, Bane) · +30 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Rapid Advance</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Battle Hungry (Scout) · +10 pts</ins></td></tr>
+</table></div>
+<h3>Razor-Flail Chariot</h3><p class='stats'>125 → 135 pts (+10) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>125</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Impact(4)</del><br><span class='muted'>Models in the two front rows roll X dice when attacking after charging, unless fatigued. For each 2+ the target takes one hit.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Lust Beasts (A1, Bane)</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Razor-Flail Crew <del class='del'>(A2, Surge,</del> Thrust)</td><td>Razor-Flail Crew <ins class='add'>(A3,</ins> Thrust)</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Toxin Claws (A2, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add'><td>➕</td><td>Item</td><td><span class='muted'>—</span></td><td><ins class='add'>Chariot Shock (Impact(4))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Razor-Flail Crew</td><td>Replace Razor-Flail Crew <ins class='add'>and Chariot Shock</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Crossbow <del class='del'>(24&quot;,</del> A1, <del class='del'>AP(2),</del> Deadly(6), Unstoppable) · <del class='del'>+45</del> pts</td><td>Great Crossbow <ins class='add'>(18&quot;,</ins> A1, <ins class='add'>AP(3),</ins> Deadly(6), Unstoppable) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Crossbow</del> Crew (18&quot;, A6, <del class='del'>AP(1),</del> Surge) · <del class='del'>+50</del> pts</td><td><ins class='add'>Arm-Crossbow</ins> Crew (18&quot;, A6, Surge) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Lust (Quick Shot Mark) · <del class='del'>+35</del> pts</td><td>Curse of Lust (Quick Shot Mark) · <ins class='add'>+10</ins> pts</td></tr>
+</table></div>
+<h3>Sacred Mirror</h3><p class='stats'>195 → 180 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>195</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Spell Resistance</ins><br><span class='muted'>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Resistance</del><br><span class='muted'>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Horrific Reflection <del class='del'>(12&quot;, A2, AP(2), Blast(3),</del> Surge)</td><td>Horrific Reflection <ins class='add'>(9&quot;, A8,</ins> Surge)</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Crew (A2)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Crew Attack (A3, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Horrific Reflection</td><td>Replace Horrific Reflection</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Focused Reflection (18&quot;, A2, <del class='del'>AP(2),</del> Deadly(3), Unstoppable) · <del class='del'>+20</del> pts</td><td>Focused Reflection (18&quot;, A2, Deadly(3), <ins class='add'>Surge,</ins> Unstoppable) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Lust (Quick Shot Mark) · <del class='del'>+35</del> pts</td><td>Curse of Lust (Quick Shot Mark) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Seductive Reflection (Mind Control) · <del class='del'>+35</del> pts</td><td>Seductive Reflection (Mind Control) · <ins class='add'>+30</ins> pts</td></tr>
+</table></div>
+<h3>Soul Daemon of Lust</h3><p class='stats'>625 → 585 pts (-40) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>625</del> pts</td><td><ins class='add'>585</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Perfect Sword (A6, Obliterate)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Lust Cannon (24&quot;, A9, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Lust Sword (A18, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace any Perfect Sword</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Sword (A6, AP(2)) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>2x Ritual Blade (A6, Surge) · +50 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Lust</del> Sword</td><td>Replace <ins class='add'>one Perfect</ins> Sword</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ritual Cannon (15&quot;, A9, Assault, Surge) · +105 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Soul Cannon (15&quot;, A3, AP(2), Blast(3), Assault) · +125 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Soul Cannon (15&quot;, A3, AP(2), Deadly(3), Assault) · +140 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Lust Sword (A12, AP(2), Surge) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Giant Perfect Sword (A18, Shatter) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Lust (Quick Shot Mark) · <del class='del'>+35</del> pts</td><td>Curse of Lust (Quick Shot Mark) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Lust Cannon</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Lust Cannon (24&quot;, A6, AP(2), Surge) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Perfect Cannon (18&quot;, A18, Shatter) · +155 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Moonmire</h3><p class='stats'>125 → 85 pts (-40) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>125</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Caster(1)</ins><br><span class='muted'>Gets X spell tokens at the start of each round, but can’t have more than 6 at once. Once per activation, before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). Pick a target and roll one die, and on 4+ resolve the spell’s effect. Models within 18” of the Caster may spend any number of spell tokens at the same time before rolling to give the Caster +1/-1 to the roll per token.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Heroes with up to Tough(6) may deploy as part of one multi-model unit without another Hero. The hero may take morale tests on behalf of the unit, but must use the unit’s Defense until all other models have been killed.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Astral Serpent <del class='del'>(12&quot;, A2, AP(2), Shatter)</del></td><td>Astral Serpent <ins class='add'>(9&quot;, A3, Assault, Obliterate)</ins></td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Ritual Sword (A1, Surge)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Claw (A2)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Dreamhelm (Caster(3))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dreamhelm (Caster(2)) · +35 pts</ins></td></tr>
+</table></div>
+<h3>Lithenote</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Unique Hero</ins><br><span class='muted'>Counts as having Hero, and this model may only be taken once per army.</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Hero</del><br><span class='muted'>Heroes with up to Tough(6) may deploy as part of one multi-model unit without another Hero. The hero may take morale tests on behalf of the unit, but must use the unit’s Defense until all other models have been killed.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Unique</del><br><span class='muted'>This unit may only be taken once per army.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td>Item</td><td><del class='del'>Mind-Shackle Song (Morale Debuff)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mind-Shackle Song (Morale Debuff) · +5 pts</ins></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='add'><td>➕</td><td>Agile</td><td>Moves +1&quot; when using Advance, and +2&quot; when using Rush/Charge.</td></tr>
+<tr class='add'><td>➕</td><td>Counter in Melee Aura</td><td>This model and its unit get Counter in melee.</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Agile</td><td>If this model has Agile, it moves +2&quot; on Advance and +4&quot; on Rush/Charge from Agile (instead of only +1&quot; and +2&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Lustbound</td><td>If this model has Lustbound, it moves +2&quot; on Advance and +4&quot; on Rush/Charge from Lustbound (instead of only +1&quot; and +2&quot;).</td></tr>
+<tr class='add'><td>➕</td><td>Enhanced Lustbound Aura</td><td>This model and its unit get Enhanced Lustbound.</td></tr>
+<tr class='add'><td>➕</td><td>Obliterate</td><td>Ignores Regeneration, and when attacking units where most models have Tough(3) or higher, the target must re-roll successful unmodified Defense results of 5-6.</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Charge</td><td>This model gets AP(+1) when charging.</td></tr>
+<tr class='add'><td>➕</td><td>Piercing Charge Aura</td><td>This model and its unit get Piercing Charge.</td></tr>
+<tr class='add'><td>➕</td><td>Spell Resistance</td><td>When a unit where most models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='add'><td>➕</td><td>Unique Hero</td><td>Counts as having Hero, and this model may only be taken once per army.</td></tr>
+<tr class='add'><td>➕</td><td>Unpredictable Fighter</td><td>When in melee, roll one die and apply one effect to all models with this rule: on a 1-3 they get AP(+1), and on a 4-6 they get +1 to hit rolls instead.</td></tr>
+<tr class='del'><td>➖</td><td>Counter-Attack</td><td>Strikes first when charged.</td></tr>
+<tr class='del'><td>➖</td><td>Counter-Attack Aura</td><td>This model and its unit get Counter-Attack.</td></tr>
+<tr class='del'><td>➖</td><td>Lustbound Boost</td><td>If this model has Lustbound, it gets +8&quot; range when shooting and moves +4&quot; when using Charge actions from Lustbound (instead of only +4&quot; and +2&quot;).</td></tr>
+<tr class='del'><td>➖</td><td>Lustbound Boost Aura</td><td>This model and its unit get Lustbound Boost.</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Assault</td><td>This model gets AP(+1) when charging.</td></tr>
+<tr class='del'><td>➖</td><td>Piercing Assault Aura</td><td>This model and its unit get Piercing Assault.</td></tr>
+<tr class='del'><td>➖</td><td>Reach Hunt</td><td>This model gets +4&quot; range when shooting and moves +2&quot; when using Charge actions.</td></tr>
+<tr class='del'><td>➖</td><td>Resistance</td><td>When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a 2+ instead.</td></tr>
+<tr class='del'><td>➖</td><td>Shatter</td><td>Against units where most models have Tough(3) or higher, this weapon gets AP(+2).</td></tr>
+<tr class='del'><td>➖</td><td>Storm of Lust</td><td>Once per game, when this model is activated, before attacking, roll 3 dice. For each 2+ one enemy unit within 12&quot; takes 3 hits with Surge (roll one die per hit to see if it triggers).</td></tr>
+<tr class='del'><td>➖</td><td>Surge</td><td>On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).</td></tr>
+<tr class='mod'><td>✏️</td><td>Counter<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>Strikes</del> first with this weapon when charged, <del class='del'>and the charging</del> unit <del class='del'>gets -1 total Impact rolls per model with Counter in the two front rows if charging in the front.</del><br><span class='add'>3.6.0:</span> <ins class='add'>May strike</ins> first with this weapon when charged, <ins class='add'>unless this</ins> unit <ins class='add'>is Fatigued.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Hit &amp; Run</td><td><span class='del'>3.5.1:</span> Once per round, <del class='del'>units where all models have</del> this <del class='del'>rule</del> may move by up to 3&quot; after shooting or being in melee.<br><span class='add'>3.6.0:</span> Once per round, this <ins class='add'>model</ins> may move by up to 3&quot; after shooting or being in melee.</td></tr>
+<tr class='mod'><td>✏️</td><td>Hit &amp; Run Fighter</td><td><span class='del'>3.5.1:</span> Once per round, <del class='del'>units where all models have</del> this <del class='del'>rule</del> may move by up to 3&quot; after being in melee.<br><span class='add'>3.6.0:</span> Once per round, this <ins class='add'>model</ins> may move by up to 3&quot; after being in melee.</td></tr>
+<tr class='mod'><td>✏️</td><td>Lustbound</td><td><span class='del'>3.5.1:</span> <del class='del'>This model gets +4&quot; range</del> when <del class='del'>shooting</del> and <del class='del'>moves</del> +2&quot; when using <del class='del'>Charge actions.</del><br><span class='add'>3.6.0:</span> <ins class='add'>Moves +1&quot;</ins> when <ins class='add'>using Advance,</ins> and +2&quot; when using <ins class='add'>Rush/Charge.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Melee Evasion</td><td><span class='del'>3.5.1:</span> Enemies get -1 to hit rolls in melee when attacking units where <del class='del'>all</del> models have this rule.<br><span class='add'>3.6.0:</span> Enemies get -1 to hit rolls in melee when attacking units where <ins class='add'>most</ins> models have this rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Mind Control</td><td><span class='del'>3.5.1:</span> Once per activation, before attacking, pick one enemy unit within 18&quot; in line of sight, which must take a <del class='del'>morale test.</del> If failed you may move it by up to 6&quot; in a straight line in any direction.<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick one enemy unit within 18&quot; in line of sight, which must take a <ins class='add'>Morale Test.</ins> If failed you may move it by up to 6&quot; in a straight line in any direction. <ins class='add'>Units may only be moved once per round in this way.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Quick Shot</td><td><span class='del'>3.5.1:</span> If <del class='del'>all</del> models in this unit have this rule, they may use Rush actions to move sideways or backward (by up to half their move), and may shoot after using Rush actions.<br><span class='add'>3.6.0:</span> If <ins class='add'>most</ins> models in this unit have this rule, they may use Rush actions to move sideways or backward (by up to half their move), and may shoot after using Rush actions.</td></tr>
+<tr class='mod'><td>✏️</td><td>Sergeant<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>When this</del> model <del class='del'>attacks, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</del><br><span class='add'>3.6.0:</span> <ins class='add'>This</ins> model <ins class='add'>gets AP(+1) when attacking.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Shred<br><span class='muted'>becomes a core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>On</del> unmodified <del class='del'>results</del> of 1 to block hits, this weapon deals 1 extra wound.<br><span class='add'>3.6.0:</span> <ins class='add'>For each</ins> unmodified <ins class='add'>result</ins> of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
+<tr class='mod'><td>✏️</td><td>Strider<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> May ignore the effects of <del class='del'>difficult terrain when moving.</del><br><span class='add'>3.6.0:</span> May ignore the effects of <ins class='add'>Difficult terrain.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Unstoppable<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> Ignores Regeneration, and ignores all negative modifiers to this <del class='del'>weapon.</del><br><span class='add'>3.6.0:</span> Ignores Regeneration, and ignores all negative modifiers to this <ins class='add'>weapon which are not from this model&#x27;s special rules.</ins></td></tr>
+</table></div>
+<h2>Spells</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='mod'><td>✏️</td><td>Beautiful Pain</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>2</del> hits with <del class='del'>Shatter.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick one enemy unit within <ins class='add'>12&quot; in line of sight in any direction,</ins> which takes <ins class='add'>4</ins> hits with <ins class='add'>Obliterate.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Blissful Dance</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>two</del> friendly units within <del class='del'>12&quot;,</del> which get Melee Evasion once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get Melee Evasion once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Combat Ecstasy</td><td><span class='del'>3.5.1:</span> (1) Pick one enemy unit within <del class='del'>18&quot;,</del> which friendly units gets Quick Shot against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within <ins class='add'>18&quot; in line of sight in any direction,</ins> which friendly units gets Quick Shot against once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Lust Boon</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick up to <del class='del'>three</del> friendly units within 12&quot;, which get Lustbound <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get <ins class='add'>Enhanced</ins> Lustbound once (next time the effect would apply).</td></tr>
+<tr class='mod'><td>✏️</td><td>Overpowering Lash</td><td><span class='del'>3.5.1:</span> (3) Pick one enemy unit within <del class='del'>12&quot;,</del> which takes 6 hits with <del class='del'>AP(1) and</del> Shred.<br><span class='add'>3.6.0:</span> (3) Pick one enemy unit within <ins class='add'>18&quot; in line of sight in any direction,</ins> which takes 6 hits with Shred.</td></tr>
+<tr class='mod'><td>✏️</td><td>Total Seizure</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick one enemy model within <del class='del'>18&quot;,</del> which takes <del class='del'>4</del> hits with AP(1). This effect is resolved as if the target was a unit of [1].<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick one enemy model within <ins class='add'>18&quot; in line of sight in any direction,</ins> which takes <ins class='add'>2</ins> hits with AP(1). This effect is resolved as if the target was a unit of [1].</td></tr>
+</table></div>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>
