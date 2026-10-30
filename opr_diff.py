@@ -4,6 +4,7 @@
 Usage: python opr_diff.py OLD.json NEW.json [-o OUTPUT_BASENAME]
 """
 import argparse
+import datetime
 import difflib
 import html
 import json
@@ -307,6 +308,10 @@ def compute_diff(old, new):
 
 APP_NAME = "Forge Diff"
 DISCLAIMER = f"{APP_NAME} — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules."
+
+
+def now_utc():
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 MARK = {"add": "➕", "del": "➖", "mod": "✏️", "": ""}
 PROFILE_STATS = ("size", "quality", "defense")
 
@@ -422,7 +427,7 @@ def render_md(d, meta):
             out += [f"- ✏️ **{k}**{tag}", f"  - {meta['old']}: {md_segments(a)}", f"  - {meta['new']}: {md_segments(b)}"]
         out += [f"- ✏️ **{k}** *({v})*, same text" for k, v in moved.items()]
         out.append("")
-    out += ["---", "", f"*{DISCLAIMER}*", ""]
+    out += ["---", "", f"*{DISCLAIMER} Generated {meta.get('generated') or now_utc()}.*", ""]
     return "\n".join(out)
 
 
@@ -439,11 +444,13 @@ def summary_lines(d, fmt):
     )]
 
 
+DARK_TOKENS = """--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff;color-scheme:dark"""
 HTML_STYLE = """
 :root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
---del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
-@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
---add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){""" + DARK_TOKENS + """}}
+:root[data-theme=dark]{""" + DARK_TOKENS + """}
 body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
 main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
 h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
@@ -459,11 +466,22 @@ tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
 footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 """
+
+# Runs before the first paint, so a saved theme doesn't flash the system one.
+THEME_INIT = """try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}"""
+THEME_TOGGLE = """(function(){var r=document.documentElement,b=document.querySelector('.theme');
+function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
+function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
+b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};
+matchMedia('(prefers-color-scheme:dark)').addEventListener('change',label);
+label();b.hidden=false})()"""
 
 
 def render_html(d, meta, back_link=None):
-    return html_page(f"{meta['name']} {meta['old']} → {meta['new']}", html_body(d, meta), back_link)
+    return html_page(f"{meta['name']} {meta['old']} → {meta['new']}", html_body(d, meta), back_link,
+                     generated=meta.get("generated"))
 
 
 def html_body(d, meta):
@@ -511,13 +529,14 @@ def html_body(d, meta):
     return out
 
 
-def html_page(title, body, back_link=None, back_text="← All armies"):
+def html_page(title, body, back_link=None, back_text="← All armies", generated=None):
     e = html.escape
     back = f"<p><a href='{e(back_link)}'>{e(back_text)}</a></p>" if back_link else ""
     tab = title if title == APP_NAME else f"{title} · {APP_NAME}"
     return "\n".join([f"<title>{e(tab)}</title>",
-                      f"<meta charset='utf-8'><style>{HTML_STYLE}</style><main>{back}", *body,
-                      f"<footer>{e(DISCLAIMER)}</footer></main>"])
+                      f"<meta charset='utf-8'><style>{HTML_STYLE}</style><script>{THEME_INIT}</script>",
+                      f"<main><button class='theme' type='button' hidden></button>{back}", *body,
+                      f"<footer>{e(DISCLAIMER)}<br>Generated {e(generated or now_utc())}.</footer></main><script>{THEME_TOGGLE}</script>"])
 
 
 def html_rules_section(title, entry, labels=("Before", "After")):

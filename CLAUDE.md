@@ -2,6 +2,7 @@
 
 The project is published as **Forge Diff**. The name and the disclaimer live in `APP_NAME` / `DISCLAIMER` in `opr_diff.py`:
 - `html_page` appends " · Forge Diff" to the tab title and adds the disclaimer as a footer on every page; the Markdown output has the footer too.
+- The footer also shows when the report was generated (UTC). `summary.json` keeps it and only moves it when the snapshots' `fetched_at` or the labels change, so the daily regeneration doesn't rewrite unchanged reports.
 - The top index is titled "Forge Diff".
 - Don't use "One Page Rules" or "Army Forge" as the project name. The "unofficial… Not affiliated with OnePageRules" disclaimer must stay on every page.
 
@@ -44,7 +45,7 @@ python generate_html.py --old stable@previous --new stable     # stable vs its p
 python generate_html.py --old stable@2026-09-28 --new stable@2026-12-01 --system grimdark-future
 ```
 - **SPEC:** `stable` or `beta` is the latest snapshot of that source; `SOURCE@YYYY-MM-DD` a specific one; `SOURCE@previous` the second latest.
-- **Default:** latest stable vs latest beta if there are beta snapshots; otherwise `stable@previous` vs `stable`.
+- **Default:** latest stable vs latest beta if the beta isn't older than the latest stable; otherwise `stable@previous` vs `stable`.
 - **Labels:** `--old-label` / `--new-label` win; otherwise the snapshot's `label`; otherwise `"<source> <date>"`. If both labels are equal, the date is appended to each.
 - **Systems:** without `--system`, every system present in both snapshots.
 - **Output:**
@@ -159,7 +160,7 @@ python opr_diff.py old.json new.json [-o output_name] [--core-old data/snapshots
 - **HTML:**
   - Red for what is removed and green for what is new, **no strikethrough**.
   - Unchanged text keeps the normal color.
-  - Supports light and dark mode.
+  - Supports light and dark mode: follows the system until the reader picks one with the button at the top right, which is remembered in `localStorage`.
   - Links use the `--link` / `--link-visited` tokens: dark blue in light mode, light blue in dark mode. The browser's default blue was unreadable in dark mode.
   - In changed special rules and spells, the before and after lines are labelled with the version (`3.5.1:` / `3.6.0:`).
 - **Markdown:** uses `~~strikethrough~~` for what is removed and `**bold**` for what is new, since it has no colors.

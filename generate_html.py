@@ -2,8 +2,8 @@
 """Generate HTML change reports comparing two snapshots downloaded by fetch_books.py.
 
 A snapshot is given as SOURCE[@DATE]: "stable" (latest), "stable@2026-09-28", "stable@previous"
-(second latest), "beta"… By default: latest stable vs latest beta if there is a beta snapshot,
-otherwise stable@previous vs stable.
+(second latest), "beta"… By default: latest stable vs latest beta if the beta isn't older than the
+latest stable, otherwise stable@previous vs stable.
 
 Writes reports/<old>_vs_<new>/<system>/{index,<army>,core_rules}.html and reports/index.html,
 which lists every comparison and game system generated so far.
@@ -18,7 +18,8 @@ import sys
 from pathlib import Path
 
 from fetch_books import SNAPSHOTS, pair_books, snapshot_dates
-from opr_diff import APP_NAME, PROFILE_STATS, build, dict_diff, html_page, html_rules_section, load_book, render_html
+from opr_diff import (APP_NAME, PROFILE_STATS, build, dict_diff, html_page, html_rules_section, load_book, now_utc,
+                      render_html)
 
 CORE_PAGE = "core_rules.html"
 SUMMARY_FILE = "summary.json"  # per-system numbers, read back to build reports/index.html
@@ -50,11 +51,13 @@ def resolve(data, spec):
     path = Path(data) / SNAPSHOTS / source / date
     meta = json.loads((path / "meta.json").read_text(encoding="utf-8"))
     return {"source": source, "date": date, "path": path, "label": meta.get("label"),
-            "systems": meta.get("systems", []), "id": f"{source}-{date}"}
+            "systems": meta.get("systems", []), "id": f"{source}-{date}", "fetched_at": meta.get("fetched_at")}
 
 
 def default_specs(data):
-    if snapshot_dates(data, "beta"):
+    # A beta older than the latest stable is stale (e.g. it was released): it isn't "ahead" of stable anymore.
+    beta, stable = snapshot_dates(data, "beta"), snapshot_dates(data, "stable")
+    if beta and (not stable or beta[-1] >= stable[-1]):
         return "stable", "beta"
     return "stable@previous", "stable"
 
@@ -101,7 +104,7 @@ def load_books(system_dir):
 
 # --------------------------------------------------------------------------- rendering
 
-def render_index(title, rows, labels, core_changes, snaps):
+def render_index(title, rows, labels, core_changes, snaps, generated):
     e = html.escape
     old, new = labels
     body = [f"<h1>{e(title)} — changes {e(old)} → {e(new)}</h1>",
@@ -130,17 +133,19 @@ def render_index(title, rows, labels, core_changes, snaps):
         body.append(f"<tr><td></td><td><a href='{e(slug)}.html'>{e(name)}</a></td>{cells}"
                     f"<td class='num'>{e(c['rules'])}</td><td class='num'>{c['spells'] or '–'}</td></tr>")
     body.append("</table></div>")
-    return html_page(f"{title} {old} → {new}", body, back_link="../../index.html", back_text="← All reports")
+    return html_page(f"{title} {old} → {new}", body, back_link="../../index.html", back_text="← All reports",
+                     generated=generated)
 
 
-def render_core(title, old_rules, new_rules, labels):
+def render_core(title, old_rules, new_rules, labels, generated):
     e = html.escape
     to_dict = lambda rules: {r["name"]: r.get("description", "") for r in rules or []}
     entry = dict_diff(to_dict(old_rules), to_dict(new_rules))
     body = [f"<h1>{e(title)} core rules — changes {e(labels[0])} → {e(labels[1])}</h1>",
             f"<p class='muted'>Common rules of {e(title)} (/api/rules/common).</p>",
             *html_rules_section("Core rules", entry, labels)]
-    return html_page(f"{title} core rules {labels[0]} → {labels[1]}", body, back_link="index.html"), sum(map(len, entry))
+    return html_page(f"{title} core rules {labels[0]} → {labels[1]}", body, back_link="index.html",
+                     generated=generated), sum(map(len, entry))
 
 
 def render_reports_index(summaries):
@@ -158,10 +163,18 @@ def render_reports_index(summaries):
                               for k in ("compared", "with_changes", "old_only", "new_only", "core_changes"))
                     + "</tr>")
     body.append("</table></div>")
-    return html_page(APP_NAME, body)
+    return html_page(APP_NAME, body, generated=max((s.get("generated", "") for s in summaries), default=None))
 
 
 # --------------------------------------------------------------------------- generation
+
+def generation_stamp(out, source):
+    """When this report was generated. The daily run regenerates the latest comparison, so the stamp
+    only moves when its data or labels do; otherwise every run would rewrite the pages."""
+    path = out / SUMMARY_FILE
+    previous = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    return previous["generated"] if previous.get("source") == source and "generated" in previous else now_utc()
+
 
 def generate_system(system, snaps, out, labels, only):
     """Write out/ (one system of one comparison) and return its summary (also saved as summary.json)."""
@@ -173,6 +186,8 @@ def generate_system(system, snaps, out, labels, only):
         new_books = [b for b in new_books if b["name"].lower() in only]
     out.mkdir(parents=True, exist_ok=True)
     core_old, core_new = core_rules(old_dir), core_rules(new_dir)
+    source = [snaps[0]["fetched_at"], snaps[1]["fetched_at"], *labels]
+    generated = generation_stamp(out, source)
 
     rows = []
     for o, n in pair_books(old_books, new_books):
@@ -196,13 +211,14 @@ def generate_system(system, snaps, out, labels, only):
             "old_vs": old_book.get("versionString", "?"), "new_vs": new_book.get("versionString", "?"),
             "old_edited": old_book.get("editedAt"), "new_edited": new_book.get("editedAt"),
             "old_modified": old_book.get("modifiedAt"), "new_modified": new_book.get("modifiedAt"),
+            "generated": generated,
         }
         (out / f"{slug}.html").write_text(render_html(d, meta, back_link="index.html"), encoding="utf-8")
         rows.append((o, n, slug, counts(d)))
 
-    core_html, core_changes = render_core(title, core_old, core_new, labels)
+    core_html, core_changes = render_core(title, core_old, core_new, labels, generated)
     (out / CORE_PAGE).write_text(core_html, encoding="utf-8")
-    (out / "index.html").write_text(render_index(title, rows, labels, core_changes, snaps), encoding="utf-8")
+    (out / "index.html").write_text(render_index(title, rows, labels, core_changes, snaps, generated), encoding="utf-8")
 
     summary = {
         "comparison": out.parent.name, "comparison_title": f"{labels[0]} → {labels[1]}",
@@ -212,6 +228,7 @@ def generate_system(system, snaps, out, labels, only):
         "old_only": sum(1 for o, n, _, _ in rows if not n),
         "new_only": sum(1 for o, n, _, _ in rows if not o),
         "core_changes": core_changes,
+        "generated": generated, "source": source,
     }
     (out / SUMMARY_FILE).write_text(json.dumps(summary), encoding="utf-8")
     print(f"  {title}: {summary['compared']} armies compared, {summary['with_changes']} with changes"

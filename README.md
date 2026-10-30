@@ -25,7 +25,7 @@ Only the Python 3 standard library is needed.
 
 ```sh
 python fetch_books.py --system all                  # stable + beta, every game system
-python generate_html.py                             # latest stable vs latest beta
+python generate_html.py                             # latest stable vs current beta, or vs its previous snapshot
 python generate_html.py --old stable@previous --new stable
 python generate_html.py --old stable@2026-09-28 --new stable --system grimdark-future
 ```
