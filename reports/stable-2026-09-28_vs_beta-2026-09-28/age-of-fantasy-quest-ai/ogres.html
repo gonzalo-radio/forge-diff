@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,26 +37,27 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +7 / -6 / ~18</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Little Ones → Little One</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>20</td><td class='num'>30</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Ogre Warrior</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>110</td><td class='num'>115</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Sabre-Tooth</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>165</td><td class='num'>145</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Yeti</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>195</td><td class='num'>155</td><td class='num'><b class='add'>-40</b></td></tr>
-<tr><td>Devourer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>155</td><td class='num'>160</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Shooter</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>190</td><td class='num'>165</td><td class='num'><b class='add'>-25</b></td></tr>
-<tr><td>Iron Warrior</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>185</td><td class='num'>175</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Hunter</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>200</td><td class='num'>185</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>245</td><td class='num'>265</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Tribe Master</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>335</td><td class='num'>400</td><td class='num'><b class='del'>+65</b></td></tr>
-<tr><td>Heavy Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>865</td><td class='num'>405</td><td class='num'><b class='add'>-460</b></td></tr>
-<tr><td>Fang-Beast Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>360</td><td class='num'>440</td><td class='num'><b class='del'>+80</b></td></tr>
-<tr><td>Abomination</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>495</td><td class='num'>470</td><td class='num'><b class='add'>-25</b></td></tr>
-<tr><td>Ice Mammoth</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>1215</td><td class='num'>1390</td><td class='num'><b class='del'>+175</b></td></tr>
-<tr><td>Giant Bison</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>1320</td><td class='num'>1525</td><td class='num'><b class='del'>+205</b></td></tr>
+<tr><td><a href='#unit-little-one'>Little Ones → Little One</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>20</td><td class='num'>30</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-ogre-warrior'>Ogre Warrior</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>110</td><td class='num'>115</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-sabre-tooth'>Sabre-Tooth</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>165</td><td class='num'>145</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-yeti'>Yeti</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>195</td><td class='num'>155</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td><a href='#unit-devourer'>Devourer</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>155</td><td class='num'>160</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-shooter'>Shooter</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>190</td><td class='num'>165</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td><a href='#unit-iron-warrior'>Iron Warrior</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>185</td><td class='num'>175</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-hunter'>Hunter</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>200</td><td class='num'>185</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-champion'>Champion</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>245</td><td class='num'>265</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-tribe-master'>Tribe Master</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>335</td><td class='num'>400</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td><a href='#unit-heavy-chariot'>Heavy Chariot</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>865</td><td class='num'>405</td><td class='num'><b class='add'>-460</b></td></tr>
+<tr><td><a href='#unit-fang-beast-rider'>Fang-Beast Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>360</td><td class='num'>440</td><td class='num'><b class='del'>+80</b></td></tr>
+<tr><td><a href='#unit-abomination'>Abomination</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>495</td><td class='num'>470</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td><a href='#unit-ice-mammoth'>Ice Mammoth</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>1215</td><td class='num'>1390</td><td class='num'><b class='del'>+175</b></td></tr>
+<tr><td><a href='#unit-giant-bison'>Giant Bison</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>1320</td><td class='num'>1525</td><td class='num'><b class='del'>+205</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Little One</h3><p class='stats'>20 → 30 pts (+10) · Size 3 → 1 · Quality 5+ · Defense 6+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-little-one'>Little One</h3><p class='stats'>20 → 30 pts (+10) · Size 3 → 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Little <del class='del'>Ones</del></td><td>Little <ins class='add'>One</ins></td></tr>
@@ -68,7 +72,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Trapper (Counter-Attack) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throwing Weapon (12&quot;, A1) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Ogre Warrior</h3><p class='stats'>110 → 115 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-ogre-warrior'>Ogre Warrior</h3><p class='stats'>110 → 115 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
@@ -85,7 +89,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Doom of Kingdoms (Piercing Feat) · <del class='del'>+5</del> pts</td><td>Doom of Kingdoms (Piercing Feat) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Sabre-Tooth</h3><p class='stats'>165 → 145 pts (-20) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-sabre-tooth'>Sabre-Tooth</h3><p class='stats'>165 → 145 pts (-20) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>165</del> pts</td><td><ins class='add'>145</ins> pts</td></tr>
@@ -95,7 +99,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rough Claws (A9, Fragment) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sharp Claws (A9, Rending) · +15 pts</ins></td></tr>
 </table></div>
-<h3>Yeti</h3><p class='stats'>195 → 155 pts (-40) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-yeti'>Yeti</h3><p class='stats'>195 → 155 pts (-40) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>195</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
@@ -107,7 +111,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sweeping Fists (A9, Surge) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Fists (A9, AP(2)) · +20 pts</ins></td></tr>
 </table></div>
-<h3>Devourer</h3><p class='stats'>155 → 160 pts (+5) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-devourer'>Devourer</h3><p class='stats'>155 → 160 pts (+5) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>155</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
@@ -133,7 +137,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Doom of Kingdoms (Piercing Feat) · <del class='del'>+5</del> pts</td><td>Doom of Kingdoms (Piercing Feat) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Shooter</h3><p class='stats'>190 → 165 pts (-25) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-shooter'>Shooter</h3><p class='stats'>190 → 165 pts (-25) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>190</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
@@ -148,7 +152,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cannon Shrapnel-Lobber (18&quot;, A3, AP(1), Blast(3), Indirect) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cannon Bomb-Lobber (18&quot;, A3, AP(3), Deadly(3), Indirect) · +60 pts</ins></td></tr>
 </table></div>
-<h3>Iron Warrior</h3><p class='stats'>185 → 175 pts (-10) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-iron-warrior'>Iron Warrior</h3><p class='stats'>185 → 175 pts (-10) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>175</ins> pts</td></tr>
@@ -161,7 +165,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shatter-Mace (A6, AP(1), Blast(3)) · +40 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shatter-Glaive (A6, AP(4), Deadly(3)) · +130 pts</ins></td></tr>
 </table></div>
-<h3>Hunter</h3><p class='stats'>200 → 185 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-hunter'>Hunter</h3><p class='stats'>200 → 185 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>200</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
@@ -173,7 +177,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Harpoons (9&quot;, A3, AP(2), Deadly(3), Assault), Strike (A3) · +85 pts</ins></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Javelin (12&quot;, A3, AP(2), Deadly(3)), Knife (A6) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Champion</h3><p class='stats'>245 → 265 pts (+20) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-champion'>Champion</h3><p class='stats'>245 → 265 pts (+20) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>245</del> pts</td><td><ins class='add'>265</ins> pts</td></tr>
@@ -243,7 +247,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shaman (Caster(2)) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Shaman (Caster(3)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Tribe Master</h3><p class='stats'>335 → 400 pts (+65) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-tribe-master'>Tribe Master</h3><p class='stats'>335 → 400 pts (+65) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>335</del> pts</td><td><ins class='add'>400</ins> pts</td></tr>
@@ -299,7 +303,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with (2)</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fire Eater (Spit Flames (12&quot;, A9, Blast(3), Limited, Reliable)) · +130 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Heavy Chariot</h3><p class='stats'>865 → 405 pts (-460) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-heavy-chariot'>Heavy Chariot</h3><p class='stats'>865 → 405 pts (-460) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>865</del> pts</td><td><ins class='add'>405</ins> pts</td></tr>
@@ -321,7 +325,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Harpoon Crew (9&quot;, A3, AP(2), Deadly(3), Assault) · +55 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Chain-Trap Crew (9&quot;, A9, Rending, Assault) · +70 pts</ins></td></tr>
 </table></div>
-<h3>Fang-Beast Rider</h3><p class='stats'>360 → 440 pts (+80) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-fang-beast-rider'>Fang-Beast Rider</h3><p class='stats'>360 → 440 pts (+80) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>360</del> pts</td><td><ins class='add'>440</ins> pts</td></tr>
@@ -344,7 +348,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Sergeant · <del class='del'>+15</del> pts</td><td>Great Sergeant · <ins class='add'>+75</ins> pts</td></tr>
 </table></div>
-<h3>Abomination</h3><p class='stats'>495 → 470 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-abomination'>Abomination</h3><p class='stats'>495 → 470 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>495</del> pts</td><td><ins class='add'>470</ins> pts</td></tr>
@@ -359,7 +363,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Intimidating Maw (Unwieldy Debuff) · <del class='del'>+10</del> pts</td><td>Intimidating Maw (Unwieldy Debuff) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Ice Mammoth</h3><p class='stats'>1215 → 1390 pts (+175) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-ice-mammoth'>Ice Mammoth</h3><p class='stats'>1215 → 1390 pts (+175) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1215</del> pts</td><td><ins class='add'>1390</ins> pts</td></tr>
@@ -384,7 +388,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Giant Tusks (A6, AP(4), Deadly(3)) · +130 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Frost Blast (24&quot;, A6, AP(1), Blast(3)), Great Tusks (A3, AP(2), Deadly(3)) · +240 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Giant Bison</h3><p class='stats'>1320 → 1525 pts (+205) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-giant-bison'>Giant Bison</h3><p class='stats'>1320 → 1525 pts (+205) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1320</del> pts</td><td><ins class='add'>1525</ins> pts</td></tr>
@@ -402,7 +406,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Crew Attack</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Harpoon Shooter (24&quot;, A3, AP(3), Deadly(3)), Trap-Chain (12&quot;, A9, AP(1)), Crew Attacks (A9) · +215 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Bravery Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get +1 to Morale Test rolls. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Destroyer</td><td>If this model has Destroyer, enemies always take wounds on unmodified results of 1 to block from Destroyer (instead of only when attacking enemies that already finished an activation).</td></tr>
@@ -436,7 +440,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Unwieldy Debuff</td><td><span class='del'>3.5.1 (2026-09-28):</span> Once per activation, before attacking, pick up to <del class='del'>4</del> enemy units within 18&quot; in line of sight, which gets Unwieldy in melee once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> Once per activation, before attacking, pick up to <ins class='add'>3</ins> enemy units within 18&quot; in line of sight, which gets Unwieldy in melee once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Violent</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>Enemies that roll</del> to block hits from <del class='del'>this model&#x27;s</del> weapons <del class='del'>take</del> 1 extra <del class='del'>wound for each unmodified result of 1 that they roll.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>When this model attacks enemies for the first time each round, unmodified results of 1</ins> to block hits from weapons <ins class='add'>deal</ins> 1 extra <ins class='add'>wound.</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Battle Guts</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(1)</del> Pick up to two friendly units within 12&quot;, which get Resistance once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> <ins class='add'>(2)</ins> Pick up to two friendly units within 12&quot;, which get <ins class='add'>Spell</ins> Resistance once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Crack Spirits</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(3)</del> Pick <del class='del'>up to six</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which <del class='del'>get</del> Unwieldy in melee once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>gets</ins> Unwieldy in melee once (next time the effect would apply).</td></tr>

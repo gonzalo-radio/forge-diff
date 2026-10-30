@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,25 +37,26 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +5 / -5 / ~18</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>35</td><td class='num'>90</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Leader</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>70</td><td class='num'><b class='del'>+50</b></td></tr>
-<tr><td>Veterans → Veteran</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>35</td><td class='num'>30</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Marksmen → Marksman</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>35</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Braves → Brave</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Beast Riders → Beast Rider</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>45</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Drunk</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>50</td><td class='num'><b class='del'>+35</b></td></tr>
-<tr><td>Thief</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>65</td><td class='num'><b class='del'>+50</b></td></tr>
-<tr><td>Townfolk</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>25</td><td class='num'>75</td><td class='num'><b class='del'>+50</b></td></tr>
-<tr><td>Warriors</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>75</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Golem</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>145</td><td class='num'><b class='del'>+90</b></td></tr>
-<tr><td>Jetpack Trooper</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>155</td><td class='num'><b class='del'>+105</b></td></tr>
-<tr><td>Zeppelin</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>170</td><td class='num'><b class='del'>+105</b></td></tr>
-<tr><td>Troll Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>180</td><td class='num'><b class='del'>+100</b></td></tr>
+<tr><td><a href='#unit-champion'>Champion</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>35</td><td class='num'>90</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-leader'>Leader</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>70</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td><a href='#unit-veteran'>Veterans → Veteran</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>35</td><td class='num'>30</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-marksman'>Marksmen → Marksman</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>35</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-brave'>Braves → Brave</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-beast-rider'>Beast Riders → Beast Rider</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>45</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-drunk'>Drunk</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>50</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td><a href='#unit-thief'>Thief</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>65</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td><a href='#unit-townfolk'>Townfolk</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>25</td><td class='num'>75</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td><a href='#unit-warriors'>Warriors</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>75</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-golem'>Golem</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>145</td><td class='num'><b class='del'>+90</b></td></tr>
+<tr><td><a href='#unit-jetpack-trooper'>Jetpack Trooper</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>155</td><td class='num'><b class='del'>+105</b></td></tr>
+<tr><td><a href='#unit-zeppelin'>Zeppelin</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>170</td><td class='num'><b class='del'>+105</b></td></tr>
+<tr><td><a href='#unit-troll-rider'>Troll Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>180</td><td class='num'><b class='del'>+100</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Champion</h3><p class='stats'>35 → 90 pts (+55) · Size 1 · Quality 4+ · Defense 4+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-champion'>Champion</h3><p class='stats'>35 → 90 pts (+55) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -110,7 +114,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Army Standard Bearer (Fear(2)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Weaponsmith (Rending when Shooting Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Leader</h3><p class='stats'>20 → 70 pts (+50) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-leader'>Leader</h3><p class='stats'>20 → 70 pts (+50) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -171,7 +175,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shaman (Caster(2)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Weaponsmith (Rending when Shooting Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Veteran</h3><p class='stats'>35 → 30 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-veteran'>Veteran</h3><p class='stats'>35 → 30 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Veterans</del></td><td><ins class='add'>Veteran</ins></td></tr>
@@ -188,7 +192,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A8) · +25 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Throwing Axes (12&quot;, A8, Assault) · +70 pts</ins></td></tr>
 </table></div>
-<h3>Marksman</h3><p class='stats'>30 → 35 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-marksman'>Marksman</h3><p class='stats'>30 → 35 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Marksmen</del></td><td><ins class='add'>Marksman</ins></td></tr>
@@ -209,7 +213,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand-Held Bolt Thrower (18&quot;, A1, AP(3), Deadly(6)) · +30 pts</ins></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rifle (18&quot;, A1, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Brave</h3><p class='stats'>40 pts · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-brave'>Brave</h3><p class='stats'>40 pts · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Braves</del></td><td><ins class='add'>Brave</ins></td></tr>
@@ -221,7 +225,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A4) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Throwing Axes (12&quot;, A4, Assault) · +20 pts</ins></td></tr>
 </table></div>
-<h3>Beast Rider</h3><p class='stats'>40 → 45 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-beast-rider'>Beast Rider</h3><p class='stats'>40 → 45 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Beast <del class='del'>Riders</del></td><td>Beast <ins class='add'>Rider</ins></td></tr>
@@ -249,7 +253,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shortbow (18&quot;, A1) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rifle (18&quot;, A1, AP(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Drunk</h3><p class='stats'>15 → 50 pts (+35) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-drunk'>Drunk</h3><p class='stats'>15 → 50 pts (+35) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>15</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
@@ -264,7 +268,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Impact Bombs (9&quot;, A1, AP(2), Deadly(6), Assault) · +40 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flame Bombs (6&quot;, A2, Blast(3), Reliable, Assault) · +55 pts</ins></td></tr>
 </table></div>
-<h3>Thief</h3><p class='stats'>15 → 65 pts (+50) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-thief'>Thief</h3><p class='stats'>15 → 65 pts (+50) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>15</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
@@ -280,7 +284,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throwing Weapon (12&quot;, A2), Hand Weapon (A1) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Improvised Fireworks (18&quot;, A1, AP(1), Blast(3), Lacerate), Hand Weapon (A1) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Townfolk</h3><p class='stats'>25 → 75 pts (+50) · Size 3 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-townfolk'>Townfolk</h3><p class='stats'>25 → 75 pts (+50) · Size 3 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
@@ -291,7 +295,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Slings</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spear (A2, Counter, Brace(2)) · +5 pts</ins></td></tr>
 </table></div>
-<h3>Warriors</h3><p class='stats'>20 → 75 pts (+55) · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-warriors'>Warriors</h3><p class='stats'>20 → 75 pts (+55) · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
@@ -303,7 +307,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear <del class='del'>(A1, Counter)</del> · <del class='del'>+10</del> pts</td><td>Spear <ins class='add'>(A2, Counter, Brace(2))</ins> · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd <del class='del'>(A1,</del> Rending) · <del class='del'>+10</del> pts</td><td>Halberd <ins class='add'>(A2,</ins> Rending) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Golem</h3><p class='stats'>55 → 145 pts (+90) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-golem'>Golem</h3><p class='stats'>55 → 145 pts (+90) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>145</ins> pts</td></tr>
@@ -312,7 +316,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Rock Breed</td><td>Replace Rock Breed</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ice Breed (Melee Evasion, Rending in Melee) · <del class='del'>+5</del> pts</td><td>Ice Breed (Melee Evasion, Rending in Melee) · <ins class='add'>+-5</ins> pts</td></tr>
 </table></div>
-<h3>Jetpack Trooper</h3><p class='stats'>50 → 155 pts (+105) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-jetpack-trooper'>Jetpack Trooper</h3><p class='stats'>50 → 155 pts (+105) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
@@ -327,7 +331,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Grenade</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Improvised Fireworks (18&quot;, A1, AP(1), Blast(3), Lacerate) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Zeppelin</h3><p class='stats'>65 → 170 pts (+105) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-zeppelin'>Zeppelin</h3><p class='stats'>65 → 170 pts (+105) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>170</ins> pts</td></tr>
@@ -339,7 +343,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Matchlock Rifle</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Crossbow (18&quot;, A2, Rending) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Troll Rider</h3><p class='stats'>80 → 180 pts (+100) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-troll-rider'>Troll Rider</h3><p class='stats'>80 → 180 pts (+100) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
@@ -353,7 +357,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Crossbow Assault Rider (9&quot;, A2, Rending, Assault), Great Weapon (A6, AP(2)) · +20 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Crossbow Rider (18&quot;, A6, Rending), Great Weapon (A2, AP(2)) · +25 pts</ins></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Crossing Strike</td><td>Once per activation, when this model moves through enemy units, pick one of them and attack it with this weapon as if it was shooting. This weapon may only be used in this way.</td></tr>
 <tr class='add'><td>➕</td><td>Decimate</td><td>When attacking units with more than half of their total size or Tough value (for single-model units), the target must re-roll unmodified Defense results of 6.</td></tr>
@@ -384,7 +388,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Tough<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>This</del> model <del class='del'>only rolls to check wound effects once it</del> has taken <del class='del'>at least X wounds, and</del> is <del class='del'>only Knocked Out on rolls of 5+X or more.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>Once a</ins> model has taken <ins class='add'>as many wounds as its Tough value, it</ins> is <ins class='add'>killed (remove from play).</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Vengeance</td><td><span class='del'>3.5.1 (2026-09-28):</span> When this unit is fully destroyed, place as many Vengeance <del class='del'>markers</del> on the unit that destroyed it as models with this rule in this unit at the beginning of the game. Friendly units get +X to hit rolls when attacking that unit, where X is the number of <del class='del'>markers</del> on it.<br><span class='add'>3.6.0 beta:</span> When this unit is fully destroyed, place as many Vengeance <ins class='add'>tokens</ins> on the unit that destroyed it as models with this rule in this unit at the beginning of the game. Friendly units get +X to hit rolls when attacking that unit, where X is the number of <ins class='add'>tokens</ins> on it.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Cleansing Spirit</td><td><span class='del'>3.5.1 (2026-09-28):</span> (1) Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>2 hits</del> with Blast(3) and <del class='del'>Lacerate.</del><br><span class='add'>3.6.0 beta:</span> (1) Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which takes <ins class='add'>1 hit</ins> with Blast(3) and <ins class='add'>Decimate.</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Dark Forest Spirit</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(3)</del> Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within 6&quot;, which <del class='del'>take 1 hit</del> with AP(2) and <del class='del'>Deadly(3) each.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>(2)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within 6&quot;, which <ins class='add'>takes 2 hits</ins> with AP(2) and <ins class='add'>Deadly(3).</ins></td></tr>

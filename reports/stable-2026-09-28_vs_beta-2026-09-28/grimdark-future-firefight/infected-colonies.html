@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,31 +37,32 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +7 / -3 / ~13</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#new-units'>New units</a> · <a href='#removed-units'>Removed units</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Monstrous Tyrant → Superior Infected Brute </td><td class='num'>1</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'><b class=del>2+ → 4+</b></td><td class='num'>155</td><td class='num'>260</td><td class='num'><b class='del'>+105</b></td></tr>
-<tr><td>Great Hunter → Hybrid Elite Leader</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>170</td><td class='num'><b class='del'>+95</b></td></tr>
-<tr><td>Infected Leader</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>85</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Hunter → Hybrid Warrior</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>30</td><td class='num'>60</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Leech Swarm → Infected Bug-Swarm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>25</td><td class='num'>80</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Crazed Raven → Infected Bug-Raven</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>85</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Infected Runners</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>95</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Rabid Dog → Infected Bug-Hounds</td><td class='num'><b class=mod>1 → 3</b></td><td class='num'><b class=del>4+ → 5+</b></td><td class='num'>5+</td><td class='num'>25</td><td class='num'>100</td><td class='num'><b class='del'>+75</b></td></tr>
-<tr><td>Corrupted Beast → Infected Brute</td><td class='num'>1</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'>75</td><td class='num'>105</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Infected Zombies</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>105</td><td class='num'><b class='del'>+65</b></td></tr>
-<tr><td>Weapon Team → Infected Gunner</td><td class='num'>1</td><td class='num'>5+</td><td class='num'><b class=add>5+ → 4+</b></td><td class='num'>50</td><td class='num'>115</td><td class='num'><b class='del'>+65</b></td></tr>
-<tr><td>Infected Soldier → Infected Soldiers</td><td class='num'><b class=mod>1 → 3</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>120</td><td class='num'><b class='del'>+105</b></td></tr>
+<tr><td><a href='#unit-superior-infected-brute'>Monstrous Tyrant → Superior Infected Brute </a></td><td class='num'>1</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'><b class=del>2+ → 4+</b></td><td class='num'>155</td><td class='num'>260</td><td class='num'><b class='del'>+105</b></td></tr>
+<tr><td><a href='#unit-hybrid-elite-leader'>Great Hunter → Hybrid Elite Leader</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>170</td><td class='num'><b class='del'>+95</b></td></tr>
+<tr><td><a href='#unit-infected-leader'>Infected Leader</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>85</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-hybrid-warrior'>Hunter → Hybrid Warrior</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>30</td><td class='num'>60</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-infected-bug-swarm'>Leech Swarm → Infected Bug-Swarm</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>25</td><td class='num'>80</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-infected-bug-raven'>Crazed Raven → Infected Bug-Raven</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>85</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-infected-runners'>Infected Runners</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>95</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-infected-bug-hounds'>Rabid Dog → Infected Bug-Hounds</a></td><td class='num'><b class=mod>1 → 3</b></td><td class='num'><b class=del>4+ → 5+</b></td><td class='num'>5+</td><td class='num'>25</td><td class='num'>100</td><td class='num'><b class='del'>+75</b></td></tr>
+<tr><td><a href='#unit-infected-brute'>Corrupted Beast → Infected Brute</a></td><td class='num'>1</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'>75</td><td class='num'>105</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-infected-zombies'>Infected Zombies</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>105</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td><a href='#unit-infected-gunner'>Weapon Team → Infected Gunner</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'><b class=add>5+ → 4+</b></td><td class='num'>50</td><td class='num'>115</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td><a href='#unit-infected-soldiers'>Infected Soldier → Infected Soldiers</a></td><td class='num'><b class=mod>1 → 3</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>120</td><td class='num'><b class='del'>+105</b></td></tr>
 </table></div>
-<h2>New units</h2><div class='scroll'><table>
+<h2 id='new-units'>New units</h2><div class='scroll'><table>
 <tr class='add'><td><b>Hybrid Elite</b></td><td>1x Q3+ D4+ — 60 pts. Rules: Strider, Infected, Tough(3). Weapons: Battle Rifle (24&quot;, A2), Strike (A2)</td></tr>
 </table></div>
-<h2>Removed units</h2><div class='scroll'><table>
+<h2 id='removed-units'>Removed units</h2><div class='scroll'><table>
 <tr class='del'><td><b>Infected Gunner</b></td><td>1x Q5+ D5+ — 25 pts. Rules: Relentless, Infected. Weapons: Grenade Launcher (24&quot;, A1, Blast(3)), CCW (A1)</td></tr>
 <tr class='del'><td><b>Boomer</b></td><td>1x Q4+ D4+ — 55 pts. Rules: Deathstrike(3), Tough(3), Infected. Weapons: Putrid Fists (A4, Bane)</td></tr>
 <tr class='del'><td><b>Infected Vulture</b></td><td>1x Q4+ D4+ — 60 pts. Rules: Ambush, Flying, Tough(3), Infected. Weapons: Sharp Talons (A3, AP(1))</td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Superior Infected Brute </h3><p class='stats'>155 → 260 pts (+105) · Size 1 · Quality 3+ → 4+ · Defense 2+ → 4+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-superior-infected-brute'>Superior Infected Brute </h3><p class='stats'>155 → 260 pts (+105) · Size 1 · Quality 3+ → 4+ · Defense 2+ → 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Monstrous Tyrant</del></td><td><ins class='add'>Superior Infected Brute</ins></td></tr>
@@ -90,7 +94,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Monstrous Stinger (A2, AP(2), Deadly(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Monstrous Fists (A4, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Hybrid Elite Leader</h3><p class='stats'>75 → 170 pts (+95) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-hybrid-elite-leader'>Hybrid Elite Leader</h3><p class='stats'>75 → 170 pts (+95) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Great Hunter</del></td><td><ins class='add'>Hybrid Elite Leader</ins></td></tr>
@@ -126,7 +130,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Terror Genus (Thrust in Melee Aura) · +40 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Colony Leader (No Retreat Aura) · +85 pts</ins></td></tr>
 </table></div>
-<h3>Infected Leader</h3><p class='stats'>30 → 85 pts (+55) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-infected-leader'>Infected Leader</h3><p class='stats'>30 → 85 pts (+55) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -174,7 +178,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spore Carrier (Infected Boost Aura) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Enlarged Brain (Caster(2)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Hybrid Warrior</h3><p class='stats'>30 → 60 pts (+30) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-hybrid-warrior'>Hybrid Warrior</h3><p class='stats'>30 → 60 pts (+30) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Hunter</del></td><td><ins class='add'>Hybrid Warrior</ins></td></tr>
@@ -191,7 +195,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Toxic Claw</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Barbed Claw (A1, AP(2), Deadly(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Infected Bug-Swarm</h3><p class='stats'>25 → 80 pts (+55) · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-infected-bug-swarm'>Infected Bug-Swarm</h3><p class='stats'>25 → 80 pts (+55) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Leech Swarm</del></td><td><ins class='add'>Infected Bug-Swarm</ins></td></tr>
@@ -204,7 +208,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Infected Claws</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spit Bile (9&quot;, A8, Bane), Strike (A2) · +15 pts</ins></td></tr>
 </table></div>
-<h3>Infected Bug-Raven</h3><p class='stats'>30 → 85 pts (+55) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-infected-bug-raven'>Infected Bug-Raven</h3><p class='stats'>30 → 85 pts (+55) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Crazed Raven</del></td><td><ins class='add'>Infected Bug-Raven</ins></td></tr>
@@ -219,7 +223,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sky Raider (Ambush) · +20 pts</ins></td></tr>
 </table></div>
-<h3>Infected Runners</h3><p class='stats'>40 → 95 pts (+55) · Size 3 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-infected-runners'>Infected Runners</h3><p class='stats'>40 → 95 pts (+55) · Size 3 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -231,7 +235,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mutated Claws (A2, Surge) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Zombie Claws (A4) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Infected Bug-Hounds</h3><p class='stats'>25 → 100 pts (+75) · Size 1 → 3 · Quality 4+ → 5+ · Defense 5+</p>
+<h3 id='unit-infected-bug-hounds'>Infected Bug-Hounds</h3><p class='stats'>25 → 100 pts (+75) · Size 1 → 3 · Quality 4+ → 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Rabid Dog</del></td><td><ins class='add'>Infected Bug-Hounds</ins></td></tr>
@@ -249,7 +253,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Rabid Hound</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Frenzied Advance (Scout) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Infected Brute</h3><p class='stats'>75 → 105 pts (+30) · Size 1 · Quality 3+ → 4+ · Defense 3+ → 4+</p>
+<h3 id='unit-infected-brute'>Infected Brute</h3><p class='stats'>75 → 105 pts (+30) · Size 1 · Quality 3+ → 4+ · Defense 3+ → 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Corrupted Beast</del></td><td><ins class='add'>Infected Brute</ins></td></tr>
@@ -272,7 +276,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Dual Sharp Claw</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Smashing Fists (A4, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Infected Zombies</h3><p class='stats'>40 → 105 pts (+65) · Size 3 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-infected-zombies'>Infected Zombies</h3><p class='stats'>40 → 105 pts (+65) · Size 3 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>105</ins> pts</td></tr>
@@ -284,7 +288,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Mutated Claws (A2, Surge) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Zombie Claws (A4) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Infected Gunner</h3><p class='stats'>50 → 115 pts (+65) · Size 1 · Quality 5+ · Defense 5+ → 4+</p>
+<h3 id='unit-infected-gunner'>Infected Gunner</h3><p class='stats'>50 → 115 pts (+65) · Size 1 · Quality 5+ · Defense 5+ → 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Weapon Team</del></td><td><ins class='add'>Infected Gunner</ins></td></tr>
@@ -303,7 +307,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shredder Cannon (30&quot;, A6, Rending) · +25 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Autocannon (36&quot;, <del class='del'>A3,</del> AP(2)) · <del class='del'>+10</del> pts</td><td>Autocannon (36&quot;, <ins class='add'>A6,</ins> AP(2)) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Infected Soldiers</h3><p class='stats'>15 → 120 pts (+105) · Size 1 → 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-infected-soldiers'>Infected Soldiers</h3><p class='stats'>15 → 120 pts (+105) · Size 1 → 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Infected <del class='del'>Soldier</del></td><td>Infected <ins class='add'>Soldiers</ins></td></tr>
@@ -328,7 +332,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Energy Sword</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Fist (A2, AP(4)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Decimate</td><td>When attacking units with more than half of their total size or Tough value (for single-model units), the target must re-roll unmodified Defense results of 6.</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Infected</td><td>If this model has Infected, enemies always take wounds on unmodified results of 1 to block from Infected (instead of only when attacking enemies that already finished an activation).</td></tr>
@@ -354,7 +358,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Unpredictable Shooter Aura</td><td><span class='del'>3.5.1 (2026-09-28):</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Unpredictable Shooter. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0 beta:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Unpredictable Shooter. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='mod'><td>✏️</td><td>Violent</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>Enemies</del> that <del class='del'>roll</del> to block hits from <del class='del'>this model&#x27;s</del> weapons <del class='del'>take</del> 1 extra <del class='del'>wound for each unmodified result of 1 that they roll.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>When this model attacks enemies</ins> that <ins class='add'>already finished an activation this round, unmodified results of 1</ins> to block hits from weapons <ins class='add'>deal</ins> 1 extra <ins class='add'>wound.</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Bio-Horror</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(1)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>2</del> hits with <del class='del'>AP(1) and</del> Surge. Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.<br><span class='add'>3.6.0 beta:</span> <ins class='add'>(3)</ins> Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which takes <ins class='add'>6</ins> hits with Surge. Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.</td></tr>
 <tr class='mod'><td>✏️</td><td>Brain Infestation</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(2)</del> Pick <del class='del'>up to four</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which <del class='del'>get</del> -1 to hit rolls when attacking once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>gets</ins> -1 to hit rolls when attacking once (next time the effect would apply).</td></tr>

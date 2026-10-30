@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,41 +37,42 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +9 / -7 / ~15</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#new-units'>New units</a> · <a href='#removed-units'>Removed units</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Knight Prime Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>100</td><td class='num'>85</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Knight Raider Brother</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>85</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Knight Infiltration Brother</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>90</td><td class='num'>90</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Knight Assault Prime Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>110</td><td class='num'>95</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Knight Veteran Assault Prime Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>100</td><td class='num'>130</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Knight Elimination Brother</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>145</td><td class='num'>135</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Knight Veteran Prime Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>120</td><td class='num'>140</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Knight Elite Raider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>185</td><td class='num'>195</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Knight Prime Master</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>200</td><td class='num'>220</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Knight Heavy Prime Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>245</td><td class='num'>225</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Knight Veteran Prime Master</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>210</td><td class='num'>245</td><td class='num'><b class='del'>+35</b></td></tr>
-<tr><td>Knight Prime Brother Biker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>310</td><td class='num'>245</td><td class='num'><b class='add'>-65</b></td></tr>
-<tr><td>Knight Aggro Brother → Knight Heavy Assault Prime Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>325</td><td class='num'>255</td><td class='num'><b class='add'>-70</b></td></tr>
-<tr><td>Knight Guard Brother → Knight Grave Guard Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>275</td><td class='num'>260</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Knight Grave Destroyer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>245</td><td class='num'>260</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Knight Grave Prime Master</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>440</td><td class='num'>370</td><td class='num'><b class='add'>-70</b></td></tr>
-<tr><td>Knight Prime Drop Pod</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>685</td><td class='num'>460</td><td class='num'><b class='add'>-225</b></td></tr>
-<tr><td>Knight Support Turret</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>660</td><td class='num'>495</td><td class='num'><b class='add'>-165</b></td></tr>
-<tr><td>Knight Prime ATV</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>830</td><td class='num'>530</td><td class='num'><b class='add'>-300</b></td></tr>
-<tr><td>Knight Anti-Grav APC</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>965</td><td class='num'>705</td><td class='num'><b class='add'>-260</b></td></tr>
-<tr><td>Knight Attack Speeder</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1215</td><td class='num'>1015</td><td class='num'><b class='add'>-200</b></td></tr>
-<tr><td>Knight Light Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1115</td><td class='num'>1180</td><td class='num'><b class='del'>+65</b></td></tr>
-<tr><td>Knight Combat Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1925</td><td class='num'>1730</td><td class='num'><b class='add'>-195</b></td></tr>
-<tr><td>Knight Heavy Anti-Grav Transport Tank</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>2740</td><td class='num'>2010</td><td class='num'><b class='add'>-730</b></td></tr>
-<tr><td>Knight Anti-Grav Tank → Knight Anti-Grav Battle Tank</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1950</td><td class='num'>2025</td><td class='num'><b class='del'>+75</b></td></tr>
-<tr><td>Knight Heavy Anti-Grav Destroyer Tank</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>3055</td><td class='num'>2605</td><td class='num'><b class='add'>-450</b></td></tr>
+<tr><td><a href='#unit-knight-prime-brother'>Knight Prime Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>100</td><td class='num'>85</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-knight-raider-brother'>Knight Raider Brother</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>85</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-knight-infiltration-brother'>Knight Infiltration Brother</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>90</td><td class='num'>90</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-knight-assault-prime-brother'>Knight Assault Prime Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>110</td><td class='num'>95</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-knight-veteran-assault-prime-brother'>Knight Veteran Assault Prime Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>100</td><td class='num'>130</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-knight-elimination-brother'>Knight Elimination Brother</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>145</td><td class='num'>135</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-knight-veteran-prime-brother'>Knight Veteran Prime Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>120</td><td class='num'>140</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-knight-elite-raider'>Knight Elite Raider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>185</td><td class='num'>195</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-knight-prime-master'>Knight Prime Master</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>200</td><td class='num'>220</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-knight-heavy-prime-brother'>Knight Heavy Prime Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>245</td><td class='num'>225</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-knight-veteran-prime-master'>Knight Veteran Prime Master</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>210</td><td class='num'>245</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td><a href='#unit-knight-prime-brother-biker'>Knight Prime Brother Biker</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>310</td><td class='num'>245</td><td class='num'><b class='add'>-65</b></td></tr>
+<tr><td><a href='#unit-knight-heavy-assault-prime-brother'>Knight Aggro Brother → Knight Heavy Assault Prime Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>325</td><td class='num'>255</td><td class='num'><b class='add'>-70</b></td></tr>
+<tr><td><a href='#unit-knight-grave-guard-brother'>Knight Guard Brother → Knight Grave Guard Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>275</td><td class='num'>260</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-knight-grave-destroyer'>Knight Grave Destroyer</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>245</td><td class='num'>260</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-knight-grave-prime-master'>Knight Grave Prime Master</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>440</td><td class='num'>370</td><td class='num'><b class='add'>-70</b></td></tr>
+<tr><td><a href='#unit-knight-prime-drop-pod'>Knight Prime Drop Pod</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>685</td><td class='num'>460</td><td class='num'><b class='add'>-225</b></td></tr>
+<tr><td><a href='#unit-knight-support-turret'>Knight Support Turret</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>660</td><td class='num'>495</td><td class='num'><b class='add'>-165</b></td></tr>
+<tr><td><a href='#unit-knight-prime-atv'>Knight Prime ATV</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>830</td><td class='num'>530</td><td class='num'><b class='add'>-300</b></td></tr>
+<tr><td><a href='#unit-knight-anti-grav-apc'>Knight Anti-Grav APC</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>965</td><td class='num'>705</td><td class='num'><b class='add'>-260</b></td></tr>
+<tr><td><a href='#unit-knight-attack-speeder'>Knight Attack Speeder</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1215</td><td class='num'>1015</td><td class='num'><b class='add'>-200</b></td></tr>
+<tr><td><a href='#unit-knight-light-walker'>Knight Light Walker</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1115</td><td class='num'>1180</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td><a href='#unit-knight-combat-walker'>Knight Combat Walker</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1925</td><td class='num'>1730</td><td class='num'><b class='add'>-195</b></td></tr>
+<tr><td><a href='#unit-knight-heavy-anti-grav-transport-tank'>Knight Heavy Anti-Grav Transport Tank</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>2740</td><td class='num'>2010</td><td class='num'><b class='add'>-730</b></td></tr>
+<tr><td><a href='#unit-knight-anti-grav-battle-tank'>Knight Anti-Grav Tank → Knight Anti-Grav Battle Tank</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1950</td><td class='num'>2025</td><td class='num'><b class='del'>+75</b></td></tr>
+<tr><td><a href='#unit-knight-heavy-anti-grav-destroyer-tank'>Knight Heavy Anti-Grav Destroyer Tank</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>3055</td><td class='num'>2605</td><td class='num'><b class='add'>-450</b></td></tr>
 </table></div>
-<h2>New units</h2><div class='scroll'><table>
+<h2 id='new-units'>New units</h2><div class='scroll'><table>
 <tr class='add'><td><b>Knight Support Prime Brother</b></td><td>1x Q3+ D3+ — 125 pts. Rules: Relentless, Fearless, Knightborn, Tough(3). Weapons: Flamer (12&quot;, A3, Blast(3), Reliable), Strike (A3)</td></tr>
 <tr class='add'><td><b>Knight Jetpack Prime Brother</b></td><td>1x Q3+ D3+ — 205 pts. Rules: Flying, Fearless, Knightborn, Tough(3). Weapons: Light Autocannon (18&quot;, A9, AP(2)), Strike (A3)</td></tr>
 <tr class='add'><td><b>Knight Heavy Support Prime Brother</b></td><td>1x Q3+ D3+ — 300 pts. Rules: Relentless, Fearless, Tough(9), Knightborn. Weapons: Fusion Rifle (12&quot;, A3, AP(4), Deadly(3)), Strike (A3)</td></tr>
 </table></div>
-<h2>Removed units</h2><div class='scroll'><table>
+<h2 id='removed-units'>Removed units</h2><div class='scroll'><table>
 <tr class='del'><td><b>Knight Infernal Brother</b></td><td>1x Q3+ D3+ — 115 pts. Rules: Relentless, Fearless, Knightborn, Tough(3). Weapons: Flamer (12&quot;, A3, Blast(3), Reliable), CCW (A3)</td></tr>
 <tr class='del'><td><b>Knight Desolator Brother</b></td><td>1x Q3+ D3+ — 130 pts. Rules: Relentless, Fearless, Knightborn, Tough(3). Weapons: HE-Launcher (30&quot;, A6), CCW (A3)</td></tr>
 <tr class='del'><td><b>Knight Blaster Brother</b></td><td>1x Q3+ D3+ — 140 pts. Rules: Relentless, Fearless, Knightborn, Tough(3). Weapons: Plasma Rifle (24&quot;, A3, AP(4)), CCW (A3)</td></tr>
@@ -76,8 +80,8 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td><b>Knight Eradication Brother</b></td><td>1x Q3+ D3+ — 260 pts. Rules: Tough(9), Relentless, Fearless, Knightborn. Weapons: Fusion Rifle (12&quot;, A3, AP(4), Deadly(3)), CCW (A3)</td></tr>
 <tr class='del'><td><b>Knight Jetpack Brother</b></td><td>1x Q3+ D3+ — 280 pts. Rules: Ambush, Flying, Tough(9), Fearless, Knightborn. Weapons: Twin Assault Blaster (12&quot;, A12), CCW (A3)</td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Knight Prime Brother</h3><p class='stats'>100 → 85 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-knight-prime-brother'>Knight Prime Brother</h3><p class='stats'>100 → 85 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -114,7 +118,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Rifle (24&quot;, A3, AP(1)) · free</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Auto-Rifle (18&quot;, A6) · free</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Raider Brother</h3><p class='stats'>80 → 85 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-knight-raider-brother'>Knight Raider Brother</h3><p class='stats'>80 → 85 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -139,7 +143,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Fist (A3, AP(2)) · +15 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Sword (A3, Rending) · +20 pts</ins></td></tr>
 </table></div>
-<h3>Knight Infiltration Brother</h3><p class='stats'>90 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-knight-infiltration-brother'>Knight Infiltration Brother</h3><p class='stats'>90 pts · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td>Marksman Carbine (18&quot;, A3, <del class='del'>Rending)</del></td><td>Marksman Carbine (18&quot;, A3, <ins class='add'>AP(1), Takedown)</ins></td></tr>
@@ -157,7 +161,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Sword (A3, Rending) · +10 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Fist (A3, AP(2)) · +15 pts</ins></td></tr>
 </table></div>
-<h3>Knight Assault Prime Brother</h3><p class='stats'>110 → 95 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-assault-prime-brother'>Knight Assault Prime Brother</h3><p class='stats'>110 → 95 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -191,7 +195,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Hammer (A3, Blast(3)) · +-10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Relic Sword (A3, AP(2), Deadly(3)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Veteran Assault Prime Brother</h3><p class='stats'>100 → 130 pts (+30) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-veteran-assault-prime-brother'>Knight Veteran Assault Prime Brother</h3><p class='stats'>100 → 130 pts (+30) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
@@ -226,7 +230,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jetpack (Flying) · +10 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Jetpacks</del> (Ambush, Flying) · +20 pts</td><td><ins class='add'>Airdrop Jetpack</ins> (Ambush, Flying) · +20 pts</td></tr>
 </table></div>
-<h3>Knight Elimination Brother</h3><p class='stats'>145 → 135 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-knight-elimination-brother'>Knight Elimination Brother</h3><p class='stats'>145 → 135 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>145</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
@@ -235,7 +239,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>any</del> Sniper Rifle</td><td>Replace Sniper Rifle</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Laser Sniper Rifle <del class='del'>(30&quot;,</del> A3, AP(2), Deadly(3), <del class='del'>Reliable)</del> · <del class='del'>+170</del> pts</td><td>Laser Sniper Rifle <ins class='add'>(36&quot;,</ins> A3, AP(2), Deadly(3), <ins class='add'>Takedown)</ins> · <ins class='add'>+90</ins> pts</td></tr>
 </table></div>
-<h3>Knight Veteran Prime Brother</h3><p class='stats'>120 → 140 pts (+20) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-veteran-prime-brother'>Knight Veteran Prime Brother</h3><p class='stats'>120 → 140 pts (+20) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
@@ -274,7 +278,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Energy Sword</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Fist (A6, AP(4)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Elite Raider</h3><p class='stats'>185 → 195 pts (+10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-knight-elite-raider'>Knight Elite Raider</h3><p class='stats'>185 → 195 pts (+10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>195</ins> pts</td></tr>
@@ -314,7 +318,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade Master Marksman Carbine with</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scope (Precise) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Prime Master</h3><p class='stats'>200 → 220 pts (+20) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-prime-master'>Knight Prime Master</h3><p class='stats'>200 → 220 pts (+20) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>200</del> pts</td><td><ins class='add'>220</ins> pts</td></tr>
@@ -362,7 +366,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade Master Marksman Carbine with</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scope (Precise) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Heavy Prime Brother</h3><p class='stats'>245 → 225 pts (-20) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-heavy-prime-brother'>Knight Heavy Prime Brother</h3><p class='stats'>245 → 225 pts (-20) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>245</del> pts</td><td><ins class='add'>225</ins> pts</td></tr>
@@ -377,7 +381,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Grave Auto-Rifle (18&quot;, A12) · free</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Grave Heavy Rifle (24&quot;, A9, AP(1)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Veteran Prime Master</h3><p class='stats'>210 → 245 pts (+35) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-veteran-prime-master'>Knight Veteran Prime Master</h3><p class='stats'>210 → 245 pts (+35) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>210</del> pts</td><td><ins class='add'>245</ins> pts</td></tr>
@@ -432,7 +436,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade Master Marksman Carbine with</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scope (Precise) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Prime Brother Biker</h3><p class='stats'>310 → 245 pts (-65) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-prime-brother-biker'>Knight Prime Brother Biker</h3><p class='stats'>310 → 245 pts (-65) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>310</del> pts</td><td><ins class='add'>245</ins> pts</td></tr>
@@ -464,7 +468,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Sword (A3, Rending) · +10 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Fist (A3, AP(2)) · +15 pts</ins></td></tr>
 </table></div>
-<h3>Knight Heavy Assault Prime Brother</h3><p class='stats'>325 → 255 pts (-70) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-heavy-assault-prime-brother'>Knight Heavy Assault Prime Brother</h3><p class='stats'>325 → 255 pts (-70) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Knight <del class='del'>Aggro</del> Brother</td><td>Knight <ins class='add'>Heavy Assault Prime</ins> Brother</td></tr>
@@ -482,7 +486,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shoulder-GL (18&quot;, A3, AP(2)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Grave Guard Brother</h3><p class='stats'>275 → 260 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-grave-guard-brother'>Knight Grave Guard Brother</h3><p class='stats'>275 → 260 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Knight Guard Brother</td><td>Knight <ins class='add'>Grave</ins> Guard Brother</td></tr>
@@ -508,7 +512,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Heavy Pistol</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plasma Pistol (12&quot;, A3, AP(4)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Grave Destroyer</h3><p class='stats'>245 → 260 pts (+15) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-grave-destroyer'>Knight Grave Destroyer</h3><p class='stats'>245 → 260 pts (+15) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>245</del> pts</td><td><ins class='add'>260</ins> pts</td></tr>
@@ -537,7 +541,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dual Energy Claws (A12, Rending) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Rifle (24&quot;, A9, AP(1)), CCW (A3) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Grave Prime Master</h3><p class='stats'>440 → 370 pts (-70) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-grave-prime-master'>Knight Grave Prime Master</h3><p class='stats'>440 → 370 pts (-70) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>440</del> pts</td><td><ins class='add'>370</ins> pts</td></tr>
@@ -593,7 +597,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Grave Auto-Rifle (18&quot;, A24) · +90 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Grave Heavy Rifle (24&quot;, A18, AP(1)) · +180 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Prime Drop Pod</h3><p class='stats'>685 → 460 pts (-225) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-knight-prime-drop-pod'>Knight Prime Drop Pod</h3><p class='stats'>685 → 460 pts (-225) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>685</del> pts</td><td><ins class='add'>460</ins> pts</td></tr>
@@ -608,7 +612,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Death Launcher</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Storm Rifle (24&quot;, A18, AP(1)) · +185 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Support Turret</h3><p class='stats'>660 → 495 pts (-165) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-knight-support-turret'>Knight Support Turret</h3><p class='stats'>660 → 495 pts (-165) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>660</del> pts</td><td><ins class='add'>495</ins> pts</td></tr>
@@ -626,7 +630,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Targeting Array (Unstoppable Mark) · <del class='del'>+15</del> pts</td><td>Targeting Array (Unstoppable Mark) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Knight Prime ATV</h3><p class='stats'>830 → 530 pts (-300) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-knight-prime-atv'>Knight Prime ATV</h3><p class='stats'>830 → 530 pts (-300) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>830</del> pts</td><td><ins class='add'>530</ins> pts</td></tr>
@@ -652,7 +656,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Gatling Gun</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Super-Heavy Fusion Rifle (18&quot;, A3, AP(4), Deadly(6)) · +90 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Anti-Grav APC</h3><p class='stats'>965 → 705 pts (-260) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-knight-anti-grav-apc'>Knight Anti-Grav APC</h3><p class='stats'>965 → 705 pts (-260) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>965</del> pts</td><td><ins class='add'>705</ins> pts</td></tr>
@@ -673,7 +677,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +140 pts</ins></td></tr>
 </table></div>
-<h3>Knight Attack Speeder</h3><p class='stats'>1215 → 1015 pts (-200) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-knight-attack-speeder'>Knight Attack Speeder</h3><p class='stats'>1215 → 1015 pts (-200) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1215</del> pts</td><td><ins class='add'>1015</ins> pts</td></tr>
@@ -707,7 +711,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rocket-GL (18&quot;, A6, AP(1)) · +65 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fury Missiles (24&quot;, A3, AP(2), Deadly(3)) · +145 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Light Walker</h3><p class='stats'>1115 → 1180 pts (+65) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-knight-light-walker'>Knight Light Walker</h3><p class='stats'>1115 → 1180 pts (+65) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1115</del> pts</td><td><ins class='add'>1180</ins> pts</td></tr>
@@ -729,7 +733,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Walker Pistol</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Light Fist (A12, AP(2)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Combat Walker</h3><p class='stats'>1925 → 1730 pts (-195) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-knight-combat-walker'>Knight Combat Walker</h3><p class='stats'>1925 → 1730 pts (-195) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1925</del> pts</td><td><ins class='add'>1730</ins> pts</td></tr>
@@ -771,7 +775,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Chest-Fuser (12&quot;, A3, AP(4), Deadly(3)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Chest-MG (30&quot;, A9, AP(1)) · +95 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Heavy Anti-Grav Transport Tank</h3><p class='stats'>2740 → 2010 pts (-730) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-knight-heavy-anti-grav-transport-tank'>Knight Heavy Anti-Grav Transport Tank</h3><p class='stats'>2740 → 2010 pts (-730) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2740</del> pts</td><td><ins class='add'>2010</ins> pts</td></tr>
@@ -797,7 +801,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with (2)</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +350 pts</ins></td></tr>
 </table></div>
-<h3>Knight Anti-Grav Battle Tank</h3><p class='stats'>1950 → 2025 pts (+75) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-knight-anti-grav-battle-tank'>Knight Anti-Grav Battle Tank</h3><p class='stats'>1950 → 2025 pts (+75) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Knight Anti-Grav Tank</td><td>Knight Anti-Grav <ins class='add'>Battle</ins> Tank</td></tr>
@@ -822,7 +826,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Machinegun <del class='del'>(30&quot;,</del> A9, <del class='del'>AP(1))</del> · <del class='del'>+150</del> pts</td><td><ins class='add'>Pintle</ins> Heavy Machinegun <ins class='add'>(15&quot;,</ins> A9, <ins class='add'>AP(1), Assault)</ins> · <ins class='add'>+170</ins> pts</td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>AA-Pod (24&quot;, A6, AP(2), Unstoppable) · +125 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight Heavy Anti-Grav Destroyer Tank</h3><p class='stats'>3055 → 2605 pts (-450) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-knight-heavy-anti-grav-destroyer-tank'>Knight Heavy Anti-Grav Destroyer Tank</h3><p class='stats'>3055 → 2605 pts (-450) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>3055</del> pts</td><td><ins class='add'>2605</ins> pts</td></tr>
@@ -847,7 +851,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Heavy Gatling Gun</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Laser Talon (24&quot;, A18, AP(3)) · +240 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Bravery Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get +1 to Morale Test rolls. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
@@ -881,7 +885,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Versatile Reach Aura</td><td><span class='del'>3.5.1 (2026-09-28):</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Versatile Reach. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0 beta:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Versatile Reach. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='mod'><td>✏️</td><td>Warding</td><td><span class='del'>3.5.1 (2026-09-28):</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a <del class='del'>4+</del> instead.<br><span class='add'>3.6.0 beta:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, <ins class='add'>the first time they are attacked each round,</ins> roll one die for each. On a 6+ it is ignored. If the wounds were from a spell, then they are ignored on a <ins class='add'>2+</ins> instead.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Banishing Sigil</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(2)</del> Pick up to <del class='del'>four enemy</del> units within 18&quot;, which get <del class='del'>-1 to defense rolls</del> once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three friendly</ins> units within 18&quot;, which get <ins class='add'>Enhanced Knightborn</ins> once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Doom Strike</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within 6&quot;, which <del class='del'>take</del> 1 hit with AP(2) and <del class='del'>Deadly(3) each.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within 6&quot;, which <ins class='add'>takes</ins> 1 hit with AP(2) and <ins class='add'>Deadly(3).</ins></td></tr>

@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,20 +37,21 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +4 / -3 / ~4</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Lust Vassal Micro-Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>680</td><td class='num'>730</td><td class='num'><b class='del'>+50</b></td></tr>
-<tr><td>Lust Errant Mini-Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1035</td><td class='num'>1140</td><td class='num'><b class='del'>+105</b></td></tr>
-<tr><td>Lust Pilgrim Mini-Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1230</td><td class='num'>1285</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Lust Yeoman Mini-Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1505</td><td class='num'>1500</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Lust Paladin Light Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1845</td><td class='num'>1925</td><td class='num'><b class='del'>+80</b></td></tr>
-<tr><td>Lust Questor Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2790</td><td class='num'>2930</td><td class='num'><b class='del'>+140</b></td></tr>
-<tr><td>Lust Knight Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>3175</td><td class='num'>3005</td><td class='num'><b class='add'>-170</b></td></tr>
-<tr><td>Lust Duke Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>3685</td><td class='num'>3535</td><td class='num'><b class='add'>-150</b></td></tr>
-<tr><td>Lust King Heavy Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>4320</td><td class='num'>4275</td><td class='num'><b class='add'>-45</b></td></tr>
+<tr><td><a href='#unit-lust-vassal-micro-titan'>Lust Vassal Micro-Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>680</td><td class='num'>730</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td><a href='#unit-lust-errant-mini-titan'>Lust Errant Mini-Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1035</td><td class='num'>1140</td><td class='num'><b class='del'>+105</b></td></tr>
+<tr><td><a href='#unit-lust-pilgrim-mini-titan'>Lust Pilgrim Mini-Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1230</td><td class='num'>1285</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-lust-yeoman-mini-titan'>Lust Yeoman Mini-Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1505</td><td class='num'>1500</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-lust-paladin-light-titan'>Lust Paladin Light Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1845</td><td class='num'>1925</td><td class='num'><b class='del'>+80</b></td></tr>
+<tr><td><a href='#unit-lust-questor-titan'>Lust Questor Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2790</td><td class='num'>2930</td><td class='num'><b class='del'>+140</b></td></tr>
+<tr><td><a href='#unit-lust-knight-titan'>Lust Knight Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>3175</td><td class='num'>3005</td><td class='num'><b class='add'>-170</b></td></tr>
+<tr><td><a href='#unit-lust-duke-titan'>Lust Duke Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>3685</td><td class='num'>3535</td><td class='num'><b class='add'>-150</b></td></tr>
+<tr><td><a href='#unit-lust-king-heavy-titan'>Lust King Heavy Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>4320</td><td class='num'>4275</td><td class='num'><b class='add'>-45</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Lust Vassal Micro-Titan</h3><p class='stats'>680 → 730 pts (+50) · Size 1 · Quality 3+ · Defense 2+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-lust-vassal-micro-titan'>Lust Vassal Micro-Titan</h3><p class='stats'>680 → 730 pts (+50) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>680</del> pts</td><td><ins class='add'>730</ins> pts</td></tr>
@@ -82,7 +86,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Titan Shield</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Hammer (A3, AP(1), Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Lust Errant Mini-Titan</h3><p class='stats'>1035 → 1140 pts (+105) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-lust-errant-mini-titan'>Lust Errant Mini-Titan</h3><p class='stats'>1035 → 1140 pts (+105) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1035</del> pts</td><td><ins class='add'>1140</ins> pts</td></tr>
@@ -112,7 +116,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Field (Regeneration) · <del class='del'>+170</del> pts</td><td>Energy Field (Regeneration) · <ins class='add'>+155</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Assault Config (Fast, Strider) · <del class='del'>+215</del> pts</td><td>Assault Config (Fast, Strider) · <ins class='add'>+155</ins> pts</td></tr>
 </table></div>
-<h3>Lust Pilgrim Mini-Titan</h3><p class='stats'>1230 → 1285 pts (+55) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-lust-pilgrim-mini-titan'>Lust Pilgrim Mini-Titan</h3><p class='stats'>1230 → 1285 pts (+55) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1230</del> pts</td><td><ins class='add'>1285</ins> pts</td></tr>
@@ -151,7 +155,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gatling Cannon (30&quot;, A18, AP(1), Rending) · +95 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hell Autocannon (36&quot;, A18, AP(2)) · +145 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Lust Yeoman Mini-Titan</h3><p class='stats'>1505 → 1500 pts (-5) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-lust-yeoman-mini-titan'>Lust Yeoman Mini-Titan</h3><p class='stats'>1505 → 1500 pts (-5) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1505</del> pts</td><td><ins class='add'>1500</ins> pts</td></tr>
@@ -173,7 +177,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gatling Cannon (30&quot;, A18, AP(1), Rending) · +115 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hell Autocannon (36&quot;, A18, AP(2)) · +150 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Lust Paladin Light Titan</h3><p class='stats'>1845 → 1925 pts (+80) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-lust-paladin-light-titan'>Lust Paladin Light Titan</h3><p class='stats'>1845 → 1925 pts (+80) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1845</del> pts</td><td><ins class='add'>1925</ins> pts</td></tr>
@@ -220,7 +224,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Titan Shield</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Hammer (A6, AP(1), Blast(3)) · +-15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Lust Questor Titan</h3><p class='stats'>2790 → 2930 pts (+140) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-lust-questor-titan'>Lust Questor Titan</h3><p class='stats'>2790 → 2930 pts (+140) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2790</del> pts</td><td><ins class='add'>2930</ins> pts</td></tr>
@@ -253,7 +257,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Exploration Config (Strider) · <del class='del'>+180</del> pts</td><td>Exploration Config (Strider) · <ins class='add'>+130</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Field (Regeneration) · <del class='del'>+470</del> pts</td><td>Energy Field (Regeneration) · <ins class='add'>+395</ins> pts</td></tr>
 </table></div>
-<h3>Lust Knight Titan</h3><p class='stats'>3175 → 3005 pts (-170) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-lust-knight-titan'>Lust Knight Titan</h3><p class='stats'>3175 → 3005 pts (-170) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>3175</del> pts</td><td><ins class='add'>3005</ins> pts</td></tr>
@@ -301,7 +305,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Gatling Cannon (30&quot;, A27, AP(1), Rending), Heavy Flamer (12&quot;, A3, AP(1), Blast(3), Reliable) · +75 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Pulse Laser (30&quot;, A27, AP(3)) · +120 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Lust Duke Titan</h3><p class='stats'>3685 → 3535 pts (-150) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-lust-duke-titan'>Lust Duke Titan</h3><p class='stats'>3685 → 3535 pts (-150) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>3685</del> pts</td><td><ins class='add'>3535</ins> pts</td></tr>
@@ -337,7 +341,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Gatling Cannon (30&quot;, A27, AP(1), Rending), Heavy Flamer (12&quot;, A3, AP(1), Blast(3), Reliable) · +100 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Pulse Laser (30&quot;, A27, AP(3)) · +125 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Lust King Heavy Titan</h3><p class='stats'>4320 → 4275 pts (-45) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-lust-king-heavy-titan'>Lust King Heavy Titan</h3><p class='stats'>4320 → 4275 pts (-45) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>4320</del> pts</td><td><ins class='add'>4275</ins> pts</td></tr>
@@ -367,7 +371,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Exploration Config (Strider) · <del class='del'>+220</del> pts</td><td>Exploration Config (Strider) · <ins class='add'>+160</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Field (Regeneration) · <del class='del'>+665</del> pts</td><td>Energy Field (Regeneration) · <ins class='add'>+545</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Agile</td><td>Moves +1&quot; when using Advance, and +2&quot; when using Rush/Charge.</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Agile</td><td>If this model has Agile, it moves +2&quot; on Advance and +4&quot; on Rush/Charge from Agile (instead of only +1&quot; and +2&quot;).</td></tr>
@@ -381,7 +385,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Melee Evasion</td><td><span class='del'>3.5.1 (2026-09-28):</span> Enemies get -1 to hit rolls in melee when attacking units where <del class='del'>all</del> models have this rule.<br><span class='add'>3.6.0 beta:</span> Enemies get -1 to hit rolls in melee when attacking units where <ins class='add'>most</ins> models have this rule.</td></tr>
 <tr class='mod'><td>✏️</td><td>Shred<br><span class='muted'>becomes a core rule</span></td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>On</del> unmodified <del class='del'>results</del> of 1 to block hits, this weapon deals 1 extra wound.<br><span class='add'>3.6.0 beta:</span> <ins class='add'>For each</ins> unmodified <ins class='add'>result</ins> of 1 to block hits, this weapon deals 1 extra wound.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Beautiful Pain</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(1)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>2</del> hits with <del class='del'>Shatter.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>(2)</ins> Pick one enemy unit within <ins class='add'>12&quot; in line of sight,</ins> which takes <ins class='add'>4</ins> hits with <ins class='add'>Obliterate.</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Blissful Dance</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(2)</del> Pick up to <del class='del'>four</del> friendly units within <del class='del'>12&quot;,</del> which get Melee Evasion once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get Melee Evasion once (next time the effect would apply).</td></tr>

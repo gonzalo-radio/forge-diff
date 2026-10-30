@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,24 +37,25 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +0 / -0 / ~8</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>High Cyborg-Priest</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>255</td><td class='num'>270</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Sect Leader</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>340</td><td class='num'>335</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Cult Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>150</td><td class='num'>140</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Cult Ranger</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Shock Priest</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>60</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Cyborg Gunner</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>95</td><td class='num'>85</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Cult Gunner</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>115</td><td class='num'>105</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Sky Stalker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>160</td><td class='num'>160</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Heavy Destroyer Cyborg</td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>220</td><td class='num'>170</td><td class='num'><b class='add'>-50</b></td></tr>
-<tr><td>Raider Cavalry</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>160</td><td class='num'>170</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Sect Stalker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>160</td><td class='num'>180</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Heavy Breacher Cyborg</td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=add>3+ → 2+</b></td><td class='num'>180</td><td class='num'>195</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Sect Infiltrator</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>225</td><td class='num'>210</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-high-cyborg-priest'>High Cyborg-Priest</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>255</td><td class='num'>270</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-sect-leader'>Sect Leader</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>340</td><td class='num'>335</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-cult-leader'>Cult Leader</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>150</td><td class='num'>140</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-cult-ranger'>Cult Ranger</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-shock-priest'>Shock Priest</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>60</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-cyborg-gunner'>Cyborg Gunner</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>95</td><td class='num'>85</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-cult-gunner'>Cult Gunner</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>115</td><td class='num'>105</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-sky-stalker'>Sky Stalker</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>160</td><td class='num'>160</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-heavy-destroyer-cyborg'>Heavy Destroyer Cyborg</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>220</td><td class='num'>170</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td><a href='#unit-raider-cavalry'>Raider Cavalry</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>160</td><td class='num'>170</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-sect-stalker'>Sect Stalker</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>160</td><td class='num'>180</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-heavy-breacher-cyborg'>Heavy Breacher Cyborg</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=add>3+ → 2+</b></td><td class='num'>180</td><td class='num'>195</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-sect-infiltrator'>Sect Infiltrator</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>225</td><td class='num'>210</td><td class='num'><b class='add'>-15</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>High Cyborg-Priest</h3><p class='stats'>255 → 270 pts (+15) · Size 1 · Quality 4+ · Defense 4+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-high-cyborg-priest'>High Cyborg-Priest</h3><p class='stats'>255 → 270 pts (+15) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>255</del> pts</td><td><ins class='add'>270</ins> pts</td></tr>
@@ -78,7 +82,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Preacher (Unpredictable Fighter Aura) · <del class='del'>+75</del> pts</td><td>Preacher (Unpredictable Fighter Aura) · <ins class='add'>+65</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Deacon (Rending when Shooting Aura) · <del class='del'>+95</del> pts</td><td>Deacon (Rending when Shooting Aura) · <ins class='add'>+85</ins> pts</td></tr>
 </table></div>
-<h3>Sect Leader</h3><p class='stats'>340 → 335 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-sect-leader'>Sect Leader</h3><p class='stats'>340 → 335 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>340</del> pts</td><td><ins class='add'>335</ins> pts</td></tr>
@@ -107,7 +111,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Preacher (Unpredictable Fighter Aura) · <del class='del'>+65</del> pts</td><td>Preacher (Unpredictable Fighter Aura) · <ins class='add'>+55</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Deacon (Rending when Shooting Aura) · <del class='del'>+95</del> pts</td><td>Deacon (Rending when Shooting Aura) · <ins class='add'>+85</ins> pts</td></tr>
 </table></div>
-<h3>Cult Leader</h3><p class='stats'>150 → 140 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-cult-leader'>Cult Leader</h3><p class='stats'>150 → 140 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
@@ -136,7 +140,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Psy-Hacker (Caster(2)) · <del class='del'>+30</del> pts</td><td>Psy-Hacker (Caster(2)) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Deacon (Rending when Shooting Aura) · <del class='del'>+95</del> pts</td><td>Deacon (Rending when Shooting Aura) · <ins class='add'>+85</ins> pts</td></tr>
 </table></div>
-<h3>Cult Ranger</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-cult-ranger'>Cult Ranger</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
@@ -153,7 +157,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword (A2, Rending) · <del class='del'>+10</del> pts</td><td>Energy Sword (A2, Rending) · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shock Baton (A2, Surge) · <del class='del'>+5</del> pts</td><td>Shock Baton (A2, <ins class='add'>AP(1),</ins> Surge) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Shock Priest</h3><p class='stats'>55 → 60 pts (+5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-shock-priest'>Shock Priest</h3><p class='stats'>55 → 60 pts (+5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
@@ -162,7 +166,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shock Caster (9&quot;, A2, Anti-Cover, Assault, Surge), Strike (A2) · +20 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shock <del class='del'>Knuckles</del> (9&quot;, A4, Assault, Surge) · <del class='del'>+50</del> pts</td><td><ins class='add'>Dual</ins> Shock <ins class='add'>Casters</ins> (9&quot;, A4, <ins class='add'>Anti-Cover,</ins> Assault, Surge) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Cyborg Gunner</h3><p class='stats'>95 → 85 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-cyborg-gunner'>Cyborg Gunner</h3><p class='stats'>95 → 85 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -174,7 +178,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gamma Cannon (30&quot;, A6, Rending) · <del class='del'>+70</del> pts</td><td>Gamma Cannon (30&quot;, A6, Rending) · <ins class='add'>+65</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Chem-Machinegun (36&quot;, A6, Demolish) · <del class='del'>+80</del> pts</td><td>Chem-Machinegun (36&quot;, A6, Demolish) · <ins class='add'>+65</ins> pts</td></tr>
 </table></div>
-<h3>Cult Gunner</h3><p class='stats'>115 → 105 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-cult-gunner'>Cult Gunner</h3><p class='stats'>115 → 105 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>115</del> pts</td><td><ins class='add'>105</ins> pts</td></tr>
@@ -186,7 +190,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gamma Pistol (9&quot;, A2, Rending, Assault) · <del class='del'>+30</del> pts</td><td>Gamma Pistol (9&quot;, A2, Rending, Assault) · <ins class='add'>+25</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Chem-Pistol (12&quot;, A2, Assault, Demolish) · <del class='del'>+40</del> pts</td><td>Chem-Pistol (12&quot;, A2, Assault, Demolish) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Sky Stalker</h3><p class='stats'>160 pts · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-sky-stalker'>Sky Stalker</h3><p class='stats'>160 pts · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Flamer</td><td>Replace Flamer</td></tr>
@@ -203,7 +207,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword (A2, Rending) · <del class='del'>+10</del> pts</td><td>Energy Sword (A2, Rending) · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shock Baton (A2, Surge) · <del class='del'>+5</del> pts</td><td>Shock Baton (A2, <ins class='add'>AP(1),</ins> Surge) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Heavy Destroyer Cyborg</h3><p class='stats'>220 → 170 pts (-50) · Size 1 · Quality 4+ · Defense 2+ → 3+</p>
+<h3 id='unit-heavy-destroyer-cyborg'>Heavy Destroyer Cyborg</h3><p class='stats'>220 → 170 pts (-50) · Size 1 · Quality 4+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>220</del> pts</td><td><ins class='add'>170</ins> pts</td></tr>
@@ -219,7 +223,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Light Chem-Flamer <del class='del'>(18&quot;,</del> A2, AP(1), <del class='del'>Ignores Cover)</del> · <del class='del'>+-5</del> pts</td><td>Light Chem-Flamer <ins class='add'>(9&quot;,</ins> A2, AP(1), <ins class='add'>Anti-Cover, Assault)</ins> · <ins class='add'>+20</ins> pts</td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Light Chem-Blaster (12&quot;, A2, Assault, Demolish) · +25 pts</ins></td></tr>
 </table></div>
-<h3>Raider Cavalry</h3><p class='stats'>160 → 170 pts (+10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-raider-cavalry'>Raider Cavalry</h3><p class='stats'>160 → 170 pts (+10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>170</ins> pts</td></tr>
@@ -242,7 +246,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Tech-Creed Canticles (Versatile Warrior) · <del class='del'>+20</del> pts</td><td>Tech-Creed Canticles (Versatile Warrior) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Sect Stalker</h3><p class='stats'>160 → 180 pts (+20) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-sect-stalker'>Sect Stalker</h3><p class='stats'>160 → 180 pts (+20) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
@@ -255,7 +259,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Overclocked Temper (Furious) · <del class='del'>+10</del> pts</td><td>Overclocked Temper (Furious) · <ins class='add'>+15</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Metal Spike (6&quot;, A1, AP(4), Deadly(6), Assault) · <del class='del'>+105</del> pts</td><td>Metal Spike (6&quot;, A1, AP(4), Deadly(6), Assault) · <ins class='add'>+75</ins> pts</td></tr>
 </table></div>
-<h3>Heavy Breacher Cyborg</h3><p class='stats'>180 → 195 pts (+15) · Size 1 · Quality 4+ · Defense 3+ → 2+</p>
+<h3 id='unit-heavy-breacher-cyborg'>Heavy Breacher Cyborg</h3><p class='stats'>180 → 195 pts (+15) · Size 1 · Quality 4+ · Defense 3+ → 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>180</del> pts</td><td><ins class='add'>195</ins> pts</td></tr>
@@ -264,14 +268,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Cyborg Claws</td><td>Replace Cyborg Claws</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Breacher Claw (A2, Rending) · <del class='del'>+10</del> pts</td><td>Breacher Claw (A2, Rending) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Sect Infiltrator</h3><p class='stats'>225 → 210 pts (-15) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-sect-infiltrator'>Sect Infiltrator</h3><p class='stats'>225 → 210 pts (-15) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>225</del> pts</td><td><ins class='add'>210</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Burst Volt-Carbines and Energy Sword</td><td>Replace Burst Volt-Carbines and Energy Sword</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dart-Blaster Gun (9&quot;, A6, Assault, Surge), Shock Baton (A2, Surge) · <del class='del'>+20</del> pts</td><td>Dart-Blaster Gun (9&quot;, A6, <ins class='add'>Anti-Cover,</ins> Assault, Surge), Shock Baton (A2, <ins class='add'>AP(1),</ins> Surge) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Enhanced Machine-Fog</td><td><span class='del'>3.6.0 beta:</span> If most models in this unit have Machine-Fog, enemies attacking them always get -1 to hit rolls from Machine-Fog (instead of only <del class='del'>as long as they haven&#x27;t started an activation yet).</del><br><span class='add'>3.6.0:</span> If most models in this unit have Machine-Fog, enemies attacking them always get -1 to hit rolls from Machine-Fog (instead of only <ins class='add'>when shooting/charging from over 9&quot;/6&quot; away).</ins></td></tr>
@@ -282,11 +286,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Screened</td><td><span class='del'>3.6.0 beta:</span> If most models in this unit have this rule, <del class='del'>as long as they haven&#x27;t started an activation yet this round,</del> enemy units <del class='del'>attacking</del> them get -1 to hit <del class='del'>rolls.</del><br><span class='add'>3.6.0:</span> If most models in this unit have this rule, enemy units <ins class='add'>shooting/charging</ins> them <ins class='add'>from over 9&quot;/6&quot; away</ins> get -1 to hit <ins class='add'>rolls .</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Versatile Warrior</td><td><span class='del'>3.6.0 beta:</span> When this unit is activated, pick one effect: until the end of the activation, when <del class='del'>this unit attacks</del> enemies <del class='del'>that already finished an activation this round,</del> all models with this rule in it either get AP(+1) or get +1 to hit rolls.<br><span class='add'>3.6.0:</span> When this unit is activated, pick one effect: until the end of the activation, when <ins class='add'>shooting/charging</ins> enemies <ins class='add'>over 9&quot;/6&quot; away,</ins> all models with this rule in it either get AP(+1) or get +1 to hit rolls.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Corrode Weapons</td><td><span class='del'>3.6.0 beta:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which loses AP(1) when shooting once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which loses AP(1) <ins class='add'>on its weapons</ins> when shooting once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,22 +37,23 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +3 / -6 / ~18</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Shield Berserkers → Shield Berserker</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>45</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Volcanic Berserker</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>70</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Berserker Guard</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>70</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Auric Marksman</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>85</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Berserker Thrower</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>85</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Volcanic Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>120</td><td class='num'>150</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Magma Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>160</td><td class='num'>180</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Fire Elemental</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>165</td><td class='num'>200</td><td class='num'><b class='del'>+35</b></td></tr>
-<tr><td>Great Fire Elemental</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>380</td><td class='num'>400</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Volcanic Lizard</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>475</td><td class='num'>520</td><td class='num'><b class='del'>+45</b></td></tr>
-<tr><td>Magma Drake</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>1025</td><td class='num'>975</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td><a href='#unit-shield-berserker'>Shield Berserkers → Shield Berserker</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>45</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-volcanic-berserker'>Volcanic Berserker</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>70</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-berserker-guard'>Berserker Guard</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>70</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-auric-marksman'>Auric Marksman</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>85</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-berserker-thrower'>Berserker Thrower</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>85</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-volcanic-leader'>Volcanic Leader</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>120</td><td class='num'>150</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-magma-champion'>Magma Champion</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>160</td><td class='num'>180</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-fire-elemental'>Fire Elemental</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>165</td><td class='num'>200</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td><a href='#unit-great-fire-elemental'>Great Fire Elemental</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>380</td><td class='num'>400</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-volcanic-lizard'>Volcanic Lizard</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>475</td><td class='num'>520</td><td class='num'><b class='del'>+45</b></td></tr>
+<tr><td><a href='#unit-magma-drake'>Magma Drake</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>1025</td><td class='num'>975</td><td class='num'><b class='add'>-50</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Shield Berserker</h3><p class='stats'>35 → 45 pts (+10) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-shield-berserker'>Shield Berserker</h3><p class='stats'>35 → 45 pts (+10) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Shield <del class='del'>Berserkers</del></td><td>Shield <ins class='add'>Berserker</ins></td></tr>
@@ -67,7 +71,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Volcanic Banner (Strider Aura) · <del class='del'>+10</del> pts</td><td>Volcanic Banner (Strider Aura) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Volcanic Berserker</h3><p class='stats'>55 → 70 pts (+15) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-volcanic-berserker'>Volcanic Berserker</h3><p class='stats'>55 → 70 pts (+15) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -81,7 +85,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Magmatic Protection (Grounded <del class='del'>Reinforcement</del> Aura) · <del class='del'>+5</del> pts</td><td>Magmatic Protection (Grounded <ins class='add'>Defense</ins> Aura) · <ins class='add'>+20</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Volcanic Banner (Strider Aura) · <del class='del'>+10</del> pts</td><td>Volcanic Banner (Strider Aura) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Berserker Guard</h3><p class='stats'>60 → 70 pts (+10) · Size 1 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-berserker-guard'>Berserker Guard</h3><p class='stats'>60 → 70 pts (+10) · Size 1 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -93,7 +97,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Volcanic Banner (Strider Aura) · <del class='del'>+10</del> pts</td><td>Volcanic Banner (Strider Aura) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Auric Marksman</h3><p class='stats'>75 → 85 pts (+10) · Size 1 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-auric-marksman'>Auric Marksman</h3><p class='stats'>75 → 85 pts (+10) · Size 1 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -111,7 +115,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Magmatic Protection (Grounded <del class='del'>Reinforcement</del> Aura) · <del class='del'>+5</del> pts</td><td>Magmatic Protection (Grounded <ins class='add'>Defense</ins> Aura) · <ins class='add'>+20</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Volcanic Banner (Strider Aura) · <del class='del'>+10</del> pts</td><td>Volcanic Banner (Strider Aura) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Berserker Thrower</h3><p class='stats'>55 → 85 pts (+30) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-berserker-thrower'>Berserker Thrower</h3><p class='stats'>55 → 85 pts (+30) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -130,7 +134,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Volcanic Banner (Strider Aura) · <del class='del'>+10</del> pts</td><td>Volcanic Banner (Strider Aura) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Volcanic Leader</h3><p class='stats'>120 → 150 pts (+30) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-volcanic-leader'>Volcanic Leader</h3><p class='stats'>120 → 150 pts (+30) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>150</ins> pts</td></tr>
@@ -178,7 +182,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Smite Forger (Quick Shot Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rune Smith (Caster(2)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Magma Champion</h3><p class='stats'>160 → 180 pts (+20) · Size 1 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-magma-champion'>Magma Champion</h3><p class='stats'>160 → 180 pts (+20) · Size 1 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
@@ -231,7 +235,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Smite Forger (Quick Shot Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ancient Icon Bearer (Fear(6)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Fire Elemental</h3><p class='stats'>165 → 200 pts (+35) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-fire-elemental'>Fire Elemental</h3><p class='stats'>165 → 200 pts (+35) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>165</del> pts</td><td><ins class='add'>200</ins> pts</td></tr>
@@ -241,7 +245,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Spit Fires and Strike</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flame Strikes (A9, Rending) · +15 pts</ins></td></tr>
 </table></div>
-<h3>Great Fire Elemental</h3><p class='stats'>380 → 400 pts (+20) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-great-fire-elemental'>Great Fire Elemental</h3><p class='stats'>380 → 400 pts (+20) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>380</del> pts</td><td><ins class='add'>400</ins> pts</td></tr>
@@ -254,7 +258,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Doom Call (Fatigue Debuff) · <del class='del'>+15</del> pts</td><td>Doom Call (Fatigue Debuff) · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flying Embers (9&quot;, A9, Rending, Assault) · +175 pts</ins></td></tr>
 </table></div>
-<h3>Volcanic Lizard</h3><p class='stats'>475 → 520 pts (+45) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-volcanic-lizard'>Volcanic Lizard</h3><p class='stats'>475 → 520 pts (+45) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>475</del> pts</td><td><ins class='add'>520</ins> pts</td></tr>
@@ -269,7 +273,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Spit Lava</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spit Flames (12&quot;, A6, Blast(3), Reliable) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Magma Drake</h3><p class='stats'>1025 → 975 pts (-50) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-magma-drake'>Magma Drake</h3><p class='stats'>1025 → 975 pts (-50) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1025</del> pts</td><td><ins class='add'>975</ins> pts</td></tr>
@@ -282,7 +286,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flame Breath (6&quot;, A3, Blast(3), Reliable, Assault) · +95 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Flying Embers (9&quot;, A9, Rending, Assault) · +135 pts</ins></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Demolish</td><td>Ignores Cover, and when attacking units with most models within 1&quot; of terrain, this weapon gets AP(+1).</td></tr>
 <tr class='add'><td>➕</td><td>Grounded Defense</td><td>If a unit where most models have this rule has most of them within 1&quot; of terrain, they get +1 to Defense rolls.</td></tr>
@@ -312,7 +316,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Unstoppable in Melee Aura</td><td><span class='del'>3.5.1 (2026-09-28):</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Unstoppable in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0 beta:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Unstoppable in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='mod'><td>✏️</td><td>Vanguard</td><td><span class='del'>3.5.1 (2026-09-28):</span> After this model is deployed, it may be placed anywhere fully within <del class='del'>9”</del> of its <del class='del'>position.</del><br><span class='add'>3.6.0 beta:</span> After this model is deployed, it may be placed anywhere fully within <ins class='add'>9&quot;</ins> of its <ins class='add'>position, over 9&quot; away from non-Vanguard enemy units.</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Auric Fury</td><td><span class='del'>3.5.1 (2026-09-28):</span> (2) Pick up to <del class='del'>four</del> friendly units within 12&quot;, which get Hit &amp; Run Fighter once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (2) Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get Hit &amp; Run Fighter once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Fire Storm</td><td><span class='del'>3.5.1 (2026-09-28):</span> (3) Pick <del class='del'>up to three</del> enemy <del class='del'>units</del> within <del class='del'>6&quot;,</del> which <del class='del'>take 3</del> hits with <del class='del'>Destructive each. Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.</del><br><span class='add'>3.6.0 beta:</span> (3) Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>24&quot; in line of sight,</ins> which <ins class='add'>takes 6</ins> hits with <ins class='add'>Demolish.</ins></td></tr>

@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,37 +37,38 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +0 / -0 / ~10</li>
 <li>Spells: +0 / -0 / ~0</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Constance</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>290</td><td class='num'>270</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Destroyer High Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>305</td><td class='num'>240</td><td class='num'><b class='add'>-65</b></td></tr>
-<tr><td>Celestial High Sister</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>135</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>High Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>120</td><td class='num'>115</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Fanatic Superior</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>125</td><td class='num'>120</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Novice Leader</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>75</td><td class='num'>75</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Warrior Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>45</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Vanguard Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Protector Sister</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>60</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Vanguard Sniper</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>70</td><td class='num'>65</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Pistoleer Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Celestial Warrior Sister</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>75</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Assault Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>80</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Novice Sisters</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>85</td><td class='num'>80</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Support Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>105</td><td class='num'>95</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-constance'>Constance</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>290</td><td class='num'>270</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-destroyer-high-sister'>Destroyer High Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>305</td><td class='num'>240</td><td class='num'><b class='add'>-65</b></td></tr>
+<tr><td><a href='#unit-celestial-high-sister'>Celestial High Sister</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>135</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-high-sister'>High Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>120</td><td class='num'>115</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-fanatic-superior'>Fanatic Superior</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>125</td><td class='num'>120</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-novice-leader'>Novice Leader</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>75</td><td class='num'>75</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-warrior-sister'>Warrior Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>45</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-vanguard-sister'>Vanguard Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-protector-sister'>Protector Sister</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>60</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-vanguard-sniper'>Vanguard Sniper</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>70</td><td class='num'>65</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-pistoleer-sister'>Pistoleer Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-celestial-warrior-sister'>Celestial Warrior Sister</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>75</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-assault-sister'>Assault Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>80</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-novice-sisters'>Novice Sisters</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>85</td><td class='num'>80</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-support-sister'>Support Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>105</td><td class='num'>95</td><td class='num'><b class='add'>-10</b></td></tr>
 <tr><td>Fanatic Sisters</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>105</td><td class='num'>105</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Destroyer Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>145</td><td class='num'>110</td><td class='num'><b class='add'>-35</b></td></tr>
-<tr><td>Biker Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>125</td><td class='num'>125</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-destroyer-sister'>Destroyer Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>145</td><td class='num'>110</td><td class='num'><b class='add'>-35</b></td></tr>
+<tr><td><a href='#unit-biker-sister'>Biker Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>125</td><td class='num'>125</td><td class='num'><b class=''>=</b></td></tr>
 <tr><td>Biker Fanatic</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>130</td><td class='num'>130</td><td class='num'><b class=''>=</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Constance</h3><p class='stats'>290 → 270 pts (-20) · Size 1 · Quality 4+ · Defense 4+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-constance'>Constance</h3><p class='stats'>290 → 270 pts (-20) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>290</del> pts</td><td><ins class='add'>270</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Rangefinder Backpack</td><td>Replace Rangefinder Backpack</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rangefinder Backpack - Leader (Increased Shooting Range Aura) · <del class='del'>+-5</del> pts</td><td>Rangefinder Backpack - Leader (Increased Shooting Range Aura) · <ins class='add'>+-15</ins> pts</td></tr>
 </table></div>
-<h3>Destroyer High Sister</h3><p class='stats'>305 → 240 pts (-65) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-destroyer-high-sister'>Destroyer High Sister</h3><p class='stats'>305 → 240 pts (-65) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>305</del> pts</td><td><ins class='add'>240</ins> pts</td></tr>
@@ -85,7 +89,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Canoness (Piercing Marksman Aura) · <del class='del'>+80</del> pts</td><td>Canoness (Piercing Marksman Aura) · <ins class='add'>+65</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Witch (Caster(3)) · <del class='del'>+40</del> pts</td><td>Master Witch (Caster(3)) · <ins class='add'>+65</ins> pts</td></tr>
 </table></div>
-<h3>Celestial High Sister</h3><p class='stats'>135 pts · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-celestial-high-sister'>Celestial High Sister</h3><p class='stats'>135 pts · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
@@ -119,7 +123,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Assault Bike (Assault Bike-Rifle (12&quot;, A6, Assault), Fast, Tough(9)) · <del class='del'>+235</del> pts</td><td>Assault Bike (Assault Bike-Rifle (12&quot;, A6, Assault), Fast, Tough(9)) · <ins class='add'>+230</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Holy Wings (Holy Flame Blast (9&quot;, A2, Blast(3), Reliable, Assault, Purge), Flying, Tough(9)) · <del class='del'>+300</del> pts</td><td>Holy Wings (Holy Flame Blast (9&quot;, A2, Blast(3), Reliable, Assault, Purge), Flying, Tough(9)) · <ins class='add'>+280</ins> pts</td></tr>
 </table></div>
-<h3>High Sister</h3><p class='stats'>120 → 115 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-high-sister'>High Sister</h3><p class='stats'>120 → 115 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
@@ -147,7 +151,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Witch (Caster(3)) · <del class='del'>+40</del> pts</td><td>Master Witch (Caster(3)) · <ins class='add'>+65</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Canoness (Piercing Marksman Aura) · <del class='del'>+85</del> pts</td><td>Canoness (Piercing Marksman Aura) · <ins class='add'>+70</ins> pts</td></tr>
 </table></div>
-<h3>Fanatic Superior</h3><p class='stats'>125 → 120 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-fanatic-superior'>Fanatic Superior</h3><p class='stats'>125 → 120 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>125</del> pts</td><td><ins class='add'>120</ins> pts</td></tr>
@@ -158,7 +162,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Superior (Enhanced Devout Aura) · <del class='del'>+25</del> pts</td><td>Superior (Enhanced Devout Aura) · <ins class='add'>+20</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Priestess (Shred in Melee Aura) · <del class='del'>+35</del> pts</td><td>Priestess (Shred in Melee Aura) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Novice Leader</h3><p class='stats'>75 pts · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-novice-leader'>Novice Leader</h3><p class='stats'>75 pts · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
@@ -177,7 +181,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Fist (A6, AP(2)) · <del class='del'>+25</del> pts</td><td>Energy Fist (A6, AP(2)) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword (A6, Rending) · <del class='del'>+35</del> pts</td><td>Energy Sword (A6, Rending) · <ins class='add'>+55</ins> pts</td></tr>
 </table></div>
-<h3>Warrior Sister</h3><p class='stats'>45 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-warrior-sister'>Warrior Sister</h3><p class='stats'>45 pts · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Battle Rifle</td><td>Replace Battle Rifle</td></tr>
@@ -194,7 +198,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Medical Training (Regeneration Aura) · <del class='del'>+65</del> pts</td><td>Medical Training (Regeneration Aura) · <ins class='add'>+70</ins> pts</td></tr>
 </table></div>
-<h3>Vanguard Sister</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-vanguard-sister'>Vanguard Sister</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
@@ -207,7 +211,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Sgt. Pistol</td><td>Replace Sgt. Pistol</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shredder Pistol (9&quot;, A2, Rending, Assault) · <del class='del'>+20</del> pts</td><td>Shredder Pistol (9&quot;, A2, Rending, Assault) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Protector Sister</h3><p class='stats'>60 pts · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-protector-sister'>Protector Sister</h3><p class='stats'>60 pts · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Procession Sword</td><td>Replace Procession Sword</td></tr>
@@ -223,7 +227,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Medical Training (Regeneration Aura) · <del class='del'>+65</del> pts</td><td>Medical Training (Regeneration Aura) · <ins class='add'>+70</ins> pts</td></tr>
 </table></div>
-<h3>Vanguard Sniper</h3><p class='stats'>70 → 65 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-vanguard-sniper'>Vanguard Sniper</h3><p class='stats'>70 → 65 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
@@ -231,7 +235,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Flame-Sniper Carbine (18&quot;, A2, Blast(3), Reliable) · <del class='del'>+35</del> pts</td><td>Flame-Sniper Carbine (18&quot;, A2, Blast(3), Reliable) · <ins class='add'>+30</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Blessed Flame-Sniper Rifle (24&quot;, A4, Reliable, Purge) · <del class='del'>+75</del> pts</td><td>Blessed Flame-Sniper Rifle (24&quot;, A4, Reliable, Purge) · <ins class='add'>+70</ins> pts</td></tr>
 </table></div>
-<h3>Pistoleer Sister</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-pistoleer-sister'>Pistoleer Sister</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -247,7 +251,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Sword (A2, Rending) · <del class='del'>free</del></td><td>Energy Sword (A2, Rending) · <ins class='add'>+10 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Fist (A2, AP(2)) · <del class='del'>free</del></td><td>Energy Fist (A2, AP(2)) · <ins class='add'>+10 pts</ins></td></tr>
 </table></div>
-<h3>Celestial Warrior Sister</h3><p class='stats'>80 → 75 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-celestial-warrior-sister'>Celestial Warrior Sister</h3><p class='stats'>80 → 75 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
@@ -258,7 +262,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Medical Training (Regeneration Aura) · <del class='del'>+65</del> pts</td><td>Medical Training (Regeneration Aura) · <ins class='add'>+70</ins> pts</td></tr>
 </table></div>
-<h3>Assault Sister</h3><p class='stats'>80 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-assault-sister'>Assault Sister</h3><p class='stats'>80 pts · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Pistol</td><td>Replace Pistol</td></tr>
@@ -266,7 +270,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burst Plasma Pistol (12&quot;, A4, AP(2), Assault) · <del class='del'>+70</del> pts</td><td>Burst Plasma Pistol (12&quot;, A4, AP(2), Assault) · <ins class='add'>+65</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burst Fusion Pistol (6&quot;, A1, AP(4), Deadly(6), Assault) · <del class='del'>+85</del> pts</td><td>Burst Fusion Pistol (6&quot;, A1, AP(4), Deadly(6), Assault) · <ins class='add'>+65</ins> pts</td></tr>
 </table></div>
-<h3>Novice Sisters</h3><p class='stats'>85 → 80 pts (-5) · Size 3 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-novice-sisters'>Novice Sisters</h3><p class='stats'>85 → 80 pts (-5) · Size 3 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
@@ -275,7 +279,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Medical Training (Regeneration Aura) · <del class='del'>+65</del> pts</td><td>Medical Training (Regeneration Aura) · <ins class='add'>+70</ins> pts</td></tr>
 </table></div>
-<h3>Support Sister</h3><p class='stats'>105 → 95 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-support-sister'>Support Sister</h3><p class='stats'>105 → 95 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -283,7 +287,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Machinegun (30&quot;, A6, AP(1)) · <del class='del'>+40</del> pts</td><td>Heavy Machinegun (30&quot;, A6, AP(1)) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Blessed Flamer (18&quot;, A2, Blast(3), Reliable, Purge) · <del class='del'>+65</del> pts</td><td>Blessed Flamer (18&quot;, A2, Blast(3), Reliable, Purge) · <ins class='add'>+55</ins> pts</td></tr>
 </table></div>
-<h3>Destroyer Sister</h3><p class='stats'>145 → 110 pts (-35) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-destroyer-sister'>Destroyer Sister</h3><p class='stats'>145 → 110 pts (-35) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>145</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
@@ -303,7 +307,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with one</td><td>Upgrade one model with one</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Medical Training (Regeneration Aura) · <del class='del'>+85</del> pts</td><td>Medical Training (Regeneration Aura) · <ins class='add'>+90</ins> pts</td></tr>
 </table></div>
-<h3>Biker Sister</h3><p class='stats'>125 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-biker-sister'>Biker Sister</h3><p class='stats'>125 pts · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Battle Rifle</td><td>Replace Battle Rifle</td></tr>
@@ -312,7 +316,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Sgt. Pistol</td><td>Replace Sgt. Pistol</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shredder Pistol (9&quot;, A2, Rending, Assault) · <del class='del'>+20</del> pts</td><td>Shredder Pistol (9&quot;, A2, Rending, Assault) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Brutal</td><td><span class='del'>3.6.0 beta:</span> When this model <del class='del'>attacks</del> enemies <del class='del'>that already finished an activation this round,</del> unmodified result of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).<br><span class='add'>3.6.0:</span> When this model <ins class='add'>shoots/charges</ins> enemies <ins class='add'>over 9&quot;/6&quot; away,</ins> unmodified result of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</td></tr>
@@ -325,9 +329,9 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Precision Target</td><td><span class='del'>3.6.0 beta:</span> Once per game, during this model&#x27;s activation, pick X enemy units within 18&quot; and in line of sight of it, and place one token on them. Friendly units get +1 to hit rolls when attacking them.<br><span class='add'>3.6.0:</span> Once per game, during this model&#x27;s activation, <ins class='add'>before attacking,</ins> pick X enemy units within 18&quot; and in line of sight of it, and place one token on them. Friendly units get +1 to hit rolls when attacking them.</td></tr>
 <tr class='mod'><td>✏️</td><td>Shred in Melee Aura</td><td><span class='del'>3.6.0 beta:</span> This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Shred in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Shred <ins class='add'>on its weapons</ins> in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <p>No changes.</p>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

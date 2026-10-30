@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,20 +37,21 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +3 / -2 / ~3</li>
 <li>Spells: +0 / -0 / ~5</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Plague Vassal Micro-Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>200</td><td class='num'>265</td><td class='num'><b class='del'>+65</b></td></tr>
-<tr><td>Plague Errant Mini-Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>300</td><td class='num'>400</td><td class='num'><b class='del'>+100</b></td></tr>
-<tr><td>Plague Pilgrim Mini-Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>365</td><td class='num'>450</td><td class='num'><b class='del'>+85</b></td></tr>
-<tr><td>Plague Yeoman Mini-Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>460</td><td class='num'>520</td><td class='num'><b class='del'>+60</b></td></tr>
-<tr><td>Plague Paladin Light Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>500</td><td class='num'>665</td><td class='num'><b class='del'>+165</b></td></tr>
-<tr><td>Plague Questor Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>720</td><td class='num'>995</td><td class='num'><b class='del'>+275</b></td></tr>
-<tr><td>Plague Knight Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>850</td><td class='num'>1020</td><td class='num'><b class='del'>+170</b></td></tr>
-<tr><td>Plague Duke Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1040</td><td class='num'>1195</td><td class='num'><b class='del'>+155</b></td></tr>
-<tr><td>Plague King Heavy Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1135</td><td class='num'>1430</td><td class='num'><b class='del'>+295</b></td></tr>
+<tr><td><a href='#unit-plague-vassal-micro-titan'>Plague Vassal Micro-Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>200</td><td class='num'>265</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td><a href='#unit-plague-errant-mini-titan'>Plague Errant Mini-Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>300</td><td class='num'>400</td><td class='num'><b class='del'>+100</b></td></tr>
+<tr><td><a href='#unit-plague-pilgrim-mini-titan'>Plague Pilgrim Mini-Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>365</td><td class='num'>450</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td><a href='#unit-plague-yeoman-mini-titan'>Plague Yeoman Mini-Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>460</td><td class='num'>520</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-plague-paladin-light-titan'>Plague Paladin Light Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>500</td><td class='num'>665</td><td class='num'><b class='del'>+165</b></td></tr>
+<tr><td><a href='#unit-plague-questor-titan'>Plague Questor Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>720</td><td class='num'>995</td><td class='num'><b class='del'>+275</b></td></tr>
+<tr><td><a href='#unit-plague-knight-titan'>Plague Knight Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>850</td><td class='num'>1020</td><td class='num'><b class='del'>+170</b></td></tr>
+<tr><td><a href='#unit-plague-duke-titan'>Plague Duke Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1040</td><td class='num'>1195</td><td class='num'><b class='del'>+155</b></td></tr>
+<tr><td><a href='#unit-plague-king-heavy-titan'>Plague King Heavy Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1135</td><td class='num'>1430</td><td class='num'><b class='del'>+295</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Plague Vassal Micro-Titan</h3><p class='stats'>200 → 265 pts (+65) · Size 1 · Quality 3+ · Defense 2+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-plague-vassal-micro-titan'>Plague Vassal Micro-Titan</h3><p class='stats'>200 → 265 pts (+65) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>200</del> pts</td><td><ins class='add'>265</ins> pts</td></tr>
@@ -82,7 +86,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Titan Shield</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Hammer (A1, AP(1), Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague Errant Mini-Titan</h3><p class='stats'>300 → 400 pts (+100) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-plague-errant-mini-titan'>Plague Errant Mini-Titan</h3><p class='stats'>300 → 400 pts (+100) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>300</del> pts</td><td><ins class='add'>400</ins> pts</td></tr>
@@ -113,7 +117,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Field (Regeneration) · <del class='del'>+45</del> pts</td><td>Energy Field (Regeneration) · <ins class='add'>+50</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Assault Config (Fast, Strider) · <del class='del'>+70</del> pts</td><td>Assault Config (Fast, Strider) · <ins class='add'>+50</ins> pts</td></tr>
 </table></div>
-<h3>Plague Pilgrim Mini-Titan</h3><p class='stats'>365 → 450 pts (+85) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-plague-pilgrim-mini-titan'>Plague Pilgrim Mini-Titan</h3><p class='stats'>365 → 450 pts (+85) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>365</del> pts</td><td><ins class='add'>450</ins> pts</td></tr>
@@ -153,7 +157,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gatling Cannon (30&quot;, A6, AP(1), Rending) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hell Autocannon (36&quot;, A6, AP(2)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague Yeoman Mini-Titan</h3><p class='stats'>460 → 520 pts (+60) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-plague-yeoman-mini-titan'>Plague Yeoman Mini-Titan</h3><p class='stats'>460 → 520 pts (+60) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>460</del> pts</td><td><ins class='add'>520</ins> pts</td></tr>
@@ -176,7 +180,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gatling Cannon (30&quot;, A6, AP(1), Rending) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hell Autocannon (36&quot;, A6, AP(2)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague Paladin Light Titan</h3><p class='stats'>500 → 665 pts (+165) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-plague-paladin-light-titan'>Plague Paladin Light Titan</h3><p class='stats'>500 → 665 pts (+165) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>500</del> pts</td><td><ins class='add'>665</ins> pts</td></tr>
@@ -224,7 +228,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Titan Shield</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Hammer (A2, AP(1), Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague Questor Titan</h3><p class='stats'>720 → 995 pts (+275) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-plague-questor-titan'>Plague Questor Titan</h3><p class='stats'>720 → 995 pts (+275) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>720</del> pts</td><td><ins class='add'>995</ins> pts</td></tr>
@@ -258,7 +262,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Psychic Lord (Caster(4)) · <del class='del'>+95</del> pts</td><td>Psychic Lord (Caster(4)) · <ins class='add'>+75</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Field (Regeneration) · <del class='del'>+100</del> pts</td><td>Energy Field (Regeneration) · <ins class='add'>+120</ins> pts</td></tr>
 </table></div>
-<h3>Plague Knight Titan</h3><p class='stats'>850 → 1020 pts (+170) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-plague-knight-titan'>Plague Knight Titan</h3><p class='stats'>850 → 1020 pts (+170) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>850</del> pts</td><td><ins class='add'>1020</ins> pts</td></tr>
@@ -307,7 +311,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Gatling Cannon (30&quot;, A9, AP(1), Rending), Heavy Flamer (12&quot;, A1, AP(1), Blast(3), Reliable) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Pulse Laser (30&quot;, A9, AP(3)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague Duke Titan</h3><p class='stats'>1040 → 1195 pts (+155) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-plague-duke-titan'>Plague Duke Titan</h3><p class='stats'>1040 → 1195 pts (+155) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1040</del> pts</td><td><ins class='add'>1195</ins> pts</td></tr>
@@ -344,7 +348,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Gatling Cannon (30&quot;, A9, AP(1), Rending), Heavy Flamer (12&quot;, A1, AP(1), Blast(3), Reliable) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Pulse Laser (30&quot;, A9, AP(3)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague King Heavy Titan</h3><p class='stats'>1135 → 1430 pts (+295) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-plague-king-heavy-titan'>Plague King Heavy Titan</h3><p class='stats'>1135 → 1430 pts (+295) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1135</del> pts</td><td><ins class='add'>1430</ins> pts</td></tr>
@@ -375,7 +379,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Psychic Lord (Caster(5)) · <del class='del'>+120</del> pts</td><td>Psychic Lord (Caster(5)) · <ins class='add'>+95</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Field (Regeneration) · <del class='del'>+135</del> pts</td><td>Energy Field (Regeneration) · <ins class='add'>+160</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Decimate</td><td>When attacking units with more than half of their total size or Tough value (for single-model units), the target must re-roll unmodified Defense results of 6.</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Plaguebound</td><td>If most models in this unit have Plaguebound, they ignore wounds on rolls of 5-6 from Plaguebound (instead of only on 6+).</td></tr>
@@ -386,7 +390,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Plaguebound</td><td><span class='del'>3.5.1 (2026-09-28):</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.<br><span class='add'>3.6.0 beta:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.</td></tr>
 <tr class='mod'><td>✏️</td><td>Protected</td><td><span class='del'>3.5.1 (2026-09-28):</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.<br><span class='add'>3.6.0 beta:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Aura of Pestilence</td><td><span class='del'>3.5.1 (2026-09-28):</span> (1) Pick one enemy unit within <del class='del'>18&quot;,</del> which counts as being in Difficult Terrain once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (1) Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which counts as being in Difficult Terrain once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Plague Boon</td><td><span class='del'>3.5.1 (2026-09-28):</span> (3) Pick up to three friendly units within <del class='del'>12&quot;,</del> which get Plaguebound <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (3) Pick up to three friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Plaguebound once (next time the effect would apply).</td></tr>

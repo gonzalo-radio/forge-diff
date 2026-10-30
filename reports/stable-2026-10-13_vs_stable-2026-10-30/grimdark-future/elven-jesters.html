@@ -20,7 +20,9 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
 .systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
@@ -35,24 +37,25 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +10 / -8 / ~7</li>
 <li>Spells: +0 / -0 / ~5</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#new-units'>New units</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Master Jester</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Fool Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>50</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Fools</td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>95</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Pranksters</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>215</td><td class='num'>130</td><td class='num'><b class='add'>-85</b></td></tr>
-<tr><td>Jesters</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>150</td><td class='num'>145</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Jokers</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>120</td><td class='num'>140</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Jetbikes → Jetbike Riders</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>285</td><td class='num'>315</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Heavy Jetbike</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>250</td><td class='num'>245</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-master-jester'>Master Jester</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-fool-champion'>Fool Champion</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>50</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-fools'>Fools</a></td><td class='num'>5</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>95</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-pranksters'>Pranksters</a></td><td class='num'>5</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>215</td><td class='num'>130</td><td class='num'><b class='add'>-85</b></td></tr>
+<tr><td><a href='#unit-jesters'>Jesters</a></td><td class='num'>5</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>150</td><td class='num'>145</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-jokers'>Jokers</a></td><td class='num'>3</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>120</td><td class='num'>140</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-jetbike-riders'>Jetbikes → Jetbike Riders</a></td><td class='num'>3</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>285</td><td class='num'>315</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-heavy-jetbike'>Heavy Jetbike</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>250</td><td class='num'>245</td><td class='num'><b class='add'>-5</b></td></tr>
 </table></div>
-<h2>New units</h2><div class='scroll'><table>
+<h2 id='new-units'>New units</h2><div class='scroll'><table>
 <tr class='add'><td><b>Tricksters</b></td><td>5x Q5+ D5+ — 110 pts. Rules: Furious, Rapid Blink, Stealth. Weapons: 5x Dual Atom Pistols (9&quot;, A2, Assault, Bane)</td></tr>
 <tr class='add'><td><b>Solitaires</b></td><td>3x Q5+ D5+ — 95 pts. Rules: Rapid Blink, Stealth. Weapons: 3x Sniper Rifle (30&quot;, A1, AP(1), Reliable, Takedown), 3x Strike (A1)</td></tr>
 <tr class='add'><td><b>Raptor Riders</b></td><td>3x Q3+ D5+ — 200 pts. Rules: Fast, Furious, Rapid Blink, Tough(3), Stealth. Weapons: 3x Hand Weapon (A1)</td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Master Jester</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 3+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-master-jester'>Master Jester</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -108,7 +111,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>2x CCW (A2) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Dagger (A1), Deathly Kiss (A1, AP(2), Deadly(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Fool Champion</h3><p class='stats'>50 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-fool-champion'>Fool Champion</h3><p class='stats'>50 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Stealth</ins><br><span class='muted'>When units where most models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</span></td></tr>
@@ -140,7 +143,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Trickster Suit (Infiltrating Precision Strike) · +10 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pet Raptor (Repel Ambushers) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Fools</h3><p class='stats'>95 pts · Size 5 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-fools'>Fools</h3><p class='stats'>95 pts · Size 5 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='add'><td>➕</td><td>Rule</td><td><span class='muted'>—</span></td><td><ins class='add'>Stealth</ins><br><span class='muted'>When units where most models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</span></td></tr>
@@ -156,7 +159,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Hand Weapons</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Arm-Blade (A1, Rending) · +25 pts</ins></td></tr>
 </table></div>
-<h3>Pranksters</h3><p class='stats'>215 → 130 pts (-85) · Size 5 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-pranksters'>Pranksters</h3><p class='stats'>215 → 130 pts (-85) · Size 5 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>215</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
@@ -172,7 +175,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with</td><td>Upgrade all models with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Twisted Illusion (Ambush Re-Deployment) · <del class='del'>+35</del> pts</td><td>Twisted Illusion (Ambush Re-Deployment) · <ins class='add'>+40</ins> pts</td></tr>
 </table></div>
-<h3>Jesters</h3><p class='stats'>150 → 145 pts (-5) · Size 5 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-jesters'>Jesters</h3><p class='stats'>150 → 145 pts (-5) · Size 5 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>145</ins> pts</td></tr>
@@ -203,7 +206,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Deathly Touch (A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Deathly Kiss (A1, AP(2), Deadly(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Jokers</h3><p class='stats'>120 → 140 pts (+20) · Size 3 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-jokers'>Jokers</h3><p class='stats'>120 → 140 pts (+20) · Size 3 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
@@ -219,7 +222,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace all Explosive Jester-Slings</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fragment Jester-Sling (12&quot;, A3, Anti-Cover, Assault, Destructive) · +65 pts</ins></td></tr>
 </table></div>
-<h3>Jetbike Riders</h3><p class='stats'>285 → 315 pts (+30) · Size 3 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-jetbike-riders'>Jetbike Riders</h3><p class='stats'>285 → 315 pts (+30) · Size 3 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Jetbikes</del></td><td><ins class='add'>Jetbike Riders</ins></td></tr>
@@ -241,7 +244,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Light EMP Cannon (24&quot;, A3, Rending) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fragment Cannon (24&quot;, A3, AP(1), Disintegrate) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Heavy Jetbike</h3><p class='stats'>250 → 245 pts (-5) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-heavy-jetbike'>Heavy Jetbike</h3><p class='stats'>250 → 245 pts (-5) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>250</del> pts</td><td><ins class='add'>245</ins> pts</td></tr>
@@ -273,7 +276,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Focus Cannon (24&quot;, A1, AP(2), Blast(3)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Light Laser Cannon (24&quot;, A1, AP(3), Deadly(3)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Ambushing Piercing Shot</td><td>Counts as having Ambush, and its weapons get AP(+1) when shooting on the round in which it deploys via this rule.</td></tr>
 <tr class='add'><td>➕</td><td>Destructive</td><td>When attacking units with more than half of their total size or Tough value (for single-model units), those hits get AP(+1).</td></tr>
@@ -301,7 +304,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Takedown<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> This model may pick any model in the target unit as its individual <del class='del'>target,</del> which is resolved as if it was a unit of [1]. Takedown attacks must be resolved before other weapons.<br><span class='add'>3.6.0:</span> This model may pick any model in the target unit as its individual <ins class='add'>target for this weapon&#x27;s attacks,</ins> which is resolved as if it was a unit of [1]. Takedown attacks must be resolved before other weapons.</td></tr>
 <tr class='mod'><td>✏️</td><td>Takedown Strike</td><td><span class='del'>3.5.1:</span> Once per game, when it&#x27;s this model&#x27;s turn to <del class='del'>attack</del> in melee, it may make <del class='del'>one attack</del> at Quality 2+ with AP(2), Deadly(3), and Takedown.<br><span class='add'>3.6.0:</span> Once per game, when it&#x27;s this model&#x27;s turn to <ins class='add'>strike</ins> in melee, it may make <ins class='add'>X attacks</ins> at Quality 2+ with AP(2), Deadly(3), and Takedown.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Asphyxiating Fog</td><td><span class='del'>3.5.1:</span> (1) Pick one friendly unit within 12&quot;, which gets <del class='del'>Counter-Attack</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick one friendly unit within 12&quot;, which gets <ins class='add'>Counter in Melee</ins> once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Fatal Sorrow</td><td><span class='del'>3.5.1:</span> (3) Pick one enemy unit within <del class='del'>18&quot;,</del> which takes 6 hits.<br><span class='add'>3.6.0:</span> (3) Pick one enemy unit within <ins class='add'>24&quot; in line of sight,</ins> which takes 6 hits.</td></tr>

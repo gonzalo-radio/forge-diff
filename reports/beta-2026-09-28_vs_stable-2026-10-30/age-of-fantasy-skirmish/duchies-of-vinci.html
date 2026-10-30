@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,31 +37,32 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +0 / -0 / ~11</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Vinci Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>110</td><td class='num'>110</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Vinci Scholar</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>95</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Gereppetto</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>440</td><td class='num'>425</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Mambrecco</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>360</td><td class='num'>355</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Mantissa</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>215</td><td class='num'>200</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Lucrezza</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>180</td><td class='num'>185</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Zairetia</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>145</td><td class='num'>130</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Ignatio</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>110</td><td class='num'>105</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Harlequin</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>35</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Automa Drone</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-vinci-leader'>Vinci Leader</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>110</td><td class='num'>110</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-vinci-scholar'>Vinci Scholar</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>95</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-gereppetto'>Gereppetto</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>440</td><td class='num'>425</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-mambrecco'>Mambrecco</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>360</td><td class='num'>355</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-mantissa'>Mantissa</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>215</td><td class='num'>200</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-lucrezza'>Lucrezza</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>180</td><td class='num'>185</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-zairetia'>Zairetia</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>145</td><td class='num'>130</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-ignatio'>Ignatio</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>110</td><td class='num'>105</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-harlequin'>Harlequin</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>35</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-automa-drone'>Automa Drone</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
 <tr><td>City Guard</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>4+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Automa-Horse Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-automa-horse-rider'>Automa-Horse Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
 <tr><td>Sniper</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>50</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Assassin</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>55</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Scout</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Automa Guard</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>65</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Militia</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>85</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Aerea Guard</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>4+</td><td class='num'>100</td><td class='num'>100</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Automa-Boar Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>165</td><td class='num'>160</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Automa Brute</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>180</td><td class='num'>175</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-assassin'>Assassin</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>55</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-scout'>Scout</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-automa-guard'>Automa Guard</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>65</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-militia'>Militia</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>85</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-aerea-guard'>Aerea Guard</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>4+</td><td class='num'>100</td><td class='num'>100</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-automa-boar-rider'>Automa-Boar Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>165</td><td class='num'>160</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-automa-brute'>Automa Brute</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>180</td><td class='num'>175</td><td class='num'><b class='add'>-5</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Vinci Leader</h3><p class='stats'>110 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-vinci-leader'>Vinci Leader</h3><p class='stats'>110 pts · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Armblade</td><td>Replace Dual Armblade</td></tr>
@@ -87,7 +91,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(4)) · <del class='del'>+45</del> pts</td><td>Army Standard Bearer (Fear(4)) · <ins class='add'>+40</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Captain (Rapid Advance Aura) · <del class='del'>+50</del> pts</td><td>Captain (Rapid Advance Aura) · <ins class='add'>+55</ins> pts</td></tr>
 </table></div>
-<h3>Vinci Scholar</h3><p class='stats'>95 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-vinci-scholar'>Vinci Scholar</h3><p class='stats'>95 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Master Hand Weapon</td><td>Replace Master Hand Weapon</td></tr>
@@ -114,26 +118,26 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Alchemist (Caster(2)) · <del class='del'>+20</del> pts</td><td>Alchemist (Caster(2)) · <ins class='add'>+50</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Inventor (Enhanced Vinci Tech Aura) · <del class='del'>+55</del> pts</td><td>Inventor (Enhanced Vinci Tech Aura) · <ins class='add'>+95</ins> pts</td></tr>
 </table></div>
-<h3>Gereppetto</h3><p class='stats'>440 → 425 pts (-15) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-gereppetto'>Gereppetto</h3><p class='stats'>440 → 425 pts (-15) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>440</del> pts</td><td><ins class='add'>425</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Paternal Bond (Mend) · <del class='del'>+40</del> pts</td><td>Paternal Bond (Mend) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Mambrecco</h3><p class='stats'>360 → 355 pts (-5) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-mambrecco'>Mambrecco</h3><p class='stats'>360 → 355 pts (-5) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>360</del> pts</td><td><ins class='add'>355</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ferrona&#x27;s Revenge (Heavy Impact(8)) · <del class='del'>+65</del> pts</td><td>Ferrona&#x27;s Revenge (Heavy Impact(8)) · <ins class='add'>+55</ins> pts</td></tr>
 </table></div>
-<h3>Mantissa</h3><p class='stats'>215 → 200 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-mantissa'>Mantissa</h3><p class='stats'>215 → 200 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>215</del> pts</td><td><ins class='add'>200</ins> pts</td></tr>
 </table></div>
-<h3>Lucrezza</h3><p class='stats'>180 → 185 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-lucrezza'>Lucrezza</h3><p class='stats'>180 → 185 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>180</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
@@ -141,7 +145,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Veteran Enforcer</td><td>Replace Veteran Enforcer</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Veteran Enforcer - Leader (Melee Slayer Aura) · <del class='del'>+55</del> pts</td><td>Veteran Enforcer - Leader (Melee Slayer Aura) · <ins class='add'>+50</ins> pts</td></tr>
 </table></div>
-<h3>Zairetia</h3><p class='stats'>145 → 130 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-zairetia'>Zairetia</h3><p class='stats'>145 → 130 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>145</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
@@ -149,14 +153,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Alchemist (Caster(2)) · +30 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Experimental Tinctures - Leader (Unpredictable Shooter Aura) · <del class='del'>+70</del> pts</td><td>Experimental Tinctures - Leader (Unpredictable Shooter Aura) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Ignatio</h3><p class='stats'>110 → 105 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-ignatio'>Ignatio</h3><p class='stats'>110 → 105 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>105</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Mindstone Detector (Piercing Spotter) · <del class='del'>+10</del> pts</td><td>Mindstone Detector (Piercing Spotter) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Harlequin</h3><p class='stats'>35 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-harlequin'>Harlequin</h3><p class='stats'>35 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td>Jester Club (A2, Surge)</td><td>Jester Club (A2, <ins class='add'>AP(1),</ins> Surge)</td></tr>
@@ -164,56 +168,56 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Juggler Bombs (12&quot;, A2, AP(2), Indirect), Strike (A2), Juggler (Quick Throw) · <del class='del'>+10</del> pts</td><td>Juggler Bombs (12&quot;, A2, AP(2), Indirect), Strike (A2), Juggler (Quick Throw) · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Jester Club (A2, Blast(3), Surge) · <del class='del'>+25</del> pts</td><td>Great Jester Club (A2, <ins class='add'>AP(1),</ins> Blast(3), Surge) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Automa Drone</h3><p class='stats'>40 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-automa-drone'>Automa Drone</h3><p class='stats'>40 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Bot-Sawblade</td><td>Replace Bot-Sawblade</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bot-Bows (12&quot;, A4, Rending), Strike (A2) · <del class='del'>+25</del> pts</td><td>Bot-Bows (12&quot;, A4, Rending), Strike (A2) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Automa-Horse Rider</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-automa-horse-rider'>Automa-Horse Rider</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Lance</td><td>Replace Lance</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Handbow (9&quot;, A2, Rending, Assault) · <del class='del'>+20</del> pts</td><td>Handbow (9&quot;, A2, Rending, Assault) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Assassin</h3><p class='stats'>55 pts · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-assassin'>Assassin</h3><p class='stats'>55 pts · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Assassin Handbow (9&quot;, A2, Deadly(2), Reliable, Assault) · <del class='del'>+35</del> pts</td><td>Assassin Handbow (9&quot;, A2, Deadly(2), Reliable, Assault) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Scout</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-scout'>Scout</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
 </table></div>
-<h3>Automa Guard</h3><p class='stats'>70 → 65 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-automa-guard'>Automa Guard</h3><p class='stats'>70 → 65 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
 </table></div>
-<h3>Militia</h3><p class='stats'>80 → 85 pts (+5) · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-militia'>Militia</h3><p class='stats'>80 → 85 pts (+5) · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A2, Rending) · <del class='del'>+10</del> pts</td><td>Halberd (A2, Rending) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Aerea Guard</h3><p class='stats'>100 pts · Size 1 · Quality 5+ · Defense 4+</p>
+<h3 id='unit-aerea-guard'>Aerea Guard</h3><p class='stats'>100 pts · Size 1 · Quality 5+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Claws</td><td>Replace Dual Claws</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rapid Crossbow (18&quot;, A6, Rending), Strike (A2) · <del class='del'>+40</del> pts</td><td>Rapid Crossbow (18&quot;, A6, Rending), Strike (A2) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Automa-Boar Rider</h3><p class='stats'>165 → 160 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-automa-boar-rider'>Automa-Boar Rider</h3><p class='stats'>165 → 160 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>165</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Lance</td><td>Replace Lance</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Drilltip Lance (A1, AP(2), Deadly(6), Thrust) · <del class='del'>+35</del> pts</td><td>Drilltip Lance (A1, AP(2), Deadly(6), Thrust) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Automa Brute</h3><p class='stats'>180 → 175 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-automa-brute'>Automa Brute</h3><p class='stats'>180 → 175 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>180</del> pts</td><td><ins class='add'>175</ins> pts</td></tr>
@@ -225,7 +229,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rapid Slayerbolt Crossbow (18&quot;, A6, Puncture) · <del class='del'>+35</del> pts</td><td>Rapid Slayerbolt Crossbow (18&quot;, A6, Puncture) · <ins class='add'>+30</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rapid Handbow (9&quot;, A6, Rending, Assault) · <del class='del'>+45</del> pts</td><td>Rapid Handbow (9&quot;, A6, Rending, Assault) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Enhanced Versatile Warrior</td><td><span class='del'>3.6.0 beta:</span> If this model has Versatile Attack, it always gets either AP(+1) or +1 to hit rolls from Versatile Attack (instead of only when <del class='del'>attacking</del> enemies <del class='del'>that already finished an activation).</del><br><span class='add'>3.6.0:</span> If this model has Versatile Attack, it always gets either AP(+1) or +1 to hit rolls from Versatile Attack (instead of only when <ins class='add'>shooting/charging</ins> enemies <ins class='add'>over 9&quot;/6&quot; away).</ins></td></tr>
@@ -239,11 +243,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Versatile Warrior</td><td><span class='del'>3.6.0 beta:</span> When this unit is activated, pick one effect: until the end of the activation, when <del class='del'>this unit attacks</del> enemies <del class='del'>that already finished an activation this round,</del> all models with this rule in it either get AP(+1) or get +1 to hit rolls.<br><span class='add'>3.6.0:</span> When this unit is activated, pick one effect: until the end of the activation, when <ins class='add'>shooting/charging</ins> enemies <ins class='add'>over 9&quot;/6&quot; away,</ins> all models with this rule in it either get AP(+1) or get +1 to hit rolls.</td></tr>
 <tr class='mod'><td>✏️</td><td>Vinci Tech</td><td><span class='del'>3.6.0 beta:</span> When this unit is activated, pick one effect: until the end of the activation, when <del class='del'>this unit attacks</del> enemies <del class='del'>that already finished an activation this round,</del> all models with this rule in it either get AP(+1) or get +1 to hit rolls.<br><span class='add'>3.6.0:</span> When this unit is activated, pick one effect: until the end of the activation, when <ins class='add'>shooting/charging</ins> enemies <ins class='add'>over 9&quot;/6&quot; away,</ins> all models with this rule in it either get AP(+1) or get +1 to hit rolls.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Clearview Leaves</td><td><span class='del'>3.6.0 beta:</span> (1) Pick one enemy unit within 18&quot; in line of sight, which friendly units get +6&quot; range when shooting against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within 18&quot; in line of sight, which friendly units get +6&quot; range <ins class='add'>on their weapons</ins> when shooting against once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

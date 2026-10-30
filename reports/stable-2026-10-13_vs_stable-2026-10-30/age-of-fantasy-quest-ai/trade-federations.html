@@ -20,7 +20,9 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
 .systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
@@ -35,22 +37,23 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +9 / -9 / ~13</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Federation Fighters → Federation Fighter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Federation Veteran Fighters → Federation Veteran Fighter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>45</td><td class='num'>35</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Federation Shooters → Federation Shooter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>45</td><td class='num'>45</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Federation Patrol Horseman</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>55</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Federation Veteran Shooter</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>55</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Federation Trueshot Agent</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Federation Negotiator Agent</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>85</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Federation Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>90</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Federation Snake Swarm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>80</td><td class='num'>95</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Federation Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>100</td><td class='num'>115</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Federation Snake Master</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>125</td><td class='num'>155</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-federation-fighter'>Federation Fighters → Federation Fighter</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-federation-veteran-fighter'>Federation Veteran Fighters → Federation Veteran Fighter</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>45</td><td class='num'>35</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-federation-shooter'>Federation Shooters → Federation Shooter</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>45</td><td class='num'>45</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-federation-patrol-horseman'>Federation Patrol Horseman</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>55</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-federation-veteran-shooter'>Federation Veteran Shooter</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>55</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-federation-trueshot-agent'>Federation Trueshot Agent</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-federation-negotiator-agent'>Federation Negotiator Agent</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>85</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-federation-champion'>Federation Champion</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>90</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-federation-snake-swarm'>Federation Snake Swarm</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>80</td><td class='num'>95</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-federation-leader'>Federation Leader</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>100</td><td class='num'>115</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-federation-snake-master'>Federation Snake Master</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>125</td><td class='num'>155</td><td class='num'><b class='del'>+30</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Federation Fighter</h3><p class='stats'>30 pts · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-federation-fighter'>Federation Fighter</h3><p class='stats'>30 pts · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Federation <del class='del'>Fighters</del></td><td>Federation <ins class='add'>Fighter</ins></td></tr>
@@ -89,7 +92,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Weapon (A2, AP(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Federation Veteran Fighter</h3><p class='stats'>45 → 35 pts (-10) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-federation-veteran-fighter'>Federation Veteran Fighter</h3><p class='stats'>45 → 35 pts (-10) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Federation Veteran <del class='del'>Fighters</del></td><td>Federation Veteran <ins class='add'>Fighter</ins></td></tr>
@@ -142,7 +145,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Weapon (A2, AP(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Federation Shooter</h3><p class='stats'>45 pts · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-federation-shooter'>Federation Shooter</h3><p class='stats'>45 pts · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Federation <del class='del'>Shooters</del></td><td>Federation <ins class='add'>Shooter</ins></td></tr>
@@ -158,7 +161,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Arcane Staff (12&quot;, A2, Shred) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fang Rifle (24&quot;, A1, Disintegrate) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Federation Patrol Horseman</h3><p class='stats'>70 → 55 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-federation-patrol-horseman'>Federation Patrol Horseman</h3><p class='stats'>70 → 55 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
@@ -188,7 +191,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fang Rifle (24&quot;, A3, Disintegrate) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Crossbow (24&quot;, A3, Rending) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Federation Veteran Shooter</h3><p class='stats'>65 → 55 pts (-10) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-federation-veteran-shooter'>Federation Veteran Shooter</h3><p class='stats'>65 → 55 pts (-10) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
@@ -205,7 +208,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Arcane Staff (12&quot;, A6, Shred) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fang Rifle (24&quot;, A3, Disintegrate) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Federation Trueshot Agent</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-federation-trueshot-agent'>Federation Trueshot Agent</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
@@ -227,7 +230,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fang Rifle (24&quot;, A3, Disintegrate) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Fang Pistol (12&quot;, A6, Disintegrate) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Federation Negotiator Agent</h3><p class='stats'>75 → 85 pts (+10) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-federation-negotiator-agent'>Federation Negotiator Agent</h3><p class='stats'>75 → 85 pts (+10) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -243,7 +246,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Heavy Great Weapon (A12, AP(2)) · +45 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Harpoon Gun (9&quot;, A3, AP(2), Deadly(3), Assault), Strike (A3) · +75 pts</ins></td></tr>
 </table></div>
-<h3>Federation Champion</h3><p class='stats'>80 → 90 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-federation-champion'>Federation Champion</h3><p class='stats'>80 → 90 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -291,7 +294,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Artefact Broker <del class='del'>(Exotic</del> Gear <del class='del'>Boost</del> Aura) · <del class='del'>+30</del> pts</td><td>Artefact Broker <ins class='add'>(Enhanced Exotic</ins> Gear Aura) · <ins class='add'>+55</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Federation Captain (Fearless Aura) · <del class='del'>+10</del> pts</td><td>Federation Captain (Fearless Aura) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Federation Snake Swarm</h3><p class='stats'>80 → 95 pts (+15) · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-federation-snake-swarm'>Federation Snake Swarm</h3><p class='stats'>80 → 95 pts (+15) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -300,7 +303,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Spit Venom (9&quot;, A3, Blast(3), Assault, Bane) · +10 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Frenzied Bites (A9, AP(1), Surge) · +25 pts</ins></td></tr>
 </table></div>
-<h3>Federation Leader</h3><p class='stats'>100 → 115 pts (+15) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-federation-leader'>Federation Leader</h3><p class='stats'>100 → 115 pts (+15) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
@@ -362,7 +365,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Mystic Charmer (Caster(2)) · <del class='del'>+45</del> pts</td><td>Mystic Charmer (Caster(2)) · <ins class='add'>+40</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Artefact Broker <del class='del'>(Exotic</del> Gear <del class='del'>Boost</del> Aura) · <del class='del'>+30</del> pts</td><td>Artefact Broker <ins class='add'>(Enhanced Exotic</ins> Gear Aura) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Federation Snake Master</h3><p class='stats'>125 → 155 pts (+30) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-federation-snake-master'>Federation Snake Master</h3><p class='stats'>125 → 155 pts (+30) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>125</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
@@ -374,7 +377,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Snake Charmer (Dangerous Terrain Debuff) · <del class='del'>+20</del> pts</td><td>Snake Charmer (Dangerous Terrain Debuff) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Counter in Melee Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Counter on its weapons in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Exotic Gear</td><td>If this model has Versatile Attack, it always gets either AP(+1) or +1 to hit rolls from Versatile Attack (instead of only when shooting/charging enemies over 9&quot;/6&quot; away).</td></tr>
@@ -408,7 +411,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Takedown<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> This model may pick any model in the target unit as its individual <del class='del'>target,</del> which is resolved as if it was a unit of [1]. Takedown attacks must be resolved before other weapons.<br><span class='add'>3.6.0:</span> This model may pick any model in the target unit as its individual <ins class='add'>target for this weapon&#x27;s attacks,</ins> which is resolved as if it was a unit of [1]. Takedown attacks must be resolved before other weapons.</td></tr>
 <tr class='mod'><td>✏️</td><td>Takedown Strike</td><td><span class='del'>3.5.1:</span> Once per game, when it&#x27;s this model&#x27;s turn to <del class='del'>attack</del> in melee, it may make <del class='del'>one attack</del> at Quality 2+ with AP(2), Deadly(3), and Takedown.<br><span class='add'>3.6.0:</span> Once per game, when it&#x27;s this model&#x27;s turn to <ins class='add'>strike</ins> in melee, it may make <ins class='add'>X attacks</ins> at Quality 2+ with AP(2), Deadly(3), and Takedown.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Crumple Armor</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick one enemy unit within <del class='del'>12&quot;,</del> which takes <del class='del'>2</del> hits with <del class='del'>Disintegrate.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick one enemy unit within <ins class='add'>12&quot; in line of sight,</ins> which takes <ins class='add'>4</ins> hits with <ins class='add'>Fragment.</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Enhanced Construction</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>four</del> friendly units within <del class='del'>12&quot;,</del> which get Exotic Gear <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Exotic Gear once (next time the effect would apply).</td></tr>

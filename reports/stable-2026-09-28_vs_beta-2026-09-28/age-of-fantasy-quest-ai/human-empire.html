@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,38 +37,39 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +8 / -7 / ~17</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#new-units'>New units</a> · <a href='#removed-units'>Removed units</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Infantrymen → Infantryman</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>25</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Fanatics → Fanatic</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>20</td><td class='num'>30</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Elite Weapon Masters → Elite Weapon Master</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Marksmen → Marksman</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>40</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Mercenaries → Mercenary</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>40</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Horse Marksman</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>50</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Mercenary Hunter</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>50</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Mage</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>50</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>60</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Guard Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>70</td><td class='num'>70</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>85</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Battle Master</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>125</td><td class='num'>125</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Gryph Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>180</td><td class='num'>175</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Empire Artillery</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>220</td><td class='num'>215</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>War Wagon of Earth</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>335</td><td class='num'>285</td><td class='num'><b class='add'>-50</b></td></tr>
-<tr><td>Hurricane Wagon of Air </td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>325</td><td class='num'>335</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Beamer Wagon of Fire</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>415</td><td class='num'>375</td><td class='num'><b class='add'>-40</b></td></tr>
-<tr><td>Altar Wagon of Aether</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>395</td><td class='num'>415</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Steam Tank of Water</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>2+</td><td class='num'>795</td><td class='num'>825</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Elemental Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2280</td><td class='num'>2070</td><td class='num'><b class='add'>-210</b></td></tr>
+<tr><td><a href='#unit-infantryman'>Infantrymen → Infantryman</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>25</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-fanatic'>Fanatics → Fanatic</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>20</td><td class='num'>30</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-elite-weapon-master'>Elite Weapon Masters → Elite Weapon Master</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-marksman'>Marksmen → Marksman</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>40</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-mercenary'>Mercenaries → Mercenary</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>40</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-horse-marksman'>Horse Marksman</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>50</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-mercenary-hunter'>Mercenary Hunter</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>50</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-mage'>Mage</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>65</td><td class='num'>50</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-knight'>Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>60</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-guard-knight'>Guard Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>70</td><td class='num'>70</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-champion'>Champion</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>85</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-battle-master'>Battle Master</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>125</td><td class='num'>125</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-gryph-rider'>Gryph Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>180</td><td class='num'>175</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-empire-artillery'>Empire Artillery</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>220</td><td class='num'>215</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-war-wagon-of-earth'>War Wagon of Earth</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>335</td><td class='num'>285</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td><a href='#unit-hurricane-wagon-of-air'>Hurricane Wagon of Air </a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>325</td><td class='num'>335</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-beamer-wagon-of-fire'>Beamer Wagon of Fire</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>415</td><td class='num'>375</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td><a href='#unit-altar-wagon-of-aether'>Altar Wagon of Aether</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>395</td><td class='num'>415</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-steam-tank-of-water'>Steam Tank of Water</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>2+</td><td class='num'>795</td><td class='num'>825</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-elemental-titan'>Elemental Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2280</td><td class='num'>2070</td><td class='num'><b class='add'>-210</b></td></tr>
 </table></div>
-<h2>New units</h2><div class='scroll'><table>
+<h2 id='new-units'>New units</h2><div class='scroll'><table>
 <tr class='add'><td><b>Hunting Hound</b></td><td>1x Q4+ D5+ — 45 pts. Rules: Strider, Hold the Line, Agile, Tough(3). Weapons: Frenzied Bites (A3, Surge)</td></tr>
 <tr class='add'><td><b>Robo-Hulk Titan</b></td><td>1x Q4+ D2+ — 1840 pts. Rules: Fear(9), Tough(54), Hold the Line. Weapons: Great Cannon (30&quot;, A9, AP(2), Blast(6)), Stomp (A18, AP(2))</td></tr>
 </table></div>
-<h2>Removed units</h2><div class='scroll'><table>
+<h2 id='removed-units'>Removed units</h2><div class='scroll'><table>
 <tr class='del'><td><b>Hunting Hounds</b></td><td>3x Q4+ D5+ — 45 pts. Rules: Agile, Hold the Line, Strider. Weapons: 3x Frenzied Bites (A1, AP(1), Surge)</td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Infantryman</h3><p class='stats'>20 → 25 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-infantryman'>Infantryman</h3><p class='stats'>20 → 25 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Infantrymen</del></td><td><ins class='add'>Infantryman</ins></td></tr>
@@ -80,7 +84,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd <del class='del'>(A1,</del> Rending) · <del class='del'>+5</del> pts</td><td>Halberd <ins class='add'>(A3,</ins> Rending) · <ins class='add'>+10</ins> pts</td></tr>
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with</td><td>Upgrade with</td></tr>
 </table></div>
-<h3>Fanatic</h3><p class='stats'>20 → 30 pts (+10) · Size 3 → 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-fanatic'>Fanatic</h3><p class='stats'>20 → 30 pts (+10) · Size 3 → 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Fanatics</del></td><td><ins class='add'>Fanatic</ins></td></tr>
@@ -96,7 +100,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Scythe (A3, AP(1), Blast(3)) · +25 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A9, AP(2)) · +60 pts</ins></td></tr>
 </table></div>
-<h3>Elite Weapon Master</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-elite-weapon-master'>Elite Weapon Master</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Elite Weapon <del class='del'>Masters</del></td><td>Elite Weapon <ins class='add'>Master</ins></td></tr>
@@ -115,7 +119,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Imperial Great Flail (A9, Surge) · +45 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Imperial Great Mace (A3, AP(4), Deadly(3)) · +75 pts</ins></td></tr>
 </table></div>
-<h3>Marksman</h3><p class='stats'>35 → 40 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-marksman'>Marksman</h3><p class='stats'>35 → 40 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Marksmen</del></td><td><ins class='add'>Marksman</ins></td></tr>
@@ -148,7 +152,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gatling Rifle (18&quot;, A4, AP(1)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sniper Rifle (30&quot;, A1, AP(1), Reliable) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Mercenary</h3><p class='stats'>35 → 40 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-mercenary'>Mercenary</h3><p class='stats'>35 → 40 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Mercenaries</del></td><td><ins class='add'>Mercenary</ins></td></tr>
@@ -168,7 +172,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Firepowder Pistols (9&quot;, A2, Crack), Hand Weapon (A1) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Pistol (9&quot;, A2, AP(1)), Hand Weapon (A1) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Horse Marksman</h3><p class='stats'>50 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-horse-marksman'>Horse Marksman</h3><p class='stats'>50 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Firepowder</del> Rifle (18&quot;, A3, <del class='del'>Crack)</del></td><td><ins class='add'>Matchlock</ins> Rifle (18&quot;, A3, <ins class='add'>AP(1))</ins></td></tr>
@@ -192,7 +196,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Gatling Pistol (9&quot;, A12, AP(1)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gatling Rifle (18&quot;, A12, AP(1)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Mercenary Hunter</h3><p class='stats'>50 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-mercenary-hunter'>Mercenary Hunter</h3><p class='stats'>50 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Strike (A3)</ins></td></tr>
@@ -200,14 +204,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Bow</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shortbow (18&quot;, A6) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Mage</h3><p class='stats'>65 → 50 pts (-15) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-mage'>Mage</h3><p class='stats'>65 → 50 pts (-15) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td>Magic Staff <del class='del'>(12&quot;, A6, Rending)</del></td><td>Magic Staff <ins class='add'>(9&quot;, A3, Assault, Unstoppable)</ins></td></tr>
 <tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A3)</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Knight</h3><p class='stats'>60 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-knight'>Knight</h3><p class='stats'>60 pts · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td>Hand Weapon <del class='del'>(A3)</del></td><td>Hand Weapon <ins class='add'>(A3, Parry(1))</ins></td></tr>
@@ -215,7 +219,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+5</del> pts</td><td>Musician · <ins class='add'>+15</ins> pts</td></tr>
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with</td><td>Upgrade with</td></tr>
 </table></div>
-<h3>Guard Knight</h3><p class='stats'>70 pts · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-guard-knight'>Guard Knight</h3><p class='stats'>70 pts · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with one</td><td>Upgrade with one</td></tr>
@@ -226,7 +230,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Imperial Great Mace (A3, AP(4), Deadly(3)) · +70 pts</ins></td></tr>
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with</td><td>Upgrade with</td></tr>
 </table></div>
-<h3>Champion</h3><p class='stats'>75 → 85 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-champion'>Champion</h3><p class='stats'>75 → 85 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -289,7 +293,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Battle Mage (Caster(2)) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Battle Mage (Caster(3)) · +50 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Battle Master</h3><p class='stats'>125 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-battle-master'>Battle Master</h3><p class='stats'>125 pts · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Hand Weapons (A12)</ins></td></tr>
@@ -349,7 +353,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>General (Martial Prowess) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Army Standard Bearer (Fear(6)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Gryph Rider</h3><p class='stats'>180 → 175 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-gryph-rider'>Gryph Rider</h3><p class='stats'>180 → 175 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>180</del> pts</td><td><ins class='add'>175</ins> pts</td></tr>
@@ -362,7 +366,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Imperial Great Flail (A9, Surge) · +40 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Imperial Great Mace (A3, AP(4), Deadly(3)) · +70 pts</ins></td></tr>
 </table></div>
-<h3>Empire Artillery</h3><p class='stats'>220 → 215 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-empire-artillery'>Empire Artillery</h3><p class='stats'>220 → 215 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>220</del> pts</td><td><ins class='add'>215</ins> pts</td></tr>
@@ -376,7 +380,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Cannon (30&quot;, A6, AP(2), Deadly(3)) · <del class='del'>+100</del> pts</td><td>Heavy Cannon (30&quot;, A6, AP(2), Deadly(3)) · <ins class='add'>+65</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Mortar <del class='del'>(36&quot;,</del> A6, AP(1), Blast(3), Indirect) · <del class='del'>+135</del> pts</td><td>Heavy Mortar <ins class='add'>(30&quot;,</ins> A6, AP(1), Blast(3), Indirect) · <ins class='add'>+100</ins> pts</td></tr>
 </table></div>
-<h3>War Wagon of Earth</h3><p class='stats'>335 → 285 pts (-50) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-war-wagon-of-earth'>War Wagon of Earth</h3><p class='stats'>335 → 285 pts (-50) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>335</del> pts</td><td><ins class='add'>285</ins> pts</td></tr>
@@ -390,7 +394,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Empire Bounty (Precision Fighting Mark) · <del class='del'>+15</del> pts</td><td>Empire Bounty (Precision Fighting Mark) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Hurricane Wagon of Air </h3><p class='stats'>325 → 335 pts (+10) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-hurricane-wagon-of-air'>Hurricane Wagon of Air </h3><p class='stats'>325 → 335 pts (+10) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>325</del> pts</td><td><ins class='add'>335</ins> pts</td></tr>
@@ -399,7 +403,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Summon Storm</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Summon Blizzard (18&quot;, A18, Surge) · +55 pts</ins></td></tr>
 </table></div>
-<h3>Beamer Wagon of Fire</h3><p class='stats'>415 → 375 pts (-40) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-beamer-wagon-of-fire'>Beamer Wagon of Fire</h3><p class='stats'>415 → 375 pts (-40) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>415</del> pts</td><td><ins class='add'>375</ins> pts</td></tr>
@@ -408,7 +412,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Searing Beam</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Melting Beam (18&quot;, A6, AP(2), Deadly(3)) · +35 pts</ins></td></tr>
 </table></div>
-<h3>Altar Wagon of Aether</h3><p class='stats'>395 → 415 pts (+20) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-altar-wagon-of-aether'>Altar Wagon of Aether</h3><p class='stats'>395 → 415 pts (+20) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>395</del> pts</td><td><ins class='add'>415</ins> pts</td></tr>
@@ -418,7 +422,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Anguishing Aether</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Banishing Aether (24&quot;, A6, Blast(3), Indirect, Rending) · +55 pts</ins></td></tr>
 </table></div>
-<h3>Steam Tank of Water</h3><p class='stats'>795 → 825 pts (+30) · Size 1 · Quality 4+ · Defense 2+</p>
+<h3 id='unit-steam-tank-of-water'>Steam Tank of Water</h3><p class='stats'>795 → 825 pts (+30) · Size 1 · Quality 4+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>795</del> pts</td><td><ins class='add'>825</ins> pts</td></tr>
@@ -431,7 +435,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Turret Gunner (15&quot;, A9, AP(1), Assault) · +130 pts</ins></td></tr>
 </table></div>
-<h3>Elemental Titan</h3><p class='stats'>2280 → 2070 pts (-210) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-elemental-titan'>Elemental Titan</h3><p class='stats'>2280 → 2070 pts (-210) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2280</del> pts</td><td><ins class='add'>2070</ins> pts</td></tr>
@@ -449,7 +453,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Earth Elemental <del class='del'>(Heavy Claws (A12, AP(4)),</del> Fortified) · <del class='del'>+245</del> pts</td><td>Earth Elemental <ins class='add'>(Shockwave (12&quot;, A6, Blast(3), Assault),</ins> Fortified) · <ins class='add'>+315</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Elemental Chimera <del class='del'>(Breath Attack,</del> Flying, Fortified, Furious, Resistance) · <del class='del'>+615</del> pts</td><td>Elemental Chimera <ins class='add'>(Heavy Flame Breath (6&quot;, A3, AP(1), Blast(6), Reliable, Assault),</ins> Flying, Fortified, Furious, <ins class='add'>Spell</ins> Resistance) · <ins class='add'>+890</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Hold the Line</td><td>If most models in this unit have Hold the Line, they always get +1 to Morale Test rolls from Hold the Line (instead of only the first time they are attacked each round).</td></tr>
@@ -484,7 +488,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Sergeant<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>When this</del> model <del class='del'>attacks, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>This</ins> model <ins class='add'>gets AP(+1) when attacking.</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Vanguard</td><td><span class='del'>3.5.1 (2026-09-28):</span> After this model is deployed, it may be placed anywhere fully within <del class='del'>9”</del> of its <del class='del'>position.</del><br><span class='add'>3.6.0 beta:</span> After this model is deployed, it may be placed anywhere fully within <ins class='add'>9&quot;</ins> of its <ins class='add'>position, over 9&quot; away from non-Vanguard enemy units.</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Aura of Heroism</td><td><span class='del'>3.5.1 (2026-09-28):</span> (1) Pick <del class='del'>up to two</del> friendly <del class='del'>units</del> within 12&quot;, which <del class='del'>get</del> Hold the Line <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (1) Pick <ins class='add'>one</ins> friendly <ins class='add'>unit</ins> within 12&quot;, which <ins class='add'>gets Enhanced</ins> Hold the Line once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Blood Hex</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within <del class='del'>12&quot;,</del> which <del class='del'>take 3 hits each.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>(3)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>takes 9 hits.</ins></td></tr>

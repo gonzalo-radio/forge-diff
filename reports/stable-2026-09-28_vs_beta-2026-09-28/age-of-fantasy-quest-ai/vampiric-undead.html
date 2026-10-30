@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,48 +37,49 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +11 / -8 / ~15</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#new-units'>New units</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Drained Soldiers → Drained Soldier</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>25</td><td class='num'>30</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Stitched Zombies → Stitched Zombie</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>30</td><td class='num'>35</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Skeleton Guard</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>35</td><td class='num'>40</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Drained Archers → Drained Archer</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>45</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Zombie Wolves → Zombie Wolf</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>50</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Ghouls → Ghoul</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>55</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Skeleton Watch</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>85</td><td class='num'>65</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Skeleton Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>65</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Vampire Knight</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>85</td><td class='num'>90</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Drained Leader</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>85</td><td class='num'>110</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Bat Swarm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>95</td><td class='num'>135</td><td class='num'><b class='del'>+40</b></td></tr>
-<tr><td>Skeleton Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>140</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Latmyir The Mad</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>190</td><td class='num'>160</td><td class='num'><b class='add'>-30</b></td></tr>
-<tr><td>Stitched Butcher</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>160</td><td class='num'>165</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Ghoul Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>145</td><td class='num'>170</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Giant Bat</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>175</td><td class='num'>170</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Ghoul Horror</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>160</td><td class='num'>175</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Ghoul Beast Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>165</td><td class='num'>185</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Vampire Master</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>180</td><td class='num'>210</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Bat Horror</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>230</td><td class='num'>210</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Werewolf</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>235</td><td class='num'>235</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Captain Blackfang</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>260</td><td class='num'>315</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Corpse Wagon</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>3+</td><td class='num'>355</td><td class='num'>380</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Maiden Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'>420</td><td class='num'>455</td><td class='num'><b class='del'>+35</b></td></tr>
-<tr><td>Werewolf Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>460</td><td class='num'>470</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Bat Beast</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>485</td><td class='num'>470</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Funeral Coach</td><td class='num'>1</td><td class='num'><b class=add>4+ → 3+</b></td><td class='num'>3+</td><td class='num'>405</td><td class='num'>490</td><td class='num'><b class='del'>+85</b></td></tr>
-<tr><td>Deathly Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>490</td><td class='num'>500</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Lady Navleva</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>520</td><td class='num'>560</td><td class='num'><b class='del'>+40</b></td></tr>
-<tr><td>Gremyir &amp; Milyazha</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>570</td><td class='num'>675</td><td class='num'><b class='del'>+105</b></td></tr>
-<tr><td>Zombie Dragon</td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'>1090</td><td class='num'>1075</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Bat Dragon</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>1085</td><td class='num'>1130</td><td class='num'><b class='del'>+45</b></td></tr>
-<tr><td>Butcher Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2145</td><td class='num'>1985</td><td class='num'><b class='add'>-160</b></td></tr>
+<tr><td><a href='#unit-drained-soldier'>Drained Soldiers → Drained Soldier</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>25</td><td class='num'>30</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-stitched-zombie'>Stitched Zombies → Stitched Zombie</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>30</td><td class='num'>35</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-skeleton-guard'>Skeleton Guard</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>35</td><td class='num'>40</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-drained-archer'>Drained Archers → Drained Archer</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>45</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-zombie-wolf'>Zombie Wolves → Zombie Wolf</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>50</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-ghoul'>Ghouls → Ghoul</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>55</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-skeleton-watch'>Skeleton Watch</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>85</td><td class='num'>65</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-skeleton-knight'>Skeleton Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>65</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-vampire-knight'>Vampire Knight</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>85</td><td class='num'>90</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-drained-leader'>Drained Leader</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>85</td><td class='num'>110</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-bat-swarm'>Bat Swarm</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>95</td><td class='num'>135</td><td class='num'><b class='del'>+40</b></td></tr>
+<tr><td><a href='#unit-skeleton-champion'>Skeleton Champion</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>140</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-latmyir-the-mad'>Latmyir The Mad</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>190</td><td class='num'>160</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td><a href='#unit-stitched-butcher'>Stitched Butcher</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>160</td><td class='num'>165</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-ghoul-champion'>Ghoul Champion</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>145</td><td class='num'>170</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-giant-bat'>Giant Bat</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>175</td><td class='num'>170</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-ghoul-horror'>Ghoul Horror</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>160</td><td class='num'>175</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-ghoul-beast-rider'>Ghoul Beast Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>165</td><td class='num'>185</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-vampire-master'>Vampire Master</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>180</td><td class='num'>210</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-bat-horror'>Bat Horror</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>230</td><td class='num'>210</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-werewolf'>Werewolf</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>235</td><td class='num'>235</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-captain-blackfang'>Captain Blackfang</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>260</td><td class='num'>315</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-corpse-wagon'>Corpse Wagon</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>3+</td><td class='num'>355</td><td class='num'>380</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-maiden-chariot'>Maiden Chariot</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'>420</td><td class='num'>455</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td><a href='#unit-werewolf-champion'>Werewolf Champion</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>460</td><td class='num'>470</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-bat-beast'>Bat Beast</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>485</td><td class='num'>470</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-funeral-coach'>Funeral Coach</a></td><td class='num'>1</td><td class='num'><b class=add>4+ → 3+</b></td><td class='num'>3+</td><td class='num'>405</td><td class='num'>490</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td><a href='#unit-deathly-chariot'>Deathly Chariot</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>490</td><td class='num'>500</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-lady-navleva'>Lady Navleva</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>520</td><td class='num'>560</td><td class='num'><b class='del'>+40</b></td></tr>
+<tr><td><a href='#unit-gremyir-milyazha'>Gremyir &amp; Milyazha</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>570</td><td class='num'>675</td><td class='num'><b class='del'>+105</b></td></tr>
+<tr><td><a href='#unit-zombie-dragon'>Zombie Dragon</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'>1090</td><td class='num'>1075</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-bat-dragon'>Bat Dragon</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>1085</td><td class='num'>1130</td><td class='num'><b class='del'>+45</b></td></tr>
+<tr><td><a href='#unit-butcher-titan'>Butcher Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2145</td><td class='num'>1985</td><td class='num'><b class='add'>-160</b></td></tr>
 </table></div>
-<h2>New units</h2><div class='scroll'><table>
+<h2 id='new-units'>New units</h2><div class='scroll'><table>
 <tr class='add'><td><b>Vampire Champion</b></td><td>1x Q3+ D3+ — 65 pts. Rules: Cursed Undead, Furious, Tough(3). Weapons: Cursed Blade (A3, Fragment)</td></tr>
 <tr class='add'><td><b>Vampiric Artillery</b></td><td>1x Q5+ D5+ — 405 pts. Rules: Artillery, Tough(9), Cursed Undead, Cumbersome, Entrenched. Weapons: Stone Thrower (36&quot;, A6, AP(1), Blast(3), Indirect), Crew (A9)</td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Drained Soldier</h3><p class='stats'>25 → 30 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-drained-soldier'>Drained Soldier</h3><p class='stats'>25 → 30 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Drained <del class='del'>Soldiers</del></td><td>Drained <ins class='add'>Soldier</ins></td></tr>
@@ -89,7 +93,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear <del class='del'>(A1, Counter)</del> · <del class='del'>+10</del> pts</td><td>Spear <ins class='add'>(A3, Counter, Brace(1))</ins> · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd <del class='del'>(A1,</del> Rending) · <del class='del'>+5</del> pts</td><td>Halberd <ins class='add'>(A3,</ins> Rending) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Stitched Zombie</h3><p class='stats'>30 → 35 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-stitched-zombie'>Stitched Zombie</h3><p class='stats'>30 → 35 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Stitched <del class='del'>Zombies</del></td><td>Stitched <ins class='add'>Zombie</ins></td></tr>
@@ -105,7 +109,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Zombie Claws (A6) · +5 pts</ins></td></tr>
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>all models</del> with</td><td>Upgrade with</td></tr>
 </table></div>
-<h3>Skeleton Guard</h3><p class='stats'>35 → 40 pts (+5) · Size 3 → 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-skeleton-guard'>Skeleton Guard</h3><p class='stats'>35 → 40 pts (+5) · Size 3 → 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
@@ -125,7 +129,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Cursed Mace (A1, AP(2), Disintegrate) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Cursed Spear (A1, Counter, Disintegrate) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Drained Archer</h3><p class='stats'>40 → 45 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-drained-archer'>Drained Archer</h3><p class='stats'>40 → 45 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Drained <del class='del'>Archers</del></td><td>Drained <ins class='add'>Archer</ins></td></tr>
@@ -142,7 +146,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Defensive Stakes (Brace in Melee) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Fire Braziers (Bane when Shooting) · +5 pts</ins></td></tr>
 </table></div>
-<h3>Zombie Wolf</h3><p class='stats'>40 → 50 pts (+10) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-zombie-wolf'>Zombie Wolf</h3><p class='stats'>40 → 50 pts (+10) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Zombie <del class='del'>Wolves</del></td><td>Zombie <ins class='add'>Wolf</ins></td></tr>
@@ -156,7 +160,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sharp Claws (A3, Rending) · +5 pts</ins></td></tr>
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>all</del> Blood-Scent <del class='del'>Trackers</del></td><td>Replace Blood-Scent <ins class='add'>Tracker</ins></td></tr>
 </table></div>
-<h3>Ghoul</h3><p class='stats'>40 → 55 pts (+15) · Size 3 → 1 · Quality 4+ · Defense 6+</p>
+<h3 id='unit-ghoul'>Ghoul</h3><p class='stats'>40 → 55 pts (+15) · Size 3 → 1 · Quality 4+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Ghouls</del></td><td><ins class='add'>Ghoul</ins></td></tr>
@@ -174,7 +178,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Musician · <del class='del'>+5</del> pts</td><td>Musician · <ins class='add'>+15</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant · <del class='del'>+5</del> pts</td><td>Sergeant · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Skeleton Watch</h3><p class='stats'>85 → 65 pts (-20) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-skeleton-watch'>Skeleton Watch</h3><p class='stats'>85 → 65 pts (-20) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
@@ -188,7 +192,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Crossbow (18&quot;, A3, Rending) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand-Held Bolt Thrower (18&quot;, A3, AP(3), Deadly(3)) · +80 pts</ins></td></tr>
 </table></div>
-<h3>Skeleton Knight</h3><p class='stats'>75 → 65 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-skeleton-knight'>Skeleton Knight</h3><p class='stats'>75 → 65 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>65</ins> pts</td></tr>
@@ -201,7 +205,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lance (A3, Thrust) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon (A3, AP(2)) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Vampire Knight</h3><p class='stats'>85 → 90 pts (+5) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-vampire-knight'>Vampire Knight</h3><p class='stats'>85 → 90 pts (+5) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -221,7 +225,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Heavy Hand Weapon</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Lance (A3, AP(1), Thrust) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Drained Leader</h3><p class='stats'>85 → 110 pts (+25) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-drained-leader'>Drained Leader</h3><p class='stats'>85 → 110 pts (+25) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
@@ -266,7 +270,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Necromancer (Caster(2)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Necromancer (Caster(3)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Bat Swarm</h3><p class='stats'>95 → 135 pts (+40) · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-bat-swarm'>Bat Swarm</h3><p class='stats'>95 → 135 pts (+40) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
@@ -275,7 +279,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Frenzied Bat</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sharp Fangs (A9, Rending) · +45 pts</ins></td></tr>
 </table></div>
-<h3>Skeleton Champion</h3><p class='stats'>135 → 140 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-skeleton-champion'>Skeleton Champion</h3><p class='stats'>135 → 140 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>135</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
@@ -320,7 +324,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Champion Cursed Crossbow (24&quot;, A6, Rending, Disintegrate) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Latmyir The Mad</h3><p class='stats'>190 → 160 pts (-30) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-latmyir-the-mad'>Latmyir The Mad</h3><p class='stats'>190 → 160 pts (-30) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>190</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
@@ -334,7 +338,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Necromancer (Caster(2)) · +25 pts</ins></td></tr>
 </table></div>
-<h3>Stitched Butcher</h3><p class='stats'>160 → 165 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-stitched-butcher'>Stitched Butcher</h3><p class='stats'>160 → 165 pts (+5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
@@ -345,7 +349,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Carving Tool <del class='del'>(A12, Rending)</del> · <del class='del'>+25</del> pts</td><td>Carving Tool <ins class='add'>(A9, Shred)</ins> · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Slicing Blade (A9, Surge) · +5 pts</ins></td></tr>
 </table></div>
-<h3>Ghoul Champion</h3><p class='stats'>145 → 170 pts (+25) · Size 1 · Quality 4+ · Defense 6+</p>
+<h3 id='unit-ghoul-champion'>Ghoul Champion</h3><p class='stats'>145 → 170 pts (+25) · Size 1 · Quality 4+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>145</del> pts</td><td><ins class='add'>170</ins> pts</td></tr>
@@ -375,7 +379,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sling (12&quot;, A6) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Giant Bat</h3><p class='stats'>175 → 170 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-giant-bat'>Giant Bat</h3><p class='stats'>175 → 170 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>175</del> pts</td><td><ins class='add'>170</ins> pts</td></tr>
@@ -386,14 +390,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sky Raider (Ambush) · +30 pts</ins></td></tr>
 </table></div>
-<h3>Ghoul Horror</h3><p class='stats'>160 → 175 pts (+15) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-ghoul-horror'>Ghoul Horror</h3><p class='stats'>160 → 175 pts (+15) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>175</ins> pts</td></tr>
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Toxin Claws</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cursed Blade (A9, Fragment) · free</ins></td></tr>
 </table></div>
-<h3>Ghoul Beast Rider</h3><p class='stats'>165 → 185 pts (+20) · Size 1 · Quality 4+ · Defense 6+</p>
+<h3 id='unit-ghoul-beast-rider'>Ghoul Beast Rider</h3><p class='stats'>165 → 185 pts (+20) · Size 1 · Quality 4+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>165</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
@@ -407,7 +411,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Lance (A3, Thrust) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sling (12&quot;, A3, Assault) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Vampire Master</h3><p class='stats'>180 → 210 pts (+30) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-vampire-master'>Vampire Master</h3><p class='stats'>180 → 210 pts (+30) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>180</del> pts</td><td><ins class='add'>210</ins> pts</td></tr>
@@ -455,7 +459,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Twisted Seduction (Mind Control) · <del class='del'>+20</del> pts</td><td>Twisted Seduction (Mind Control) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Bat Horror</h3><p class='stats'>230 → 210 pts (-20) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-bat-horror'>Bat Horror</h3><p class='stats'>230 → 210 pts (-20) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>230</del> pts</td><td><ins class='add'>210</ins> pts</td></tr>
@@ -467,14 +471,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sky Raider (Ambush) · +40 pts</ins></td></tr>
 </table></div>
-<h3>Werewolf</h3><p class='stats'>235 pts · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-werewolf'>Werewolf</h3><p class='stats'>235 pts · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Heavy Rending</del> Claws (A9, <del class='del'>AP(1),</del> Rending)</td><td><ins class='add'>Sharp</ins> Claws (A9, Rending)</td></tr>
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Heavy Rending</del> Claws</td><td>Replace <ins class='add'>Sharp</ins> Claws</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Heavy Hand</del> Weapon (A9, AP(2)) · <del class='del'>+5</del> pts</td><td><ins class='add'>Great</ins> Weapon (A9, AP(2)) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Captain Blackfang</h3><p class='stats'>260 → 315 pts (+55) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-captain-blackfang'>Captain Blackfang</h3><p class='stats'>260 → 315 pts (+55) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>260</del> pts</td><td><ins class='add'>315</ins> pts</td></tr>
@@ -487,7 +491,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Greedy Pirate</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Greedy Pirate - Leader (Fast Aura) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Corpse Wagon</h3><p class='stats'>355 → 380 pts (+25) · Size 1 · Quality 5+ · Defense 3+</p>
+<h3 id='unit-corpse-wagon'>Corpse Wagon</h3><p class='stats'>355 → 380 pts (+25) · Size 1 · Quality 5+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>355</del> pts</td><td><ins class='add'>380</ins> pts</td></tr>
@@ -501,7 +505,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Corpse Pile (Spawn(Stitched <del class='del'>Zombies [3]))</del> · <del class='del'>free</del></td><td>Corpse Pile (Spawn(Stitched <ins class='add'>Zombie [1]))</ins> · <ins class='add'>+35 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Unholy Brazier <del class='del'>(Resistance)</del> · +65 pts</td><td>Unholy Brazier <ins class='add'>(Spell Resistance)</ins> · +65 pts</td></tr>
 </table></div>
-<h3>Maiden Chariot</h3><p class='stats'>420 → 455 pts (+35) · Size 1 · Quality 4+ · Defense 3+ → 4+</p>
+<h3 id='unit-maiden-chariot'>Maiden Chariot</h3><p class='stats'>420 → 455 pts (+35) · Size 1 · Quality 4+ · Defense 3+ → 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>420</del> pts</td><td><ins class='add'>455</ins> pts</td></tr>
@@ -516,7 +520,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dark Bolts (9&quot;, A9, Assault, Bane) · +25 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cursed Bolts (9&quot;, A9, Assault, Fragment) · +25 pts</ins></td></tr>
 </table></div>
-<h3>Werewolf Champion</h3><p class='stats'>460 → 470 pts (+10) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-werewolf-champion'>Werewolf Champion</h3><p class='stats'>460 → 470 pts (+10) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>460</del> pts</td><td><ins class='add'>470</ins> pts</td></tr>
@@ -539,7 +543,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Bringer (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Night Bringer (Stealth Aura) · <ins class='add'>+70</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Commander (No Retreat Aura) · <del class='del'>+15</del> pts</td><td>Commander (No Retreat Aura) · <ins class='add'>+120</ins> pts</td></tr>
 </table></div>
-<h3>Bat Beast</h3><p class='stats'>485 → 470 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-bat-beast'>Bat Beast</h3><p class='stats'>485 → 470 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>485</del> pts</td><td><ins class='add'>470</ins> pts</td></tr>
@@ -551,7 +555,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wings (Flying) · <del class='del'>+65</del> pts</td><td>Wings (Flying) · <ins class='add'>+50</ins> pts</td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Raider Wings (Ambush) · +80 pts</ins></td></tr>
 </table></div>
-<h3>Funeral Coach</h3><p class='stats'>405 → 490 pts (+85) · Size 1 · Quality 4+ → 3+ · Defense 3+</p>
+<h3 id='unit-funeral-coach'>Funeral Coach</h3><p class='stats'>405 → 490 pts (+85) · Size 1 · Quality 4+ → 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>405</del> pts</td><td><ins class='add'>490</ins> pts</td></tr>
@@ -562,7 +566,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Cursed Blade Crew</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Weapon Crew (A9, AP(2)) · +30 pts</ins></td></tr>
 </table></div>
-<h3>Deathly Chariot</h3><p class='stats'>490 → 500 pts (+10) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-deathly-chariot'>Deathly Chariot</h3><p class='stats'>490 → 500 pts (+10) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>490</del> pts</td><td><ins class='add'>500</ins> pts</td></tr>
@@ -572,7 +576,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Spear Crew</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Halberd Crew (A9, Rending) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Lady Navleva</h3><p class='stats'>520 → 560 pts (+40) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-lady-navleva'>Lady Navleva</h3><p class='stats'>520 → 560 pts (+40) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>520</del> pts</td><td><ins class='add'>560</ins> pts</td></tr>
@@ -582,7 +586,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Weapon</td><td>Forlorn Falchion (A12, <del class='del'>AP(1),</del> Surge)</td><td>Forlorn Falchion (A12, Surge)</td></tr>
 <tr class='mod'><td>✏️</td><td>Item</td><td>Ravanez <del class='del'>(Ravage(3), Flying,</del> Tough(9), <del class='del'>Toxin</del> Claws (A9, <del class='del'>Bane))</del></td><td>Ravanez <ins class='add'>(Flying,</ins> Tough(9), <ins class='add'>Sharp</ins> Claws (A9, <ins class='add'>Rending))</ins></td></tr>
 </table></div>
-<h3>Gremyir &amp; Milyazha</h3><p class='stats'>570 → 675 pts (+105) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-gremyir-milyazha'>Gremyir &amp; Milyazha</h3><p class='stats'>570 → 675 pts (+105) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>570</del> pts</td><td><ins class='add'>675</ins> pts</td></tr>
@@ -594,7 +598,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Hunting Tactic</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hunting Tactics - Leader (Ambush Aura) · +60 pts</ins></td></tr>
 </table></div>
-<h3>Zombie Dragon</h3><p class='stats'>1090 → 1075 pts (-15) · Size 1 · Quality 4+ · Defense 3+ → 4+</p>
+<h3 id='unit-zombie-dragon'>Zombie Dragon</h3><p class='stats'>1090 → 1075 pts (-15) · Size 1 · Quality 4+ · Defense 3+ → 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1090</del> pts</td><td><ins class='add'>1075</ins> pts</td></tr>
@@ -608,7 +612,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Vampire Lord Rider (Mind Control) · <del class='del'>+20</del> pts</td><td>Vampire Lord Rider (Mind Control) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Bat Dragon</h3><p class='stats'>1085 → 1130 pts (+45) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-bat-dragon'>Bat Dragon</h3><p class='stats'>1085 → 1130 pts (+45) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1085</del> pts</td><td><ins class='add'>1130</ins> pts</td></tr>
@@ -618,7 +622,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sky Raider (Ambush) · +160 pts</ins></td></tr>
 </table></div>
-<h3>Butcher Titan</h3><p class='stats'>2145 → 1985 pts (-160) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-butcher-titan'>Butcher Titan</h3><p class='stats'>2145 → 1985 pts (-160) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2145</del> pts</td><td><ins class='add'>1985</ins> pts</td></tr>
@@ -630,7 +634,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Infected Zombie</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Grasping Zombies (A9, Surge) · free</ins></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Ambush Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Ambush. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
@@ -667,7 +671,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Stealth<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1 (2026-09-28):</span> When units where <del class='del'>all</del> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.<br><span class='add'>3.6.0 beta:</span> When units where <ins class='add'>most</ins> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</td></tr>
 <tr class='mod'><td>✏️</td><td>Stealth Aura</td><td><span class='del'>3.5.1 (2026-09-28):</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0 beta:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Cursed Strike</td><td><span class='del'>3.5.1 (2026-09-28):</span> (1) Pick one enemy unit within 6&quot;, which takes 3 hits with <del class='del'>Disintegrate.</del><br><span class='add'>3.6.0 beta:</span> (1) Pick one enemy unit within 6&quot;, which takes 3 hits with <ins class='add'>Fragment.</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Dance of Death</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(3)</del> Pick up to <del class='del'>six</del> friendly units within 12&quot;, which get Teleport once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> <ins class='add'>(2)</ins> Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get Teleport once (next time the effect would apply).</td></tr>

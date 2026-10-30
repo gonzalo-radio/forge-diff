@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,21 +37,22 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +1 / -0 / ~8</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Gecko Champion</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>55</td><td class='num'>55</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Saurian Veteran</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>70</td><td class='num'>70</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Teqi</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>80</td><td class='num'>110</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Kikatle</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>110</td><td class='num'>115</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Gator Veteran</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>155</td><td class='num'>150</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Xakanu the Daemon Slayer</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>185</td><td class='num'>165</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Frog-Mage</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>185</td><td class='num'>180</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Hakatlo</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>190</td><td class='num'>180</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Great Mage Satloxatle</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>190</td><td class='num'>185</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Hana &amp; Haki</td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>225</td><td class='num'>210</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-gecko-champion'>Gecko Champion</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>55</td><td class='num'>55</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-saurian-veteran'>Saurian Veteran</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>70</td><td class='num'>70</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-teqi'>Teqi</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>80</td><td class='num'>110</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-kikatle'>Kikatle</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>110</td><td class='num'>115</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-gator-veteran'>Gator Veteran</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>155</td><td class='num'>150</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-xakanu-the-daemon-slayer'>Xakanu the Daemon Slayer</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>185</td><td class='num'>165</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-frog-mage'>Frog-Mage</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>185</td><td class='num'>180</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-hakatlo'>Hakatlo</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>190</td><td class='num'>180</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-great-mage-satloxatle'>Great Mage Satloxatle</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>190</td><td class='num'>185</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-hana-haki'>Hana &amp; Haki</a></td><td class='num'>1</td><td class='num'>6+</td><td class='num'>6+</td><td class='num'>225</td><td class='num'>210</td><td class='num'><b class='add'>-15</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Gecko Champion</h3><p class='stats'>55 pts · Size 1 · Quality 6+ · Defense 6+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-gecko-champion'>Gecko Champion</h3><p class='stats'>55 pts · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
@@ -75,7 +79,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Priest (Caster(1)) · <del class='del'>+10</del> pts</td><td>Priest (Caster(1)) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Saurian Veteran</h3><p class='stats'>70 pts · Size 1 · Quality 6+ · Defense 6+</p>
+<h3 id='unit-saurian-veteran'>Saurian Veteran</h3><p class='stats'>70 pts · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
@@ -94,7 +98,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(2)) · <del class='del'>+25</del> pts</td><td>Army Standard Bearer (Fear(2)) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Teqi</h3><p class='stats'>80 → 110 pts (+30) · Size 1 · Quality 6+ · Defense 6+</p>
+<h3 id='unit-teqi'>Teqi</h3><p class='stats'>80 → 110 pts (+30) · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
@@ -104,13 +108,13 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Healing Bond (Mend) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Kikatle</h3><p class='stats'>110 → 115 pts (+5) · Size 1 · Quality 6+ · Defense 6+</p>
+<h3 id='unit-kikatle'>Kikatle</h3><p class='stats'>110 → 115 pts (+5) · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td>Dual Axes of Lanaxiqi (A4, Surge)</td><td>Dual Axes of Lanaxiqi (A4, <ins class='add'>AP(1),</ins> Surge)</td></tr>
 </table></div>
-<h3>Gator Veteran</h3><p class='stats'>155 → 150 pts (-5) · Size 1 · Quality 6+ · Defense 6+</p>
+<h3 id='unit-gator-veteran'>Gator Veteran</h3><p class='stats'>155 → 150 pts (-5) · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>155</del> pts</td><td><ins class='add'>150</ins> pts</td></tr>
@@ -129,12 +133,12 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sacred Destiny (Protection Feat) · <del class='del'>+50</del> pts</td><td>Sacred Destiny (Protection Feat) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Xakanu the Daemon Slayer</h3><p class='stats'>185 → 165 pts (-20) · Size 1 · Quality 6+ · Defense 6+</p>
+<h3 id='unit-xakanu-the-daemon-slayer'>Xakanu the Daemon Slayer</h3><p class='stats'>185 → 165 pts (-20) · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
 </table></div>
-<h3>Frog-Mage</h3><p class='stats'>185 → 180 pts (-5) · Size 1 · Quality 6+ · Defense 6+</p>
+<h3 id='unit-frog-mage'>Frog-Mage</h3><p class='stats'>185 → 180 pts (-5) · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
@@ -155,26 +159,26 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Primal Guidance (Enhanced Primal) · <del class='del'>+10</del> pts</td><td>Primal Guidance (Enhanced Primal) · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Enlightened Mage (Caster(1)) · <del class='del'>+10</del> pts</td><td>Enlightened Mage (Caster(1)) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Hakatlo</h3><p class='stats'>190 → 180 pts (-10) · Size 1 · Quality 6+ · Defense 6+</p>
+<h3 id='unit-hakatlo'>Hakatlo</h3><p class='stats'>190 → 180 pts (-10) · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>190</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
 </table></div>
-<h3>Great Mage Satloxatle</h3><p class='stats'>190 → 185 pts (-5) · Size 1 · Quality 6+ · Defense 6+</p>
+<h3 id='unit-great-mage-satloxatle'>Great Mage Satloxatle</h3><p class='stats'>190 → 185 pts (-5) · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>190</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Celestial Serpent</td><td>Replace Celestial Serpent</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Divine Serpent (9&quot;, A2, Blast(3), Assault, Bane) · <del class='del'>+10</del> pts</td><td>Divine Serpent (9&quot;, A2, Blast(3), Assault, Bane) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Hana &amp; Haki</h3><p class='stats'>225 → 210 pts (-15) · Size 1 · Quality 6+ · Defense 6+</p>
+<h3 id='unit-hana-haki'>Hana &amp; Haki</h3><p class='stats'>225 → 210 pts (-15) · Size 1 · Quality 6+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>225</del> pts</td><td><ins class='add'>210</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hana, Deadly Sniper (Reliable when Shooting) · <del class='del'>+50</del> pts</td><td>Hana, Deadly Sniper (Reliable when Shooting) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Unstoppable</td><td>This weapon ignores Regeneration, and ignores all negative modifiers which are not from this model&#x27;s special rules.</td></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
@@ -186,11 +190,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Shred Mark</td><td><span class='del'>3.6.0 beta:</span> Only one use per game. Once per activation, before attacking, pick up to 3 enemy units within 18&quot; in line of sight, which friendly units gets Shred when attacking against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Only one use per game. Once per activation, before attacking, pick up to 3 enemy units within 18&quot; in line of sight, which friendly units gets Shred <ins class='add'>on their weapons</ins> when attacking against once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Versatile Warrior</td><td><span class='del'>3.6.0 beta:</span> When this unit is activated, pick one effect: until the end of the activation, when <del class='del'>this unit attacks</del> enemies <del class='del'>for the first time each round,</del> all models with this rule in it either get AP(+1) or get +1 to hit rolls.<br><span class='add'>3.6.0:</span> When this unit is activated, pick one effect: until the end of the activation, when <ins class='add'>shooting/charging</ins> enemies <ins class='add'>over 9&quot;/6&quot; away,</ins> all models with this rule in it either get AP(+1) or get +1 to hit rolls.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Poison Mist</td><td><span class='del'>3.6.0 beta:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which friendly units gets Shred when attacking against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which friendly units gets Shred <ins class='add'>on their weapons</ins> when attacking against once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

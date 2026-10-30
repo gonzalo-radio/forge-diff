@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,33 +37,34 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +1 / -1 / ~11</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
 <tr><td>Warrior</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Silver Cavalry</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>45</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Coast Guard</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Archer</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Reaver Cavalry</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Lion Warrior</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Phoenix Warrior</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>60</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Weapon Master</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Shadow Sister</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Shadow Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Dragon Cavalry</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>85</td><td class='num'>75</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>110</td><td class='num'>105</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>High Noble</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>155</td><td class='num'>145</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Giant Eagle</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>155</td><td class='num'>180</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>High Elf Artillery</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>370</td><td class='num'>330</td><td class='num'><b class='add'>-40</b></td></tr>
-<tr><td>War Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>385</td><td class='num'>360</td><td class='num'><b class='add'>-25</b></td></tr>
-<tr><td>Eagle Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>385</td><td class='num'>430</td><td class='num'><b class='del'>+45</b></td></tr>
-<tr><td>Deer-Avatar Hunter</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>430</td><td class='num'>455</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Ice Phoenix</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>525</td><td class='num'>500</td><td class='num'><b class='add'>-25</b></td></tr>
-<tr><td>Lion Chariot</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>590</td><td class='num'>560</td><td class='num'><b class='add'>-30</b></td></tr>
-<tr><td>Fire Phoenix</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>655</td><td class='num'>615</td><td class='num'><b class='add'>-40</b></td></tr>
-<tr><td>Bull-Avatar Giant</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>940</td><td class='num'>875</td><td class='num'><b class='add'>-65</b></td></tr>
+<tr><td><a href='#unit-silver-cavalry'>Silver Cavalry</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>45</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-coast-guard'>Coast Guard</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-archer'>Archer</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-reaver-cavalry'>Reaver Cavalry</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-lion-warrior'>Lion Warrior</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-phoenix-warrior'>Phoenix Warrior</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>60</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-weapon-master'>Weapon Master</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-shadow-sister'>Shadow Sister</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-shadow-brother'>Shadow Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-dragon-cavalry'>Dragon Cavalry</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>85</td><td class='num'>75</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-champion'>Champion</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>110</td><td class='num'>105</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-high-noble'>High Noble</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>155</td><td class='num'>145</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-giant-eagle'>Giant Eagle</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>155</td><td class='num'>180</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-high-elf-artillery'>High Elf Artillery</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>370</td><td class='num'>330</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td><a href='#unit-war-chariot'>War Chariot</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>385</td><td class='num'>360</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td><a href='#unit-eagle-chariot'>Eagle Chariot</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>385</td><td class='num'>430</td><td class='num'><b class='del'>+45</b></td></tr>
+<tr><td><a href='#unit-deer-avatar-hunter'>Deer-Avatar Hunter</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>430</td><td class='num'>455</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-ice-phoenix'>Ice Phoenix</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>525</td><td class='num'>500</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td><a href='#unit-lion-chariot'>Lion Chariot</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>590</td><td class='num'>560</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td><a href='#unit-fire-phoenix'>Fire Phoenix</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>655</td><td class='num'>615</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td><a href='#unit-bull-avatar-giant'>Bull-Avatar Giant</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>940</td><td class='num'>875</td><td class='num'><b class='add'>-65</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Silver Cavalry</h3><p class='stats'>60 → 45 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-silver-cavalry'>Silver Cavalry</h3><p class='stats'>60 → 45 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
@@ -70,7 +74,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Beast Mount</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Silver Steed (Fast, Impact(3)) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Coast Guard</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-coast-guard'>Coast Guard</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
@@ -79,7 +83,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Light-Beacon Conjurer (Piercing Tag(6)) · <del class='del'>+30</del> pts</td><td>Light-Beacon Conjurer (Piercing Tag(6)) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Archer</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-archer'>Archer</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
@@ -88,14 +92,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Realm-Bow</td><td>Replace Realm-Bow</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Longbow (30&quot;, A3, Indirect) · <del class='del'>+10</del> pts</td><td>Longbow (30&quot;, A3, Indirect) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Reaver Cavalry</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-reaver-cavalry'>Reaver Cavalry</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Bow</td><td>Replace Bow</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Realm-Shortbow (18&quot;, A6, Fracture) · <del class='del'>+30</del> pts</td><td>Realm-Shortbow (18&quot;, A6, Fracture) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Lion Warrior</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-lion-warrior'>Lion Warrior</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
@@ -105,7 +109,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Light-Beacon Conjurer (Piercing Tag(6)) · <del class='del'>+30</del> pts</td><td>Light-Beacon Conjurer (Piercing Tag(6)) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Phoenix Warrior</h3><p class='stats'>60 pts · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-phoenix-warrior'>Phoenix Warrior</h3><p class='stats'>60 pts · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
@@ -114,7 +118,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fire Blast (6&quot;, A3, Blast(3), Reliable, Assault) · <del class='del'>+100</del> pts</td><td>Fire Blast (6&quot;, A3, Blast(3), Reliable, Assault) · <ins class='add'>+85</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ice Blast (9&quot;, A3, AP(2), Deadly(3), Assault) · <del class='del'>+170</del> pts</td><td>Ice Blast (9&quot;, A3, AP(2), Deadly(3), Assault) · <ins class='add'>+150</ins> pts</td></tr>
 </table></div>
-<h3>Weapon Master</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-weapon-master'>Weapon Master</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
@@ -124,13 +128,13 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spell Master (Caster(1)) · <del class='del'>+10</del> pts</td><td>Spell Master (Caster(1)) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Shadow Sister</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-shadow-sister'>Shadow Sister</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Dagger</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
 </table></div>
-<h3>Shadow Brother</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-shadow-brother'>Shadow Brother</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -139,7 +143,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Shortbow</td><td>Replace Shortbow</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Kill-Bow (18&quot;, A3, AP(2), Deadly(3)) · <del class='del'>+70</del> pts</td><td>Heavy Kill-Bow (18&quot;, A3, AP(2), Deadly(3)) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Dragon Cavalry</h3><p class='stats'>85 → 75 pts (-10) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-dragon-cavalry'>Dragon Cavalry</h3><p class='stats'>85 → 75 pts (-10) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
@@ -152,7 +156,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Beast Mount</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dragon Steed (Fast, Impact(3)) · +5 pts</ins></td></tr>
 </table></div>
-<h3>Champion</h3><p class='stats'>110 → 105 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-champion'>Champion</h3><p class='stats'>110 → 105 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>105</ins> pts</td></tr>
@@ -190,7 +194,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>High Merchant (Relentless Aura) · <del class='del'>+45</del> pts</td><td>High Merchant (Relentless Aura) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Mage (Caster(3)) · <del class='del'>+30</del> pts</td><td>Master Mage (Caster(3)) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>High Noble</h3><p class='stats'>155 → 145 pts (-10) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-high-noble'>High Noble</h3><p class='stats'>155 → 145 pts (-10) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>155</del> pts</td><td><ins class='add'>145</ins> pts</td></tr>
@@ -230,14 +234,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Mage (Caster(3)) · <del class='del'>+30</del> pts</td><td>Master Mage (Caster(3)) · <ins class='add'>+45</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(6)) · <del class='del'>+70</del> pts</td><td>Army Standard Bearer (Fear(6)) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Giant Eagle</h3><p class='stats'>155 → 180 pts (+25) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-giant-eagle'>Giant Eagle</h3><p class='stats'>155 → 180 pts (+25) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>155</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Razor Claws</td><td>Replace Razor Claws</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sharp Claws (A9, Rending) · <del class='del'>+20</del> pts</td><td>Sharp Claws (A9, Rending) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>High Elf Artillery</h3><p class='stats'>370 → 330 pts (-40) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-high-elf-artillery'>High Elf Artillery</h3><p class='stats'>370 → 330 pts (-40) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>370</del> pts</td><td><ins class='add'>330</ins> pts</td></tr>
@@ -247,21 +251,21 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Repeater Bolt Thrower (36&quot;, A18, AP(1)) · <del class='del'>+30</del> pts</td><td>Repeater Bolt Thrower (36&quot;, A18, AP(1)) · <ins class='add'>+25</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Bolt Thrower (36&quot;, A3, AP(4), Deadly(6)) · <del class='del'>+60</del> pts</td><td>Heavy Bolt Thrower (36&quot;, A3, AP(4), Deadly(6)) · <ins class='add'>+50</ins> pts</td></tr>
 </table></div>
-<h3>War Chariot</h3><p class='stats'>385 → 360 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-war-chariot'>War Chariot</h3><p class='stats'>385 → 360 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>385</del> pts</td><td><ins class='add'>360</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Spear Crew and Chariot Shock</td><td>Replace Spear Crew and Chariot Shock</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bow Crew (24&quot;, A18) · <del class='del'>+5</del> pts</td><td>Bow Crew (24&quot;, A18) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Eagle Chariot</h3><p class='stats'>385 → 430 pts (+45) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-eagle-chariot'>Eagle Chariot</h3><p class='stats'>385 → 430 pts (+45) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>385</del> pts</td><td><ins class='add'>430</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Spear Crew and Chariot Shock</td><td>Replace Spear Crew and Chariot Shock</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bow Crew (24&quot;, A18) · <del class='del'>+5</del> pts</td><td>Bow Crew (24&quot;, A18) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Deer-Avatar Hunter</h3><p class='stats'>430 → 455 pts (+25) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-deer-avatar-hunter'>Deer-Avatar Hunter</h3><p class='stats'>430 → 455 pts (+25) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>430</del> pts</td><td><ins class='add'>455</ins> pts</td></tr>
@@ -273,28 +277,28 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with any</td><td>Upgrade with any</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Monster Hunter (Slayer) · <del class='del'>+65</del> pts</td><td>Monster Hunter (Slayer) · <ins class='add'>+50</ins> pts</td></tr>
 </table></div>
-<h3>Ice Phoenix</h3><p class='stats'>525 → 500 pts (-25) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-ice-phoenix'>Ice Phoenix</h3><p class='stats'>525 → 500 pts (-25) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>525</del> pts</td><td><ins class='add'>500</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Frost Blizzard</td><td>Replace Frost Blizzard</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ice Blast (9&quot;, A3, AP(2), Deadly(3), Assault) · <del class='del'>+160</del> pts</td><td>Ice Blast (9&quot;, A3, AP(2), Deadly(3), Assault) · <ins class='add'>+145</ins> pts</td></tr>
 </table></div>
-<h3>Lion Chariot</h3><p class='stats'>590 → 560 pts (-30) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-lion-chariot'>Lion Chariot</h3><p class='stats'>590 → 560 pts (-30) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>590</del> pts</td><td><ins class='add'>560</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Lion Axe Crew</td><td>Replace Lion Axe Crew</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon Crew (A9, AP(2)) · <del class='del'>+30</del> pts</td><td>Great Weapon Crew (A9, AP(2)) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Fire Phoenix</h3><p class='stats'>655 → 615 pts (-40) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-fire-phoenix'>Fire Phoenix</h3><p class='stats'>655 → 615 pts (-40) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>655</del> pts</td><td><ins class='add'>615</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Ember Storm</td><td>Replace Ember Storm</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fire Blast (6&quot;, A3, Blast(3), Reliable, Assault) · <del class='del'>+20</del> pts</td><td>Fire Blast (6&quot;, A3, Blast(3), Reliable, Assault) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Bull-Avatar Giant</h3><p class='stats'>940 → 875 pts (-65) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-bull-avatar-giant'>Bull-Avatar Giant</h3><p class='stats'>940 → 875 pts (-65) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>940</del> pts</td><td><ins class='add'>875</ins> pts</td></tr>
@@ -304,7 +308,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shockwave (12&quot;, A3, Blast(3), Assault) · <del class='del'>+90</del> pts</td><td>Shockwave (12&quot;, A3, Blast(3), Assault) · <ins class='add'>+85</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rock Storm (12&quot;, A6, AP(2), Assault) · <del class='del'>+145</del> pts</td><td>Rock Storm (12&quot;, A6, AP(2), Assault) · <ins class='add'>+135</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Unstoppable</td><td>This weapon ignores Regeneration, and ignores all negative modifiers which are not from this model&#x27;s special rules.</td></tr>
 <tr class='del'><td>➖</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
@@ -320,11 +324,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Slayer</td><td><span class='del'>3.6.0 beta:</span> When <del class='del'>shooting enemies over 9&quot; away,</del> or when charging, this model&#x27;s weapons get AP(+2) if most models in the target have Tough(27) or higher.<br><span class='add'>3.6.0:</span> When <ins class='add'>using Hold actions and shooting,</ins> or when charging, this model&#x27;s weapons get AP(+2) if most models in the target have Tough(27) or higher.</td></tr>
 <tr class='mod'><td>✏️</td><td>Spell Resistance</td><td><span class='del'>3.6.0 beta:</span> When a unit where most models have this rule takes wounds, roll one die for each. <del class='del'>On a 6+ it is ignored.</del> If the <del class='del'>wounds were</del> from a spell, then <del class='del'>they are</del> ignored on a <del class='del'>2+</del> instead.<br><span class='add'>3.6.0:</span> When a unit where most models have this rule takes wounds, roll one die for each. If the <ins class='add'>wound was</ins> from a spell, then <ins class='add'>it is</ins> ignored on a <ins class='add'>2+. If the wound was not from a spell, then it is ignored on a 6+</ins> instead.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Magical Surge</td><td><span class='del'>3.6.0 beta:</span> (3) Pick up to three friendly units within 18&quot;, which get Bane in melee once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (3) Pick up to three friendly units within 18&quot;, which get Bane <ins class='add'>on its weapons</ins> in melee once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

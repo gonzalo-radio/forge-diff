@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,23 +37,24 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +6 / -5 / ~14</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Sea Master</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>125</td><td class='num'><b class='del'>+75</b></td></tr>
-<tr><td>Scholar</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>115</td><td class='num'><b class='del'>+75</b></td></tr>
-<tr><td>Octopus Hybrids → Octopus Hybrid</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Sea Guard</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Elf Thrall</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>50</td><td class='num'><b class='del'>+35</b></td></tr>
-<tr><td>Elf Reaver</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>60</td><td class='num'><b class='del'>+40</b></td></tr>
-<tr><td>War-Eel Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>25</td><td class='num'>60</td><td class='num'><b class='del'>+35</b></td></tr>
-<tr><td>Crab Swarm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>35</td><td class='num'>90</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Depth Horror</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>130</td><td class='num'><b class='del'>+75</b></td></tr>
-<tr><td>Sea-Wyrm Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>150</td><td class='num'><b class='del'>+85</b></td></tr>
-<tr><td>Giant Crab</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>155</td><td class='num'><b class='del'>+100</b></td></tr>
-<tr><td>Water Elemental</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>155</td><td class='num'><b class='del'>+100</b></td></tr>
+<tr><td><a href='#unit-sea-master'>Sea Master</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>125</td><td class='num'><b class='del'>+75</b></td></tr>
+<tr><td><a href='#unit-scholar'>Scholar</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>115</td><td class='num'><b class='del'>+75</b></td></tr>
+<tr><td><a href='#unit-octopus-hybrid'>Octopus Hybrids → Octopus Hybrid</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-sea-guard'>Sea Guard</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-elf-thrall'>Elf Thrall</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>50</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td><a href='#unit-elf-reaver'>Elf Reaver</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>60</td><td class='num'><b class='del'>+40</b></td></tr>
+<tr><td><a href='#unit-war-eel-rider'>War-Eel Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>25</td><td class='num'>60</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td><a href='#unit-crab-swarm'>Crab Swarm</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>35</td><td class='num'>90</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-depth-horror'>Depth Horror</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>130</td><td class='num'><b class='del'>+75</b></td></tr>
+<tr><td><a href='#unit-sea-wyrm-rider'>Sea-Wyrm Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>150</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td><a href='#unit-giant-crab'>Giant Crab</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>155</td><td class='num'><b class='del'>+100</b></td></tr>
+<tr><td><a href='#unit-water-elemental'>Water Elemental</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>155</td><td class='num'><b class='del'>+100</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Sea Master</h3><p class='stats'>50 → 125 pts (+75) · Size 1 · Quality 4+ · Defense 4+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-sea-master'>Sea Master</h3><p class='stats'>50 → 125 pts (+75) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
@@ -105,7 +109,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Depth Scryer (Ranged Shrouding Aura) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Army Standard Bearer (Fear(2)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Scholar</h3><p class='stats'>40 → 115 pts (+75) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-scholar'>Scholar</h3><p class='stats'>40 → 115 pts (+75) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
@@ -163,7 +167,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Tidemage (Caster(2)) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Tidemage (Caster(3)) · +70 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Octopus Hybrid</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-octopus-hybrid'>Octopus Hybrid</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Octopus <del class='del'>Hybrids</del></td><td>Octopus <ins class='add'>Hybrid</ins></td></tr>
@@ -178,7 +182,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rusty Blade (A2, Shred) · free</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Tentacles (A4) · +5 pts</ins></td></tr>
 </table></div>
-<h3>Sea Guard</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-sea-guard'>Sea Guard</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
@@ -194,7 +198,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Mage Apprentice (Spell Accumulator(1)) · <del class='del'>+15</del> pts</td><td>Mage Apprentice (Spell Accumulator(1)) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Elf Thrall</h3><p class='stats'>15 → 50 pts (+35) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-elf-thrall'>Elf Thrall</h3><p class='stats'>15 → 50 pts (+35) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>15</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
@@ -212,7 +216,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>all models</del> with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Deep-Sea Passage (Ambush Re-Deployment) · <del class='del'>+5</del> pts</td><td>Deep-Sea Passage (Ambush Re-Deployment) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Elf Reaver</h3><p class='stats'>20 → 60 pts (+40) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-elf-reaver'>Elf Reaver</h3><p class='stats'>20 → 60 pts (+40) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
@@ -232,7 +236,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>all models</del> with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Deep-Sea Passage (Ambush Re-Deployment) · <del class='del'>+5</del> pts</td><td>Deep-Sea Passage (Ambush Re-Deployment) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>War-Eel Rider</h3><p class='stats'>25 → 60 pts (+35) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-war-eel-rider'>War-Eel Rider</h3><p class='stats'>25 → 60 pts (+35) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
@@ -257,7 +261,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Banner · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Musician · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Crab Swarm</h3><p class='stats'>35 → 90 pts (+55) · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-crab-swarm'>Crab Swarm</h3><p class='stats'>35 → 90 pts (+55) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -269,7 +273,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Grasping Pincer</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sharp Pincers (A6, Rending) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Depth Horror</h3><p class='stats'>55 → 130 pts (+75) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-depth-horror'>Depth Horror</h3><p class='stats'>55 → 130 pts (+75) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
@@ -291,7 +295,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Hand Weapon (A3, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Great Weapon (A2, AP(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Sea-Wyrm Rider</h3><p class='stats'>65 → 150 pts (+85) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-sea-wyrm-rider'>Sea-Wyrm Rider</h3><p class='stats'>65 → 150 pts (+85) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>150</ins> pts</td></tr>
@@ -306,7 +310,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Jagged Greatsword (A6, Shred) · +25 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Great Hook-Scythe (A1, AP(4), Deadly(6)) · +30 pts</ins></td></tr>
 </table></div>
-<h3>Giant Crab</h3><p class='stats'>55 → 155 pts (+100) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-giant-crab'>Giant Crab</h3><p class='stats'>55 → 155 pts (+100) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
@@ -322,7 +326,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Elf Thrall Rider (Jagged Greatsword (A6, Shred)) · +40 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Elf Thrall Rider (Great Hook-Scythe (A1, AP(4), Deadly(6))) · +45 pts</ins></td></tr>
 </table></div>
-<h3>Water Elemental</h3><p class='stats'>55 → 155 pts (+100) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-water-elemental'>Water Elemental</h3><p class='stats'>55 → 155 pts (+100) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
@@ -331,7 +335,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Wave Strike</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Wave Spurt (12&quot;, A2, Blast(3), Reliable, Bane), Strike (A2) · +10 pts</ins></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Dodge</td><td>If most models in this unit have this rule, as long as they aren&#x27;t Fatigued, enemy units get -1 to hit rolls in melee against them.</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Nimble</td><td>If this model has Nimble, it may move by up to 2D3&quot; from Nimble (instead of only D3&quot;).</td></tr>
@@ -359,7 +363,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Stealth<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1 (2026-09-28):</span> When units where <del class='del'>all</del> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.<br><span class='add'>3.6.0 beta:</span> When units where <ins class='add'>most</ins> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</td></tr>
 <tr class='mod'><td>✏️</td><td>Wave-Step</td><td><span class='del'>3.5.1 (2026-09-28):</span> When this unit is activated, you may <del class='del'>place</del> all models with this rule in it <del class='del'>anywhere fully within D3&quot; of their position.</del><br><span class='add'>3.6.0 beta:</span> When this unit is activated, you may <ins class='add'>move</ins> all models with this rule in it <ins class='add'>by up to D3&quot;.</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Crushing Pressure</td><td><span class='del'>3.5.1 (2026-09-28):</span> (2) Pick up to <del class='del'>four</del> enemy units within <del class='del'>12&quot;,</del> which take <del class='del'>1 hit</del> with AP(2) each.<br><span class='add'>3.6.0 beta:</span> (2) Pick up to <ins class='add'>two</ins> enemy units within <ins class='add'>6&quot;,</ins> which take <ins class='add'>4 hits</ins> with AP(2) each.</td></tr>
 <tr class='mod'><td>✏️</td><td>Darkest Abyss</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(3)</del> Pick <del class='del'>up to six</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which <del class='del'>get</del> -1 to hit rolls when attacking once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>gets</ins> -1 to hit rolls when attacking once (next time the effect would apply).</td></tr>

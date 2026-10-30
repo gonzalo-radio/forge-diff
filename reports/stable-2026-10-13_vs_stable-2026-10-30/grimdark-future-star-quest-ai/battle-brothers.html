@@ -20,7 +20,9 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
 .systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
@@ -35,40 +37,41 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +5 / -4 / ~16</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#new-units'>New units</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Pathfinder</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>70</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Battle Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>100</td><td class='num'>85</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Assault Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>105</td><td class='num'>95</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Veteran Assault Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>100</td><td class='num'>115</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Veteran Battle Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>120</td><td class='num'>125</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Support Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>140</td><td class='num'>140</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Elite Pathfinder</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>175</td><td class='num'>175</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Pathfinder Biker</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>230</td><td class='num'>180</td><td class='num'><b class='add'>-50</b></td></tr>
-<tr><td>Master Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>190</td><td class='num'>210</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Destroyer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>240</td><td class='num'>210</td><td class='num'><b class='add'>-30</b></td></tr>
-<tr><td>Veteran Master Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>205</td><td class='num'>235</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Brother Biker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>305</td><td class='num'>260</td><td class='num'><b class='add'>-45</b></td></tr>
-<tr><td>Drop Pod</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>425</td><td class='num'>290</td><td class='num'><b class='add'>-135</b></td></tr>
-<tr><td>Master Destroyer</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>490</td><td class='num'>365</td><td class='num'><b class='add'>-125</b></td></tr>
-<tr><td>Heavy Exo-Suit</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>555</td><td class='num'>410</td><td class='num'><b class='add'>-145</b></td></tr>
-<tr><td>Artillery Gun</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>545</td><td class='num'>420</td><td class='num'><b class='add'>-125</b></td></tr>
-<tr><td>APC</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>615</td><td class='num'>455</td><td class='num'><b class='add'>-160</b></td></tr>
-<tr><td>Support Bike</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>600</td><td class='num'>490</td><td class='num'><b class='add'>-110</b></td></tr>
-<tr><td>Attack APC → Attack Vehicle</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>640</td><td class='num'>500</td><td class='num'><b class='add'>-140</b></td></tr>
-<tr><td>Attack Speeder</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>755</td><td class='num'>640</td><td class='num'><b class='add'>-115</b></td></tr>
-<tr><td>Light Gunship</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1010</td><td class='num'>770</td><td class='num'><b class='add'>-240</b></td></tr>
-<tr><td>Heavy Gunship</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1820</td><td class='num'>1120</td><td class='num'><b class='add'>-700</b></td></tr>
-<tr><td>Combat Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1375</td><td class='num'>1210</td><td class='num'><b class='add'>-165</b></td></tr>
-<tr><td>Battle Tank</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1710</td><td class='num'>1285</td><td class='num'><b class='add'>-425</b></td></tr>
-<tr><td>Veteran Combat Walker</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1485</td><td class='num'>1295</td><td class='num'><b class='add'>-190</b></td></tr>
-<tr><td>Heavy Tank → Heavy Battle Tank</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2735</td><td class='num'>2250</td><td class='num'><b class='add'>-485</b></td></tr>
+<tr><td><a href='#unit-pathfinder'>Pathfinder</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>70</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-battle-brother'>Battle Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>100</td><td class='num'>85</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-assault-brother'>Assault Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>105</td><td class='num'>95</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-veteran-assault-brother'>Veteran Assault Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>100</td><td class='num'>115</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-veteran-battle-brother'>Veteran Battle Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>120</td><td class='num'>125</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-support-brother'>Support Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>140</td><td class='num'>140</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-elite-pathfinder'>Elite Pathfinder</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>175</td><td class='num'>175</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-pathfinder-biker'>Pathfinder Biker</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>230</td><td class='num'>180</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td><a href='#unit-master-brother'>Master Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>190</td><td class='num'>210</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-destroyer'>Destroyer</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>240</td><td class='num'>210</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td><a href='#unit-veteran-master-brother'>Veteran Master Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>205</td><td class='num'>235</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-brother-biker'>Brother Biker</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>305</td><td class='num'>260</td><td class='num'><b class='add'>-45</b></td></tr>
+<tr><td><a href='#unit-drop-pod'>Drop Pod</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>425</td><td class='num'>290</td><td class='num'><b class='add'>-135</b></td></tr>
+<tr><td><a href='#unit-master-destroyer'>Master Destroyer</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>490</td><td class='num'>365</td><td class='num'><b class='add'>-125</b></td></tr>
+<tr><td><a href='#unit-heavy-exo-suit'>Heavy Exo-Suit</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>555</td><td class='num'>410</td><td class='num'><b class='add'>-145</b></td></tr>
+<tr><td><a href='#unit-artillery-gun'>Artillery Gun</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>545</td><td class='num'>420</td><td class='num'><b class='add'>-125</b></td></tr>
+<tr><td><a href='#unit-apc'>APC</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>615</td><td class='num'>455</td><td class='num'><b class='add'>-160</b></td></tr>
+<tr><td><a href='#unit-support-bike'>Support Bike</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>600</td><td class='num'>490</td><td class='num'><b class='add'>-110</b></td></tr>
+<tr><td><a href='#unit-attack-vehicle'>Attack APC → Attack Vehicle</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>640</td><td class='num'>500</td><td class='num'><b class='add'>-140</b></td></tr>
+<tr><td><a href='#unit-attack-speeder'>Attack Speeder</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>755</td><td class='num'>640</td><td class='num'><b class='add'>-115</b></td></tr>
+<tr><td><a href='#unit-light-gunship'>Light Gunship</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1010</td><td class='num'>770</td><td class='num'><b class='add'>-240</b></td></tr>
+<tr><td><a href='#unit-heavy-gunship'>Heavy Gunship</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>1820</td><td class='num'>1120</td><td class='num'><b class='add'>-700</b></td></tr>
+<tr><td><a href='#unit-combat-walker'>Combat Walker</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1375</td><td class='num'>1210</td><td class='num'><b class='add'>-165</b></td></tr>
+<tr><td><a href='#unit-battle-tank'>Battle Tank</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1710</td><td class='num'>1285</td><td class='num'><b class='add'>-425</b></td></tr>
+<tr><td><a href='#unit-veteran-combat-walker'>Veteran Combat Walker</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1485</td><td class='num'>1295</td><td class='num'><b class='add'>-190</b></td></tr>
+<tr><td><a href='#unit-heavy-battle-tank'>Heavy Tank → Heavy Battle Tank</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2735</td><td class='num'>2250</td><td class='num'><b class='add'>-485</b></td></tr>
 </table></div>
-<h2>New units</h2><div class='scroll'><table>
+<h2 id='new-units'>New units</h2><div class='scroll'><table>
 <tr class='add'><td><b>Pathfinder Sniper</b></td><td>1x Q4+ D4+ — 120 pts. Rules: Strider, Battleborn, Fearless, Scout, Stealth, Tough(3). Weapons: Anti-Matter-Sniper Carbine (24&quot;, A3, AP(1), Reliable, Smash, Takedown), Strike (A3)</td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Pathfinder</h3><p class='stats'>80 → 70 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-pathfinder'>Pathfinder</h3><p class='stats'>80 → 70 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -106,7 +109,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Heavy Rifle</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sniper Rifle (30&quot;, A3, AP(1), Reliable) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Battle Brother</h3><p class='stats'>100 → 85 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-battle-brother'>Battle Brother</h3><p class='stats'>100 → 85 pts (-15) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -142,7 +145,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Banner (Versatile Reach Aura) · <del class='del'>+10</del> pts</td><td>The Founder&#x27;s Banner (Versatile Reach Aura) · <ins class='add'>+20</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Medical Training (Regeneration Aura) · <del class='del'>+15</del> pts</td><td>Medical Training (Regeneration Aura) · <ins class='add'>+70</ins> pts</td></tr>
 </table></div>
-<h3>Assault Brother</h3><p class='stats'>105 → 95 pts (-10) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-assault-brother'>Assault Brother</h3><p class='stats'>105 → 95 pts (-10) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -186,7 +189,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Plasma Rifle (24&quot;, A3, AP(4)) · +60 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Fusion Rifle (12&quot;, A3, AP(4), Deadly(3)) · +80 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Veteran Assault Brother</h3><p class='stats'>100 → 115 pts (+15) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-veteran-assault-brother'>Veteran Assault Brother</h3><p class='stats'>100 → 115 pts (+15) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
@@ -231,7 +234,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Energy Sword</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Fist (A6, AP(4)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Veteran Battle Brother</h3><p class='stats'>120 → 125 pts (+5) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-veteran-battle-brother'>Veteran Battle Brother</h3><p class='stats'>120 → 125 pts (+5) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
@@ -273,7 +276,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Energy Sword</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Energy Fist (A6, AP(4)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Support Brother</h3><p class='stats'>140 pts · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-support-brother'>Support Brother</h3><p class='stats'>140 pts · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>CCW</del> (A3)</td><td><ins class='add'>Strike</ins> (A3)</td></tr>
@@ -286,7 +289,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Laser Cannon (36&quot;, A3, AP(3), Deadly(3)) · <del class='del'>+150</del> pts</td><td>Laser Cannon (36&quot;, A3, AP(3), Deadly(3)) · <ins class='add'>+145</ins> pts</td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Gravity Cannon (24&quot;, A3, AP(2), Blast(3), Lacerate) · +85 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Elite Pathfinder</h3><p class='stats'>175 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-elite-pathfinder'>Elite Pathfinder</h3><p class='stats'>175 pts · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td>Flamer Pistol (6&quot;, A3, <del class='del'>Blast(3), Reliable)</del></td><td>Flamer Pistol (6&quot;, A3, <ins class='add'>Reliable, Anti-Cover, Assault)</ins></td></tr>
@@ -339,7 +342,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Camo Cloak (Stealth) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Bike (Twin Heavy Rifle (24&quot;, A6, AP(1)), Fast, Tough(9)) · +270 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Pathfinder Biker</h3><p class='stats'>230 → 180 pts (-50) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-pathfinder-biker'>Pathfinder Biker</h3><p class='stats'>230 → 180 pts (-50) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>230</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
@@ -368,7 +371,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Sword (A3, Rending) · +10 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Fist <del class='del'>(A6, AP(4))</del> · <del class='del'>+15</del> pts</td><td>Energy Fist <ins class='add'>(A3, AP(2))</ins> · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Master Brother</h3><p class='stats'>190 → 210 pts (+20) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-master-brother'>Master Brother</h3><p class='stats'>190 → 210 pts (+20) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>190</del> pts</td><td><ins class='add'>210</ins> pts</td></tr>
@@ -415,7 +418,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Captain (Bane when Shooting Aura) · <del class='del'>+10</del> pts</td><td>Captain (Bane when Shooting Aura) · <ins class='add'>+45</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Archivist (Caster(3)) · <del class='del'>+50</del> pts</td><td>Master Archivist (Caster(3)) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Destroyer</h3><p class='stats'>240 → 210 pts (-30) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-destroyer'>Destroyer</h3><p class='stats'>240 → 210 pts (-30) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>240</del> pts</td><td><ins class='add'>210</ins> pts</td></tr>
@@ -447,7 +450,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Banner (Versatile Reach Aura) · <del class='del'>+10</del> pts</td><td>The Founder&#x27;s Banner (Versatile Reach Aura) · <ins class='add'>+25</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Medical Training (Regeneration Aura) · <del class='del'>+15</del> pts</td><td>Medical Training (Regeneration Aura) · <ins class='add'>+90</ins> pts</td></tr>
 </table></div>
-<h3>Veteran Master Brother</h3><p class='stats'>205 → 235 pts (+30) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-veteran-master-brother'>Veteran Master Brother</h3><p class='stats'>205 → 235 pts (+30) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>205</del> pts</td><td><ins class='add'>235</ins> pts</td></tr>
@@ -500,7 +503,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Fist <del class='del'>(A6, AP(4))</del> · <del class='del'>+60</del> pts</td><td>Energy Fist <ins class='add'>(A9, AP(2))</ins> · <ins class='add'>+45</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Chain-Fist (A3, <del class='del'>AP(2),</del> Deadly(3)) · <del class='del'>+50</del> pts</td><td>Chain-Fist (A3, <ins class='add'>AP(4),</ins> Deadly(3)) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Brother Biker</h3><p class='stats'>305 → 260 pts (-45) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-brother-biker'>Brother Biker</h3><p class='stats'>305 → 260 pts (-45) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>305</del> pts</td><td><ins class='add'>260</ins> pts</td></tr>
@@ -531,7 +534,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Energy Sword (A3, Rending) · +10 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Fist <del class='del'>(A6, AP(4))</del> · <del class='del'>+25</del> pts</td><td>Energy Fist <ins class='add'>(A3, AP(2))</ins> · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Drop Pod</h3><p class='stats'>425 → 290 pts (-135) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-drop-pod'>Drop Pod</h3><p class='stats'>425 → 290 pts (-135) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>425</del> pts</td><td><ins class='add'>290</ins> pts</td></tr>
@@ -544,7 +547,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Death Launcher</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Storm Rifle (24&quot;, A18, AP(1)) · +185 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Master Destroyer</h3><p class='stats'>490 → 365 pts (-125) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-master-destroyer'>Master Destroyer</h3><p class='stats'>490 → 365 pts (-125) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>490</del> pts</td><td><ins class='add'>365</ins> pts</td></tr>
@@ -573,7 +576,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Archivist (Caster(3)) · <del class='del'>+50</del> pts</td><td>Master Archivist (Caster(3)) · <ins class='add'>+60</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lieutenant (Rapid Rush Aura) · <del class='del'>+10</del> pts</td><td>Lieutenant (Rapid Rush Aura) · <ins class='add'>+65</ins> pts</td></tr>
 </table></div>
-<h3>Heavy Exo-Suit</h3><p class='stats'>555 → 410 pts (-145) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-heavy-exo-suit'>Heavy Exo-Suit</h3><p class='stats'>555 → 410 pts (-145) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>555</del> pts</td><td><ins class='add'>410</ins> pts</td></tr>
@@ -607,7 +610,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Light Gravity Cannon (24&quot;, A6, AP(2), Blast(3), Lacerate) · +205 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Laser Cannon (36&quot;, A6, AP(3), Deadly(3)) · +325 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Artillery Gun</h3><p class='stats'>545 → 420 pts (-125) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-artillery-gun'>Artillery Gun</h3><p class='stats'>545 → 420 pts (-125) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>545</del> pts</td><td><ins class='add'>420</ins> pts</td></tr>
@@ -619,7 +622,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>AT-Bombard (30&quot;, A6, AP(3), Deadly(3), Indirect) · +315 pts</ins></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Crack Cannon (30&quot;, A18, AP(1), Indirect, Rending) · +305 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>APC</h3><p class='stats'>615 → 455 pts (-160) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-apc'>APC</h3><p class='stats'>615 → 455 pts (-160) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>615</del> pts</td><td><ins class='add'>455</ins> pts</td></tr>
@@ -637,7 +640,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +90 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dozer Blade (Strider) · <del class='del'>+45</del> pts</td><td>Dozer Blade (Strider) · <ins class='add'>+95</ins> pts</td></tr>
 </table></div>
-<h3>Support Bike</h3><p class='stats'>600 → 490 pts (-110) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-support-bike'>Support Bike</h3><p class='stats'>600 → 490 pts (-110) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>600</del> pts</td><td><ins class='add'>490</ins> pts</td></tr>
@@ -653,7 +656,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Heavy Pistol</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Rifle (24&quot;, A3, AP(1)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Attack Vehicle</h3><p class='stats'>640 → 500 pts (-140) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-attack-vehicle'>Attack Vehicle</h3><p class='stats'>640 → 500 pts (-140) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Attack <del class='del'>APC</del></td><td>Attack <ins class='add'>Vehicle</ins></td></tr>
@@ -673,7 +676,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dozer Blade (Strider) · <del class='del'>+45</del> pts</td><td>Dozer Blade (Strider) · <ins class='add'>+95</ins> pts</td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Cargo Space (Transport(18)) · +160 pts</ins></td></tr>
 </table></div>
-<h3>Attack Speeder</h3><p class='stats'>755 → 640 pts (-115) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-attack-speeder'>Attack Speeder</h3><p class='stats'>755 → 640 pts (-115) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>755</del> pts</td><td><ins class='add'>640</ins> pts</td></tr>
@@ -693,7 +696,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Extra Armor (Defense(1)) · +90 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Open Sides (Transport(18)) · <del class='del'>+60</del> pts</td><td>Open Sides (Transport(18)) · <ins class='add'>+160</ins> pts</td></tr>
 </table></div>
-<h3>Light Gunship</h3><p class='stats'>1010 → 770 pts (-240) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-light-gunship'>Light Gunship</h3><p class='stats'>1010 → 770 pts (-240) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1010</del> pts</td><td><ins class='add'>770</ins> pts</td></tr>
@@ -717,7 +720,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Laser Talon (24&quot;, A6, AP(3)) · +145 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Storm Cannon (30&quot;, A6, AP(2), Unstoppable) · +145 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Heavy Gunship</h3><p class='stats'>1820 → 1120 pts (-700) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-heavy-gunship'>Heavy Gunship</h3><p class='stats'>1820 → 1120 pts (-700) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1820</del> pts</td><td><ins class='add'>1120</ins> pts</td></tr>
@@ -744,7 +747,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Fusion Rifle (18&quot;, A3, AP(4), Deadly(3)) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Machinegun (30&quot;, A9, AP(1)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Combat Walker</h3><p class='stats'>1375 → 1210 pts (-165) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-combat-walker'>Combat Walker</h3><p class='stats'>1375 → 1210 pts (-165) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1375</del> pts</td><td><ins class='add'>1210</ins> pts</td></tr>
@@ -772,7 +775,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Cyclic Rifle (9&quot;, A9, Anti-Cover, Assault, Surge) · +15 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Fusion Rifle (6&quot;, A3, AP(4), Deadly(3), Assault) · +55 pts</ins></td></tr>
 </table></div>
-<h3>Battle Tank</h3><p class='stats'>1710 → 1285 pts (-425) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-battle-tank'>Battle Tank</h3><p class='stats'>1710 → 1285 pts (-425) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1710</del> pts</td><td><ins class='add'>1285</ins> pts</td></tr>
@@ -801,7 +804,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td><del class='del'>Hunter Missiles (24&quot;,</del> A3, AP(2), Deadly(3), Limited, Unstoppable) · <del class='del'>+50</del> pts</td><td><ins class='add'>Disposable Guided Missile (18&quot;,</ins> A3, AP(2), Deadly(3), Limited, Unstoppable) · <ins class='add'>+40</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dozer Blade (Strider) · <del class='del'>+90</del> pts</td><td>Dozer Blade (Strider) · <ins class='add'>+190</ins> pts</td></tr>
 </table></div>
-<h3>Veteran Combat Walker</h3><p class='stats'>1485 → 1295 pts (-190) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-veteran-combat-walker'>Veteran Combat Walker</h3><p class='stats'>1485 → 1295 pts (-190) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1485</del> pts</td><td><ins class='add'>1295</ins> pts</td></tr>
@@ -831,7 +834,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Burst Cyclic Rifle (9&quot;, A9, Anti-Cover, Assault, Surge) · +30 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Assault Fusion Rifle (6&quot;, A3, AP(4), Deadly(3), Assault) · +65 pts</ins></td></tr>
 </table></div>
-<h3>Heavy Battle Tank</h3><p class='stats'>2735 → 2250 pts (-485) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-heavy-battle-tank'>Heavy Battle Tank</h3><p class='stats'>2735 → 2250 pts (-485) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Heavy Tank</td><td>Heavy <ins class='add'>Battle</ins> Tank</td></tr>
@@ -860,7 +863,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Twin Heavy Machinegun</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Twin Minigun (24&quot;, A24, AP(1)) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Bravery Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get +1 to Morale Test rolls. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
@@ -888,7 +891,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Versatile Reach</td><td><span class='del'>3.5.1:</span> When this unit is activated, pick one effect: until the end of the <del class='del'>activation</del> all models with this rule in <del class='del'>it</del> either get +4&quot; range when <del class='del'>shooting,</del> or move +2&quot; when charging.<br><span class='add'>3.6.0:</span> When this unit is activated, pick one effect: until the end of the <ins class='add'>activation,</ins> all models with this rule in <ins class='add'>this unit</ins> either get +4&quot; range when <ins class='add'>shooting</ins> or move +2&quot; when charging.</td></tr>
 <tr class='mod'><td>✏️</td><td>Versatile Reach Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> nearest friendly units picked before the start of the game get Versatile Reach. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> nearest friendly units picked before the start of the game get Versatile Reach. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Advanced Sight</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick up to two enemy units within <del class='del'>18&quot;,</del> which friendly units gets Unstoppable when shooting against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to two enemy units within <ins class='add'>18&quot; in line of sight,</ins> which friendly units gets Unstoppable <ins class='add'>on their weapons</ins> when shooting against once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Blessed Ammo</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick up to <del class='del'>four</del> friendly units within <del class='del'>12&quot;,</del> which get Shred when shooting once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get Shred <ins class='add'>on its weapons</ins> when shooting once (next time the effect would apply).</td></tr>

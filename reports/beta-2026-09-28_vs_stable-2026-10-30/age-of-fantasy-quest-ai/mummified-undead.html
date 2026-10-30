@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,54 +37,55 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +0 / -1 / ~11</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
 <tr><td>Skeleton Warrior</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>25</td><td class='num'>25</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Mummy</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Skeleton Archer</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Skeleton Horseman</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Royal Guard</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>40</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Hunting Beast</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>45</td><td class='num'>50</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Beast Rider</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>70</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Skeleton Leader</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>85</td><td class='num'>80</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-mummy'>Mummy</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-skeleton-archer'>Skeleton Archer</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-skeleton-horseman'>Skeleton Horseman</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-royal-guard'>Royal Guard</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>40</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-hunting-beast'>Hunting Beast</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>45</td><td class='num'>50</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-beast-rider'>Beast Rider</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>70</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-skeleton-leader'>Skeleton Leader</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>85</td><td class='num'>80</td><td class='num'><b class='add'>-5</b></td></tr>
 <tr><td>Scarab Swarm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>90</td><td class='num'>90</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Vulture</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>130</td><td class='num'>125</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Great Snake</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>140</td><td class='num'>135</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Snake Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>140</td><td class='num'>135</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Guardian Statue</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>145</td><td class='num'>140</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Royal Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>155</td><td class='num'>145</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Snakeman</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>205</td><td class='num'>195</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Rammit Den Geddul</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>265</td><td class='num'>240</td><td class='num'><b class='add'>-25</b></td></tr>
-<tr><td>Death Casket</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>355</td><td class='num'>335</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Skull Catapult</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>395</td><td class='num'>360</td><td class='num'><b class='add'>-35</b></td></tr>
-<tr><td>Skeleton Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>385</td><td class='num'>360</td><td class='num'><b class='add'>-25</b></td></tr>
-<tr><td>Great Scorpion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>390</td><td class='num'>365</td><td class='num'><b class='add'>-25</b></td></tr>
-<tr><td>Skeleton Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>730</td><td class='num'>710</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Giant God-Statue</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>870</td><td class='num'>815</td><td class='num'><b class='add'>-55</b></td></tr>
-<tr><td>War Sphinx</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>2+</td><td class='num'>940</td><td class='num'>880</td><td class='num'><b class='add'>-60</b></td></tr>
-<tr><td>Sphinx Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1055</td><td class='num'>990</td><td class='num'><b class='add'>-65</b></td></tr>
-<tr><td>Desert Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2860</td><td class='num'>2480</td><td class='num'><b class='add'>-380</b></td></tr>
-<tr><td>God-Titan</td><td class='num'>1</td><td class='num'>2+</td><td class='num'>2+</td><td class='num'>3460</td><td class='num'>2970</td><td class='num'><b class='add'>-490</b></td></tr>
+<tr><td><a href='#unit-vulture'>Vulture</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>130</td><td class='num'>125</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-great-snake'>Great Snake</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>140</td><td class='num'>135</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-snake-rider'>Snake Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>140</td><td class='num'>135</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-guardian-statue'>Guardian Statue</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>145</td><td class='num'>140</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-royal-champion'>Royal Champion</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>155</td><td class='num'>145</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-snakeman'>Snakeman</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>205</td><td class='num'>195</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-rammit-den-geddul'>Rammit Den Geddul</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>265</td><td class='num'>240</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td><a href='#unit-death-casket'>Death Casket</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>355</td><td class='num'>335</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-skull-catapult'>Skull Catapult</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>395</td><td class='num'>360</td><td class='num'><b class='add'>-35</b></td></tr>
+<tr><td><a href='#unit-skeleton-chariot'>Skeleton Chariot</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>385</td><td class='num'>360</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td><a href='#unit-great-scorpion'>Great Scorpion</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>390</td><td class='num'>365</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td><a href='#unit-skeleton-giant'>Skeleton Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>730</td><td class='num'>710</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-giant-god-statue'>Giant God-Statue</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>870</td><td class='num'>815</td><td class='num'><b class='add'>-55</b></td></tr>
+<tr><td><a href='#unit-war-sphinx'>War Sphinx</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>2+</td><td class='num'>940</td><td class='num'>880</td><td class='num'><b class='add'>-60</b></td></tr>
+<tr><td><a href='#unit-sphinx-champion'>Sphinx Champion</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1055</td><td class='num'>990</td><td class='num'><b class='add'>-65</b></td></tr>
+<tr><td><a href='#unit-desert-titan'>Desert Titan</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>2860</td><td class='num'>2480</td><td class='num'><b class='add'>-380</b></td></tr>
+<tr><td><a href='#unit-god-titan'>God-Titan</a></td><td class='num'>1</td><td class='num'>2+</td><td class='num'>2+</td><td class='num'>3460</td><td class='num'>2970</td><td class='num'><b class='add'>-490</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Mummy</h3><p class='stats'>30 pts · Size 1 · Quality 5+ · Defense 6+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-mummy'>Mummy</h3><p class='stats'>30 pts · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Infected Bite</td><td>Replace Infected Bite</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Grasping Claws (A3, Surge) · +5 pts</td><td>Grasping Claws (A3, <ins class='add'>AP(1),</ins> Surge) · +5 pts</td></tr>
 </table></div>
-<h3>Skeleton Archer</h3><p class='stats'>40 → 35 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-skeleton-archer'>Skeleton Archer</h3><p class='stats'>40 → 35 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
 </table></div>
-<h3>Skeleton Horseman</h3><p class='stats'>40 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-skeleton-horseman'>Skeleton Horseman</h3><p class='stats'>40 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Bows and Strike</td><td>Replace Bows and Strike</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lance (A3, Thrust), Trample (Impact(3)) · <del class='del'>+10</del> pts</td><td>Lance (A3, Thrust), Trample (Impact(3)) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Royal Guard</h3><p class='stats'>45 → 40 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-royal-guard'>Royal Guard</h3><p class='stats'>45 → 40 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
@@ -89,14 +93,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Royal Axe (A3, Blast(3), Shred) · <del class='del'>+45</del> pts</td><td>Royal Axe (A3, Blast(3), Shred) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Royal Scythe (A3, AP(2), Deadly(3), Bane) · <del class='del'>+85</del> pts</td><td>Royal Scythe (A3, AP(2), Deadly(3), Bane) · <ins class='add'>+75</ins> pts</td></tr>
 </table></div>
-<h3>Hunting Beast</h3><p class='stats'>45 → 50 pts (+5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-hunting-beast'>Hunting Beast</h3><p class='stats'>45 → 50 pts (+5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Infected Bite</td><td>Replace Infected Bite</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Razor Claws (A6) · <del class='del'>+10</del> pts</td><td>Razor Claws (A6) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Beast Rider</h3><p class='stats'>80 → 70 pts (-10) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-beast-rider'>Beast Rider</h3><p class='stats'>80 → 70 pts (-10) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -104,7 +108,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Royal Axe (A3, Blast(3), Shred) · <del class='del'>+45</del> pts</td><td>Royal Axe (A3, Blast(3), Shred) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Royal Scythe (A3, AP(2), Deadly(3), Bane) · <del class='del'>+85</del> pts</td><td>Royal Scythe (A3, AP(2), Deadly(3), Bane) · <ins class='add'>+75</ins> pts</td></tr>
 </table></div>
-<h3>Skeleton Leader</h3><p class='stats'>85 → 80 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-skeleton-leader'>Skeleton Leader</h3><p class='stats'>85 → 80 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
@@ -140,19 +144,19 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Herald (Scout Aura) · <del class='del'>+80</del> pts</td><td>Herald (Scout Aura) · <ins class='add'>+70</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Soul-Gem Keeper (Spell Resistance Aura) · <del class='del'>+85</del> pts</td><td>Soul-Gem Keeper (Spell Resistance Aura) · <ins class='add'>+90</ins> pts</td></tr>
 </table></div>
-<h3>Vulture</h3><p class='stats'>130 → 125 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-vulture'>Vulture</h3><p class='stats'>130 → 125 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>130</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
 </table></div>
-<h3>Great Snake</h3><p class='stats'>140 → 135 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-great-snake'>Great Snake</h3><p class='stats'>140 → 135 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Dune Hunter</td><td>Replace Dune Hunter</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burrower (Ambush) · <del class='del'>+15</del> pts</td><td>Burrower (Ambush) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Snake Rider</h3><p class='stats'>140 → 135 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-snake-rider'>Snake Rider</h3><p class='stats'>140 → 135 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
@@ -161,7 +165,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Dune Hunter</td><td>Replace Dune Hunter</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burrower (Ambush) · <del class='del'>+15</del> pts</td><td>Burrower (Ambush) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Guardian Statue</h3><p class='stats'>145 → 140 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-guardian-statue'>Guardian Statue</h3><p class='stats'>145 → 140 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>145</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
@@ -170,7 +174,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Bow (24&quot;, A9), Strike (A3) · <del class='del'>+35</del> pts</td><td>Great Bow (24&quot;, A9), Strike (A3) · <ins class='add'>+40</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Cursed Bow (18&quot;, A9, AP(1), Pierce), Strike (A3) · <del class='del'>+90</del> pts</td><td>Great Cursed Bow (18&quot;, A9, AP(1), Pierce), Strike (A3) · <ins class='add'>+85</ins> pts</td></tr>
 </table></div>
-<h3>Royal Champion</h3><p class='stats'>155 → 145 pts (-10) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-royal-champion'>Royal Champion</h3><p class='stats'>155 → 145 pts (-10) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>155</del> pts</td><td><ins class='add'>145</ins> pts</td></tr>
@@ -210,7 +214,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Soul-Gem Keeper (Spell Resistance Aura) · <del class='del'>+85</del> pts</td><td>Soul-Gem Keeper (Spell Resistance Aura) · <ins class='add'>+90</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Monarch (No Retreat Aura) · <del class='del'>+85</del> pts</td><td>Monarch (No Retreat Aura) · <ins class='add'>+90</ins> pts</td></tr>
 </table></div>
-<h3>Snakeman</h3><p class='stats'>205 → 195 pts (-10) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-snakeman'>Snakeman</h3><p class='stats'>205 → 195 pts (-10) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>205</del> pts</td><td><ins class='add'>195</ins> pts</td></tr>
@@ -221,12 +225,12 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Dune Hunter</td><td>Replace Dune Hunter</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burrower (Ambush) · <del class='del'>+20</del> pts</td><td>Burrower (Ambush) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Rammit Den Geddul</h3><p class='stats'>265 → 240 pts (-25) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-rammit-den-geddul'>Rammit Den Geddul</h3><p class='stats'>265 → 240 pts (-25) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>265</del> pts</td><td><ins class='add'>240</ins> pts</td></tr>
 </table></div>
-<h3>Death Casket</h3><p class='stats'>355 → 335 pts (-20) · Size 1 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-death-casket'>Death Casket</h3><p class='stats'>355 → 335 pts (-20) · Size 1 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>355</del> pts</td><td><ins class='add'>335</ins> pts</td></tr>
@@ -236,7 +240,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Sand (Difficult Terrain Debuff) · <del class='del'>+5</del> pts</td><td>Curse of Sand (Difficult Terrain Debuff) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Skull Catapult</h3><p class='stats'>395 → 360 pts (-35) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-skull-catapult'>Skull Catapult</h3><p class='stats'>395 → 360 pts (-35) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>395</del> pts</td><td><ins class='add'>360</ins> pts</td></tr>
@@ -245,7 +249,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cursed Skull Barrage (30&quot;, A18, AP(1), Indirect, Pierce) · <del class='del'>+95</del> pts</td><td>Cursed Skull Barrage (30&quot;, A18, AP(1), Indirect, Pierce) · <ins class='add'>+90</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Skull Volley (36&quot;, A6, AP(2), Deadly(3), Indirect) · <del class='del'>+110</del> pts</td><td>Great Skull Volley (36&quot;, A6, AP(2), Deadly(3), Indirect) · <ins class='add'>+100</ins> pts</td></tr>
 </table></div>
-<h3>Skeleton Chariot</h3><p class='stats'>385 → 360 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-skeleton-chariot'>Skeleton Chariot</h3><p class='stats'>385 → 360 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>385</del> pts</td><td><ins class='add'>360</ins> pts</td></tr>
@@ -254,7 +258,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Curse of Sand (Difficult Terrain Debuff) · <del class='del'>+5</del> pts</td><td>Curse of Sand (Difficult Terrain Debuff) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Great Scorpion</h3><p class='stats'>390 → 365 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-great-scorpion'>Great Scorpion</h3><p class='stats'>390 → 365 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>390</del> pts</td><td><ins class='add'>365</ins> pts</td></tr>
@@ -265,7 +269,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Venom Spurt (9&quot;, A3, Blast(3), Assault, Bane) · <del class='del'>+80</del> pts</td><td>Venom Spurt (9&quot;, A3, Blast(3), Assault, Bane) · <ins class='add'>+70</ins> pts</td></tr>
 </table></div>
-<h3>Skeleton Giant</h3><p class='stats'>730 → 710 pts (-20) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-skeleton-giant'>Skeleton Giant</h3><p class='stats'>730 → 710 pts (-20) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>730</del> pts</td><td><ins class='add'>710</ins> pts</td></tr>
@@ -279,7 +283,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Giant Cursed Bow (18&quot;, A6, AP(3), Deadly(6), Pierce) · <del class='del'>+245</del> pts</td><td>Giant Cursed Bow (18&quot;, A6, AP(3), Deadly(6), Pierce) · <ins class='add'>+190</ins> pts</td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Giant Sword (A24, Rending) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Giant God-Statue</h3><p class='stats'>870 → 815 pts (-55) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-giant-god-statue'>Giant God-Statue</h3><p class='stats'>870 → 815 pts (-55) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>870</del> pts</td><td><ins class='add'>815</ins> pts</td></tr>
@@ -288,7 +292,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stone Shaper (Fortified) · <del class='del'>+130</del> pts</td><td>Stone Shaper (Fortified) · <ins class='add'>+125</ins> pts</td></tr>
 </table></div>
-<h3>War Sphinx</h3><p class='stats'>940 → 880 pts (-60) · Size 1 · Quality 4+ · Defense 2+</p>
+<h3 id='unit-war-sphinx'>War Sphinx</h3><p class='stats'>940 → 880 pts (-60) · Size 1 · Quality 4+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>940</del> pts</td><td><ins class='add'>880</ins> pts</td></tr>
@@ -301,7 +305,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stone Shaper (Fortified) · <del class='del'>+155</del> pts</td><td>Stone Shaper (Fortified) · <ins class='add'>+75</ins> pts</td></tr>
 </table></div>
-<h3>Sphinx Champion</h3><p class='stats'>1055 → 990 pts (-65) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-sphinx-champion'>Sphinx Champion</h3><p class='stats'>1055 → 990 pts (-65) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1055</del> pts</td><td><ins class='add'>990</ins> pts</td></tr>
@@ -315,7 +319,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stone Shaper (Fortified) · <del class='del'>+155</del> pts</td><td>Stone Shaper (Fortified) · <ins class='add'>+75</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wings (Flying) · <del class='del'>+95</del> pts</td><td>Wings (Flying) · <ins class='add'>+105</ins> pts</td></tr>
 </table></div>
-<h3>Desert Titan</h3><p class='stats'>2860 → 2480 pts (-380) · Size 1 · Quality 3+ · Defense 2+</p>
+<h3 id='unit-desert-titan'>Desert Titan</h3><p class='stats'>2860 → 2480 pts (-380) · Size 1 · Quality 3+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2860</del> pts</td><td><ins class='add'>2480</ins> pts</td></tr>
@@ -332,7 +336,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Scorpion Titan (Ambush, Bane in Melee) · <del class='del'>+495</del> pts</td><td>Scorpion Titan (Ambush, Bane in Melee) · <ins class='add'>+350</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Skeleton Titan (Surprise Attack(24)) · <del class='del'>+525</del> pts</td><td>Skeleton Titan (Surprise Attack(24)) · <ins class='add'>+415</ins> pts</td></tr>
 </table></div>
-<h3>God-Titan</h3><p class='stats'>3460 → 2970 pts (-490) · Size 1 · Quality 2+ · Defense 2+</p>
+<h3 id='unit-god-titan'>God-Titan</h3><p class='stats'>3460 → 2970 pts (-490) · Size 1 · Quality 2+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>3460</del> pts</td><td><ins class='add'>2970</ins> pts</td></tr>
@@ -342,7 +346,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heavy Flame Breath (6&quot;, A3, AP(1), Blast(6), Reliable, Assault) · <del class='del'>+215</del> pts</td><td>Heavy Flame Breath (6&quot;, A3, AP(1), Blast(6), Reliable, Assault) · <ins class='add'>+185</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='del'><td>➖</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
@@ -357,11 +361,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Royal Legion</td><td><span class='del'>3.6.0 beta:</span> This model gets <del class='del'>+6&quot;</del> range when <del class='del'>using Hold actions and shooting, and moves +2&quot; when using Charge actions.</del><br><span class='add'>3.6.0:</span> This model gets <ins class='add'>+4&quot;/+2&quot;</ins> range when <ins class='add'>shooting/charging.</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Spell Resistance</td><td><span class='del'>3.6.0 beta:</span> When a unit where most models have this rule takes wounds, roll one die for each. <del class='del'>On a 6+ it is ignored.</del> If the <del class='del'>wounds were</del> from a spell, then <del class='del'>they are</del> ignored on a <del class='del'>2+</del> instead.<br><span class='add'>3.6.0:</span> When a unit where most models have this rule takes wounds, roll one die for each. If the <ins class='add'>wound was</ins> from a spell, then <ins class='add'>it is</ins> ignored on a <ins class='add'>2+. If the wound was not from a spell, then it is ignored on a 6+</ins> instead.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Cursed Arrows</td><td><span class='del'>3.6.0 beta:</span> (3) Pick up to three friendly units within 18&quot;, which get Shred when shooting once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (3) Pick up to three friendly units within 18&quot;, which get Shred <ins class='add'>on its weapons</ins> when shooting once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

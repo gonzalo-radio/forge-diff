@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,19 +37,20 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +3 / -3 / ~4</li>
 <li>Spells: +0 / -0 / ~5</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Plague Half-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>150</td><td class='num'>185</td><td class='num'><b class='del'>+35</b></td></tr>
-<tr><td>Plague Crusher Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>245</td><td class='num'>305</td><td class='num'><b class='del'>+60</b></td></tr>
-<tr><td>Plague Drunken Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>235</td><td class='num'>295</td><td class='num'><b class='del'>+60</b></td></tr>
-<tr><td>Plague Wall Smasher Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>255</td><td class='num'>375</td><td class='num'><b class='del'>+120</b></td></tr>
-<tr><td>Plague Battle Stomper Mega-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>390</td><td class='num'>490</td><td class='num'><b class='del'>+100</b></td></tr>
-<tr><td>Plague Monster Eater Mega-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>385</td><td class='num'>470</td><td class='num'><b class='del'>+85</b></td></tr>
-<tr><td>Plague Castle Breaker Mega-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>420</td><td class='num'>595</td><td class='num'><b class='del'>+175</b></td></tr>
-<tr><td>Plague Bone Grinder Ultra-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>525</td><td class='num'>620</td><td class='num'><b class='del'>+95</b></td></tr>
+<tr><td><a href='#unit-plague-half-giant'>Plague Half-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>150</td><td class='num'>185</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td><a href='#unit-plague-crusher-giant'>Plague Crusher Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>245</td><td class='num'>305</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-plague-drunken-giant'>Plague Drunken Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>235</td><td class='num'>295</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-plague-wall-smasher-giant'>Plague Wall Smasher Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>255</td><td class='num'>375</td><td class='num'><b class='del'>+120</b></td></tr>
+<tr><td><a href='#unit-plague-battle-stomper-mega-giant'>Plague Battle Stomper Mega-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>390</td><td class='num'>490</td><td class='num'><b class='del'>+100</b></td></tr>
+<tr><td><a href='#unit-plague-monster-eater-mega-giant'>Plague Monster Eater Mega-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>385</td><td class='num'>470</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td><a href='#unit-plague-castle-breaker-mega-giant'>Plague Castle Breaker Mega-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>420</td><td class='num'>595</td><td class='num'><b class='del'>+175</b></td></tr>
+<tr><td><a href='#unit-plague-bone-grinder-ultra-giant'>Plague Bone Grinder Ultra-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>525</td><td class='num'>620</td><td class='num'><b class='del'>+95</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Plague Half-Giant</h3><p class='stats'>150 → 185 pts (+35) · Size 1 · Quality 4+ · Defense 3+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-plague-half-giant'>Plague Half-Giant</h3><p class='stats'>150 → 185 pts (+35) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
@@ -75,7 +79,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Patient Wanderer (Delayed Action) · <del class='del'>+35</del> pts</td><td>Patient Wanderer (Delayed Action) · <ins class='add'>+40</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Vanguard Giant (Scout, Strider) · <del class='del'>+40</del> pts</td><td>Vanguard Giant (Scout, Strider) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>Plague Crusher Giant</h3><p class='stats'>245 → 305 pts (+60) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-crusher-giant'>Plague Crusher Giant</h3><p class='stats'>245 → 305 pts (+60) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>245</del> pts</td><td><ins class='add'>305</ins> pts</td></tr>
@@ -105,7 +109,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Hurl Log</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throw Stones (18&quot;, A2, Blast(3), Indirect) · free</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague Drunken Giant</h3><p class='stats'>235 → 295 pts (+60) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-drunken-giant'>Plague Drunken Giant</h3><p class='stats'>235 → 295 pts (+60) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>235</del> pts</td><td><ins class='add'>295</ins> pts</td></tr>
@@ -130,7 +134,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stumbling Giant (Bounding, Strider) · <del class='del'>+65</del> pts</td><td>Stumbling Giant (Bounding, Strider) · <ins class='add'>+40</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Paint (Regeneration) · <del class='del'>+45</del> pts</td><td>War Paint (Regeneration) · <ins class='add'>+50</ins> pts</td></tr>
 </table></div>
-<h3>Plague Wall Smasher Giant</h3><p class='stats'>255 → 375 pts (+120) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-wall-smasher-giant'>Plague Wall Smasher Giant</h3><p class='stats'>255 → 375 pts (+120) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>255</del> pts</td><td><ins class='add'>375</ins> pts</td></tr>
@@ -149,7 +153,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Hurl Log</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throw Stones (18&quot;, A2, Blast(3), Indirect) · +-5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague Battle Stomper Mega-Giant</h3><p class='stats'>390 → 490 pts (+100) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-battle-stomper-mega-giant'>Plague Battle Stomper Mega-Giant</h3><p class='stats'>390 → 490 pts (+100) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>390</del> pts</td><td><ins class='add'>490</ins> pts</td></tr>
@@ -182,7 +186,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one Mega Fist</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Giant Shield (Fortified) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague Monster Eater Mega-Giant</h3><p class='stats'>385 → 470 pts (+85) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-monster-eater-mega-giant'>Plague Monster Eater Mega-Giant</h3><p class='stats'>385 → 470 pts (+85) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>385</del> pts</td><td><ins class='add'>470</ins> pts</td></tr>
@@ -209,7 +213,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wandering Mystic (Caster(3)) · <del class='del'>+70</del> pts</td><td>Wandering Mystic (Caster(3)) · <ins class='add'>+55</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Paint (Regeneration) · <del class='del'>+70</del> pts</td><td>War Paint (Regeneration) · <ins class='add'>+85</ins> pts</td></tr>
 </table></div>
-<h3>Plague Castle Breaker Mega-Giant</h3><p class='stats'>420 → 595 pts (+175) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-castle-breaker-mega-giant'>Plague Castle Breaker Mega-Giant</h3><p class='stats'>420 → 595 pts (+175) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>420</del> pts</td><td><ins class='add'>595</ins> pts</td></tr>
@@ -230,7 +234,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Throw Rocks</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hurl Trunk (12&quot;, A3, AP(2), Deadly(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Plague Bone Grinder Ultra-Giant</h3><p class='stats'>525 → 620 pts (+95) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-bone-grinder-ultra-giant'>Plague Bone Grinder Ultra-Giant</h3><p class='stats'>525 → 620 pts (+95) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>525</del> pts</td><td><ins class='add'>620</ins> pts</td></tr>
@@ -266,7 +270,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ultra Club (A12, AP(1), Precise) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ultra Flail (A12, Rending, Precise) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Decimate</td><td>When attacking units with more than half of their total size or Tough value (for single-model units), the target must re-roll unmodified Defense results of 6.</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Plaguebound</td><td>If most models in this unit have Plaguebound, they ignore wounds on rolls of 5-6 from Plaguebound (instead of only on 6+).</td></tr>
@@ -279,7 +283,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Plaguebound</td><td><span class='del'>3.5.1 (2026-09-28):</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.<br><span class='add'>3.6.0 beta:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.</td></tr>
 <tr class='mod'><td>✏️</td><td>Protected</td><td><span class='del'>3.5.1 (2026-09-28):</span> When a unit where <del class='del'>all</del> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.<br><span class='add'>3.6.0 beta:</span> When a unit where <ins class='add'>most</ins> models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Aura of Pestilence</td><td><span class='del'>3.5.1 (2026-09-28):</span> (1) Pick one enemy unit within <del class='del'>18&quot;,</del> which counts as being in Difficult Terrain once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (1) Pick one enemy unit within <ins class='add'>18&quot; in line of sight,</ins> which counts as being in Difficult Terrain once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Plague Boon</td><td><span class='del'>3.5.1 (2026-09-28):</span> (3) Pick up to three friendly units within <del class='del'>12&quot;,</del> which get Plaguebound <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (3) Pick up to three friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Plaguebound once (next time the effect would apply).</td></tr>

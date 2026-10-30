@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,24 +37,25 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +1 / -1 / ~4</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Great Stalker</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>100</td><td class='num'>90</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Herald of Death</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Bone Master</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>40</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Guardians</td><td class='num'>10</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>105</td><td class='num'>100</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Reapers</td><td class='num'>5</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>125</td><td class='num'>110</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Guardian Archers</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>70</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Stalkers</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>120</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Immortals</td><td class='num'>3</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>210</td><td class='num'>200</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Death Riders</td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>90</td><td class='num'>85</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Skeleton Horror</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>160</td><td class='num'>155</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Harvester Beast</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>295</td><td class='num'>280</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Bone Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>135</td><td class='num'>125</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Crawler Catapult</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>110</td><td class='num'>95</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-great-stalker'>Great Stalker</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>100</td><td class='num'>90</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-herald-of-death'>Herald of Death</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-bone-master'>Bone Master</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>40</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-guardians'>Guardians</a></td><td class='num'>10</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>105</td><td class='num'>100</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-reapers'>Reapers</a></td><td class='num'>5</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>125</td><td class='num'>110</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-guardian-archers'>Guardian Archers</a></td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>70</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-stalkers'>Stalkers</a></td><td class='num'>3</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>120</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-immortals'>Immortals</a></td><td class='num'>3</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>210</td><td class='num'>200</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-death-riders'>Death Riders</a></td><td class='num'>5</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>90</td><td class='num'>85</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-skeleton-horror'>Skeleton Horror</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>160</td><td class='num'>155</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-harvester-beast'>Harvester Beast</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>295</td><td class='num'>280</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-bone-chariot'>Bone Chariot</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>135</td><td class='num'>125</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-crawler-catapult'>Crawler Catapult</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>110</td><td class='num'>95</td><td class='num'><b class='add'>-15</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Great Stalker</h3><p class='stats'>100 → 90 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-great-stalker'>Great Stalker</h3><p class='stats'>100 → 90 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -71,7 +75,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Artisan of Shards (Regeneration Aura) · <del class='del'>+30</del> pts</td><td>Artisan of Shards (Regeneration Aura) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ur-Dead Master (No Retreat Aura) · <del class='del'>+30</del> pts</td><td>Ur-Dead Master (No Retreat Aura) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Herald of Death</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-herald-of-death'>Herald of Death</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
@@ -96,7 +100,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spell Reaper (Relentless Aura) · <del class='del'>+45</del> pts</td><td>Spell Reaper (Relentless Aura) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ur-Dead Master (No Retreat Aura) · <del class='del'>+30</del> pts</td><td>Ur-Dead Master (No Retreat Aura) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Bone Master</h3><p class='stats'>45 → 40 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-bone-master'>Bone Master</h3><p class='stats'>45 → 40 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
@@ -125,7 +129,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Artisan of Shards (Regeneration Aura) · <del class='del'>+30</del> pts</td><td>Artisan of Shards (Regeneration Aura) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spell Reaper (Relentless Aura) · <del class='del'>+45</del> pts</td><td>Spell Reaper (Relentless Aura) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Guardians</h3><p class='stats'>105 → 100 pts (-5) · Size 10 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-guardians'>Guardians</h3><p class='stats'>105 → 100 pts (-5) · Size 10 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>100</ins> pts</td></tr>
@@ -137,7 +141,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace up to two Hand Weapons</td><td>Replace up to two Hand Weapons</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bone Greatmace (A3, AP(1), Shatter) · <del class='del'>+20</del> pts</td><td>Bone Greatmace (A3, AP(1), Shatter) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Reapers</h3><p class='stats'>125 → 110 pts (-15) · Size 5 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-reapers'>Reapers</h3><p class='stats'>125 → 110 pts (-15) · Size 5 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>125</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
@@ -149,7 +153,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Smoke Cache (Evasive Aura) · <del class='del'>+45</del> pts</td><td>Smoke Cache (Evasive Aura) · <ins class='add'>+40</ins> pts</td></tr>
 </table></div>
-<h3>Guardian Archers</h3><p class='stats'>80 → 70 pts (-10) · Size 5 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-guardian-archers'>Guardian Archers</h3><p class='stats'>80 → 70 pts (-10) · Size 5 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -160,14 +164,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with (2)</td><td>Upgrade all models with (2)</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ur-Fire Braziers (Bane when Shooting) · <del class='del'>+10</del> pts</td><td>Ur-Fire Braziers (Bane when Shooting) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Stalkers</h3><p class='stats'>135 → 120 pts (-15) · Size 3 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-stalkers'>Stalkers</h3><p class='stats'>135 → 120 pts (-15) · Size 3 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>135</del> pts</td><td><ins class='add'>120</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace one Stalker Blades</td><td>Replace one Stalker Blades</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Ur-Falchions (A6, Shred) · <del class='del'>+25</del> pts</td><td>Dual Ur-Falchions (A6, Shred) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Immortals</h3><p class='stats'>210 → 200 pts (-10) · Size 3 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-immortals'>Immortals</h3><p class='stats'>210 → 200 pts (-10) · Size 3 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>210</del> pts</td><td><ins class='add'>200</ins> pts</td></tr>
@@ -175,7 +179,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bone Greatmace (A3, AP(1), Shatter) · <del class='del'>+20</del> pts</td><td>Bone Greatmace (A3, AP(1), Shatter) · <ins class='add'>+15</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A3, AP(2)) · <del class='del'>+25</del> pts</td><td>Great Weapon (A3, AP(2)) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Death Riders</h3><p class='stats'>90 → 85 pts (-5) · Size 5 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-death-riders'>Death Riders</h3><p class='stats'>90 → 85 pts (-5) · Size 5 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -185,14 +189,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Javelins (12&quot;, A1, Assault), Strike (A1) · <del class='del'>+10</del> pts</td><td>Javelins (12&quot;, A1, Assault), Strike (A1) · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A1, AP(2)), Trample (Impact(1)) · <del class='del'>+15</del> pts</td><td>Great Weapon (A1, AP(2)), Trample (Impact(1)) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Skeleton Horror</h3><p class='stats'>160 → 155 pts (-5) · Size 1 · Quality 3+ · Defense 3+</p>
+<h3 id='unit-skeleton-horror'>Skeleton Horror</h3><p class='stats'>160 → 155 pts (-5) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ur-Dead Nightmare (Furious Mark) · <del class='del'>+25</del> pts</td><td>Ur-Dead Nightmare (Furious Mark) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Harvester Beast</h3><p class='stats'>295 → 280 pts (-15) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-harvester-beast'>Harvester Beast</h3><p class='stats'>295 → 280 pts (-15) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>295</del> pts</td><td><ins class='add'>280</ins> pts</td></tr>
@@ -204,7 +208,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ur-Dead Nightmare (Furious Mark) · <del class='del'>+25</del> pts</td><td>Ur-Dead Nightmare (Furious Mark) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Bone Chariot</h3><p class='stats'>135 → 125 pts (-10) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-bone-chariot'>Bone Chariot</h3><p class='stats'>135 → 125 pts (-10) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>135</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
@@ -213,7 +217,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Javelin Crew (12&quot;, A6, Assault) · <del class='del'>+15</del> pts</td><td>Javelin Crew (12&quot;, A6, Assault) · <ins class='add'>+10</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bone Bow Crew (18&quot;, A6, AP(1), Shatter) · <del class='del'>+30</del> pts</td><td>Bone Bow Crew (18&quot;, A6, AP(1), Shatter) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Crawler Catapult</h3><p class='stats'>110 → 95 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-crawler-catapult'>Crawler Catapult</h3><p class='stats'>110 → 95 pts (-15) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -225,7 +229,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Skull Thrower (36&quot;, A2, AP(1), Blast(3), Indirect) · <del class='del'>+70</del> pts</td><td>Skull Thrower (36&quot;, A2, AP(1), Blast(3), Indirect) · <ins class='add'>+60</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Skull Thrower (36&quot;, A2, AP(2), Deadly(3), Indirect) · <del class='del'>+115</del> pts</td><td>Great Skull Thrower (36&quot;, A2, AP(2), Deadly(3), Indirect) · <ins class='add'>+100</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Cumbersome</td><td>May only use Hold or Advance actions, but can’t shoot when moving.</td></tr>
 <tr class='del'><td>➖</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
@@ -234,11 +238,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Bane when Shooting<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> This model gets Bane when shooting.<br><span class='add'>3.6.0:</span> This model gets Bane <ins class='add'>on its weapons</ins> when shooting.</td></tr>
 <tr class='mod'><td>✏️</td><td>Unstoppable<br><span class='muted'>no longer a core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Ignores</del> Regeneration, and ignores all negative modifiers <del class='del'>to this weapon</del> which are not from this model&#x27;s special rules.<br><span class='add'>3.6.0:</span> <ins class='add'>This weapon ignores</ins> Regeneration, and ignores all negative modifiers which are not from this model&#x27;s special rules.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Drain Spirit</td><td><span class='del'>3.6.0 beta:</span> (3) Pick up to three friendly units within 18&quot;, which get Unstoppable in melee once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (3) Pick up to three friendly units within 18&quot;, which get Unstoppable <ins class='add'>on its weapons</ins> in melee once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

@@ -20,7 +20,9 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
 .systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
@@ -35,22 +37,23 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +8 / -7 / ~13</li>
 <li>Spells: +0 / -0 / ~5</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Syndicate Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>105</td><td class='num'><b class='del'>+65</b></td></tr>
-<tr><td>Syndicate Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>90</td><td class='num'><b class='del'>+60</b></td></tr>
-<tr><td>Syndicate Familiars → Syndicate Familiar</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Syndicate Shooters → Syndicate Shooter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Syndicate Veteran Fighter</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>35</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Syndicate Stealth Master</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>40</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Syndicate Veteran Shooter</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>45</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Syndicate Weapon Master</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>45</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Syndicate Fighters</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>90</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Syndicate Bird Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>140</td><td class='num'><b class='del'>+85</b></td></tr>
-<tr><td>Syndicate Shifter Beast</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>140</td><td class='num'><b class='del'>+70</b></td></tr>
+<tr><td><a href='#unit-syndicate-leader'>Syndicate Leader</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>105</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td><a href='#unit-syndicate-champion'>Syndicate Champion</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>90</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-syndicate-familiar'>Syndicate Familiars → Syndicate Familiar</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-syndicate-shooter'>Syndicate Shooters → Syndicate Shooter</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-syndicate-veteran-fighter'>Syndicate Veteran Fighter</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>35</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-syndicate-stealth-master'>Syndicate Stealth Master</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>40</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-syndicate-veteran-shooter'>Syndicate Veteran Shooter</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>45</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-syndicate-weapon-master'>Syndicate Weapon Master</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>45</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-syndicate-fighters'>Syndicate Fighters</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>90</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-syndicate-bird-rider'>Syndicate Bird Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>140</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td><a href='#unit-syndicate-shifter-beast'>Syndicate Shifter Beast</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>140</td><td class='num'><b class='del'>+70</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Syndicate Leader</h3><p class='stats'>40 → 105 pts (+65) · Size 1 · Quality 4+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-syndicate-leader'>Syndicate Leader</h3><p class='stats'>40 → 105 pts (+65) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>105</ins> pts</td></tr>
@@ -104,7 +107,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Icon Bearer (Fear(2)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Master Hexer (Caster(3)) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Syndicate Champion</h3><p class='stats'>30 → 90 pts (+60) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-syndicate-champion'>Syndicate Champion</h3><p class='stats'>30 → 90 pts (+60) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -149,7 +152,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Infuser (Rending when Shooting Aura) · <del class='del'>+30</del> pts</td><td>Infuser (Rending when Shooting Aura) · <ins class='add'>+85</ins> pts</td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Shadowblade (Takedown Strike) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Syndicate Familiar</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-syndicate-familiar'>Syndicate Familiar</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Syndicate <del class='del'>Familiars</del></td><td>Syndicate <ins class='add'>Familiar</ins></td></tr>
@@ -163,7 +166,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Exalted Familiars (Unpredictable Fighter) · +5 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Excited Familiars (Scout) · +5 pts</ins></td></tr>
 </table></div>
-<h3>Syndicate Shooter</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-syndicate-shooter'>Syndicate Shooter</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Syndicate <del class='del'>Shooters</del></td><td>Syndicate <ins class='add'>Shooter</ins></td></tr>
@@ -179,7 +182,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Splinter Blowpipe (18&quot;, <del class='del'>A1, Disintegrate)</del> · +5 pts</td><td>Splinter Blowpipe (18&quot;, <ins class='add'>A2, AP(1), Demolish)</ins> · +5 pts</td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shortbow (18&quot;, A4) · +5 pts</ins></td></tr>
 </table></div>
-<h3>Syndicate Veteran Fighter</h3><p class='stats'>15 → 35 pts (+20) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-syndicate-veteran-fighter'>Syndicate Veteran Fighter</h3><p class='stats'>15 → 35 pts (+20) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>15</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
@@ -215,7 +218,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Weapon (A2, AP(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Syndicate Stealth Master</h3><p class='stats'>20 → 40 pts (+20) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-syndicate-stealth-master'>Syndicate Stealth Master</h3><p class='stats'>20 → 40 pts (+20) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
@@ -244,7 +247,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shadow Arts (Ambush Re-Deployment) · +15 pts</ins></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Deadly Arts (Versatile Attack Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Syndicate Veteran Shooter</h3><p class='stats'>20 → 45 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-syndicate-veteran-shooter'>Syndicate Veteran Shooter</h3><p class='stats'>20 → 45 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
@@ -262,7 +265,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Longbow</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Headtaker Longbow (30&quot;, A1, AP(1), Deadly(2), Reliable) · +-5 pts</ins></td></tr>
 </table></div>
-<h3>Syndicate Weapon Master</h3><p class='stats'>20 → 45 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-syndicate-weapon-master'>Syndicate Weapon Master</h3><p class='stats'>20 → 45 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
@@ -282,7 +285,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shadow Arts (Ambush Re-Deployment) · +15 pts</ins></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Deadly Arts (Versatile Attack Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Syndicate Fighters</h3><p class='stats'>35 → 90 pts (+55) · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-syndicate-fighters'>Syndicate Fighters</h3><p class='stats'>35 → 90 pts (+55) · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -313,7 +316,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spear (A2, Counter) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Syndicate Bird Rider</h3><p class='stats'>55 → 140 pts (+85) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-syndicate-bird-rider'>Syndicate Bird Rider</h3><p class='stats'>55 → 140 pts (+85) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
@@ -330,7 +333,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shadow Arts (Ambush Re-Deployment) · +50 pts</ins></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Deadly Arts (Versatile Attack Aura) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Syndicate Shifter Beast</h3><p class='stats'>70 → 140 pts (+70) · Size 1 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-syndicate-shifter-beast'>Syndicate Shifter Beast</h3><p class='stats'>70 → 140 pts (+70) · Size 1 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>70</del> pts</td><td><ins class='add'>140</ins> pts</td></tr>
@@ -342,7 +345,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cypher of Doom (Slayer Mark) · <del class='del'>+35</del> pts</td><td>Cypher of Doom (Slayer Mark) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Ambush Re-Deployment</td><td>Once per game, when a unit where all models have this rule ends its activation, you may immediately remove it from the table (dropping any objectives it might hold within 1&quot;), and deploy it as if it had Ambush at the beginning of the next round.</td></tr>
 <tr class='add'><td>➕</td><td>Demolish</td><td>Ignores Cover, and when attacking units with most models within 1&quot; of terrain, this weapon gets AP(+1).</td></tr>
@@ -373,7 +376,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Teleport Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Teleport. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Teleport. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='mod'><td>✏️</td><td>Tough<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>This</del> model <del class='del'>only rolls to check wound effects once it</del> has taken <del class='del'>at least X wounds, and</del> is <del class='del'>only Knocked Out on rolls of 5+X or more.</del><br><span class='add'>3.6.0:</span> <ins class='add'>Once a</ins> model has taken <ins class='add'>as many wounds as its Tough value, it</ins> is <ins class='add'>killed (remove from play).</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Acrobatic Defense</td><td><span class='del'>3.5.1:</span> (1) Pick <del class='del'>up to two</del> friendly <del class='del'>units</del> within 12&quot;, which <del class='del'>get Counter-Attack</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick <ins class='add'>one</ins> friendly <ins class='add'>unit</ins> within 12&quot;, which <ins class='add'>gets Counter in Melee</ins> once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Fatal Assault</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick up to <del class='del'>six</del> enemy units within <del class='del'>18&quot;,</del> which friendly units gets Slayer against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to <ins class='add'>two</ins> enemy units within <ins class='add'>18&quot; in line of sight,</ins> which friendly units gets Slayer against once (next time the effect would apply).</td></tr>

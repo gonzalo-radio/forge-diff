@@ -20,7 +20,9 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
 .systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
@@ -35,22 +37,23 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +8 / -8 / ~13</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Guard Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>90</td><td class='num'><b class='del'>+60</b></td></tr>
-<tr><td>Guard Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>25</td><td class='num'>75</td><td class='num'><b class='del'>+50</b></td></tr>
-<tr><td>Guard Veteran Fighters → Guard Veteran Fighter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>30</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Guard Pit Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>35</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Guard Pit Defenders → Guard Pit Defender</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>35</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Guard Veteran Shooter</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>40</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Guard Horse Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>45</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Guard Fighters</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>80</td><td class='num'><b class='del'>+50</b></td></tr>
-<tr><td>Guard Attack Dogs</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>95</td><td class='num'><b class='del'>+60</b></td></tr>
-<tr><td>Guard Brute Defender</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>30</td><td class='num'>95</td><td class='num'><b class='del'>+65</b></td></tr>
-<tr><td>Guard Shooters</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>95</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-guard-leader'>Guard Leader</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>90</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-guard-champion'>Guard Champion</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>25</td><td class='num'>75</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td><a href='#unit-guard-veteran-fighter'>Guard Veteran Fighters → Guard Veteran Fighter</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>30</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-guard-pit-champion'>Guard Pit Champion</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>35</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-guard-pit-defender'>Guard Pit Defenders → Guard Pit Defender</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>35</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-guard-veteran-shooter'>Guard Veteran Shooter</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>15</td><td class='num'>40</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-guard-horse-rider'>Guard Horse Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>45</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-guard-fighters'>Guard Fighters</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>80</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td><a href='#unit-guard-attack-dogs'>Guard Attack Dogs</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>95</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-guard-brute-defender'>Guard Brute Defender</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>30</td><td class='num'>95</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td><a href='#unit-guard-shooters'>Guard Shooters</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>95</td><td class='num'><b class='del'>+60</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Guard Leader</h3><p class='stats'>30 → 90 pts (+60) · Size 1 · Quality 4+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-guard-leader'>Guard Leader</h3><p class='stats'>30 → 90 pts (+60) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -105,7 +108,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Investigator (Fast Aura) · <del class='del'>+15</del> pts</td><td>Investigator (Fast Aura) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Undercover Agent (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Undercover Agent (Stealth Aura) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>Guard Champion</h3><p class='stats'>25 → 75 pts (+50) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-guard-champion'>Guard Champion</h3><p class='stats'>25 → 75 pts (+50) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
@@ -149,7 +152,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Undercover Agent (Stealth Aura) · <del class='del'>+15</del> pts</td><td>Undercover Agent (Stealth Aura) · <ins class='add'>+45</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant (Piercing <del class='del'>Hunter</del> Aura) · <del class='del'>+20</del> pts</td><td>Sergeant (Piercing <ins class='add'>Marksman</ins> Aura) · <ins class='add'>+65</ins> pts</td></tr>
 </table></div>
-<h3>Guard Veteran Fighter</h3><p class='stats'>35 → 30 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-guard-veteran-fighter'>Guard Veteran Fighter</h3><p class='stats'>35 → 30 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Guard Veteran <del class='del'>Fighters</del></td><td>Guard Veteran <ins class='add'>Fighter</ins></td></tr>
@@ -191,7 +194,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Weapon (A2, AP(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Guard Pit Champion</h3><p class='stats'>15 → 35 pts (+20) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-guard-pit-champion'>Guard Pit Champion</h3><p class='stats'>15 → 35 pts (+20) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>15</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
@@ -215,7 +218,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Blade Weapon (A3, AP(1), Rending) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Spear (A3, AP(1), Counter) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Guard Pit Defender</h3><p class='stats'>30 → 35 pts (+5) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-guard-pit-defender'>Guard Pit Defender</h3><p class='stats'>30 → 35 pts (+5) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Guard Pit <del class='del'>Defenders</del></td><td>Guard Pit <ins class='add'>Defender</ins></td></tr>
@@ -243,7 +246,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one Pistol</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Whip (12&quot;, A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Guard Veteran Shooter</h3><p class='stats'>15 → 40 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-guard-veteran-shooter'>Guard Veteran Shooter</h3><p class='stats'>15 → 40 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>15</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
@@ -258,7 +261,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Repeater Crossbow (12&quot;, A4, Rending) · +15 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slayer Crossbow (24&quot;, <del class='del'>A1, Tear)</del> · <del class='del'>+10</del> pts</td><td>Slayer Crossbow (24&quot;, <ins class='add'>A4, Disintegrate)</ins> · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>Guard Horse Rider</h3><p class='stats'>20 → 45 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-guard-horse-rider'>Guard Horse Rider</h3><p class='stats'>20 → 45 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
@@ -285,7 +288,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Combat Whip (12&quot;, A1, Blast(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Slayer Bombs (12&quot;, A1, Tear) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Guard Fighters</h3><p class='stats'>30 → 80 pts (+50) · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-guard-fighters'>Guard Fighters</h3><p class='stats'>30 → 80 pts (+50) · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
@@ -313,7 +316,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spear (A2, Counter) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Guard Attack Dogs</h3><p class='stats'>35 → 95 pts (+60) · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-guard-attack-dogs'>Guard Attack Dogs</h3><p class='stats'>35 → 95 pts (+60) · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -325,7 +328,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sniffer Hound Handler (Vanguard) · +10 pts</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Hound Handler (Unpredictable Fighter) · +15 pts</ins></td></tr>
 </table></div>
-<h3>Guard Brute Defender</h3><p class='stats'>30 → 95 pts (+65) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-guard-brute-defender'>Guard Brute Defender</h3><p class='stats'>30 → 95 pts (+65) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -346,7 +349,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Spear (A3, AP(1), Counter) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Great Weapon (A3, AP(4)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Guard Shooters</h3><p class='stats'>35 → 95 pts (+60) · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-guard-shooters'>Guard Shooters</h3><p class='stats'>35 → 95 pts (+60) · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -360,7 +363,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slayer Crossbow (24&quot;, <del class='del'>A1, Tear)</del> · <del class='del'>+5</del> pts</td><td>Slayer Crossbow (24&quot;, <ins class='add'>A4, Disintegrate)</ins> · <ins class='add'>+30</ins> pts</td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Crossbow (24&quot;, A1, Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Enhanced Fortified</td><td>If most models in this unit have Fortified, hits they take count as having AP(-2) from Fortified (instead of only AP(-1)).</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Guardian</td><td>If most models in this unit have Guardian, hits they take count as having AP(-2) from Guardian (instead of only AP(-1)).</td></tr>
@@ -392,7 +395,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Stealth Aura</td><td><span class='del'>3.5.1:</span> This <del class='del'>model</del> and up to <del class='del'>3</del> friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This <ins class='add'>model&#x27;s unit</ins> and up to <ins class='add'>2</ins> friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='mod'><td>✏️</td><td>Tough<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>This</del> model <del class='del'>only rolls to check wound effects once it</del> has taken <del class='del'>at least X wounds, and</del> is <del class='del'>only Knocked Out on rolls of 5+X or more.</del><br><span class='add'>3.6.0:</span> <ins class='add'>Once a</ins> model has taken <ins class='add'>as many wounds as its Tough value, it</ins> is <ins class='add'>killed (remove from play).</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Deadly Attraction</td><td><span class='del'>3.5.1:</span> <del class='del'>(3)</del> Pick <del class='del'>up to six</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which friendly units gets Quick Shot against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which friendly units gets Quick Shot against once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Electrified Weapons</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick up to two friendly units within 12&quot;, which get Piercing <del class='del'>Assault</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(2)</ins> Pick up to two friendly units within 12&quot;, which get Piercing <ins class='add'>Fighter</ins> once (next time the effect would apply).</td></tr>

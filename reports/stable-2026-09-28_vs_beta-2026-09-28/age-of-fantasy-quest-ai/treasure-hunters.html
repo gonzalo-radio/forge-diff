@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,22 +37,23 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +7 / -7 / ~10</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Hunter Fighters → Hunter Fighter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Hunter Veteran Fighters → Hunter Veteran Fighter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Hunter Shooters → Hunter Shooter</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>40</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Hunter Flight Rig</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>45</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Hunter Stalker Shadow</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>45</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Hunter Veteran Shooter</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Hunter Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>90</td><td class='num'><b class='del'>+10</b></td></tr>
-<tr><td>Hunter Stalker Cabalist</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>100</td><td class='num'>90</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Hunter Pet Hawk</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>90</td><td class='num'>110</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Hunter Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>110</td><td class='num'>115</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Hunter Great Flight Rig</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>175</td><td class='num'>165</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-hunter-fighter'>Hunter Fighters → Hunter Fighter</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-hunter-veteran-fighter'>Hunter Veteran Fighters → Hunter Veteran Fighter</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-hunter-shooter'>Hunter Shooters → Hunter Shooter</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>40</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-hunter-flight-rig'>Hunter Flight Rig</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>45</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-hunter-stalker-shadow'>Hunter Stalker Shadow</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>45</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-hunter-veteran-shooter'>Hunter Veteran Shooter</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-hunter-champion'>Hunter Champion</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>90</td><td class='num'><b class='del'>+10</b></td></tr>
+<tr><td><a href='#unit-hunter-stalker-cabalist'>Hunter Stalker Cabalist</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>100</td><td class='num'>90</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-hunter-pet-hawk'>Hunter Pet Hawk</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>90</td><td class='num'>110</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-hunter-leader'>Hunter Leader</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>110</td><td class='num'>115</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-hunter-great-flight-rig'>Hunter Great Flight Rig</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>5+</td><td class='num'>175</td><td class='num'>165</td><td class='num'><b class='add'>-10</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Hunter Fighter</h3><p class='stats'>30 pts · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-hunter-fighter'>Hunter Fighter</h3><p class='stats'>30 pts · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Hunter <del class='del'>Fighters</del></td><td>Hunter <ins class='add'>Fighter</ins></td></tr>
@@ -80,7 +84,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Talon Sickle (A2, Crack, Precise) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Hunter Veteran Fighter</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-hunter-veteran-fighter'>Hunter Veteran Fighter</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Hunter Veteran <del class='del'>Fighters</del></td><td>Hunter Veteran <ins class='add'>Fighter</ins></td></tr>
@@ -115,7 +119,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A2, AP(1), Rending) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Weapon (A2, AP(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Hunter Shooter</h3><p class='stats'>35 → 40 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-hunter-shooter'>Hunter Shooter</h3><p class='stats'>35 → 40 pts (+5) · Size 3 → 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Hunter <del class='del'>Shooters</del></td><td>Hunter <ins class='add'>Shooter</ins></td></tr>
@@ -130,7 +134,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Barbed Bow (18&quot;, <del class='del'>A1,</del> Shred) · +5 pts</td><td>Barbed Bow (18&quot;, <ins class='add'>A3,</ins> Shred) · +5 pts</td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Shortbow (18&quot;, A6) · +10 pts</ins></td></tr>
 </table></div>
-<h3>Hunter Flight Rig</h3><p class='stats'>60 → 45 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-hunter-flight-rig'>Hunter Flight Rig</h3><p class='stats'>60 → 45 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
@@ -159,7 +163,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Talon Sickle (A6, Crack, Precise) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Blade Weapon (A6, AP(1), Rending) · +25 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Hunter Stalker Shadow</h3><p class='stats'>50 → 45 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-hunter-stalker-shadow'>Hunter Stalker Shadow</h3><p class='stats'>50 → 45 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
@@ -174,7 +178,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with (2)</td><td>Upgrade with (2)</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rival Spotter <del class='del'>(Piercing</del> Spotter) · +5 pts</td><td>Rival Spotter <ins class='add'>(Precision</ins> Spotter) · +5 pts</td></tr>
 </table></div>
-<h3>Hunter Veteran Shooter</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-hunter-veteran-shooter'>Hunter Veteran Shooter</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
@@ -189,7 +193,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Barbed Bow (18&quot;, A3, Shred) · +-5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Bow (24&quot;, A3, AP(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Hunter Champion</h3><p class='stats'>80 → 90 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-hunter-champion'>Hunter Champion</h3><p class='stats'>80 → 90 pts (+10) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -228,7 +232,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sky Cutter <del class='del'>(Runner Boost</del> Aura) · <del class='del'>+10</del> pts</td><td>Sky Cutter <ins class='add'>(Enhanced Runner</ins> Aura) · <ins class='add'>+25</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Trophy Hunter (Relentless Aura) · <del class='del'>+5</del> pts</td><td>Trophy Hunter (Relentless Aura) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>Hunter Stalker Cabalist</h3><p class='stats'>100 → 90 pts (-10) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-hunter-stalker-cabalist'>Hunter Stalker Cabalist</h3><p class='stats'>100 → 90 pts (-10) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -242,13 +246,13 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rival Spotter <del class='del'>(Piercing</del> Spotter) · +5 pts</td><td>Rival Spotter <ins class='add'>(Precision</ins> Spotter) · +5 pts</td></tr>
 </table></div>
-<h3>Hunter Pet Hawk</h3><p class='stats'>90 → 110 pts (+20) · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-hunter-pet-hawk'>Hunter Pet Hawk</h3><p class='stats'>90 → 110 pts (+20) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td>Weapon</td><td>Heavy Claws (A9, <del class='del'>AP(1))</del></td><td>Heavy Claws (A9, <ins class='add'>AP(2))</ins></td></tr>
 </table></div>
-<h3>Hunter Leader</h3><p class='stats'>110 → 115 pts (+5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-hunter-leader'>Hunter Leader</h3><p class='stats'>110 → 115 pts (+5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
@@ -294,7 +298,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sky Cutter <del class='del'>(Runner Boost</del> Aura) · <del class='del'>+10</del> pts</td><td>Sky Cutter <ins class='add'>(Enhanced Runner</ins> Aura) · <ins class='add'>+25</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Talon Grinder (Furious Aura) · <del class='del'>+5</del> pts</td><td>Talon Grinder (Furious Aura) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>Hunter Great Flight Rig</h3><p class='stats'>175 → 165 pts (-10) · Size 1 · Quality 3+ · Defense 5+</p>
+<h3 id='unit-hunter-great-flight-rig'>Hunter Great Flight Rig</h3><p class='stats'>175 → 165 pts (-10) · Size 1 · Quality 3+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>175</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
@@ -310,7 +314,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Vulture&#x27;s Mark (Precision Fighting Mark) · <del class='del'>+15</del> pts</td><td>Vulture&#x27;s Mark (Precision Fighting Mark) · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Agile</td><td>Moves +1&quot; when using Advance, and +2&quot; when using Rush/Charge.</td></tr>
 <tr class='add'><td>➕</td><td>Bravery Aura</td><td>This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get +1 to Morale Test rolls. If this model is killed, picked models that are deployed lose the rule.</td></tr>
@@ -337,7 +341,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Runner</td><td><span class='del'>3.5.1 (2026-09-28):</span> Moves <del class='del'>+2&quot;</del> when using Advance, and <del class='del'>+2”</del> when using Rush/Charge.<br><span class='add'>3.6.0 beta:</span> Moves <ins class='add'>+1&quot;</ins> when using Advance, and <ins class='add'>+2&quot;</ins> when using Rush/Charge.</td></tr>
 <tr class='mod'><td>✏️</td><td>Stealth<br><span class='muted'>core rule</span></td><td><span class='del'>3.5.1 (2026-09-28):</span> When units where <del class='del'>all</del> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.<br><span class='add'>3.6.0 beta:</span> When units where <ins class='add'>most</ins> models have this rule are shot from over 9&quot; away, enemy units get -1 to hit rolls.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Adrenaline Rush</td><td><span class='del'>3.5.1 (2026-09-28):</span> (1) Pick <del class='del'>up to two</del> friendly <del class='del'>units</del> within 12&quot;, which <del class='del'>get</del> Runner <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (1) Pick <ins class='add'>one</ins> friendly <ins class='add'>unit</ins> within 12&quot;, which <ins class='add'>gets Enhanced</ins> Runner once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Dark Shadow</td><td><span class='del'>3.5.1 (2026-09-28):</span> (3) Pick up to <del class='del'>six</del> friendly units within <del class='del'>12&quot;,</del> which get Stealth once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (3) Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get Stealth once (next time the effect would apply).</td></tr>

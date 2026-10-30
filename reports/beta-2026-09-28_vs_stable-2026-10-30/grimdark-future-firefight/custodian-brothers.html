@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,21 +37,22 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +0 / -0 / ~6</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Veteran Master Custodian</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>550</td><td class='num'>430</td><td class='num'><b class='add'>-120</b></td></tr>
-<tr><td>Master Custodian</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>500</td><td class='num'>385</td><td class='num'><b class='add'>-115</b></td></tr>
-<tr><td>Great Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>130</td><td class='num'>125</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Prosecution Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>45</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Vigilant Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Hunter Sister</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>70</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Custodian Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>250</td><td class='num'>190</td><td class='num'><b class='add'>-60</b></td></tr>
-<tr><td>Veteran Custodian Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>280</td><td class='num'>220</td><td class='num'><b class='add'>-60</b></td></tr>
-<tr><td>Jetpack Custodian Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>285</td><td class='num'>225</td><td class='num'><b class='add'>-60</b></td></tr>
-<tr><td>Support Custodian Brother</td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>330</td><td class='num'>265</td><td class='num'><b class='add'>-65</b></td></tr>
+<tr><td><a href='#unit-veteran-master-custodian'>Veteran Master Custodian</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>550</td><td class='num'>430</td><td class='num'><b class='add'>-120</b></td></tr>
+<tr><td><a href='#unit-master-custodian'>Master Custodian</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>500</td><td class='num'>385</td><td class='num'><b class='add'>-115</b></td></tr>
+<tr><td><a href='#unit-great-sister'>Great Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>130</td><td class='num'>125</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-prosecution-sister'>Prosecution Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>50</td><td class='num'>45</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-vigilant-sister'>Vigilant Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-hunter-sister'>Hunter Sister</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>80</td><td class='num'>70</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-custodian-brother'>Custodian Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>250</td><td class='num'>190</td><td class='num'><b class='add'>-60</b></td></tr>
+<tr><td><a href='#unit-veteran-custodian-brother'>Veteran Custodian Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>280</td><td class='num'>220</td><td class='num'><b class='add'>-60</b></td></tr>
+<tr><td><a href='#unit-jetpack-custodian-brother'>Jetpack Custodian Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>285</td><td class='num'>225</td><td class='num'><b class='add'>-60</b></td></tr>
+<tr><td><a href='#unit-support-custodian-brother'>Support Custodian Brother</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'><b class=del>2+ → 3+</b></td><td class='num'>330</td><td class='num'>265</td><td class='num'><b class='add'>-65</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Veteran Master Custodian</h3><p class='stats'>550 → 430 pts (-120) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-veteran-master-custodian'>Veteran Master Custodian</h3><p class='stats'>550 → 430 pts (-120) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>550</del> pts</td><td><ins class='add'>430</ins> pts</td></tr>
@@ -81,7 +85,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Disruptor (Stealth Aura) · <del class='del'>+70</del> pts</td><td>Disruptor (Stealth Aura) · <ins class='add'>+60</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Captain (Enhanced Guardian Aura) · <del class='del'>+40</del> pts</td><td>Captain (Enhanced Guardian Aura) · <ins class='add'>+65</ins> pts</td></tr>
 </table></div>
-<h3>Master Custodian</h3><p class='stats'>500 → 385 pts (-115) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-master-custodian'>Master Custodian</h3><p class='stats'>500 → 385 pts (-115) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>500</del> pts</td><td><ins class='add'>385</ins> pts</td></tr>
@@ -113,7 +117,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Disruptor (Stealth Aura) · <del class='del'>+70</del> pts</td><td>Disruptor (Stealth Aura) · <ins class='add'>+60</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Captain (Enhanced Guardian Aura) · <del class='del'>+40</del> pts</td><td>Captain (Enhanced Guardian Aura) · <ins class='add'>+65</ins> pts</td></tr>
 </table></div>
-<h3>Great Sister</h3><p class='stats'>130 → 125 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-great-sister'>Great Sister</h3><p class='stats'>130 → 125 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>130</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
@@ -142,7 +146,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Disruptor (Stealth Aura) · <del class='del'>+55</del> pts</td><td>Disruptor (Stealth Aura) · <ins class='add'>+45</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Sorceress (Caster(3)) · <del class='del'>+30</del> pts</td><td>Master Sorceress (Caster(3)) · <ins class='add'>+55</ins> pts</td></tr>
 </table></div>
-<h3>Prosecution Sister</h3><p class='stats'>50 → 45 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-prosecution-sister'>Prosecution Sister</h3><p class='stats'>50 → 45 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
@@ -151,14 +155,14 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Battle Rifle</td><td>Replace Battle Rifle</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shotgun (12&quot;, A4, AP(1)) · <del class='del'>+20</del> pts</td><td>Shotgun (12&quot;, A4, AP(1)) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Vigilant Sister</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-vigilant-sister'>Vigilant Sister</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Heretic Spotter (Piercing Target(1)) · <del class='del'>+15</del> pts</td><td>Heretic Spotter (Piercing Target(1)) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Hunter Sister</h3><p class='stats'>80 → 70 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-hunter-sister'>Hunter Sister</h3><p class='stats'>80 → 70 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -168,7 +172,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Fusion Rifle (12&quot;, A1, AP(4), Deadly(6)) · <del class='del'>+10</del> pts</td><td>Fusion Rifle (12&quot;, A1, AP(4), Deadly(6)) · <ins class='add'>+5</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Burst Shredder Shotgun (9&quot;, A8, Rending) · <del class='del'>+20</del> pts</td><td>Burst Shredder Shotgun (9&quot;, A8, Rending) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Custodian Brother</h3><p class='stats'>250 → 190 pts (-60) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-custodian-brother'>Custodian Brother</h3><p class='stats'>250 → 190 pts (-60) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>250</del> pts</td><td><ins class='add'>190</ins> pts</td></tr>
@@ -193,7 +197,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy Banner (Dash Aura) · <del class='del'>+40</del> pts</td><td>Envoy Banner (Dash Aura) · <ins class='add'>+45</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <del class='del'>+85</del> pts</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <ins class='add'>+90</ins> pts</td></tr>
 </table></div>
-<h3>Veteran Custodian Brother</h3><p class='stats'>280 → 220 pts (-60) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-veteran-custodian-brother'>Veteran Custodian Brother</h3><p class='stats'>280 → 220 pts (-60) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>280</del> pts</td><td><ins class='add'>220</ins> pts</td></tr>
@@ -215,7 +219,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Combat Shield (Armor(2)) · +30 pts</ins></td></tr>
 </table></div>
-<h3>Jetpack Custodian Brother</h3><p class='stats'>285 → 225 pts (-60) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-jetpack-custodian-brother'>Jetpack Custodian Brother</h3><p class='stats'>285 → 225 pts (-60) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>285</del> pts</td><td><ins class='add'>225</ins> pts</td></tr>
@@ -236,7 +240,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy Banner (Dash Aura) · <del class='del'>+40</del> pts</td><td>Envoy Banner (Dash Aura) · <ins class='add'>+45</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <del class='del'>+85</del> pts</td><td>The Founder&#x27;s Warding (Regeneration Aura) · <ins class='add'>+90</ins> pts</td></tr>
 </table></div>
-<h3>Support Custodian Brother</h3><p class='stats'>330 → 265 pts (-65) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
+<h3 id='unit-support-custodian-brother'>Support Custodian Brother</h3><p class='stats'>330 → 265 pts (-65) · Size 1 · Quality 3+ · Defense 2+ → 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>330</del> pts</td><td><ins class='add'>265</ins> pts</td></tr>
@@ -247,7 +251,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Inhibitor Array (Ranged Shrouding Aura) · <del class='del'>+20</del> pts</td><td>Inhibitor Array (Ranged Shrouding Aura) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Piercing Target</td><td><span class='del'>3.6.0 beta:</span> Once per game, during this model&#x27;s activation, pick X enemy units within 18&quot; and in line of sight of it, and place one token on them. Friendly units get AP(+1) on their weapons when attacking them.<br><span class='add'>3.6.0:</span> Once per game, during this model&#x27;s activation, <ins class='add'>before attacking,</ins> pick X enemy units within 18&quot; and in line of sight of it, and place one token on them. Friendly units get AP(+1) on their weapons when attacking them.</td></tr>
@@ -256,11 +260,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Unstoppable<br><span class='muted'>no longer a core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Ignores</del> Regeneration, and ignores all negative modifiers <del class='del'>to this weapon</del> which are not from this model&#x27;s special rules.<br><span class='add'>3.6.0:</span> <ins class='add'>This weapon ignores</ins> Regeneration, and ignores all negative modifiers which are not from this model&#x27;s special rules.</td></tr>
 <tr class='mod'><td>✏️</td><td>Unstoppable in Melee Aura</td><td><span class='del'>3.6.0 beta:</span> This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Unstoppable in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Unstoppable <ins class='add'>on its weapons</ins> in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>The Founder&#x27;s Curse</td><td><span class='del'>3.6.0 beta:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which friendly units gets Shred when attacking against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which friendly units gets Shred <ins class='add'>on their weapons</ins> when attacking against once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

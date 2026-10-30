@@ -20,7 +20,9 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
 .systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
@@ -35,29 +37,30 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +7 / -5 / ~12</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#new-units'>New units</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Killer Tank Champ</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>140</td><td class='num'>350</td><td class='num'><b class='del'>+210</b></td></tr>
-<tr><td>Death Walker Champ</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>155</td><td class='num'>320</td><td class='num'><b class='del'>+165</b></td></tr>
-<tr><td>Boss Champ</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>105</td><td class='num'><b class='del'>+70</b></td></tr>
-<tr><td>Champ</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>20</td><td class='num'>70</td><td class='num'><b class='del'>+50</b></td></tr>
-<tr><td>Waskatsin</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>195</td><td class='num'>380</td><td class='num'><b class='del'>+185</b></td></tr>
-<tr><td>Scout Bikers → Scout Biker</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Boss</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>45</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Looter</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>60</td><td class='num'><b class='del'>+20</b></td></tr>
-<tr><td>Freak → Freaks</td><td class='num'><b class=mod>1 → 3</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>15</td><td class='num'>75</td><td class='num'><b class='del'>+60</b></td></tr>
-<tr><td>Shooter Mob</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>30</td><td class='num'>80</td><td class='num'><b class='del'>+50</b></td></tr>
-<tr><td>Storm Mob</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>35</td><td class='num'>90</td><td class='num'><b class='del'>+55</b></td></tr>
-<tr><td>Commandos</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>110</td><td class='num'><b class='del'>+70</b></td></tr>
-<tr><td>Death Walker</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>3+</td><td class='num'>55</td><td class='num'>115</td><td class='num'><b class='del'>+60</b></td></tr>
-<tr><td>Killer Tank</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>3+</td><td class='num'>50</td><td class='num'>130</td><td class='num'><b class='del'>+80</b></td></tr>
-<tr><td>Bug Rider</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>135</td><td class='num'><b class='del'>+80</b></td></tr>
+<tr><td><a href='#unit-killer-tank-champ'>Killer Tank Champ</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>140</td><td class='num'>350</td><td class='num'><b class='del'>+210</b></td></tr>
+<tr><td><a href='#unit-death-walker-champ'>Death Walker Champ</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>155</td><td class='num'>320</td><td class='num'><b class='del'>+165</b></td></tr>
+<tr><td><a href='#unit-boss-champ'>Boss Champ</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>35</td><td class='num'>105</td><td class='num'><b class='del'>+70</b></td></tr>
+<tr><td><a href='#unit-champ'>Champ</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>20</td><td class='num'>70</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td><a href='#unit-waskatsin'>Waskatsin</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>195</td><td class='num'>380</td><td class='num'><b class='del'>+185</b></td></tr>
+<tr><td><a href='#unit-scout-biker'>Scout Bikers → Scout Biker</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-boss'>Boss</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>45</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-looter'>Looter</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>60</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td><a href='#unit-freaks'>Freak → Freaks</a></td><td class='num'><b class=mod>1 → 3</b></td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>15</td><td class='num'>75</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-shooter-mob'>Shooter Mob</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>30</td><td class='num'>80</td><td class='num'><b class='del'>+50</b></td></tr>
+<tr><td><a href='#unit-storm-mob'>Storm Mob</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>35</td><td class='num'>90</td><td class='num'><b class='del'>+55</b></td></tr>
+<tr><td><a href='#unit-commandos'>Commandos</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>110</td><td class='num'><b class='del'>+70</b></td></tr>
+<tr><td><a href='#unit-death-walker'>Death Walker</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>3+</td><td class='num'>55</td><td class='num'>115</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-killer-tank'>Killer Tank</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>3+</td><td class='num'>50</td><td class='num'>130</td><td class='num'><b class='del'>+80</b></td></tr>
+<tr><td><a href='#unit-bug-rider'>Bug Rider</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>135</td><td class='num'><b class='del'>+80</b></td></tr>
 </table></div>
-<h2>New units</h2><div class='scroll'><table>
+<h2 id='new-units'>New units</h2><div class='scroll'><table>
 <tr class='add'><td><b>Commando Sniper</b></td><td>1x Q5+ D6+ — 50 pts. Rules: Scout, Strider, Mischievous, Stealth, Tough(3). Weapons: Scrap Sniper Rifle (30&quot;, A1, AP(1), Deadly(2), Reliable), Strike (A2)</td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Killer Tank Champ</h3><p class='stats'>140 → 350 pts (+210) · Size 1 · Quality 4+ · Defense 3+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-killer-tank-champ'>Killer Tank Champ</h3><p class='stats'>140 → 350 pts (+210) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>350</ins> pts</td></tr>
@@ -84,7 +87,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Bubble Cannon (30&quot;, A1, AP(4), Blast(6)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Chucker Cannon (24&quot;, A8, Rending) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Death Walker Champ</h3><p class='stats'>155 → 320 pts (+165) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-death-walker-champ'>Death Walker Champ</h3><p class='stats'>155 → 320 pts (+165) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>155</del> pts</td><td><ins class='add'>320</ins> pts</td></tr>
@@ -122,7 +125,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Bubble Cannon (30&quot;, A1, AP(4), Blast(6)) · +30 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Chucker Cannon (24&quot;, A8, Rending) · +55 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Boss Champ</h3><p class='stats'>35 → 105 pts (+70) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-boss-champ'>Boss Champ</h3><p class='stats'>35 → 105 pts (+70) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>105</ins> pts</td></tr>
@@ -170,7 +173,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Raider Jetpack (Ambush, Flying) · +45 pts</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Combat Bug <del class='del'>(Rending Claws (A2, Rending),</del> Bounding, Regeneration, Strider, <del class='del'>Tough(3))</del> · <del class='del'>+85</del> pts</td><td>Combat Bug <ins class='add'>(Claws (A6),</ins> Bounding, Regeneration, Strider, <ins class='add'>Tough(9))</ins> · <ins class='add'>+215</ins> pts</td></tr>
 </table></div>
-<h3>Champ</h3><p class='stats'>20 → 70 pts (+50) · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-champ'>Champ</h3><p class='stats'>20 → 70 pts (+50) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -213,7 +216,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Trash Goggles (Good Shot) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Waskatsin</h3><p class='stats'>195 → 380 pts (+185) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-waskatsin'>Waskatsin</h3><p class='stats'>195 → 380 pts (+185) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>195</del> pts</td><td><ins class='add'>380</ins> pts</td></tr>
@@ -227,7 +230,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rad-Glow (Dangerous Terrain Debuff) · +15 pts</ins></td></tr>
 </table></div>
-<h3>Scout Biker</h3><p class='stats'>40 pts · Size 3 → 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-scout-biker'>Scout Biker</h3><p class='stats'>40 pts · Size 3 → 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Scout <del class='del'>Bikers</del></td><td>Scout <ins class='add'>Biker</ins></td></tr>
@@ -256,7 +259,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Killer Sword (A6, Rending) · +25 pts</ins></td></tr>
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>all</del> Trekker <del class='del'>Tires</del></td><td>Replace Trekker <ins class='add'>Tire</ins></td></tr>
 </table></div>
-<h3>Boss</h3><p class='stats'>20 → 45 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-boss'>Boss</h3><p class='stats'>20 → 45 pts (+25) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>45</ins> pts</td></tr>
@@ -295,7 +298,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Killer Saw (A1, AP(2), Deadly(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Killer Fist (A2, AP(4)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Looter</h3><p class='stats'>40 → 60 pts (+20) · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-looter'>Looter</h3><p class='stats'>40 → 60 pts (+20) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
@@ -312,7 +315,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Chucker Cannon <del class='del'>(24&quot;, A4,</del> Rending) · <del class='del'>+25</del> pts</td><td>Chucker Cannon <ins class='add'>(30&quot;, A6,</ins> Rending) · <ins class='add'>+90</ins> pts</td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Bolt-Smasher Rifle (24&quot;, A1, Deadly(3), Tear) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Freaks</h3><p class='stats'>15 → 75 pts (+60) · Size 1 → 3 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-freaks'>Freaks</h3><p class='stats'>15 → 75 pts (+60) · Size 1 → 3 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td><del class='del'>Freak</del></td><td><ins class='add'>Freaks</ins></td></tr>
@@ -330,7 +333,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ramshackle Crew (Instinctive) · +5 pts</ins></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Mutations (Regeneration) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Shooter Mob</h3><p class='stats'>30 → 80 pts (+50) · Size 3 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-shooter-mob'>Shooter Mob</h3><p class='stats'>30 → 80 pts (+50) · Size 3 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
@@ -354,7 +357,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with (2)</td><td>Upgrade all models with (2)</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ramshackle Crew (Instinctive) · <del class='del'>+5</del> pts</td><td>Ramshackle Crew (Instinctive) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Storm Mob</h3><p class='stats'>35 → 90 pts (+55) · Size 3 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-storm-mob'>Storm Mob</h3><p class='stats'>35 → 90 pts (+55) · Size 3 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>35</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -388,7 +391,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Ramshackle Crew (Instinctive) · +10 pts</ins></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Trash Goggles (Good Shot) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Commandos</h3><p class='stats'>40 → 110 pts (+70) · Size 3 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-commandos'>Commandos</h3><p class='stats'>40 → 110 pts (+70) · Size 3 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
@@ -416,7 +419,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace one Scrap Guns</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Scrap Sniper (24&quot;, A1, AP(1), Reliable) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Death Walker</h3><p class='stats'>55 → 115 pts (+60) · Size 1 · Quality 5+ · Defense 3+</p>
+<h3 id='unit-death-walker'>Death Walker</h3><p class='stats'>55 → 115 pts (+60) · Size 1 · Quality 5+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
@@ -443,7 +446,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Mini-Claw</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mini-Saw (A1, AP(2), Deadly(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Killer Tank</h3><p class='stats'>50 → 130 pts (+80) · Size 1 · Quality 5+ · Defense 3+</p>
+<h3 id='unit-killer-tank'>Killer Tank</h3><p class='stats'>50 → 130 pts (+80) · Size 1 · Quality 5+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>50</del> pts</td><td><ins class='add'>130</ins> pts</td></tr>
@@ -459,7 +462,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Self-Destruction Payload <del class='del'>(Deathstrike(3))</del> · <del class='del'>+5</del> pts</td><td>Self-Destruction Payload <ins class='add'>(Deathstrike(6))</ins> · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Bug Rider</h3><p class='stats'>55 → 135 pts (+80) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-bug-rider'>Bug Rider</h3><p class='stats'>55 → 135 pts (+80) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
@@ -482,7 +485,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade all models with</td><td>Upgrade all models with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Trash Goggles (Good Shot) · <del class='del'>+5</del> pts</td><td>Trash Goggles (Good Shot) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Bravery Aura</td><td>This model&#x27;s unit and up to 2 friendly units picked before the start of the game get +1 to Morale Test rolls. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Mischievous</td><td>If this model has Mischievous, enemies taking hits from it must re-roll successful unmodified Defense results of 5-6 from Mischievous (instead of only results of 6).</td></tr>
@@ -509,7 +512,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Surge<br><span class='muted'>becomes a core rule</span></td><td><span class='del'>3.5.1:</span> <del class='del'>On</del> unmodified <del class='del'>results</del> of 6 to hit, this weapon deals 1 extra <del class='del'>hits</del> (only the original hit counts as a 6 for special rules).<br><span class='add'>3.6.0:</span> <ins class='add'>For each</ins> unmodified <ins class='add'>result</ins> of 6 to hit, this weapon deals 1 extra <ins class='add'>hit</ins> (only the original hit counts as a 6 for special rules).</td></tr>
 <tr class='mod'><td>✏️</td><td>Vanguard</td><td><span class='del'>3.5.1:</span> After this model is deployed, it may be placed anywhere fully within <del class='del'>9”</del> of its <del class='del'>position.</del><br><span class='add'>3.6.0:</span> After this model is deployed, it may be placed anywhere fully within <ins class='add'>9&quot;</ins> of its <ins class='add'>position, over 9&quot; away from non-Vanguard enemy units.</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Ammo Boost</td><td><span class='del'>3.5.1:</span> <del class='del'>(1)</del> Pick up to <del class='del'>two</del> friendly units within <del class='del'>12&quot;,</del> which get Mischievous <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0:</span> <ins class='add'>(3)</ins> Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Mischievous once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Boom!</td><td><span class='del'>3.5.1:</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within <del class='del'>18&quot;,</del> which <del class='del'>take</del> 1 hit with <del class='del'>Blast(3) each.</del><br><span class='add'>3.6.0:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within <ins class='add'>18&quot; in line of sight,</ins> which <ins class='add'>takes</ins> 1 hit with <ins class='add'>Blast(3).</ins></td></tr>

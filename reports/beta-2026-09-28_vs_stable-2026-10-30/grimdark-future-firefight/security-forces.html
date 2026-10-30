@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,22 +37,23 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +0 / -0 / ~7</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Security Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>90</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Security Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>75</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Security Fighters</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>75</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Security Ram-Suppressor</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>75</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Security Gunners</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>85</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Security Shield-Suppressors</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>90</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Security Veteran Fighters</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>105</td><td class='num'>95</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Security Veteran Gunner → Security Veteran Gunners</td><td class='num'><b class=mod>1 → 3</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>110</td><td class='num'><b class='del'>+70</b></td></tr>
-<tr><td>Security Patrol-Biker</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>120</td><td class='num'>115</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Security Robo-Dogs</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>120</td><td class='num'>115</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Security Enforcer-Bot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>150</td><td class='num'>145</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-security-leader'>Security Leader</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>90</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-security-champion'>Security Champion</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>75</td><td class='num'>75</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-security-fighters'>Security Fighters</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>75</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-security-ram-suppressor'>Security Ram-Suppressor</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>75</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-security-gunners'>Security Gunners</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>85</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-security-shield-suppressors'>Security Shield-Suppressors</a></td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>90</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-security-veteran-fighters'>Security Veteran Fighters</a></td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>105</td><td class='num'>95</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-security-veteran-gunners'>Security Veteran Gunner → Security Veteran Gunners</a></td><td class='num'><b class=mod>1 → 3</b></td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>110</td><td class='num'><b class='del'>+70</b></td></tr>
+<tr><td><a href='#unit-security-patrol-biker'>Security Patrol-Biker</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>120</td><td class='num'>115</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-security-robo-dogs'>Security Robo-Dogs</a></td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>120</td><td class='num'>115</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-security-enforcer-bot'>Security Enforcer-Bot</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>150</td><td class='num'>145</td><td class='num'><b class='add'>-5</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Security Leader</h3><p class='stats'>95 → 90 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-security-leader'>Security Leader</h3><p class='stats'>95 → 90 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -86,7 +90,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant (Furious Aura) · <del class='del'>+40</del> pts</td><td>Sergeant (Furious Aura) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cyber-Security (Caster(2)) · <del class='del'>+25</del> pts</td><td>Cyber-Security (Caster(2)) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Security Champion</h3><p class='stats'>75 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-security-champion'>Security Champion</h3><p class='stats'>75 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
@@ -116,7 +120,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant (Furious Aura) · <del class='del'>+40</del> pts</td><td>Sergeant (Furious Aura) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cyber-Security (Caster(2)) · <del class='del'>+25</del> pts</td><td>Cyber-Security (Caster(2)) · <ins class='add'>+35</ins> pts</td></tr>
 </table></div>
-<h3>Security Fighters</h3><p class='stats'>80 → 75 pts (-5) · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-security-fighters'>Security Fighters</h3><p class='stats'>80 → 75 pts (-5) · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>80</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
@@ -130,7 +134,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Weapon (A2, Rending) · <del class='del'>+25</del> pts</td><td>Energy Weapon (A2, Rending) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Security Ram-Suppressor</h3><p class='stats'>90 → 75 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-security-ram-suppressor'>Security Ram-Suppressor</h3><p class='stats'>90 → 75 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>75</ins> pts</td></tr>
@@ -139,7 +143,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Security Scanner (Piercing Target(1)) · <del class='del'>+15</del> pts</td><td>Security Scanner (Piercing Target(1)) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Security Gunners</h3><p class='stats'>90 → 85 pts (-5) · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-security-gunners'>Security Gunners</h3><p class='stats'>90 → 85 pts (-5) · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -152,7 +156,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sonic Blaster (24&quot;, A6, AP(1), Smash) · <del class='del'>+35</del> pts</td><td>Sonic Blaster (24&quot;, A6, AP(1), Smash) · <ins class='add'>+30</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shredder Rifle (18&quot;, A6, Rending) · <del class='del'>+45</del> pts</td><td>Shredder Rifle (18&quot;, A6, Rending) · <ins class='add'>+40</ins> pts</td></tr>
 </table></div>
-<h3>Security Shield-Suppressors</h3><p class='stats'>95 → 90 pts (-5) · Size 3 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-security-shield-suppressors'>Security Shield-Suppressors</h3><p class='stats'>95 → 90 pts (-5) · Size 3 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -175,7 +179,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Security Scanner (Piercing Target(1)) · <del class='del'>+15</del> pts</td><td>Security Scanner (Piercing Target(1)) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Security Veteran Fighters</h3><p class='stats'>105 → 95 pts (-10) · Size 3 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-security-veteran-fighters'>Security Veteran Fighters</h3><p class='stats'>105 → 95 pts (-10) · Size 3 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>105</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -201,7 +205,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A6, AP(2)) · <del class='del'>+45</del> pts</td><td>Great Weapon (A6, AP(2)) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shock Weapon (A6, Surge) · <del class='del'>+30</del> pts</td><td>Shock Weapon (A6, <ins class='add'>AP(1),</ins> Surge) · <ins class='add'>+40</ins> pts</td></tr>
 </table></div>
-<h3>Security Veteran Gunners</h3><p class='stats'>40 → 110 pts (+70) · Size 1 → 3 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-security-veteran-gunners'>Security Veteran Gunners</h3><p class='stats'>40 → 110 pts (+70) · Size 1 → 3 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Security Veteran <del class='del'>Gunner</del></td><td>Security Veteran <ins class='add'>Gunners</ins></td></tr>
@@ -222,7 +226,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Take one Battle Rifle attachment</td><td>Take one Battle Rifle attachment</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shred-Mod (18&quot;, A6, Limited, Rending) · <del class='del'>+30</del> pts</td><td>Shred-Mod (18&quot;, A6, Limited, Rending) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Security Patrol-Biker</h3><p class='stats'>120 → 115 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-security-patrol-biker'>Security Patrol-Biker</h3><p class='stats'>120 → 115 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
@@ -243,7 +247,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Security Scanner (Piercing Target(1)) · <del class='del'>+15</del> pts</td><td>Security Scanner (Piercing Target(1)) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Security Robo-Dogs</h3><p class='stats'>120 → 115 pts (-5) · Size 3 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-security-robo-dogs'>Security Robo-Dogs</h3><p class='stats'>120 → 115 pts (-5) · Size 3 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>120</del> pts</td><td><ins class='add'>115</ins> pts</td></tr>
@@ -251,7 +255,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sniffer Canine Handler (Vanguard) · <del class='del'>+20</del> pts</td><td>Sniffer Canine Handler (Vanguard) · <ins class='add'>+15</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Combat Canine Handler (Unpredictable Fighter) · <del class='del'>+35</del> pts</td><td>Combat Canine Handler (Unpredictable Fighter) · <ins class='add'>+30</ins> pts</td></tr>
 </table></div>
-<h3>Security Enforcer-Bot</h3><p class='stats'>150 → 145 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-security-enforcer-bot'>Security Enforcer-Bot</h3><p class='stats'>150 → 145 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>150</del> pts</td><td><ins class='add'>145</ins> pts</td></tr>
@@ -261,7 +265,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stomping Target (Surge Mark) · <del class='del'>+20</del> pts</td><td>Stomping Target (Surge Mark) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Flying<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> May move through units and terrain, and ignores the effects of terrain it <del class='del'>doesn&#x27;t end</del> its move <del class='del'>it. This</del> unit automatically passes jumping rolls.<br><span class='add'>3.6.0:</span> May move through units and terrain, and ignores the effects of <ins class='add'>Difficult and Dangerous</ins> terrain it <ins class='add'>doesn’t start</ins> its move <ins class='add'>in.This</ins> unit automatically passes jumping rolls.</td></tr>
@@ -271,11 +275,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Slayer</td><td><span class='del'>3.6.0 beta:</span> When <del class='del'>shooting enemies over 9&quot; away,</del> or when charging, this model&#x27;s weapons get AP(+2) if most models in the target have Tough(9) or higher.<br><span class='add'>3.6.0:</span> When <ins class='add'>using Hold actions and shooting,</ins> or when charging, this model&#x27;s weapons get AP(+2) if most models in the target have Tough(9) or higher.</td></tr>
 <tr class='mod'><td>✏️</td><td>Surge Mark</td><td><span class='del'>3.6.0 beta:</span> Once per activation, before attacking, pick up to 3 enemy units within 18&quot; in line of sight, which friendly units gets Surge when attacking against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to 3 enemy units within 18&quot; in line of sight, which friendly units gets Surge <ins class='add'>on their weapons</ins> when attacking against once (next time the effect would apply).</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Assign Bounty</td><td><span class='del'>3.6.0 beta:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which friendly units gets Surge against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which friendly units gets Surge <ins class='add'>on their weapons</ins> against once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

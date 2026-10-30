@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,25 +37,26 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +8 / -5 / ~19</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Harbinger of War</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>140</td><td class='num'>360</td><td class='num'><b class='del'>+220</b></td></tr>
-<tr><td>Champion of War</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>105</td><td class='num'><b class='del'>+60</b></td></tr>
-<tr><td>Fury Champion of War</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>45</td><td class='num'>110</td><td class='num'><b class='del'>+65</b></td></tr>
-<tr><td>Tri-Hound Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>345</td><td class='num'><b class='del'>+210</b></td></tr>
-<tr><td>Cleaverfang</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>175</td><td class='num'>390</td><td class='num'><b class='del'>+215</b></td></tr>
-<tr><td>Ironpride</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>185</td><td class='num'><b class='del'>+120</b></td></tr>
-<tr><td>Chainrend</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>165</td><td class='num'><b class='del'>+75</b></td></tr>
-<tr><td>Blood Hound</td><td class='num'>1</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'><b class=del>4+ → 5+</b></td><td class='num'>30</td><td class='num'>35</td><td class='num'><b class='del'>+5</b></td></tr>
-<tr><td>Blood Warriors → Blood Warrior</td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>War Fury</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>35</td><td class='num'><b class='del'>+15</b></td></tr>
-<tr><td>Blood Whipper</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>25</td><td class='num'>55</td><td class='num'><b class='del'>+30</b></td></tr>
-<tr><td>Whip-Fury</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>55</td><td class='num'><b class='del'>+35</b></td></tr>
-<tr><td>Beast Rider → Blood Beast Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>60</td><td class='num'>140</td><td class='num'><b class='del'>+80</b></td></tr>
-<tr><td>War Soul Spawn</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>150</td><td class='num'><b class='del'>+85</b></td></tr>
+<tr><td><a href='#unit-harbinger-of-war'>Harbinger of War</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>140</td><td class='num'>360</td><td class='num'><b class='del'>+220</b></td></tr>
+<tr><td><a href='#unit-champion-of-war'>Champion of War</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>105</td><td class='num'><b class='del'>+60</b></td></tr>
+<tr><td><a href='#unit-fury-champion-of-war'>Fury Champion of War</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>45</td><td class='num'>110</td><td class='num'><b class='del'>+65</b></td></tr>
+<tr><td><a href='#unit-tri-hound-champion'>Tri-Hound Champion</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>345</td><td class='num'><b class='del'>+210</b></td></tr>
+<tr><td><a href='#unit-cleaverfang'>Cleaverfang</a></td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>175</td><td class='num'>390</td><td class='num'><b class='del'>+215</b></td></tr>
+<tr><td><a href='#unit-ironpride'>Ironpride</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>185</td><td class='num'><b class='del'>+120</b></td></tr>
+<tr><td><a href='#unit-chainrend'>Chainrend</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>165</td><td class='num'><b class='del'>+75</b></td></tr>
+<tr><td><a href='#unit-blood-hound'>Blood Hound</a></td><td class='num'>1</td><td class='num'><b class=del>3+ → 4+</b></td><td class='num'><b class=del>4+ → 5+</b></td><td class='num'>30</td><td class='num'>35</td><td class='num'><b class='del'>+5</b></td></tr>
+<tr><td><a href='#unit-blood-warrior'>Blood Warriors → Blood Warrior</a></td><td class='num'><b class=mod>3 → 1</b></td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-war-fury'>War Fury</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>35</td><td class='num'><b class='del'>+15</b></td></tr>
+<tr><td><a href='#unit-blood-whipper'>Blood Whipper</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>25</td><td class='num'>55</td><td class='num'><b class='del'>+30</b></td></tr>
+<tr><td><a href='#unit-whip-fury'>Whip-Fury</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>20</td><td class='num'>55</td><td class='num'><b class='del'>+35</b></td></tr>
+<tr><td><a href='#unit-blood-beast-rider'>Beast Rider → Blood Beast Rider</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>60</td><td class='num'>140</td><td class='num'><b class='del'>+80</b></td></tr>
+<tr><td><a href='#unit-war-soul-spawn'>War Soul Spawn</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>150</td><td class='num'><b class='del'>+85</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Harbinger of War</h3><p class='stats'>140 → 360 pts (+220) · Size 1 · Quality 3+ · Defense 3+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-harbinger-of-war'>Harbinger of War</h3><p class='stats'>140 → 360 pts (+220) · Size 1 · Quality 3+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>360</ins> pts</td></tr>
@@ -90,7 +94,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Envoy of War (Furious Aura) · <del class='del'>+5</del> pts</td><td>Envoy of War (Furious Aura) · <ins class='add'>+55</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Gift of War (Shielded Aura) · <del class='del'>+5</del> pts</td><td>Gift of War (Shielded Aura) · <ins class='add'>+120</ins> pts</td></tr>
 </table></div>
-<h3>Champion of War</h3><p class='stats'>45 → 105 pts (+60) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-champion-of-war'>Champion of War</h3><p class='stats'>45 → 105 pts (+60) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>105</ins> pts</td></tr>
@@ -133,7 +137,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flame Axe (A2, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flame Gauntlet (A2, AP(4)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Fury Champion of War</h3><p class='stats'>45 → 110 pts (+65) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-fury-champion-of-war'>Fury Champion of War</h3><p class='stats'>45 → 110 pts (+65) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>110</ins> pts</td></tr>
@@ -166,7 +170,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flame Axe (A2, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Flame Gauntlet (A2, AP(4)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Tri-Hound Champion</h3><p class='stats'>135 → 345 pts (+210) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-tri-hound-champion'>Tri-Hound Champion</h3><p class='stats'>135 → 345 pts (+210) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>135</del> pts</td><td><ins class='add'>345</ins> pts</td></tr>
@@ -184,7 +188,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Upgrade with</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Guard Beast (Repel Ambushers) · +5 pts</ins></td></tr>
 </table></div>
-<h3>Cleaverfang</h3><p class='stats'>175 → 390 pts (+215) · Size 1 · Quality 3+ · Defense 4+</p>
+<h3 id='unit-cleaverfang'>Cleaverfang</h3><p class='stats'>175 → 390 pts (+215) · Size 1 · Quality 3+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>175</del> pts</td><td><ins class='add'>390</ins> pts</td></tr>
@@ -199,7 +203,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Packmaster</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Packmaster - Leader (Bounding Aura) · +40 pts</ins></td></tr>
 </table></div>
-<h3>Ironpride</h3><p class='stats'>65 → 185 pts (+120) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-ironpride'>Ironpride</h3><p class='stats'>65 → 185 pts (+120) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>185</ins> pts</td></tr>
@@ -211,7 +215,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Devious One</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Devious One - Leader (Unpredictable Fighter Aura) · +50 pts</ins></td></tr>
 </table></div>
-<h3>Chainrend</h3><p class='stats'>90 → 165 pts (+75) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-chainrend'>Chainrend</h3><p class='stats'>90 → 165 pts (+75) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
@@ -225,7 +229,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Pilfered Relic</ins></td></tr>
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Pilfered Relics - Leader (Reckless Piercing Aura) · +120 pts</ins></td></tr>
 </table></div>
-<h3>Blood Hound</h3><p class='stats'>30 → 35 pts (+5) · Size 1 · Quality 3+ → 4+ · Defense 4+ → 5+</p>
+<h3 id='unit-blood-hound'>Blood Hound</h3><p class='stats'>30 → 35 pts (+5) · Size 1 · Quality 3+ → 4+ · Defense 4+ → 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>30</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
@@ -237,7 +241,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spiked Collars <del class='del'>(Ravage(1))</del> · +5 pts</td><td>Spiked Collars <ins class='add'>(Ravage(2))</ins> · +5 pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Anti-Wizard Collar <del class='del'>(Resistance)</del> · <del class='del'>+5</del> pts</td><td>Anti-Wizard Collar <ins class='add'>(Spell Resistance)</ins> · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Blood Warrior</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-blood-warrior'>Blood Warrior</h3><p class='stats'>40 → 35 pts (-5) · Size 3 → 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Blood <del class='del'>Warriors</del></td><td>Blood <ins class='add'>Warrior</ins></td></tr>
@@ -261,7 +265,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade <del class='del'>one model</del> with</td><td>Upgrade with <ins class='add'>(2)</ins></td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Banner of War (Piercing Fighter Aura) · <del class='del'>+15</del> pts</td><td>Banner of War (Piercing Fighter Aura) · <ins class='add'>+75</ins> pts</td></tr>
 </table></div>
-<h3>War Fury</h3><p class='stats'>20 → 35 pts (+15) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-war-fury'>War Fury</h3><p class='stats'>20 → 35 pts (+15) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
@@ -272,7 +276,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Dual Armblades (A4) · +5 pts</ins></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Armblades (A2, AP(2)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Blood Whipper</h3><p class='stats'>25 → 55 pts (+30) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-blood-whipper'>Blood Whipper</h3><p class='stats'>25 → 55 pts (+30) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>25</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
@@ -286,7 +290,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Long Whip</td><td>Replace Long Whip</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Whip <del class='del'>(12&quot;, A2, AP(1))</del> · <del class='del'>+5</del> pts</td><td>War Whip <ins class='add'>(9&quot;, A4, Rending)</ins> · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Whip-Fury</h3><p class='stats'>20 → 55 pts (+35) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-whip-fury'>Whip-Fury</h3><p class='stats'>20 → 55 pts (+35) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>20</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
@@ -297,7 +301,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Long Whip</td><td>Replace Long Whip</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Whip <del class='del'>(12&quot;, A2, AP(1))</del> · +5 pts</td><td>War Whip <ins class='add'>(9&quot;, A4, Rending)</ins> · +5 pts</td></tr>
 </table></div>
-<h3>Blood Beast Rider</h3><p class='stats'>60 → 140 pts (+80) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-blood-beast-rider'>Blood Beast Rider</h3><p class='stats'>60 → 140 pts (+80) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Name</td><td>Beast Rider</td><td><ins class='add'>Blood</ins> Beast Rider</td></tr>
@@ -323,7 +327,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Halberd (A1, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Great Weapon (A1, AP(3)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>War Soul Spawn</h3><p class='stats'>65 → 150 pts (+85) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-war-soul-spawn'>War Soul Spawn</h3><p class='stats'>65 → 150 pts (+85) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>150</ins> pts</td></tr>
@@ -337,7 +341,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Heavy Flame Axe (A3, AP(1), Rending) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Mutated Claws (A4, AP(1)) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Enhanced Violent</td><td>If this model has Violent, enemies always take wounds on unmodified results of 1 to block from Violent (instead of only when attacking enemies that already finished an activation).</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Warbound</td><td>If this model has Warbound, enemies always take wounds on unmodified results of 1 to block from Warbound (instead of only when attacking enemies that already finished an activation).</td></tr>
@@ -372,7 +376,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Violent</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>Enemies</del> that <del class='del'>roll</del> to block hits from <del class='del'>this model&#x27;s</del> weapons <del class='del'>take</del> 1 extra <del class='del'>wound for each unmodified result of 1 that they roll.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>When this model attacks enemies</ins> that <ins class='add'>already finished an activation this round, unmodified results of 1</ins> to block hits from weapons <ins class='add'>deal</ins> 1 extra <ins class='add'>wound.</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Warbound</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>Enemies</del> that <del class='del'>roll</del> to block hits from <del class='del'>this model&#x27;s</del> weapons <del class='del'>take</del> 1 extra <del class='del'>wound for each unmodified result of 1 that they roll.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>When this model attacks enemies</ins> that <ins class='add'>already finished an activation this round, unmodified results of 1</ins> to block hits from weapons <ins class='add'>deal</ins> 1 extra <ins class='add'>wound.</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Brutal Massacre</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>(2)</del> Pick <del class='del'>up to two</del> enemy <del class='del'>units</del> within 6&quot;, which <del class='del'>take</del> 3 hits with <del class='del'>Crack each. Roll as many dice as hits to see if &quot;on rolls of 6&quot; effects trigger.</del><br><span class='add'>3.6.0 beta:</span> <ins class='add'>(1)</ins> Pick <ins class='add'>one</ins> enemy <ins class='add'>unit</ins> within 6&quot;, which <ins class='add'>takes</ins> 3 hits with <ins class='add'>AP(1) and Purge.</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Fiery Protection</td><td><span class='del'>3.5.1 (2026-09-28):</span> (2) Pick up to <del class='del'>four</del> friendly units within 12&quot;, which get Melee Evasion once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (2) Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get Melee Evasion once (next time the effect would apply).</td></tr>

@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,19 +37,20 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +0 / -0 / ~1</li>
 <li>Spells: +0 / -0 / ~0</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Plague Half-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>185</td><td class='num'>180</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Plague Crusher Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>305</td><td class='num'>285</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Plague Drunken Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>295</td><td class='num'>275</td><td class='num'><b class='add'>-20</b></td></tr>
-<tr><td>Plague Wall Smasher Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>375</td><td class='num'>345</td><td class='num'><b class='add'>-30</b></td></tr>
-<tr><td>Plague Battle Stomper Mega-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>490</td><td class='num'>455</td><td class='num'><b class='add'>-35</b></td></tr>
-<tr><td>Plague Monster Eater Mega-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>470</td><td class='num'>440</td><td class='num'><b class='add'>-30</b></td></tr>
-<tr><td>Plague Castle Breaker Mega-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>595</td><td class='num'>545</td><td class='num'><b class='add'>-50</b></td></tr>
-<tr><td>Plague Bone Grinder Ultra-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>620</td><td class='num'>580</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td><a href='#unit-plague-half-giant'>Plague Half-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>185</td><td class='num'>180</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-plague-crusher-giant'>Plague Crusher Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>305</td><td class='num'>285</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-plague-drunken-giant'>Plague Drunken Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>295</td><td class='num'>275</td><td class='num'><b class='add'>-20</b></td></tr>
+<tr><td><a href='#unit-plague-wall-smasher-giant'>Plague Wall Smasher Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>375</td><td class='num'>345</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td><a href='#unit-plague-battle-stomper-mega-giant'>Plague Battle Stomper Mega-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>490</td><td class='num'>455</td><td class='num'><b class='add'>-35</b></td></tr>
+<tr><td><a href='#unit-plague-monster-eater-mega-giant'>Plague Monster Eater Mega-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>470</td><td class='num'>440</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td><a href='#unit-plague-castle-breaker-mega-giant'>Plague Castle Breaker Mega-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>595</td><td class='num'>545</td><td class='num'><b class='add'>-50</b></td></tr>
+<tr><td><a href='#unit-plague-bone-grinder-ultra-giant'>Plague Bone Grinder Ultra-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>620</td><td class='num'>580</td><td class='num'><b class='add'>-40</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Plague Half-Giant</h3><p class='stats'>185 → 180 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-plague-half-giant'>Plague Half-Giant</h3><p class='stats'>185 → 180 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
@@ -62,7 +66,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Patient Wanderer (Delayed Action) · <del class='del'>+40</del> pts</td><td>Patient Wanderer (Delayed Action) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Vanguard Giant (Scout, Strider) · <del class='del'>+45</del> pts</td><td>Vanguard Giant (Scout, Strider) · <ins class='add'>+40</ins> pts</td></tr>
 </table></div>
-<h3>Plague Crusher Giant</h3><p class='stats'>305 → 285 pts (-20) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-crusher-giant'>Plague Crusher Giant</h3><p class='stats'>305 → 285 pts (-20) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>305</del> pts</td><td><ins class='add'>285</ins> pts</td></tr>
@@ -76,7 +80,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Patient Wanderer (Delayed Action) · <del class='del'>+40</del> pts</td><td>Patient Wanderer (Delayed Action) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stumbling Giant (Bounding, Strider) · <del class='del'>+40</del> pts</td><td>Stumbling Giant (Bounding, Strider) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>Plague Drunken Giant</h3><p class='stats'>295 → 275 pts (-20) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-drunken-giant'>Plague Drunken Giant</h3><p class='stats'>295 → 275 pts (-20) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>295</del> pts</td><td><ins class='add'>275</ins> pts</td></tr>
@@ -94,7 +98,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Patient Wanderer (Delayed Action) · <del class='del'>+40</del> pts</td><td>Patient Wanderer (Delayed Action) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stumbling Giant (Bounding, Strider) · <del class='del'>+40</del> pts</td><td>Stumbling Giant (Bounding, Strider) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>Plague Wall Smasher Giant</h3><p class='stats'>375 → 345 pts (-30) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-wall-smasher-giant'>Plague Wall Smasher Giant</h3><p class='stats'>375 → 345 pts (-30) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>375</del> pts</td><td><ins class='add'>345</ins> pts</td></tr>
@@ -104,7 +108,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Patient Wanderer (Delayed Action) · <del class='del'>+40</del> pts</td><td>Patient Wanderer (Delayed Action) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stumbling Giant (Bounding, Strider) · <del class='del'>+40</del> pts</td><td>Stumbling Giant (Bounding, Strider) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>Plague Battle Stomper Mega-Giant</h3><p class='stats'>490 → 455 pts (-35) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-battle-stomper-mega-giant'>Plague Battle Stomper Mega-Giant</h3><p class='stats'>490 → 455 pts (-35) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>490</del> pts</td><td><ins class='add'>455</ins> pts</td></tr>
@@ -121,7 +125,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wandering Mystic (Caster(3)) · <del class='del'>+55</del> pts</td><td>Wandering Mystic (Caster(3)) · <ins class='add'>+60</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Paint (Regeneration) · <del class='del'>+85</del> pts</td><td>War Paint (Regeneration) · <ins class='add'>+80</ins> pts</td></tr>
 </table></div>
-<h3>Plague Monster Eater Mega-Giant</h3><p class='stats'>470 → 440 pts (-30) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-monster-eater-mega-giant'>Plague Monster Eater Mega-Giant</h3><p class='stats'>470 → 440 pts (-30) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>470</del> pts</td><td><ins class='add'>440</ins> pts</td></tr>
@@ -139,7 +143,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wandering Mystic (Caster(3)) · <del class='del'>+55</del> pts</td><td>Wandering Mystic (Caster(3)) · <ins class='add'>+60</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Paint (Regeneration) · <del class='del'>+85</del> pts</td><td>War Paint (Regeneration) · <ins class='add'>+80</ins> pts</td></tr>
 </table></div>
-<h3>Plague Castle Breaker Mega-Giant</h3><p class='stats'>595 → 545 pts (-50) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-castle-breaker-mega-giant'>Plague Castle Breaker Mega-Giant</h3><p class='stats'>595 → 545 pts (-50) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>595</del> pts</td><td><ins class='add'>545</ins> pts</td></tr>
@@ -150,7 +154,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wandering Mystic (Caster(3)) · <del class='del'>+55</del> pts</td><td>Wandering Mystic (Caster(3)) · <ins class='add'>+60</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Paint (Regeneration) · <del class='del'>+85</del> pts</td><td>War Paint (Regeneration) · <ins class='add'>+80</ins> pts</td></tr>
 </table></div>
-<h3>Plague Bone Grinder Ultra-Giant</h3><p class='stats'>620 → 580 pts (-40) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-plague-bone-grinder-ultra-giant'>Plague Bone Grinder Ultra-Giant</h3><p class='stats'>620 → 580 pts (-40) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>620</del> pts</td><td><ins class='add'>580</ins> pts</td></tr>
@@ -173,13 +177,13 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Wandering Mystic (Caster(4)) · <del class='del'>+75</del> pts</td><td>Wandering Mystic (Caster(4)) · <ins class='add'>+80</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Paint (Regeneration) · <del class='del'>+120</del> pts</td><td>War Paint (Regeneration) · <ins class='add'>+115</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <p>No changes.</p>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

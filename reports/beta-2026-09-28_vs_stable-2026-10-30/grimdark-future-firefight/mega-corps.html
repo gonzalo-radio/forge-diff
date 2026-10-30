@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,22 +37,23 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +0 / -0 / ~7</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
-<tr><td>Corp Leader</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>90</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Corp Champion</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>70</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Corp Veteran Gunner</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Corp Fighters</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>70</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Corp Cyber-Spider</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>80</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Corp Veteran Fighters</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>85</td><td class='num'>80</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Corp Support Techy</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>85</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Corp Gunners</td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>90</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Corp Grav-Board Techies</td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>105</td><td class='num'>105</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Corp Spider-Suit</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>170</td><td class='num'>160</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Corp Heavy Spider-Suit</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>2+</td><td class='num'>195</td><td class='num'>190</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-corp-leader'>Corp Leader</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>90</td><td class='num'>90</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-corp-champion'>Corp Champion</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>70</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-corp-veteran-gunner'>Corp Veteran Gunner</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-corp-fighters'>Corp Fighters</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>70</td><td class='num'>70</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-corp-cyber-spider'>Corp Cyber-Spider</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>80</td><td class='num'>80</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-corp-veteran-fighters'>Corp Veteran Fighters</a></td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>85</td><td class='num'>80</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-corp-support-techy'>Corp Support Techy</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>85</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-corp-gunners'>Corp Gunners</a></td><td class='num'>3</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>95</td><td class='num'>90</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-corp-grav-board-techies'>Corp Grav-Board Techies</a></td><td class='num'>3</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>105</td><td class='num'>105</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td><a href='#unit-corp-spider-suit'>Corp Spider-Suit</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>170</td><td class='num'>160</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-corp-heavy-spider-suit'>Corp Heavy Spider-Suit</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>2+</td><td class='num'>195</td><td class='num'>190</td><td class='num'><b class='add'>-5</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Corp Leader</h3><p class='stats'>90 pts · Size 1 · Quality 4+ · Defense 5+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-corp-leader'>Corp Leader</h3><p class='stats'>90 pts · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Hand Weapon and Combat Shield</td><td>Replace Hand Weapon and Combat Shield</td></tr>
@@ -95,7 +99,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Corpo Hitman (Takedown Shot(2)) · <del class='del'>+40</del> pts</td><td>Corpo Hitman (Takedown Shot(2)) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Overseer (Rapid Advance Aura) · <del class='del'>+50</del> pts</td><td>Overseer (Rapid Advance Aura) · <ins class='add'>+55</ins> pts</td></tr>
 </table></div>
-<h3>Corp Champion</h3><p class='stats'>70 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-corp-champion'>Corp Champion</h3><p class='stats'>70 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
@@ -131,7 +135,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Customizer (Ranged Slayer Aura) · <del class='del'>+80</del> pts</td><td>Customizer (Ranged Slayer Aura) · <ins class='add'>+20</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Psy-Hacker (Caster(2)) · <del class='del'>+20</del> pts</td><td>Psy-Hacker (Caster(2)) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Corp Veteran Gunner</h3><p class='stats'>40 pts · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-corp-veteran-gunner'>Corp Veteran Gunner</h3><p class='stats'>40 pts · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Battle Rifle</td><td>Replace Battle Rifle</td></tr>
@@ -149,7 +153,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shred-Mod (18&quot;, A6, Limited, Rending) · <del class='del'>+30</del> pts</td><td>Shred-Mod (18&quot;, A6, Limited, Rending) · <ins class='add'>+25</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Beam-Mod (24&quot;, A6, AP(1), Limited, Decimate) · <del class='del'>+30</del> pts</td><td>Beam-Mod (24&quot;, A6, AP(1), Limited, Decimate) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Corp Fighters</h3><p class='stats'>70 pts · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-corp-fighters'>Corp Fighters</h3><p class='stats'>70 pts · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons and Combat Shields</td><td>Replace all Hand Weapons and Combat Shields</td></tr>
@@ -165,13 +169,13 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons</td><td>Replace all Hand Weapons</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Weapon (A2, Rending) · <del class='del'>+25</del> pts</td><td>Energy Weapon (A2, Rending) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Corp Cyber-Spider</h3><p class='stats'>80 pts · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-corp-cyber-spider'>Corp Cyber-Spider</h3><p class='stats'>80 pts · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Toxin Fang</td><td>Replace Toxin Fang</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cyber-Laser (9&quot;, A4, AP(3), <del class='del'>Ignores Cover,</del> Assault) · <del class='del'>+35</del> pts</td><td>Cyber-Laser (9&quot;, A4, AP(3), <ins class='add'>Anti-Cover,</ins> Assault) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Corp Veteran Fighters</h3><p class='stats'>85 → 80 pts (-5) · Size 3 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-corp-veteran-fighters'>Corp Veteran Fighters</h3><p class='stats'>85 → 80 pts (-5) · Size 3 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>85</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
@@ -199,7 +203,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Energy Weapon (A6, Rending) · <del class='del'>+40</del> pts</td><td>Energy Weapon (A6, Rending) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shock Weapon (A6, Surge) · <del class='del'>+30</del> pts</td><td>Shock Weapon (A6, <ins class='add'>AP(1),</ins> Surge) · <ins class='add'>+40</ins> pts</td></tr>
 </table></div>
-<h3>Corp Support Techy</h3><p class='stats'>95 → 85 pts (-10) · Size 1 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-corp-support-techy'>Corp Support Techy</h3><p class='stats'>95 → 85 pts (-10) · Size 1 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>85</ins> pts</td></tr>
@@ -212,7 +216,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>High-Tech Gear (Versatile Reach Aura) · <del class='del'>+10</del> pts</td><td>High-Tech Gear (Versatile Reach Aura) · <ins class='add'>+20</ins> pts</td></tr>
 </table></div>
-<h3>Corp Gunners</h3><p class='stats'>95 → 90 pts (-5) · Size 3 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-corp-gunners'>Corp Gunners</h3><p class='stats'>95 → 90 pts (-5) · Size 3 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>95</del> pts</td><td><ins class='add'>90</ins> pts</td></tr>
@@ -227,7 +231,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Laser Rifle (18&quot;, A1, AP(3), Deadly(6)) · <del class='del'>+35</del> pts</td><td>Laser Rifle (18&quot;, A1, AP(3), Deadly(6)) · <ins class='add'>+30</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Shredder Rifle (18&quot;, A6, Rending) · <del class='del'>+55</del> pts</td><td>Shredder Rifle (18&quot;, A6, Rending) · <ins class='add'>+45</ins> pts</td></tr>
 </table></div>
-<h3>Corp Grav-Board Techies</h3><p class='stats'>105 pts · Size 3 · Quality 4+ · Defense 5+</p>
+<h3 id='unit-corp-grav-board-techies'>Corp Grav-Board Techies</h3><p class='stats'>105 pts · Size 3 · Quality 4+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace all Hand Weapons and Combat Shields</td><td>Replace all Hand Weapons and Combat Shields</td></tr>
@@ -249,7 +253,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>High-Tech Gear (Versatile Reach Aura) · <del class='del'>+10</del> pts</td><td>High-Tech Gear (Versatile Reach Aura) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h3>Corp Spider-Suit</h3><p class='stats'>170 → 160 pts (-10) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-corp-spider-suit'>Corp Spider-Suit</h3><p class='stats'>170 → 160 pts (-10) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>170</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
@@ -263,7 +267,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade one model with</td><td>Upgrade one model with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>High-Tech Gear (Versatile Reach Aura) · <del class='del'>+15</del> pts</td><td>High-Tech Gear (Versatile Reach Aura) · <ins class='add'>+25</ins> pts</td></tr>
 </table></div>
-<h3>Corp Heavy Spider-Suit</h3><p class='stats'>195 → 190 pts (-5) · Size 1 · Quality 4+ · Defense 2+</p>
+<h3 id='unit-corp-heavy-spider-suit'>Corp Heavy Spider-Suit</h3><p class='stats'>195 → 190 pts (-5) · Size 1 · Quality 4+ · Defense 2+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>195</del> pts</td><td><ins class='add'>190</ins> pts</td></tr>
@@ -272,7 +276,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Triple Plasma Rifles (18&quot;, A6, AP(2)) · <del class='del'>+40</del> pts</td><td>Triple Plasma Rifles (18&quot;, A6, AP(2)) · <ins class='add'>+30</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Beam Cannon (36&quot;, A6, AP(1), Decimate) · <del class='del'>+65</del> pts</td><td>Beam Cannon (36&quot;, A6, AP(1), Decimate) · <ins class='add'>+55</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
 <tr class='mod'><td>✏️</td><td>Increased Shooting Range Mark</td><td><span class='del'>3.6.0 beta:</span> Once per activation, before attacking, pick up to 3 enemy units within 18&quot; in line of sight, which friendly units get +6&quot; range when shooting against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to 3 enemy units within 18&quot; in line of sight, which friendly units get +6&quot; range <ins class='add'>on their weapons</ins> when shooting against once (next time the effect would apply).</td></tr>
@@ -282,11 +286,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Unstoppable in Melee Aura</td><td><span class='del'>3.6.0 beta:</span> This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Unstoppable in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This model&#x27;s unit and up to 2 friendly units picked before the start of the game get Unstoppable <ins class='add'>on its weapons</ins> in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
 <tr class='mod'><td>✏️</td><td>Versatile Reach</td><td><span class='del'>3.6.0 beta:</span> When this unit is activated, pick one effect: until the end of the activation, <del class='del'>when attacking enemies that already finished an activation this round,</del> all models with this rule in this unit either get +4&quot; range when shooting or move +2&quot; when charging.<br><span class='add'>3.6.0:</span> When this unit is activated, pick one effect: until the end of the activation, all models with this rule in this unit either get +4&quot; range when shooting or move +2&quot; when charging.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Cyberspace Vision</td><td><span class='del'>3.6.0 beta:</span> (1) Pick one enemy unit within 18&quot; in line of sight, which friendly units get +6&quot; range when shooting against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (1) Pick one enemy unit within 18&quot; in line of sight, which friendly units get +6&quot; range <ins class='add'>on their weapons</ins> when shooting against once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

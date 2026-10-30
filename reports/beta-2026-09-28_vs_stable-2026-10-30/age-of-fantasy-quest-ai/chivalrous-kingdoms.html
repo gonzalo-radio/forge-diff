@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,63 +37,64 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +0 / -1 / ~9</li>
 <li>Spells: +0 / -0 / ~1</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
 <tr><td>Men-at-Arm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
 <tr><td>Peasant Levy</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
-<tr><td>Peasant Bowman</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Mounted Peasant</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>45</td><td class='num'>40</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Foot Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>40</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Errant Knight</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Vale Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Pledge Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Quest Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Grail Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>Vale Defender</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>100</td><td class='num'>95</td><td class='num'><b class='add'>-5</b></td></tr>
-<tr><td>High Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>125</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Mythical Beast Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>185</td><td class='num'>175</td><td class='num'><b class='add'>-10</b></td></tr>
-<tr><td>Pegasus Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>180</td><td class='num'>205</td><td class='num'><b class='del'>+25</b></td></tr>
-<tr><td>Grail Relic</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>250</td><td class='num'>235</td><td class='num'><b class='add'>-15</b></td></tr>
-<tr><td>Chivalrous Artillery</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>395</td><td class='num'>340</td><td class='num'><b class='add'>-55</b></td></tr>
+<tr><td><a href='#unit-peasant-bowman'>Peasant Bowman</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>40</td><td class='num'>35</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-mounted-peasant'>Mounted Peasant</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>45</td><td class='num'>40</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-foot-knight'>Foot Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>45</td><td class='num'>40</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-errant-knight'>Errant Knight</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-vale-knight'>Vale Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>60</td><td class='num'>55</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-pledge-knight'>Pledge Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-quest-knight'>Quest Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-grail-knight'>Grail Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>75</td><td class='num'>70</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-vale-defender'>Vale Defender</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>100</td><td class='num'>95</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td><a href='#unit-high-champion'>High Champion</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>135</td><td class='num'>125</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-mythical-beast-knight'>Mythical Beast Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>185</td><td class='num'>175</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td><a href='#unit-pegasus-knight'>Pegasus Knight</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>180</td><td class='num'>205</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td><a href='#unit-grail-relic'>Grail Relic</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>250</td><td class='num'>235</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td><a href='#unit-chivalrous-artillery'>Chivalrous Artillery</a></td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>395</td><td class='num'>340</td><td class='num'><b class='add'>-55</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Peasant Bowman</h3><p class='stats'>40 → 35 pts (-5) · Size 1 · Quality 5+ · Defense 6+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-peasant-bowman'>Peasant Bowman</h3><p class='stats'>40 → 35 pts (-5) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>40</del> pts</td><td><ins class='add'>35</ins> pts</td></tr>
 </table></div>
-<h3>Mounted Peasant</h3><p class='stats'>45 → 40 pts (-5) · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-mounted-peasant'>Mounted Peasant</h3><p class='stats'>45 → 40 pts (-5) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
 </table></div>
-<h3>Foot Knight</h3><p class='stats'>45 → 40 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-foot-knight'>Foot Knight</h3><p class='stats'>45 → 40 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Hand Weapon</td><td>Replace Hand Weapon</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Monster Hunting Mace (A6, AP(3), Obliterate) · <del class='del'>+75</del> pts</td><td>Monster Hunting Mace (A6, AP(3), Obliterate) · <ins class='add'>+65</ins> pts</td></tr>
 </table></div>
-<h3>Errant Knight</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-errant-knight'>Errant Knight</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
 </table></div>
-<h3>Vale Knight</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-vale-knight'>Vale Knight</h3><p class='stats'>60 → 55 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>60</del> pts</td><td><ins class='add'>55</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Hand Weapon</td><td>Replace Hand Weapon</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Monster Hunting Spear (A3, AP(1), Obliterate) · <del class='del'>+15</del> pts</td><td>Monster Hunting Spear (A3, AP(1), Obliterate) · <ins class='add'>+10</ins> pts</td></tr>
 </table></div>
-<h3>Pledge Knight</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-pledge-knight'>Pledge Knight</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant · <del class='del'>+10</del> pts</td><td>Sergeant · <ins class='add'>+5</ins> pts</td></tr>
 </table></div>
-<h3>Quest Knight</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-quest-knight'>Quest Knight</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -99,7 +103,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Replace Holy Sword</td><td>Replace Holy Sword</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Monster Hunting Mace (A6, AP(3), Obliterate) · <del class='del'>+70</del> pts</td><td>Monster Hunting Mace (A6, AP(3), Obliterate) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Grail Knight</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-grail-knight'>Grail Knight</h3><p class='stats'>75 → 70 pts (-5) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>75</del> pts</td><td><ins class='add'>70</ins> pts</td></tr>
@@ -109,7 +113,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spiked Flail (A3, Blast(3), Thrust) · <del class='del'>+30</del> pts</td><td>Spiked Flail (A3, Blast(3), Thrust) · <ins class='add'>+25</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Monster Hunting Mace (A6, AP(3), Obliterate) · <del class='del'>+75</del> pts</td><td>Monster Hunting Mace (A6, AP(3), Obliterate) · <ins class='add'>+65</ins> pts</td></tr>
 </table></div>
-<h3>Vale Defender</h3><p class='stats'>100 → 95 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-vale-defender'>Vale Defender</h3><p class='stats'>100 → 95 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>100</del> pts</td><td><ins class='add'>95</ins> pts</td></tr>
@@ -147,7 +151,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Enchanter (Caster(2)) · <del class='del'>+25</del> pts</td><td>Enchanter (Caster(2)) · <ins class='add'>+35</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Paladin (Furious Aura) · <del class='del'>+45</del> pts</td><td>Paladin (Furious Aura) · <ins class='add'>+40</ins> pts</td></tr>
 </table></div>
-<h3>High Champion</h3><p class='stats'>135 → 125 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-high-champion'>High Champion</h3><p class='stats'>135 → 125 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>135</del> pts</td><td><ins class='add'>125</ins> pts</td></tr>
@@ -183,7 +187,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Paladin (Furious Aura) · <del class='del'>+45</del> pts</td><td>Paladin (Furious Aura) · <ins class='add'>+40</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(6)) · <del class='del'>+70</del> pts</td><td>Army Standard Bearer (Fear(6)) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Mythical Beast Knight</h3><p class='stats'>185 → 175 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-mythical-beast-knight'>Mythical Beast Knight</h3><p class='stats'>185 → 175 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>175</ins> pts</td></tr>
@@ -193,7 +197,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dual Hand Weapons (A12) · <del class='del'>+35</del> pts</td><td>Dual Hand Weapons (A12) · <ins class='add'>+30</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A9, AP(2)) · <del class='del'>+60</del> pts</td><td>Great Weapon (A9, AP(2)) · <ins class='add'>+50</ins> pts</td></tr>
 </table></div>
-<h3>Pegasus Knight</h3><p class='stats'>180 → 205 pts (+25) · Size 1 · Quality 4+ · Defense 4+</p>
+<h3 id='unit-pegasus-knight'>Pegasus Knight</h3><p class='stats'>180 → 205 pts (+25) · Size 1 · Quality 4+ · Defense 4+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>180</del> pts</td><td><ins class='add'>205</ins> pts</td></tr>
@@ -204,7 +208,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spiked Flail (A3, Blast(3), Thrust) · <del class='del'>+25</del> pts</td><td>Spiked Flail (A3, Blast(3), Thrust) · <ins class='add'>+20</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Monster Hunting Mace (A6, AP(3), Obliterate) · <del class='del'>+65</del> pts</td><td>Monster Hunting Mace (A6, AP(3), Obliterate) · <ins class='add'>+60</ins> pts</td></tr>
 </table></div>
-<h3>Grail Relic</h3><p class='stats'>250 → 235 pts (-15) · Size 1 · Quality 5+ · Defense 6+</p>
+<h3 id='unit-grail-relic'>Grail Relic</h3><p class='stats'>250 → 235 pts (-15) · Size 1 · Quality 5+ · Defense 6+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>250</del> pts</td><td><ins class='add'>235</ins> pts</td></tr>
@@ -212,7 +216,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Knight&#x27;s Oath (Surge Mark) · <del class='del'>+20</del> pts</td><td>Knight&#x27;s Oath (Surge Mark) · <ins class='add'>+15</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Holy Grenades (9&quot;, A3, Blast(3), Assault, Bane) · <del class='del'>+65</del> pts</td><td>Holy Grenades (9&quot;, A3, Blast(3), Assault, Bane) · <ins class='add'>+55</ins> pts</td></tr>
 </table></div>
-<h3>Chivalrous Artillery</h3><p class='stats'>395 → 340 pts (-55) · Size 1 · Quality 5+ · Defense 5+</p>
+<h3 id='unit-chivalrous-artillery'>Chivalrous Artillery</h3><p class='stats'>395 → 340 pts (-55) · Size 1 · Quality 5+ · Defense 5+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>395</del> pts</td><td><ins class='add'>340</ins> pts</td></tr>
@@ -222,7 +226,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Knight&#x27;s Oath (Surge Mark) · <del class='del'>+20</del> pts</td><td>Knight&#x27;s Oath (Surge Mark) · <ins class='add'>+15</ins> pts</td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='del'><td>➖</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
 <tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
@@ -235,11 +239,11 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Surge Mark</td><td><span class='del'>3.6.0 beta:</span> Once per activation, before attacking, pick up to 3 enemy units within 18&quot; in line of sight, which friendly units gets Surge when attacking against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> Once per activation, before attacking, pick up to 3 enemy units within 18&quot; in line of sight, which friendly units gets Surge <ins class='add'>on their weapons</ins> when attacking against once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Versatile Warrior</td><td><span class='del'>3.6.0 beta:</span> When this unit is activated, pick one effect: until the end of the activation, when <del class='del'>this unit attacks</del> enemies <del class='del'>for the first time each round,</del> all models with this rule in it either get AP(+1) or get +1 to hit rolls.<br><span class='add'>3.6.0:</span> When this unit is activated, pick one effect: until the end of the activation, when <ins class='add'>shooting/charging</ins> enemies <ins class='add'>over 9&quot;/6&quot; away,</ins> all models with this rule in it either get AP(+1) or get +1 to hit rolls.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Curse of the Huntress</td><td><span class='del'>3.6.0 beta:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which friendly units gets Surge against once (next time the effect would apply).<br><span class='add'>3.6.0:</span> (2) Pick up to two enemy units within 18&quot; in line of sight, which friendly units gets Surge <ins class='add'>on their weapons</ins> against once (next time the effect would apply).</td></tr>
 </table></div>
-<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 08:24 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.<br>Generated 2026-10-30 09:41 UTC.</footer></main><script>(function(){var r=document.documentElement,b=document.querySelector('.theme');
 function now(){return r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}
 function label(){b.textContent=now()==='dark'?'☀️ Light mode':'🌙 Dark mode'}
 b.onclick=function(){r.dataset.theme=now()==='dark'?'light':'dark';try{localStorage.setItem('forge-diff-theme',r.dataset.theme)}catch(e){}label()};

@@ -20,7 +20,10 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
+.systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 </style><script>try{var t=localStorage.getItem('forge-diff-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <main><button class='theme' type='button' hidden></button><p><a href='index.html'>← All armies</a></p>
@@ -34,19 +37,20 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <li>Special rules: +3 / -3 / ~4</li>
 <li>Spells: +0 / -0 / ~6</li>
 </ul>
-<h2>Unit profiles</h2><div class='scroll'><table>
+<nav class='toc' id='contents'><b>Contents:</b> <a href='#unit-profiles'>Unit profiles</a> · <a href='#changed-units'>Changed units</a> · <a href='#special-rules'>Special rules</a> · <a href='#spells'>Spells</a></nav><a class='toplink' href='#contents'>↑ Contents</a>
+<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>
 <tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.5.1 (2026-09-28)</th><th>Cost 3.6.0 beta</th><th>Δ</th></tr>
-<tr><td>Change Half-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>560</td><td class='num'>515</td><td class='num'><b class='add'>-45</b></td></tr>
-<tr><td>Change Drunken Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>870</td><td class='num'>830</td><td class='num'><b class='add'>-40</b></td></tr>
-<tr><td>Change Crusher Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>895</td><td class='num'>870</td><td class='num'><b class='add'>-25</b></td></tr>
-<tr><td>Change Wall Smasher Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>925</td><td class='num'>1070</td><td class='num'><b class='del'>+145</b></td></tr>
-<tr><td>Change Monster Eater Mega-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>1470</td><td class='num'>1345</td><td class='num'><b class='add'>-125</b></td></tr>
-<tr><td>Change Battle Stomper Mega-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>1495</td><td class='num'>1405</td><td class='num'><b class='add'>-90</b></td></tr>
-<tr><td>Change Castle Breaker Mega-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>1580</td><td class='num'>1725</td><td class='num'><b class='del'>+145</b></td></tr>
-<tr><td>Change Bone Grinder Ultra-Giant</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>2100</td><td class='num'>1790</td><td class='num'><b class='add'>-310</b></td></tr>
+<tr><td><a href='#unit-change-half-giant'>Change Half-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>560</td><td class='num'>515</td><td class='num'><b class='add'>-45</b></td></tr>
+<tr><td><a href='#unit-change-drunken-giant'>Change Drunken Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>870</td><td class='num'>830</td><td class='num'><b class='add'>-40</b></td></tr>
+<tr><td><a href='#unit-change-crusher-giant'>Change Crusher Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>895</td><td class='num'>870</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td><a href='#unit-change-wall-smasher-giant'>Change Wall Smasher Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>925</td><td class='num'>1070</td><td class='num'><b class='del'>+145</b></td></tr>
+<tr><td><a href='#unit-change-monster-eater-mega-giant'>Change Monster Eater Mega-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>1470</td><td class='num'>1345</td><td class='num'><b class='add'>-125</b></td></tr>
+<tr><td><a href='#unit-change-battle-stomper-mega-giant'>Change Battle Stomper Mega-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>1495</td><td class='num'>1405</td><td class='num'><b class='add'>-90</b></td></tr>
+<tr><td><a href='#unit-change-castle-breaker-mega-giant'>Change Castle Breaker Mega-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>1580</td><td class='num'>1725</td><td class='num'><b class='del'>+145</b></td></tr>
+<tr><td><a href='#unit-change-bone-grinder-ultra-giant'>Change Bone Grinder Ultra-Giant</a></td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>2100</td><td class='num'>1790</td><td class='num'><b class='add'>-310</b></td></tr>
 </table></div>
-<h2>Changed units</h2>
-<h3>Change Half-Giant</h3><p class='stats'>560 → 515 pts (-45) · Size 1 · Quality 4+ · Defense 3+</p>
+<h2 id='changed-units'>Changed units</h2>
+<h3 id='unit-change-half-giant'>Change Half-Giant</h3><p class='stats'>560 → 515 pts (-45) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>560</del> pts</td><td><ins class='add'>515</ins> pts</td></tr>
@@ -74,7 +78,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Paint (Regeneration) · <del class='del'>+115</del> pts</td><td>War Paint (Regeneration) · <ins class='add'>+105</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Vanguard Giant (Scout, Strider) · <del class='del'>+125</del> pts</td><td>Vanguard Giant (Scout, Strider) · <ins class='add'>+130</ins> pts</td></tr>
 </table></div>
-<h3>Change Drunken Giant</h3><p class='stats'>870 → 830 pts (-40) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-change-drunken-giant'>Change Drunken Giant</h3><p class='stats'>870 → 830 pts (-40) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>870</del> pts</td><td><ins class='add'>830</ins> pts</td></tr>
@@ -99,7 +103,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stumbling Giant (Bounding, Strider) · <del class='del'>+200</del> pts</td><td>Stumbling Giant (Bounding, Strider) · <ins class='add'>+125</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Paint (Regeneration) · <del class='del'>+170</del> pts</td><td>War Paint (Regeneration) · <ins class='add'>+155</ins> pts</td></tr>
 </table></div>
-<h3>Change Crusher Giant</h3><p class='stats'>895 → 870 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-change-crusher-giant'>Change Crusher Giant</h3><p class='stats'>895 → 870 pts (-25) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>895</del> pts</td><td><ins class='add'>870</ins> pts</td></tr>
@@ -127,7 +131,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Hurl Log</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throw Stones (18&quot;, A6, Blast(3), Indirect) · +-5 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Change Wall Smasher Giant</h3><p class='stats'>925 → 1070 pts (+145) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-change-wall-smasher-giant'>Change Wall Smasher Giant</h3><p class='stats'>925 → 1070 pts (+145) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>925</del> pts</td><td><ins class='add'>1070</ins> pts</td></tr>
@@ -145,7 +149,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Hurl Log</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throw Stones (18&quot;, A6, Blast(3), Indirect) · +-10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Change Monster Eater Mega-Giant</h3><p class='stats'>1470 → 1345 pts (-125) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-change-monster-eater-mega-giant'>Change Monster Eater Mega-Giant</h3><p class='stats'>1470 → 1345 pts (-125) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1470</del> pts</td><td><ins class='add'>1345</ins> pts</td></tr>
@@ -171,7 +175,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hungry Giant (Strider) · <del class='del'>+100</del> pts</td><td>Hungry Giant (Strider) · <ins class='add'>+75</ins> pts</td></tr>
 <tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>War Paint (Regeneration) · <del class='del'>+305</del> pts</td><td>War Paint (Regeneration) · <ins class='add'>+260</ins> pts</td></tr>
 </table></div>
-<h3>Change Battle Stomper Mega-Giant</h3><p class='stats'>1495 → 1405 pts (-90) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-change-battle-stomper-mega-giant'>Change Battle Stomper Mega-Giant</h3><p class='stats'>1495 → 1405 pts (-90) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1495</del> pts</td><td><ins class='add'>1405</ins> pts</td></tr>
@@ -203,7 +207,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Mega Fist</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Giant Shield (Fortified) · +130 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Change Castle Breaker Mega-Giant</h3><p class='stats'>1580 → 1725 pts (+145) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-change-castle-breaker-mega-giant'>Change Castle Breaker Mega-Giant</h3><p class='stats'>1580 → 1725 pts (+145) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1580</del> pts</td><td><ins class='add'>1725</ins> pts</td></tr>
@@ -223,7 +227,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace any Throw Rock</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Hurl Trunk (12&quot;, A9, AP(2), Deadly(3)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h3>Change Bone Grinder Ultra-Giant</h3><p class='stats'>2100 → 1790 pts (-310) · Size 1 · Quality 4+ · Defense 3+</p>
+<h3 id='unit-change-bone-grinder-ultra-giant'>Change Bone Grinder Ultra-Giant</h3><p class='stats'>2100 → 1790 pts (-310) · Size 1 · Quality 4+ · Defense 3+</p>
 <div class='scroll'><table class='unit'>
 <tr><th></th><th></th><th>3.5.1 (2026-09-28)</th><th>3.6.0 beta</th></tr>
 <tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>2100</del> pts</td><td><ins class='add'>1790</ins> pts</td></tr>
@@ -258,7 +262,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ultra Club (A36, AP(1), Precise) · +135 pts</del></td><td><span class='muted'>—</span></td></tr>
 <tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Ultra Sword (A36, AP(1), Rending) · +140 pts</del></td><td><span class='muted'>—</span></td></tr>
 </table></div>
-<h2>Special rules</h2>
+<h2 id='special-rules'>Special rules</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='add'><td>➕</td><td>Enhanced Changebound</td><td>If most models in this unit have Changebound, enemies attacking them always get -1 to hit rolls from Changebound (instead of only the first time they are attacked each round).</td></tr>
 <tr class='add'><td>➕</td><td>Enhanced Screened</td><td>If most models in this unit have Screened, enemies attacking them always get -1 to hit rolls from Screened (instead of only the first time they are attacked each round).</td></tr>
@@ -271,7 +275,7 @@ footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:
 <tr class='mod'><td>✏️</td><td>Fortified</td><td><span class='del'>3.5.1 (2026-09-28):</span> When units where <del class='del'>all</del> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).<br><span class='add'>3.6.0 beta:</span> When units where <ins class='add'>most</ins> models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).</td></tr>
 <tr class='mod'><td>✏️</td><td>Screened</td><td><span class='del'>3.5.1 (2026-09-28):</span> <del class='del'>When units where all</del> models have this <del class='del'>rule</del> are <del class='del'>shot or charged from over 9&quot; away,</del> enemy units get -1 to hit rolls.<br><span class='add'>3.6.0 beta:</span> <ins class='add'>If most</ins> models <ins class='add'>in this unit</ins> have this <ins class='add'>rule, the first time they</ins> are <ins class='add'>attacked each round,</ins> enemy units <ins class='add'>attacking them</ins> get -1 to hit rolls.</td></tr>
 </table></div>
-<h2>Spells</h2>
+<h2 id='spells'>Spells</h2>
 <div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
 <tr class='mod'><td>✏️</td><td>Breath of Change</td><td><span class='del'>3.5.1 (2026-09-28):</span> (2) Pick up to <del class='del'>four</del> friendly units within 12&quot;, which get Bane when Shooting once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (2) Pick up to <ins class='add'>two</ins> friendly units within 12&quot;, which get Bane when Shooting once (next time the effect would apply).</td></tr>
 <tr class='mod'><td>✏️</td><td>Change Boon</td><td><span class='del'>3.5.1 (2026-09-28):</span> (3) Pick up to <del class='del'>six</del> friendly units within <del class='del'>12&quot;,</del> which get Changebound <del class='del'>Boost</del> once (next time the effect would apply).<br><span class='add'>3.6.0 beta:</span> (3) Pick up to <ins class='add'>three</ins> friendly units within <ins class='add'>18&quot;,</ins> which get <ins class='add'>Enhanced</ins> Changebound once (next time the effect would apply).</td></tr>
