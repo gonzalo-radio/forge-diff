@@ -465,7 +465,9 @@ td.sub{text-align:right}
 tr.add,tr.del,tr.mod{color:inherit}
 a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
 ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
-footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer{margin-top:3rem;padding:.8rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+nav.toc{margin:1rem 0;font-size:14px}
+a.toplink,a.toplink:visited{position:fixed;right:16px;bottom:16px;padding:4px 10px;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;text-decoration:none}
 .systems a{white-space:nowrap}
 .theme{float:right;margin-left:12px;padding:4px 10px;font:inherit;font-size:13px;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;cursor:pointer}
 """
@@ -485,37 +487,64 @@ def render_html(d, meta, back_link=None):
                      generated=meta.get("generated"))
 
 
+def section_id(title):
+    return re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+
+
+def unit_anchors(changed):
+    """{id(new unit): HTML id} for the units with a section under "Changed units"."""
+    anchors = {}
+    for _, n, _ in changed:
+        base = anchor = f"unit-{section_id(n['name'])}"
+        copy = 1
+        while anchor in anchors.values():  # books can have two units with the same name
+            copy += 1
+            anchor = f"{base}-{copy}"
+        anchors[id(n)] = anchor
+    return anchors
+
+
+def html_toc(d):
+    titles = ["Unit profiles", "New units" if d["units_added"] else None, "Removed units" if d["units_removed"] else None,
+              "Changed units", "Special rules", "Spells"]
+    links = " · ".join(f"<a href='#{section_id(t)}'>{t}</a>" for t in titles if t)
+    return f"<nav class='toc' id='contents'><b>Contents:</b> {links}</nav><a class='toplink' href='#contents'>↑ Contents</a>"
+
+
 def html_body(d, meta):
     e = html.escape
+    anchors = unit_anchors(d["units_changed"])
     out = [f"<h1>{e(meta['name'])} — changes {e(meta['old'])} → {e(meta['new'])}</h1>",
            f"<p class='muted'>{e(meta['system'])}. <code>{e(meta['old_file'])}</code> ({e(book_info(meta, 'old'))}) → "
            f"<code>{e(meta['new_file'])}</code> ({e(book_info(meta, 'new'))})</p>",
-           "<ul class='summary'>", *summary_lines(d, lambda s: f"<li>{e(s)}</li>"), "</ul>"]
+           "<ul class='summary'>", *summary_lines(d, lambda s: f"<li>{e(s)}</li>"), "</ul>", html_toc(d)]
 
-    out += ["<h2>Unit profiles</h2><div class='scroll'><table>",
+    out += ["<h2 id='unit-profiles'>Unit profiles</h2><div class='scroll'><table>",
             f"<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th>"
             f"<th>Cost {e(meta['old'])}</th><th>Cost {e(meta['new'])}</th><th>Δ</th></tr>"]
     for o, n in d["costs"]:
         delta = n["cost"] - o["cost"]
         cls = "" if not delta else ("del" if delta > 0 else "add")
-        name = n["name"] if o["name"] == n["name"] else f"{o['name']} → {n['name']}"
+        name = e(n["name"] if o["name"] == n["name"] else f"{o['name']} → {n['name']}")
+        if id(n) in anchors:
+            name = f"<a href='#{anchors[id(n)]}'>{name}</a>"
         stats = "".join(f"<td class='num'>{stat_cell(o, n, f, lambda t, c: f'<b class={c}>{e(t)}</b>' if c else e(t))}</td>"
                         for f in PROFILE_STATS)
-        out.append(f"<tr><td>{e(name)}</td>{stats}<td class='num'>{o['cost']}</td><td class='num'>{n['cost']}</td>"
+        out.append(f"<tr><td>{name}</td>{stats}<td class='num'>{o['cost']}</td><td class='num'>{n['cost']}</td>"
                    f"<td class='num'><b class='{cls}'>{'%+d' % delta if delta else '='}</b></td></tr>")
     out.append("</table></div>")
 
     for title, units, kind in (("New units", d["units_added"], "add"), ("Removed units", d["units_removed"], "del")):
         if units:
-            out += [f"<h2>{title}</h2><div class='scroll'><table>"]
+            out += [f"<h2 id='{section_id(title)}'>{title}</h2><div class='scroll'><table>"]
             out += [f"<tr class='{kind}'><td><b>{e(u['name'])}</b></td><td>{e(unit_summary(u))}</td></tr>" for u in units]
             out.append("</table></div>")
 
-    out.append("<h2>Changed units</h2>")
+    out.append("<h2 id='changed-units'>Changed units</h2>")
     if not d["units_changed"]:
         out.append("<p>No changes.</p>")
     for o, n, rows in d["units_changed"]:
-        out += [f"<h3>{e(n['name'])}</h3><p class='stats'>{e(unit_header(o, n))}</p>",
+        out += [f"<h3 id='{anchors[id(n)]}'>{e(n['name'])}</h3><p class='stats'>{e(unit_header(o, n))}</p>",
                 "<div class='scroll'><table class='unit'>",
                 f"<tr><th></th><th></th><th>{e(meta['old'])}</th><th>{e(meta['new'])}</th></tr>"]
         for kind, what, a, b in rows:
@@ -546,7 +575,7 @@ def html_rules_section(title, entry, labels=("Before", "After")):
     added, removed, changed, *notes = entry
     notes = notes[0] if notes else {}
     moved = {k: v for k, v in notes.items() if k not in changed and v != "core rule"}
-    out = [f"<h2>{title}</h2>"]
+    out = [f"<h2 id='{section_id(title)}'>{title}</h2>"]
     if not (added or removed or changed or moved):
         return out + ["<p>No changes.</p>"]
     out.append("<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>")

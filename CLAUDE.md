@@ -150,6 +150,7 @@ python opr_diff.py old.json new.json [-o output_name] [--core-old data/snapshots
   - Books that only exist on one side are marked with ➕ / ➖.
   - Links to `core_rules.html`.
 - **Profile table:** at the top, with Size, Quality, Defense, the cost of each version and Δ. Quality and Defense are shown as `3+`; a higher number is worse, so it goes in red.
+- **Navigation in army pages:** a Contents line above the profile table links each section, and a fixed `↑ Contents` link returns to it. Units in the profile table link to their section under Changed units when they have one.
 - **Changed units:**
   - One table per unit whose column headers are just the version labels (`3.5.1 | 3.6.0`), not "Before/After".
   - One row per changed element.
