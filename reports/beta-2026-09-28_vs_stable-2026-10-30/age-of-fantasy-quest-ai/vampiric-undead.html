@@ -1,0 +1,490 @@
+<title>Vampiric Undead 3.6.0 beta → 3.6.0 · Forge Diff</title>
+<meta charset='utf-8'><style>
+:root{--bg:#fafaf8;--fg:#1d1d1b;--muted:#6b6b66;--line:#e2e1dc;--add:#e5f4e8;--add-fg:#1f6b34;
+--del:#fbe6e4;--del-fg:#a3261b;--mod:#fdf3dc;--mod-fg:#8a5a00;--card:#fff;--sec:#f0efea;--link:#1a5fb4;--link-visited:#6a3fb0}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ecebe6;--muted:#9c9b95;--line:#34332f;
+--add:#173322;--add-fg:#8fd6a4;--del:#3b1a17;--del-fg:#f0a39b;--mod:#382c12;--mod-fg:#f0cd7a;--card:#1f1f1d;--sec:#2a2a27;--link:#8cb8ff;--link-visited:#c4a8ff}}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0;padding:24px 16px}
+main{max-width:1100px;margin:auto}h1{font-size:1.6rem;margin:0 0 4px}h2{margin-top:2.2rem;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{margin:1.8rem 0 .1rem}p.stats{margin:0 0 .5rem;color:var(--muted)}.muted{color:var(--muted);font-size:13px}.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:14px}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.unit td:first-child{width:1.6em;text-align:center}table.unit td:nth-child(2){width:5.5em;color:var(--muted)}
+table.unit td:nth-child(3),table.unit td:nth-child(4){width:45%}
+tr.add td{background:var(--add)}tr.del td{background:var(--del)}tr.mod td{background:var(--mod)}
+tr.sec td{font-weight:600;border-top:2px solid var(--muted)}tr.sec:not(.add):not(.del):not(.mod) td{background:var(--sec)}
+td.sub{text-align:right}
+.add{color:var(--add-fg)}.del{color:var(--del-fg)}.mod{color:var(--mod-fg)}b.add,b.del,b.mod,ins,del{font-weight:600}ins,del{text-decoration:none}
+tr.add,tr.del,tr.mod{color:inherit}
+a{color:var(--link);text-underline-offset:2px}a:visited{color:var(--link-visited)}a:hover{text-decoration-thickness:2px}
+ul.summary{background:var(--card);border:1px solid var(--line);padding:12px 12px 12px 32px}
+footer{margin-top:3rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style><main><p><a href='index.html'>← All armies</a></p>
+<h1>Vampiric Undead — changes 3.6.0 beta → 3.6.0</h1>
+<p class='muted'>age-of-fantasy-quest-ai. <code>beta 2026-09-28: Vampiric Undead</code> (versionString 3.5.1, edited 2026-09-10, modified 2026-09-11) → <code>stable 2026-10-30: Vampiric Undead</code> (versionString 3.6.0, edited 2026-10-13, modified 2026-10-29)</p>
+<ul class='summary'>
+<li>New units: 0</li>
+<li>Removed units: 0</li>
+<li>Changed units: 33 (29 with cost changes)</li>
+<li>Profile changes: Quality 0, Defense 0, Size 0</li>
+<li>Special rules: +0 / -1 / ~7</li>
+<li>Spells: +0 / -0 / ~0</li>
+</ul>
+<h2>Unit profiles</h2><div class='scroll'><table>
+<tr><th>Unit</th><th>Size</th><th>Quality</th><th>Defense</th><th>Cost 3.6.0 beta</th><th>Cost 3.6.0</th><th>Δ</th></tr>
+<tr><td>Drained Soldier</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>30</td><td class='num'>30</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Stitched Zombie</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>35</td><td class='num'>35</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Drained Archer</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>45</td><td class='num'>40</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Skeleton Guard</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>40</td><td class='num'>40</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Ghoul</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>55</td><td class='num'>50</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Zombie Wolf</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>50</td><td class='num'>50</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Skeleton Watch</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Vampire Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Skeleton Knight</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>65</td><td class='num'>60</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Vampire Knight</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>90</td><td class='num'>80</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Drained Leader</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>110</td><td class='num'>105</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Skeleton Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>140</td><td class='num'>135</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Bat Swarm</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>6+</td><td class='num'>135</td><td class='num'>135</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Stitched Butcher</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>165</td><td class='num'>155</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Ghoul Horror</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>175</td><td class='num'>160</td><td class='num'><b class='add'>-15</b></td></tr>
+<tr><td>Ghoul Champion</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>170</td><td class='num'>165</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Giant Bat</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>5+</td><td class='num'>170</td><td class='num'>165</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Latmyir The Mad</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>160</td><td class='num'>180</td><td class='num'><b class='del'>+20</b></td></tr>
+<tr><td>Ghoul Beast Rider</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>6+</td><td class='num'>185</td><td class='num'>180</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Vampire Master</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>210</td><td class='num'>200</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Bat Horror</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>210</td><td class='num'>205</td><td class='num'><b class='add'>-5</b></td></tr>
+<tr><td>Werewolf</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>235</td><td class='num'>225</td><td class='num'><b class='add'>-10</b></td></tr>
+<tr><td>Captain Blackfang</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>315</td><td class='num'>285</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td>Vampiric Artillery</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>5+</td><td class='num'>405</td><td class='num'>350</td><td class='num'><b class='add'>-55</b></td></tr>
+<tr><td>Maiden Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>455</td><td class='num'>365</td><td class='num'><b class='add'>-90</b></td></tr>
+<tr><td>Corpse Wagon</td><td class='num'>1</td><td class='num'>5+</td><td class='num'>3+</td><td class='num'>380</td><td class='num'>380</td><td class='num'><b class=''>=</b></td></tr>
+<tr><td>Werewolf Champion</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>470</td><td class='num'>440</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td>Bat Beast</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>470</td><td class='num'>445</td><td class='num'><b class='add'>-25</b></td></tr>
+<tr><td>Funeral Coach</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>490</td><td class='num'>460</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td>Deathly Chariot</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>3+</td><td class='num'>500</td><td class='num'>470</td><td class='num'><b class='add'>-30</b></td></tr>
+<tr><td>Lady Navleva</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>560</td><td class='num'>585</td><td class='num'><b class='del'>+25</b></td></tr>
+<tr><td>Gremyir &amp; Milyazha</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>4+</td><td class='num'>675</td><td class='num'>615</td><td class='num'><b class='add'>-60</b></td></tr>
+<tr><td>Zombie Dragon</td><td class='num'>1</td><td class='num'>4+</td><td class='num'>4+</td><td class='num'>1075</td><td class='num'>950</td><td class='num'><b class='add'>-125</b></td></tr>
+<tr><td>Bat Dragon</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>3+</td><td class='num'>1130</td><td class='num'>1070</td><td class='num'><b class='add'>-60</b></td></tr>
+<tr><td>Butcher Titan</td><td class='num'>1</td><td class='num'>3+</td><td class='num'>2+</td><td class='num'>1985</td><td class='num'>1860</td><td class='num'><b class='add'>-125</b></td></tr>
+</table></div>
+<h2>Changed units</h2>
+<h3>Stitched Zombie</h3><p class='stats'>35 pts · Size 1 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Infected Bite</td><td>Replace Infected Bite</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Grasping Claws (A3, Surge) · +5 pts</td><td>Grasping Claws (A3, <ins class='add'>AP(1),</ins> Surge) · +5 pts</td></tr>
+</table></div>
+<h3>Drained Archer</h3><p class='stats'>45 → 40 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>45</del> pts</td><td><ins class='add'>40</ins> pts</td></tr>
+</table></div>
+<h3>Skeleton Guard</h3><p class='stats'>40 pts · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Cursed Blade (A3, Fragment)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A3, Parry(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Hand Weapon</del></td><td>Replace <ins class='add'>Cursed Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3, Parry(1)) · free</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A3, Rending) · <del class='del'>+10</del> pts</td><td>Halberd (A3, Rending) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Cursed Blade (A3, Fragment) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Ghoul</h3><p class='stats'>55 → 50 pts (-5) · Size 1 · Quality 4+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>55</del> pts</td><td><ins class='add'>50</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Cursed Blade (A3, Fragment)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Toxin Claws (A3, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Toxin Claws</del></td><td>Replace <ins class='add'>Cursed Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxin Claws (A3, Bane) · +5 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Cursed Blade (A3, Fragment) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant · <del class='del'>+10</del> pts</td><td>Sergeant · <ins class='add'>+5</ins> pts</td></tr>
+</table></div>
+<h3>Skeleton Watch</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant · <del class='del'>+20</del> pts</td><td>Sergeant · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Cursed Crossbow</td><td>Replace Cursed Crossbow</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Crossbow (18&quot;, A3, Rending) · <del class='del'>+5</del> pts</td><td>Crossbow (18&quot;, A3, Rending) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hand-Held Bolt Thrower (18&quot;, A3, AP(3), Deadly(3)) · <del class='del'>+80</del> pts</td><td>Hand-Held Bolt Thrower (18&quot;, A3, AP(3), Deadly(3)) · <ins class='add'>+70</ins> pts</td></tr>
+</table></div>
+<h3>Vampire Champion</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Cursed Blade</td><td>Replace Cursed Blade</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hand Weapon (A3, Parry(1)) · <del class='del'>+-5 pts</del></td><td>Hand Weapon (A3, Parry(1)) · <ins class='add'>free</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lunar Mace (A3, AP(1), Blast(3)) · <del class='del'>+45</del> pts</td><td>Lunar Mace (A3, AP(1), Blast(3)) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sacrificial Axe (A3, AP(4), Deadly(3)) · <del class='del'>+120</del> pts</td><td>Sacrificial Axe (A3, AP(4), Deadly(3)) · <ins class='add'>+105</ins> pts</td></tr>
+</table></div>
+<h3>Skeleton Knight</h3><p class='stats'>65 → 60 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>65</del> pts</td><td><ins class='add'>60</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Cursed Blade (A3, Fragment)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Hand Weapon (A3, Parry(1))</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Hand Weapon</del></td><td>Replace <ins class='add'>Cursed Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A3, Parry(1)) · free</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Cursed Blade (A3, Fragment) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Vampire Knight</h3><p class='stats'>90 → 80 pts (-10) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>90</del> pts</td><td><ins class='add'>80</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Cursed Blade</td><td>Replace Cursed Blade</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hand Weapon (A3, Parry(1)) · <del class='del'>+-5 pts</del></td><td>Hand Weapon (A3, Parry(1)) · <ins class='add'>free</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cursed Bolts (9&quot;, A3, Assault, Fragment) · <del class='del'>+20</del> pts</td><td>Cursed Bolts (9&quot;, A3, Assault, Fragment) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dark Bolts (9&quot;, A3, Assault, Bane) · <del class='del'>+25</del> pts</td><td>Dark Bolts (9&quot;, A3, Assault, Bane) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lunar Mace (A3, AP(1), Blast(3)) · <del class='del'>+45</del> pts</td><td>Lunar Mace (A3, AP(1), Blast(3)) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sacrificial Axe (A3, AP(4), Deadly(3)) · <del class='del'>+120</del> pts</td><td>Sacrificial Axe (A3, AP(4), Deadly(3)) · <ins class='add'>+105</ins> pts</td></tr>
+</table></div>
+<h3>Drained Leader</h3><p class='stats'>110 → 105 pts (-5) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>110</del> pts</td><td><ins class='add'>105</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Spear (A9, AP(1), Counter, Brace(1)) · <del class='del'>+25</del> pts</td><td>Master Spear (A9, AP(1), Counter, Brace(1)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Halberd (A9, AP(1), Rending) · <del class='del'>+35</del> pts</td><td>Master Halberd (A9, AP(1), Rending) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Great Weapon (A9, AP(4)) · <del class='del'>+35</del> pts</td><td>Master Great Weapon (A9, AP(4)) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Necromancer Staff (A6, Spell Amplifier) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Bow (24&quot;, A9), Strike (A3) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sling (12&quot;, A3, Assault), Hand Weapon (A9, Parry(3)) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapon (2)</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Bow (24&quot;, A9), Strike (A3) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Necromancer Staff (A6, Spell Amplifier) · +10 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Sling (12&quot;, A3, Assault), Spear (A9, Counter, Brace(1)) · +20 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Hand Weapon</del></td><td>Replace <ins class='add'>Spear</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A9, Parry(3)) · +-5 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A9, AP(2)) · <del class='del'>+20</del> pts</td><td>Great Weapon (A9, AP(2)) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A9, Rending) · <del class='del'>+25</del> pts</td><td>Halberd (A9, Rending) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Spear (A9, Counter, Brace(1)) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Sling</td><td>Replace Sling</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dark Bolts (9&quot;, A3, Assault, Bane) · <del class='del'>+10</del> pts</td><td>Dark Bolts (9&quot;, A3, Assault, Bane) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Rapid Bow</td><td>Replace Rapid Bow</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Deadly Bolts (9&quot;, A3, AP(2), Deadly(3), Assault) · <del class='del'>+40</del> pts</td><td>Deadly Bolts (9&quot;, A3, AP(2), Deadly(3), Assault) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunt Master (Piercing Marksman Aura) · <del class='del'>+40</del> pts</td><td>Hunt Master (Piercing Marksman Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Necromancer (Caster(2)) · <del class='del'>+25</del> pts</td><td>Necromancer (Caster(2)) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Bringer (Stealth Aura) · <del class='del'>+55</del> pts</td><td>Night Bringer (Stealth Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Necromancer (Caster(3)) · <del class='del'>+40</del> pts</td><td>Master Necromancer (Caster(3)) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Village Chief (Scout Aura) · <del class='del'>+80</del> pts</td><td>Village Chief (Scout Aura) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Corpse Master (Reanimation Aura) · <del class='del'>+85</del> pts</td><td>Great Corpse Master (Reanimation Aura) · <ins class='add'>+90</ins> pts</td></tr>
+</table></div>
+<h3>Skeleton Champion</h3><p class='stats'>140 → 135 pts (-5) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>140</del> pts</td><td><ins class='add'>135</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Cursed Blade (A9, AP(1), Fragment) · <del class='del'>+30</del> pts</td><td>Master Cursed Blade (A9, AP(1), Fragment) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Halberd (A9, AP(1), Rending) · <del class='del'>+35</del> pts</td><td>Master Halberd (A9, AP(1), Rending) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Lance (A9, AP(1), Thrust) · <del class='del'>+35</del> pts</td><td>Master Lance (A9, AP(1), Thrust) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Spear (A9, AP(1), Counter, Brace(1)) · <del class='del'>+40</del> pts</td><td>Master Spear (A9, AP(1), Counter, Brace(1)) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Great Weapon (A9, AP(4)) · <del class='del'>+55</del> pts</td><td>Master Great Weapon (A9, AP(4)) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throwing Daggers (12&quot;, A3, Assault), Hand Weapon (A9, Parry(3)) · +20 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Cursed Crossbow (18&quot;, A9, Fragment), Strike (A3) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapon (2)</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Daggers (12&quot;, A3, Assault), Cursed Blade (A9, Fragment) · +20 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Cursed Crossbow (18&quot;, A9, Fragment), Strike (A3) · +20 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Hand Weapon</del></td><td>Replace <ins class='add'>Cursed Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Hand Weapon (A9, Parry(3)) · free</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lance (A9, Thrust) · <del class='del'>+15</del> pts</td><td>Lance (A9, Thrust) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A9, Counter, Brace(1)) · <del class='del'>+15</del> pts</td><td>Spear (A9, Counter, Brace(1)) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A9, Rending) · <del class='del'>+25</del> pts</td><td>Halberd (A9, Rending) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A9, AP(2)) · <del class='del'>+35</del> pts</td><td>Great Weapon (A9, AP(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Cursed Blade (A9, Fragment) · +10 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Throwing Dagger</td><td>Replace Throwing Dagger</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cursed Bolts (9&quot;, A3, Assault, Fragment) · <del class='del'>+10</del> pts</td><td>Cursed Bolts (9&quot;, A3, Assault, Fragment) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dark Bolts (9&quot;, A3, Assault, Bane) · <del class='del'>+10</del> pts</td><td>Dark Bolts (9&quot;, A3, Assault, Bane) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Rapid Cursed Crossbow</td><td>Replace Rapid Cursed Crossbow</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rapid Crossbow (18&quot;, A9, Rending) · <del class='del'>+20</del> pts</td><td>Rapid Crossbow (18&quot;, A9, Rending) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Deadly Bolts (9&quot;, A3, AP(2), Deadly(3), Assault) · <del class='del'>+50</del> pts</td><td>Deadly Bolts (9&quot;, A3, AP(2), Deadly(3), Assault) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Skeletal Steed (Fast, Impact(3)) · <del class='del'>+35</del> pts</td><td>Skeletal Steed (Fast, Impact(3)) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Abyssal Beast (Jagged Claws (A18, Shred), Defense(1), Fear(3), Strider, Tough(18)) · <del class='del'>+470</del> pts</td><td>Abyssal Beast (Jagged Claws (A18, Shred), Defense(1), Fear(3), Strider, Tough(18)) · <ins class='add'>+450</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Awakened Lord (Shred in Melee Aura) · <del class='del'>+35</del> pts</td><td>Awakened Lord (Shred in Melee Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunt Master (Piercing Marksman Aura) · <del class='del'>+40</del> pts</td><td>Hunt Master (Piercing Marksman Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Bringer (Stealth Aura) · <del class='del'>+55</del> pts</td><td>Night Bringer (Stealth Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Army Standard Bearer (Fear(6)) · <del class='del'>+70</del> pts</td><td>Army Standard Bearer (Fear(6)) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Ancient Count (Scout Aura) · <del class='del'>+90</del> pts</td><td>Ancient Count (Scout Aura) · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Commander (No Retreat Aura) · <del class='del'>+85</del> pts</td><td>Commander (No Retreat Aura) · <ins class='add'>+90</ins> pts</td></tr>
+</table></div>
+<h3>Bat Swarm</h3><p class='stats'>135 pts · Size 1 · Quality 5+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxin Fangs (A9, Bane)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Frenzied Bats (A9, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Toxin Fang</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Frenzied Bats (A9, AP(1), Surge) · +20 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Frenzied Bat</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sharp Fangs (A9, Rending) · +45 pts</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Stitched Butcher</h3><p class='stats'>165 → 155 pts (-10) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>165</del> pts</td><td><ins class='add'>155</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Slicing Blade (A9, Surge) · <del class='del'>+5</del> pts</td><td>Slicing Blade (A9, <ins class='add'>AP(1),</ins> Surge) · <ins class='add'>+30</ins> pts</td></tr>
+</table></div>
+<h3>Ghoul Horror</h3><p class='stats'>175 → 160 pts (-15) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>175</del> pts</td><td><ins class='add'>160</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Cursed Blade (A9, Fragment)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Toxin Claws (A9, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Cursed Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxin Claws (A9, Bane) · +10 pts</ins></td></tr>
+<tr class='del sec'><td>➖</td><td>Upgrade</td><td><del class='del'>Replace Toxin Claws</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Cursed Blade (A9, Fragment) · free</del></td><td><span class='muted'>—</span></td></tr>
+</table></div>
+<h3>Ghoul Champion</h3><p class='stats'>170 → 165 pts (-5) · Size 1 · Quality 4+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>170</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Cursed Blade (A9, AP(1), Fragment) · <del class='del'>+30</del> pts</td><td>Master Cursed Blade (A9, AP(1), Fragment) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sling (12&quot;, A3, Assault), <del class='del'>Toxin Claws</del> (A9, <del class='del'>Bane)</del> · <del class='del'>+30</del> pts</td><td>Sling (12&quot;, A3, Assault), <ins class='add'>Cursed Blade</ins> (A9, <ins class='add'>Fragment)</ins> · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Lance (A9, AP(1), Thrust) · <del class='del'>+35</del> pts</td><td>Master Lance (A9, AP(1), Thrust) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Great Weapon (A9, AP(4)) · <del class='del'>+55</del> pts</td><td>Master Great Weapon (A9, AP(4)) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Toxin Claws</del></td><td>Replace <ins class='add'>Cursed Blade</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxin Claws (A9, Bane) · +10 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lance (A9, Thrust) · <del class='del'>+5</del> pts</td><td>Lance (A9, Thrust) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A9, AP(2)) · <del class='del'>+20</del> pts</td><td>Great Weapon (A9, AP(2)) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Cursed Blade (A9, Fragment) · free</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Raider Wings (Ambush, Flying) · <del class='del'>+50</del> pts</td><td>Raider Wings (Ambush, Flying) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Winged Beast (Flying, Impact(9), Tough(9)) · <del class='del'>+215</del> pts</td><td>Winged Beast (Flying, Impact(9), Tough(9)) · <ins class='add'>+210</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bat Beast (Jagged Fangs (A18, Shred), Defense(1), Fear(3), Flying, Furious, Tough(18)) · <del class='del'>+555</del> pts</td><td>Bat Beast (Jagged Fangs (A18, Shred), Defense(1), Fear(3), Flying, Furious, Tough(18)) · <ins class='add'>+525</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Bat Dragon (Stomp (A12, AP(1)), Toxin Fangs (A24, Bane), Defense(1), Fear(6), Flying, Furious, Tough(36)) · <del class='del'>+1150</del> pts</td><td>Bat Dragon (Stomp (A12, AP(1)), Toxin Fangs (A24, Bane), Defense(1), Fear(6), Flying, Furious, Tough(36)) · <ins class='add'>+1095</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Magic Attuned (Caster(1)) · <del class='del'>+10</del> pts</td><td>Magic Attuned (Caster(1)) · <ins class='add'>+15</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Superior (Shred in Melee Aura) · <del class='del'>+35</del> pts</td><td>Superior (Shred in Melee Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunt Master (Piercing Marksman Aura) · <del class='del'>+40</del> pts</td><td>Hunt Master (Piercing Marksman Aura) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Bringer (Stealth Aura) · <del class='del'>+55</del> pts</td><td>Night Bringer (Stealth Aura) · <ins class='add'>+45</ins> pts</td></tr>
+</table></div>
+<h3>Giant Bat</h3><p class='stats'>170 → 165 pts (-5) · Size 1 · Quality 4+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>170</del> pts</td><td><ins class='add'>165</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Toxin Fang</td><td>Replace Toxin Fang</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jagged Fangs (A9, Shred) · <del class='del'>free</del></td><td>Jagged Fangs (A9, Shred) · <ins class='add'>+-5 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sky Raider (Ambush) · <del class='del'>+30</del> pts</td><td>Sky Raider (Ambush) · <ins class='add'>+25</ins> pts</td></tr>
+</table></div>
+<h3>Latmyir The Mad</h3><p class='stats'>160 → 180 pts (+20) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>160</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Item</td><td>Skeletal Gravestone <del class='del'>(Fear(3))</del></td><td>Skeletal Gravestone <ins class='add'>(Fear(6))</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td><del class='del'>Upgrade with</del></td><td><ins class='add'>Replace Skeletal Gravestone</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Necromancer (Caster(2)) · <del class='del'>+25</del> pts</td><td>Necromancer (Caster(2)) · <ins class='add'>+-20</ins> pts</td></tr>
+</table></div>
+<h3>Ghoul Beast Rider</h3><p class='stats'>185 → 180 pts (-5) · Size 1 · Quality 4+ · Defense 6+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>185</del> pts</td><td><ins class='add'>180</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sergeant · <del class='del'>+10</del> pts</td><td>Sergeant · <ins class='add'>+5</ins> pts</td></tr>
+</table></div>
+<h3>Vampire Master</h3><p class='stats'>210 → 200 pts (-10) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>210</del> pts</td><td><ins class='add'>200</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Cursed Blade (A9, AP(1), Fragment) · <del class='del'>+40</del> pts</td><td>Master Cursed Blade (A9, AP(1), Fragment) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Lance (A9, AP(1), Thrust) · <del class='del'>+40</del> pts</td><td>Master Lance (A9, AP(1), Thrust) · <ins class='add'>+35</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Spear (A9, AP(1), Counter, Brace(1)) · <del class='del'>+65</del> pts</td><td>Master Spear (A9, AP(1), Counter, Brace(1)) · <ins class='add'>+55</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Halberd (A9, AP(1), Rending) · <del class='del'>+65</del> pts</td><td>Master Halberd (A9, AP(1), Rending) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Great Weapon (A9, AP(4)) · <del class='del'>+90</del> pts</td><td>Master Great Weapon (A9, AP(4)) · <ins class='add'>+80</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Necromancer Staff (A6, Spell Amplifier) · +-15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Rapid Cursed Crossbow (18&quot;, A9, Fragment), Strike (A3) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throwing Daggers (12&quot;, A3, Assault), Cursed Blade (A9, Fragment) · +40 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapon (2)</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Necromancer Staff (A6, Spell Amplifier) · +5 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Rapid Cursed Crossbow (18&quot;, A9, Fragment), Strike (A3) · +15 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Daggers (12&quot;, A3, Assault), Cursed Blade (A9, Fragment) · +25 pts</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Cursed Blade</td><td>Replace Cursed Blade</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hand Weapon (A9, Parry(3)) · <del class='del'>+-10 pts</del></td><td>Hand Weapon (A9, Parry(3)) · <ins class='add'>free</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lance (A9, Thrust) · <del class='del'>+5</del> pts</td><td>Lance (A9, Thrust) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Spear (A9, Counter, Brace(1)) · <del class='del'>+15</del> pts</td><td>Spear (A9, Counter, Brace(1)) · <ins class='add'>+20</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Halberd (A9, Rending) · <del class='del'>+40</del> pts</td><td>Halberd (A9, Rending) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Throwing Dagger</td><td>Replace Throwing Dagger</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cursed Bolts (9&quot;, A3, Assault, Fragment) · <del class='del'>+10</del> pts</td><td>Cursed Bolts (9&quot;, A3, Assault, Fragment) · <ins class='add'>+5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Rapid Cursed Crossbow</td><td>Replace Rapid Cursed Crossbow</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Rapid Crossbow (18&quot;, A9, Rending) · <del class='del'>+15</del> pts</td><td>Rapid Crossbow (18&quot;, A9, Rending) · <ins class='add'>+25</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Deadly Bolts (9&quot;, A3, AP(2), Deadly(3), Assault) · <del class='del'>+85</del> pts</td><td>Deadly Bolts (9&quot;, A3, AP(2), Deadly(3), Assault) · <ins class='add'>+75</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Winged Terror (Heavy Claws (A9, AP(2)), Flying, Tough(9)) · <del class='del'>+315</del> pts</td><td>Winged Terror (Heavy Claws (A9, AP(2)), Flying, Tough(9)) · <ins class='add'>+300</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Winged Steed (Fast, Flying, Impact(9), Tough(9)) · <del class='del'>+280</del> pts</td><td>Winged Steed (Fast, Flying, Impact(9), Tough(9)) · <ins class='add'>+370</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Zombie Dragon (Toxic Breath (6&quot;, A3, Blast(3), Reliable, Assault, Bane), Sharp Claws (A24, Rending), Stomp (A12, AP(1)), Defense(1), Fear(6), Flying, Regeneration, Tough(36)) · <del class='del'>+1935</del> pts</td><td>Zombie Dragon (Toxic Breath (6&quot;, A3, Blast(3), Reliable, Assault, Bane), Sharp Claws (A24, Rending), Stomp (A12, AP(1)), Defense(1), Fear(6), Flying, Regeneration, Tough(36)) · <ins class='add'>+1805</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Skeleton Dragon (Heavy Claws (A36, AP(2)), Stomp (A18, AP(2)), Fear(9), Flying, Tough(54)) · <del class='del'>+2180</del> pts</td><td>Skeleton Dragon (Heavy Claws (A36, AP(2)), Stomp (A18, AP(2)), Fear(9), Flying, Tough(54)) · <ins class='add'>+2020</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Stitched Zombie Horde (Infected Zombies (A54, Bane), Fear(9), Fearless, Regeneration, Tough(54)) · <del class='del'>+2320</del> pts</td><td>Stitched Zombie Horde (Infected Zombies (A54, Bane), Fear(9), Fearless, Regeneration, Tough(54)) · <ins class='add'>+2180</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one (2)</td><td>Upgrade with one (2)</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Lord (Shred in Melee Aura) · <del class='del'>+35</del> pts</td><td>Lord (Shred in Melee Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Necromancer (Caster(2)) · <del class='del'>+25</del> pts</td><td>Necromancer (Caster(2)) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Bringer (Stealth Aura) · <del class='del'>+55</del> pts</td><td>Night Bringer (Stealth Aura) · <ins class='add'>+45</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Necromancer (Caster(3)) · <del class='del'>+40</del> pts</td><td>Master Necromancer (Caster(3)) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Count (Scout Aura) · <del class='del'>+100</del> pts</td><td>Count (Scout Aura) · <ins class='add'>+85</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Commander (No Retreat Aura) · <del class='del'>+85</del> pts</td><td>Commander (No Retreat Aura) · <ins class='add'>+90</ins> pts</td></tr>
+</table></div>
+<h3>Bat Horror</h3><p class='stats'>210 → 205 pts (-5) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>210</del> pts</td><td><ins class='add'>205</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Toxin Fang</td><td>Replace Toxin Fang</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jagged Fangs (A9, Shred) · <del class='del'>+5 pts</del></td><td>Jagged Fangs (A9, Shred) · <ins class='add'>free</ins></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sky Raider (Ambush) · <del class='del'>+40</del> pts</td><td>Sky Raider (Ambush) · <ins class='add'>+35</ins> pts</td></tr>
+</table></div>
+<h3>Werewolf</h3><p class='stats'>235 → 225 pts (-10) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>235</del> pts</td><td><ins class='add'>225</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Sharp Claws</td><td>Replace Sharp Claws</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A9, AP(2)) · <del class='del'>+20</del> pts</td><td>Great Weapon (A9, AP(2)) · <ins class='add'>+15</ins> pts</td></tr>
+</table></div>
+<h3>Captain Blackfang</h3><p class='stats'>315 → 285 pts (-30) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>315</del> pts</td><td><ins class='add'>285</ins> pts</td></tr>
+</table></div>
+<h3>Vampiric Artillery</h3><p class='stats'>405 → 350 pts (-55) · Size 1 · Quality 5+ · Defense 5+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>405</del> pts</td><td><ins class='add'>350</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Rule</td><td><del class='del'>Entrenched</del><br><span class='muted'>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</span></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Stone Thrower</td><td>Replace Stone Thrower</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Boulder Thrower (36&quot;, A6, AP(2), Deadly(3), Indirect) · <del class='del'>+105</del> pts</td><td>Boulder Thrower (36&quot;, A6, AP(2), Deadly(3), Indirect) · <ins class='add'>+90</ins> pts</td></tr>
+</table></div>
+<h3>Maiden Chariot</h3><p class='stats'>455 → 365 pts (-90) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>455</del> pts</td><td><ins class='add'>365</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Throwing Daggers (12&quot;, A9, Assault)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td><del class='del'>Replace Throwing Dagger</del></td><td><ins class='add'>Upgrade with one</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Daggers (12&quot;, A9, Assault) · +70 pts</ins></td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cursed Bolts (9&quot;, A9, Assault, Fragment) · <del class='del'>+25</del> pts</td><td>Cursed Bolts (9&quot;, A9, Assault, Fragment) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Dark Bolts (9&quot;, A9, Assault, Bane) · <del class='del'>+25</del> pts</td><td>Dark Bolts (9&quot;, A9, Assault, Bane) · <ins class='add'>+85</ins> pts</td></tr>
+</table></div>
+<h3>Corpse Wagon</h3><p class='stats'>380 pts · Size 1 · Quality 5+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Infected Zombie</td><td>Replace Infected Zombie</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Grasping Zombies (A18, Surge) · <del class='del'>+5</del> pts</td><td>Grasping Zombies (A18, <ins class='add'>AP(1),</ins> Surge) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Cursed Monolith (Casting Buff) · <del class='del'>+5</del> pts</td><td>Cursed Monolith (Casting Buff) · <ins class='add'>+10</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Corpse Pile (Spawn(Stitched Zombie [1])) · <del class='del'>+35</del> pts</td><td>Corpse Pile (Spawn(Stitched Zombie [1])) · <ins class='add'>+40</ins> pts</td></tr>
+</table></div>
+<h3>Werewolf Champion</h3><p class='stats'>470 → 440 pts (-30) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>470</del> pts</td><td><ins class='add'>440</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Dual Hand Weapon</td><td>Replace Dual Hand Weapon</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Cursed Blade (A18, AP(1), Fragment) · <del class='del'>+80</del> pts</td><td>Master Cursed Blade (A18, AP(1), Fragment) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Sharp Claws (A18, AP(1), Rending) · <del class='del'>+75</del> pts</td><td>Master Sharp Claws (A18, AP(1), Rending) · <ins class='add'>+65</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Razor Blades (A18, <del class='del'>AP(1),</del> Surge) · <del class='del'>+70</del> pts</td><td>Master Razor Blades (A18, <ins class='add'>AP(2),</ins> Surge) · <ins class='add'>+115</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Master Great Weapon (A18, AP(4)) · <del class='del'>+145</del> pts</td><td>Master Great Weapon (A18, AP(4)) · <ins class='add'>+125</ins> pts</td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Throwing Daggers (12&quot;, A9, Assault), Razor Blades (A18, Surge) · +105 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapon (2)</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Daggers (12&quot;, A9, Assault), Cursed Blade (A18, Fragment) · +80 pts</ins></td></tr>
+<tr class='add sec'><td>➕</td><td>Upgrade</td><td><span class='muted'>—</span></td><td><ins class='add'>Replace Dual Hand Weapon (3)</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Cursed Blade (A18, AP(1), Fragment) · +40 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Sharp Claws (A18, AP(1), Rending) · +65 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Razor Blades (A18, AP(2), Surge) · +115 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Master Great Weapon (A18, AP(4)) · +125 pts</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Throwing Daggers (12&quot;, A9, Assault), Razor Blades (A18, AP(1), Surge) · +150 pts</ins></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Razor</del> Blade</td><td>Replace <ins class='add'>Cursed</ins> Blade</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sharp Claws (A18, Rending) · <del class='del'>+25</del> pts</td><td>Sharp Claws (A18, Rending) · <ins class='add'>+40</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon (A18, AP(2)) · <del class='del'>+65</del> pts</td><td>Great Weapon (A18, AP(2)) · <ins class='add'>+70</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Razor Blades (A18, AP(1), Surge) · +75 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Cursed Blade (A18, Fragment) · +5 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Aspiring Lord (Shred in Melee Aura) · <del class='del'>+35</del> pts</td><td>Aspiring Lord (Shred in Melee Aura) · <ins class='add'>+30</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Night Bringer (Stealth Aura) · <del class='del'>+70</del> pts</td><td>Night Bringer (Stealth Aura) · <ins class='add'>+60</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Commander (No Retreat Aura) · <del class='del'>+120</del> pts</td><td>Commander (No Retreat Aura) · <ins class='add'>+125</ins> pts</td></tr>
+</table></div>
+<h3>Bat Beast</h3><p class='stats'>470 → 445 pts (-25) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>470</del> pts</td><td><ins class='add'>445</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Toxin Fang</td><td>Replace Toxin Fang</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jagged Fangs (A18, Shred) · <del class='del'>+5</del> pts</td><td>Jagged Fangs (A18, Shred) · <ins class='add'>+-5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with one</td><td>Upgrade with one</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Raider Wings <del class='del'>(Ambush)</del> · <del class='del'>+80</del> pts</td><td>Raider Wings <ins class='add'>(Ambush, Flying)</ins> · <ins class='add'>+120</ins> pts</td></tr>
+</table></div>
+<h3>Funeral Coach</h3><p class='stats'>490 → 460 pts (-30) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>490</del> pts</td><td><ins class='add'>460</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Cursed Blade Crew</td><td>Replace Cursed Blade Crew</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Great Weapon Crew (A9, AP(2)) · <del class='del'>+30</del> pts</td><td>Great Weapon Crew (A9, AP(2)) · <ins class='add'>+35</ins> pts</td></tr>
+</table></div>
+<h3>Deathly Chariot</h3><p class='stats'>500 → 470 pts (-30) · Size 1 · Quality 4+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>500</del> pts</td><td><ins class='add'>470</ins> pts</td></tr>
+</table></div>
+<h3>Lady Navleva</h3><p class='stats'>560 → 585 pts (+25) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>560</del> pts</td><td><ins class='add'>585</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td>Forlorn Falchion (A12, Surge)</td><td>Forlorn Falchion (A12, <ins class='add'>AP(1),</ins> Surge)</td></tr>
+</table></div>
+<h3>Gremyir &amp; Milyazha</h3><p class='stats'>675 → 615 pts (-60) · Size 1 · Quality 3+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>675</del> pts</td><td><ins class='add'>615</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Hunting Tactic</td><td>Replace Hunting Tactic</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Hunting Tactics - Leader (Ambush Aura) · <del class='del'>+60</del> pts</td><td>Hunting Tactics - Leader (Ambush Aura) · <ins class='add'>+50</ins> pts</td></tr>
+</table></div>
+<h3>Zombie Dragon</h3><p class='stats'>1075 → 950 pts (-125) · Size 1 · Quality 4+ · Defense 4+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1075</del> pts</td><td><ins class='add'>950</ins> pts</td></tr>
+<tr class='mod'><td>✏️</td><td>Weapon</td><td><del class='del'>Grasping</del> Claws (A24, <del class='del'>Surge)</del></td><td><ins class='add'>Sharp</ins> Claws (A24, <ins class='add'>Rending)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Toxic Breath (6&quot;, A3, Blast(3), Reliable, Assault, Bane)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace <del class='del'>Grasping</del> Claws</td><td>Replace <ins class='add'>Sharp</ins> Claws</td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Grasping Claws (A24, AP(1), Surge) · +30 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Sharp Claws (A24, Rending) · +35 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with <ins class='add'>any</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Toxic Breath (6&quot;, A3, Blast(3), Reliable, Assault, Bane) · +85 pts</ins></td></tr>
+</table></div>
+<h3>Bat Dragon</h3><p class='stats'>1130 → 1070 pts (-60) · Size 1 · Quality 3+ · Defense 3+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1130</del> pts</td><td><ins class='add'>1070</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Toxin Fang</td><td>Replace Toxin Fang</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Jagged Fangs (A24, Shred) · <del class='del'>+5</del> pts</td><td>Jagged Fangs (A24, Shred) · <ins class='add'>+-5</ins> pts</td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Upgrade with</td><td>Upgrade with</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Sky Raider (Ambush) · <del class='del'>+160</del> pts</td><td>Sky Raider (Ambush) · <ins class='add'>+135</ins> pts</td></tr>
+</table></div>
+<h3>Butcher Titan</h3><p class='stats'>1985 → 1860 pts (-125) · Size 1 · Quality 3+ · Defense 2+</p>
+<div class='scroll'><table class='unit'>
+<tr><th></th><th></th><th>3.6.0 beta</th><th>3.6.0</th></tr>
+<tr class='mod'><td>✏️</td><td>Cost</td><td><del class='del'>1985</del> pts</td><td><ins class='add'>1860</ins> pts</td></tr>
+<tr class='add'><td>➕</td><td>Weapon</td><td><span class='muted'>—</span></td><td><ins class='add'>Titan Carving Tool (A27, Shred)</ins></td></tr>
+<tr class='del'><td>➖</td><td>Weapon</td><td><del class='del'>Titan Slicing Blade (A27, Surge)</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='mod sec'><td>✏️</td><td>Upgrade</td><td>Replace Titan <del class='del'>Slicing Blade</del></td><td>Replace Titan <ins class='add'>Carving Tool</ins></td></tr>
+<tr class='add'><td>➕</td><td class='sub'>↳</td><td><span class='muted'>—</span></td><td><ins class='add'>Titan Slicing Blade (A27, AP(1), Surge) · +80 pts</ins></td></tr>
+<tr class='del'><td>➖</td><td class='sub'>↳</td><td><del class='del'>Titan Carving Tool (A27, Shred) · +15 pts</del></td><td><span class='muted'>—</span></td></tr>
+<tr class='sec'><td></td><td>Upgrade</td><td>Replace Infected Zombie</td><td>Replace Infected Zombie</td></tr>
+<tr class='mod'><td>✏️</td><td class='sub'>↳</td><td>Grasping Zombies (A9, Surge) · <del class='del'>free</del></td><td>Grasping Zombies (A9, <ins class='add'>AP(1),</ins> Surge) · <ins class='add'>+30 pts</ins></td></tr>
+</table></div>
+<h2>Special rules</h2>
+<div class='scroll'><table><tr><th></th><th>Name</th><th>Text</th></tr>
+<tr class='del'><td>➖</td><td>Entrenched</td><td>If most models in this unit have this rule, as long as they haven&#x27;t moved during this round, enemy units shooting at them from over 12” away get -1 to hit rolls.</td></tr>
+<tr class='mod'><td>✏️</td><td>AP<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> <del class='del'>Targets get -X to Defense rolls when blocking hits.</del><br><span class='add'>3.6.0:</span> <ins class='add'>AP</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Bane when Shooting<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> This model gets Bane when shooting.<br><span class='add'>3.6.0:</span> This model gets Bane <ins class='add'>on its weapons</ins> when shooting.</td></tr>
+<tr class='mod'><td>✏️</td><td>Brace in Melee<br><span class='muted'>core rule</span></td><td><span class='del'>3.6.0 beta:</span> This model gets Brace(1) in melee.<br><span class='add'>3.6.0:</span> This model gets Brace(1) <ins class='add'>on its weapons</ins> in melee.</td></tr>
+<tr class='mod'><td>✏️</td><td>Fragment</td><td><span class='del'>3.6.0 beta:</span> When attacking units where most models have Defense <del class='del'>4+</del> to Defense 6+, the target must re-roll successful unmodified Defense results of <del class='del'>4-6.</del><br><span class='add'>3.6.0:</span> When attacking units where most models have Defense <ins class='add'>5+</ins> to Defense 6+, the target must re-roll successful unmodified Defense results of <ins class='add'>5-6.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Shred in Melee Aura</td><td><span class='del'>3.6.0 beta:</span> This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Shred in melee. If this model is killed, picked models that are deployed lose the rule.<br><span class='add'>3.6.0:</span> This model&#x27;s unit and up to 2 nearest friendly units picked before the start of the game get Shred <ins class='add'>on its weapons</ins> in melee. If this model is killed, picked models that are deployed lose the rule.</td></tr>
+<tr class='mod'><td>✏️</td><td>Spawn</td><td><span class='del'>3.6.0 beta:</span> Once per game, when this model is activated, you may place a new unit of X fully within 6&quot; of it.<br><span class='add'>3.6.0:</span> Once per game, when this model is activated, you may place a new unit of X fully within 6&quot; of it. <ins class='add'>Units placed via Spawn can’t seize or contest objectives on the round they are placed.</ins></td></tr>
+<tr class='mod'><td>✏️</td><td>Spell Resistance</td><td><span class='del'>3.6.0 beta:</span> When a unit where most models have this rule takes wounds, roll one die for each. <del class='del'>On a 6+ it is ignored.</del> If the <del class='del'>wounds were</del> from a spell, then <del class='del'>they are</del> ignored on a <del class='del'>2+</del> instead.<br><span class='add'>3.6.0:</span> When a unit where most models have this rule takes wounds, roll one die for each. If the <ins class='add'>wound was</ins> from a spell, then <ins class='add'>it is</ins> ignored on a <ins class='add'>2+. If the wound was not from a spell, then it is ignored on a 6+</ins> instead.</td></tr>
+</table></div>
+<h2>Spells</h2>
+<p>No changes.</p>
+<footer>Forge Diff — unofficial change reports for OPR Army Forge books. Not affiliated with OnePageRules.</footer></main>
