@@ -50,7 +50,7 @@ python generate_html.py --old stable@2026-09-28 --new stable@2026-12-01 --system
 - **Systems:** without `--system`, every system present in both snapshots.
 - **Output:**
   - `reports/<source>-<date>_vs_<source>-<date>/<system>/`: `index.html`, `<army>.html`, `core_rules.html` and `summary.json`.
-  - `reports/index.html`: one row per comparison and system. It is built from every `summary.json`, so it includes comparisons from other runs.
+  - `reports/index.html`: one row per comparison, newest first, linking the game systems that changed. Systems and comparisons with no changes aren't listed, though their pages still exist. It is built from every `summary.json`, so it includes comparisons from other runs.
 - **Armies without changes:** same `uid` and `modifiedAt`, or an empty diff according to `has_changes`. They show up in the index as "no changes", without a page.
 - `data/`, `reports/` and `store/` are generated and ignored by `.gitignore`.
 

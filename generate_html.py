@@ -6,7 +6,7 @@ A snapshot is given as SOURCE[@DATE]: "stable" (latest), "stable@2026-09-28", "s
 latest stable, otherwise stable@previous vs stable.
 
 Writes reports/<old>_vs_<new>/<system>/{index,<army>,core_rules}.html and reports/index.html,
-which lists every comparison and game system generated so far.
+which lists every comparison generated so far that has changes.
 
 Usage: python generate_html.py [--old stable@previous] [--new stable] [--system SLUG ...]
                                [--only "Battle Brothers" ...] [--old-label 3.5.1] [--new-label 3.6.0]
@@ -148,20 +148,36 @@ def render_core(title, old_rules, new_rules, labels, generated):
                      generated=generated), sum(map(len, entry))
 
 
+def has_news(summary):
+    return any(summary[k] for k in ("with_changes", "old_only", "new_only", "core_changes"))
+
+
+def comparison_dates(comparison):
+    """'stable-2026-10-13_vs_beta-2026-10-30' -> ('2026-10-30', '2026-10-13')"""
+    old, new = comparison.split("_vs_")
+    return new[-10:], old[-10:]
+
+
 def render_reports_index(summaries):
+    """One row per comparison, newest first, linking only the game systems that changed.
+    A comparison where nothing changed in any system isn't listed."""
     e = html.escape
+    by_comparison = {}
+    for s in sorted(filter(has_news, summaries), key=lambda s: s["system"]):
+        by_comparison.setdefault(s["comparison"], []).append(s)
     body = [f"<h1>{APP_NAME}</h1>",
-            "<p class='muted'>Change reports for OPR Army Forge books. "
-            "Each row compares two Army Forge snapshots of one game system.</p>",
+            "<p class='muted'>Change reports for OPR Army Forge books, newest first. "
+            "The number next to each game system is how many armies changed.</p>",
             "<div class='scroll'><table>",
-            "<tr><th>Comparison</th><th>Game system</th><th>Armies compared</th><th>With changes</th>"
-            "<th>Only in old</th><th>Only in new</th><th>Core rule changes</th></tr>"]
-    for s in summaries:
-        body.append(f"<tr><td>{e(s['comparison_title'])}</td>"
-                    f"<td><a href='{e(s['comparison'])}/{e(s['system'])}/index.html'>{e(s['title'])}</a></td>"
-                    + "".join(f"<td class='num'>{s[k] or '–'}</td>"
-                              for k in ("compared", "with_changes", "old_only", "new_only", "core_changes"))
-                    + "</tr>")
+            "<tr><th>Comparison</th><th>Game systems</th></tr>"]
+    for comparison in sorted(by_comparison, key=lambda c: (comparison_dates(c), c), reverse=True):
+        rows = by_comparison[comparison]
+        title = rows[0]["comparison_title"]
+        snapshots = " → ".join(f"{side[:-11]} {side[-10:]}" for side in comparison.split("_vs_"))
+        sub_title = f"<br><span class='muted'>{e(snapshots)}</span>" if snapshots != title else ""
+        links = " · ".join(f"<a href='{e(comparison)}/{e(s['system'])}/index.html'>{e(s['title'])}</a>"
+                           + (f" ({s['with_changes']})" if s["with_changes"] else "") for s in rows)
+        body.append(f"<tr><td>{e(title)}{sub_title}</td><td class='systems'>{links}</td></tr>")
     body.append("</table></div>")
     return html_page(APP_NAME, body, generated=max((s.get("generated", "") for s in summaries), default=None))
 
@@ -267,10 +283,8 @@ def main():
     for system in systems:
         generate_system(system, snaps, comparison / system, labels, only)
 
-    # The top index lists every comparison and system generated so far, newest comparison first.
+    # The top index is built from every comparison generated so far.
     summaries = [json.loads(p.read_text(encoding="utf-8")) for p in Path(args.out).glob(f"*/*/{SUMMARY_FILE}")]
-    summaries.sort(key=lambda s: s["system"])
-    summaries.sort(key=lambda s: s["comparison"], reverse=True)
     (Path(args.out) / "index.html").write_text(render_reports_index(summaries), encoding="utf-8")
     print(f"\nWrote {Path(args.out) / 'index.html'} ({len(summaries)} reports)")
 

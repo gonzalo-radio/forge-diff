@@ -16,7 +16,7 @@ profiles, weapons, upgrades, special rules, spells and core rules. It compares:
 | Script | What it does |
 |---|---|
 | `fetch_books.py` | Downloads a dated snapshot (`data/snapshots/<source>/<YYYY-MM-DD>/`) per source. Books whose `modifiedAt` didn't change are reused, and a snapshot identical to the previous one is dropped. |
-| `generate_html.py` | Compares two snapshots and writes `reports/<old>_vs_<new>/<system>/`, plus `reports/index.html` listing every report. |
+| `generate_html.py` | Compares two snapshots and writes `reports/<old>_vs_<new>/<system>/`, plus `reports/index.html` listing every comparison with changes. |
 | `opr_diff.py` | The diff and rendering engine. Also works on its own with two army book JSON files. |
 
 Only the Python 3 standard library is needed.
