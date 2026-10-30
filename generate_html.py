@@ -175,7 +175,7 @@ def render_reports_index(summaries):
         title = rows[0]["comparison_title"]
         snapshots = " → ".join(f"{side[:-11]} {side[-10:]}" for side in comparison.split("_vs_"))
         sub_title = f"<br><span class='muted'>{e(snapshots)}</span>" if snapshots != title else ""
-        links = " · ".join(f"<a href='{e(comparison)}/{e(s['system'])}/index.html'>{e(s['title'])}</a>"
+        links = "<br>".join(f"<a href='{e(comparison)}/{e(s['system'])}/index.html'>{e(s['title'])}</a>"
                            + (f" ({s['with_changes']})" if s["with_changes"] else "") for s in rows)
         body.append(f"<tr><td>{e(title)}{sub_title}</td><td class='systems'>{links}</td></tr>")
     body.append("</table></div>")
